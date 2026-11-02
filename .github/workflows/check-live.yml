@@ -8,6 +8,6 @@ jobs:
       - run: |
           for u in https://mecara.app/ https://www.mecara.app/; do
             echo "== $u"; curl -sSL -D - -o page.html "$u?t=$(date +%s)" | grep -iE "^(HTTP|cf-cache|age|last-modified)"
-            echo "foto refs: $(grep -o 'img/foto/[A-Z0-9-]*\.jpg' page.html | sort -u | wc -l)"
+            echo "foto refs: $(grep -o 'img/foto/[A-Z0-9-]*\.jpg' page.html | sort -u | wc -l) garaza: $(grep -ci garaž page.html) tommy: $(grep -o Tommy page.html | wc -l)"
           done
           curl -sS -o /dev/null -w "KKP4512.jpg %{http_code} %{size_download}\n" https://mecara.app/img/foto/KKP4512.jpg
