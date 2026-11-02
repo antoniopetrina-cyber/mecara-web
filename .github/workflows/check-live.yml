@@ -1,0 +1,13 @@
+name: Provjeri mecara.app
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://mecara.app/ https://www.mecara.app/; do
+            echo "== $u"; curl -sSL -D - -o page.html "$u?t=$(date +%s)" | grep -iE "^(HTTP|cf-cache|age|last-modified)"
+            echo "foto refs: $(grep -o 'img/foto/[A-Z0-9-]*\.jpg' page.html | sort -u | wc -l)"
+          done
+          curl -sS -o /dev/null -w "KKP4512.jpg %{http_code} %{size_download}\n" https://mecara.app/img/foto/KKP4512.jpg
