@@ -8,12 +8,12 @@ Web stranica i aplikacija za narudžbe mesnice **Mecara**, Kralja Tomislava 7 (D
 - `wrangler.toml` – postavke za Cloudflare
 
 ## Objava na Cloudflare (jednom)
-Cloudflare → Workers & Pages → Create → Pages → Connect to Git → izaberi `mecara-web`
-- Framework preset: **None**
+Cloudflare → Workers & Pages → Create → **Import a repository** → izaberi `mecara-web`
+- Project name: `mecara-web`
 - Build command: *(prazno)*
-- Build output directory: **public**
+- Deploy command: `npx wrangler deploy`
 
-Svaki novi commit na `main` automatski se objavi.
+Svaki novi commit na `main` automatski se objavi na `mecara-web.<tvoj-račun>.workers.dev`.
 
 ## Prije prave objave
 - U `public/index.html` zamijeni `WA_NUMBER` pravim brojem
