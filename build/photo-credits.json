@@ -1,0 +1,140 @@
+{
+  "photos": [
+    {
+      "article": "M03",
+      "sourcePage": "https://www.pexels.com/photo/grind-meat-in-glass-bowl-128401/",
+      "photographer": "Angele J",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/m03.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Sirova mljevena junetina u staklenoj zdjeli",
+        "en": "Raw minced beef in a glass bowl"
+      },
+      "label": "cut"
+    },
+    {
+      "article": "R02",
+      "sourcePage": "https://www.pexels.com/photo/person-cooking-on-black-frying-pan-4253299/",
+      "photographer": "cottonbro studio",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/r02.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Odrezak se peče u tavi na kuhalu",
+        "en": "A steak cooking in a frying pan on the hob"
+      },
+      "label": "serving"
+    },
+    {
+      "article": "R03",
+      "sourcePage": "https://www.pexels.com/photo/roasting-meat-and-sausages-on-barbecue-grid-4294500/",
+      "photographer": "Diana ✨ (didsss)",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/r03.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Kobasice i odresci na roštilju",
+        "en": "Sausages and steaks on a barbecue grill"
+      },
+      "label": "serving"
+    },
+    {
+      "article": "K02",
+      "sourcePage": "https://www.pexels.com/photo/gourmet-cheese-and-prosciutto-platter-close-up-29068725/",
+      "photographer": "Jonathan Borba",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/k02.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Pršut i sir na drvenoj dasci",
+        "en": "Prosciutto and cheese on a wooden board"
+      },
+      "label": "serving"
+    },
+    {
+      "article": "K03",
+      "sourcePage": "https://www.pexels.com/photo/delicious-roasted-beef-on-a-wooden-cutting-board-37014727/",
+      "photographer": "John Benedict Malong",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/k03.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Narezano pečenje na drvenoj dasci",
+        "en": "Sliced roast meat on a wooden board"
+      },
+      "label": "serving"
+    },
+    {
+      "article": "G02",
+      "sourcePage": "https://www.pexels.com/photo/fried-meat-with-sliced-lemon-on-white-ceramic-plate-6920656/",
+      "photographer": "Media Lens King",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/g02.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Ćevapi s lukom i ajvarom na tanjuru",
+        "en": "Ćevapi with onion and ajvar on a plate"
+      },
+      "label": "serving"
+    },
+    {
+      "article": "G03",
+      "sourcePage": "https://www.pexels.com/photo/person-grilling-meat-63746/",
+      "photographer": "Caio",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/g03.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Meso na roštilju na terasi",
+        "en": "Meat cooking on a grill on a terrace"
+      },
+      "label": "serving"
+    },
+    {
+      "article": "T01",
+      "sourcePage": "https://www.pexels.com/photo/cooked-chicken-with-potatoes-on-black-metal-tray-4589138/",
+      "photographer": "ArtHouse Studio",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/t01.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Pečeni pileći batci i zabatci s krumpirom na limu",
+        "en": "Roasted chicken legs and thighs with potatoes on a baking tray"
+      },
+      "label": "serving"
+    },
+    {
+      "article": "T02",
+      "sourcePage": "https://www.pexels.com/photo/delicious-meatballs-in-rich-tomato-sauce-34314421/",
+      "photographer": "ERIVELTO Martins",
+      "license": "https://www.pexels.com/license/",
+      "checkedAt": "2026-11-02",
+      "localPath": "/img/blog/t02.jpg",
+      "attribution": "nije obvezna (Pexels licenca); prikazana u opisu fotografije",
+      "alt": {
+        "hr": "Mesne okruglice u umaku od rajčice s peršinom",
+        "en": "Meatballs in tomato sauce with parsley"
+      },
+      "label": "serving"
+    }
+  ],
+  "gaps": [
+    {
+      "article": "K01",
+      "reason": "Nema dopuštene fotografije teletine ili janjetine ispod peke; kandidati prikazuju drugo meso. Privremeni brendirani blok."
+    },
+    {
+      "article": "T03",
+      "reason": "Nema dopuštene fotografije junećih trakica s gljivama; kandidati su stir-fry bez gljiva. Privremeni brendirani blok."
+    }
+  ]
+}
