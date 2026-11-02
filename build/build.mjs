@@ -593,13 +593,16 @@ function crumbLd(lang, page, title) {
     { "@type": "ListItem", position: 2, name: title, item: abs(ROUTES[page][lang]) } ] };
 }
 
-function layout(lang, page) {
+export function layout(lang, page, opt = {}) {
   const u = UI[lang], other = lang === "hr" ? "en" : "hr";
-  const [title, desc] = META[page][lang];
-  const url = abs(ROUTES[page][lang]);
+  const [title, desc] = opt.meta || META[page][lang];
+  const alt = opt.alt || { hr: ROUTES[page].hr, en: ROUTES[page].en };
+  const url = abs(alt[lang]);
   const h1Title = page === "home" ? title : title.split(" — ")[0];
+  const navKey = opt.navKey || page;
   const navTitle = (u.nav.find(n => n[0] === page) || [null, h1Title])[1];
-  const ld = [page === "home" || page === "contact" ? storeLd() : null, page !== "home" ? crumbLd(lang, page, navTitle) : null].filter(Boolean);
+  const ld = opt.ld || [page === "home" || page === "contact" ? storeLd() : null, page !== "home" ? crumbLd(lang, page, navTitle) : null].filter(Boolean);
+  const ogImage = opt.ogImage || `${SITE.host}/img/og/mecara-dubrovnik.jpg`;
   const robots = SITE.wip ? "noindex, nofollow" : "index, follow, max-image-preview:large";
   return `<!DOCTYPE html>
 <html lang="${lang}">
@@ -610,19 +613,17 @@ function layout(lang, page) {
 <meta name="description" content="${esc(desc)}">
 <meta name="robots" content="${robots}">
 <link rel="canonical" href="${url}">
-<link rel="alternate" hreflang="hr" href="${abs(ROUTES[page].hr)}">
-<link rel="alternate" hreflang="en" href="${abs(ROUTES[page].en)}">
-<link rel="alternate" hreflang="x-default" href="${abs(ROUTES[page].hr)}">
-<meta property="og:type" content="website">
+<link rel="alternate" hreflang="hr" href="${abs(alt.hr)}">
+<link rel="alternate" hreflang="en" href="${abs(alt.en)}">
+<link rel="alternate" hreflang="x-default" href="${abs(alt.hr)}">
+<meta property="og:type" content="${opt.ogType || "website"}">
 <meta property="og:site_name" content="Mecara">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="${lang === "hr" ? "hr_HR" : "en_GB"}">
 <meta property="og:locale:alternate" content="${lang === "hr" ? "en_GB" : "hr_HR"}">
-<meta property="og:image" content="${SITE.host}/img/og/mecara-dubrovnik.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="${ogImage}">${opt.ogImage ? "" : `\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">`}
 <meta property="og:image:alt" content="${lang === "hr" ? "Mecara, mesnica u Lapadu u Dubrovniku" : "Mecara, butcher shop in Lapad, Dubrovnik"}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#13100e">
@@ -634,7 +635,7 @@ function layout(lang, page) {
 <link rel="stylesheet" href="/css/styles.css?v=${V}">
 ${ld.map(o => `<script type="application/ld+json">${JSON.stringify(o)}</script>`).join("\n")}
 </head>
-<body data-page="${page}">
+<body data-page="${page}"${opt.bodyClass ? ` class="${opt.bodyClass}"` : ""}>
 <a class="skip" href="#main">${esc(u.skip)}</a>
 ${SITE.wip ? `<div class="proto" role="note"><b>${esc(u.wip)}</b> <span>${esc(u.wipText)}</span></div>` : ""}
 <header class="top">
@@ -644,15 +645,15 @@ ${SITE.wip ? `<div class="proto" role="note"><b>${esc(u.wip)}</b> <span>${esc(u.
       <span>${lang === "hr" ? "MESO DOMAĆIH UZGAJIVAČA" : "BUTCHER SHOP · DUBROVNIK"}</span>
     </a>
     <nav class="links" aria-label="${esc(u.navLabel)}">
-      ${u.nav.map(([k, l]) => `<a href="${ROUTES[k][lang]}"${k === page ? ' aria-current="page"' : ""}>${esc(l)}</a>`).join("\n      ")}
+      ${u.nav.map(([k, l]) => `<a href="${ROUTES[k][lang]}"${k === navKey ? ' aria-current="page"' : ""}>${esc(l)}</a>`).join("\n      ")}
     </nav>
-    <a class="lang-link" href="${ROUTES[page][other]}" hreflang="${other}" lang="${other}"><span aria-hidden="true">${esc(u.otherShort)}</span><span class="sr">${esc(u.other)}</span></a>
+    <nav class="lang-switch" aria-label="${lang === "hr" ? "Jezik" : "Language"}">${["hr", "en"].map(l => `<a href="${alt[l]}" hreflang="${l}" lang="${l}"${l === lang ? ' aria-current="true"' : ""}><span aria-hidden="true">${l.toUpperCase()}</span><span class="sr">${l === "hr" ? "Hrvatski" : "English"}</span></a>`).join('<span class="sep" aria-hidden="true">|</span>')}</nav>
     <a class="cartbtn" href="${ROUTES.contact[lang]}" id="open-cart" data-open-enquiry aria-haspopup="dialog" aria-controls="drawer"><span class="lbl">${esc(u.enquiryBtn)}</span> <span class="n" id="cart-n">0</span></a>
   </div>
 </header>
-${crumbs(lang, page, navTitle)}
+${opt.crumbsHtml !== undefined ? opt.crumbsHtml : crumbs(lang, page, navTitle)}
 <main id="main" tabindex="-1">
-${PAGES[page](lang)}
+${opt.body || PAGES[page](lang)}
 </main>
 <footer>
   <div class="wrap foot-grid">
@@ -661,7 +662,7 @@ ${PAGES[page](lang)}
       ${SITE.phone || SITE.email ? `<br>${[SITE.phone && (lang === "hr" ? "Telefon: " : "Phone: ") + esc(SITE.phone), SITE.email && "E-mail: " + esc(SITE.email)].filter(Boolean).join(" · ")}` : ""}
       ${SITE.legalName && SITE.oib ? `<br>${lang === "hr" ? "" : "Operated by "}${esc(SITE.legalName)} · OIB: ${esc(SITE.oib)}` : ""}
     </div>
-    <nav aria-label="Footer"><a href="${ROUTES.home[lang]}">${esc(u.home)}</a>${u.nav.map(([k, l]) => `<a href="${ROUTES[k][lang]}">${esc(l)}</a>`).join("")}<a href="${esc(SITE.instagram)}" rel="noopener noreferrer">Instagram</a><a href="${ROUTES[page][other]}" hreflang="${other}" lang="${other}">${esc(u.other)}</a></nav>
+    <nav aria-label="Footer"><a href="${ROUTES.home[lang]}">${esc(u.home)}</a>${u.nav.map(([k, l]) => `<a href="${ROUTES[k][lang]}">${esc(l)}</a>`).join("")}<a href="${esc(SITE.instagram)}" rel="noopener noreferrer">Instagram</a><a href="${alt[other]}" hreflang="${other}" lang="${other}">${esc(u.other)}</a></nav>
   </div>
   <div class="wrap"><p class="privacy">${esc(u.privacy)}</p></div>
 </footer>
@@ -729,7 +730,7 @@ function notFound() {
 
 /* ------------------------------ zapisivanje ------------------------------ */
 function write(rel, content) { const f = join(ROOT, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, content); }
-const pages = Object.keys(ROUTES);
+const pages = Object.keys(ROUTES).filter(p => p !== "blog");
 for (const page of pages) for (const lang of ["hr", "en"]) write(join(ROUTES[page][lang], "index.html"), layout(lang, page));
 write("404.html", notFound());
 
@@ -744,10 +745,13 @@ const catalog = {
 };
 write("js/catalog.js", `/* Generirano iz build/content.mjs – ne uređivati ručno */\nwindow.MECARA=${JSON.stringify(catalog)};\n`);
 
+const { buildBlog } = await import("./blog-build.mjs");
+const blog = buildBlog({ layout, write, ROUTES, UI, SITE, abs });
+const smPairs = [...pages.map(p => ROUTES[p]), ...blog.sitemap];
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${pages.flatMap(p => ["hr", "en"].map(l => `  <url><loc>${abs(ROUTES[p][l])}</loc><xhtml:link rel="alternate" hreflang="hr" href="${abs(ROUTES[p].hr)}"/><xhtml:link rel="alternate" hreflang="en" href="${abs(ROUTES[p].en)}"/></url>`)).join("\n")}
+${smPairs.flatMap(r => ["hr", "en"].map(l => `  <url><loc>${abs(r[l])}</loc><xhtml:link rel="alternate" hreflang="hr" href="${abs(r.hr)}"/><xhtml:link rel="alternate" hreflang="en" href="${abs(r.en)}"/></url>`)).join("\n")}
 </urlset>
 `);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE.host}/sitemap.xml\n`);
-console.log("OK:", pages.length * 2, "stranica + 404, sitemap, robots, catalog");
+console.log("OK:", pages.length * 2, "stranica +", blog.count * 2, "članaka + blog/rubrike, 404, sitemap, robots, catalog");

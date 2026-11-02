@@ -13,7 +13,7 @@ jobs:
             curl -sS -o /dev/null -w "$u -> %{http_code} %{redirect_url}\n" "$u"
           done
           echo "--- stranice (www)"
-          for p in /rostilj-planer/ /en/bbq-planner/ /vile-i-jahte/ /en/villa-yacht-meat-supply/ /radionice/ /en/workshops/ /komora/ /en/dry-age-room/ / /en/ /ponuda/ /en/meat-and-deli/ /odlezani-steakovi/ /en/dry-aged-steaks/ /meso-za-rostilj/ /en/bbq-meat/ /o-nama/ /en/about/ /kontakt/ /en/contact/ /ponuda /robots.txt /sitemap.xml /js/catalog.js /img/og/mecara-dubrovnik.jpg /img/foto/KKP4539.webp /nema-ovoga /wp-login.php /.git/config /wrangler.toml /src/worker.js /build/content.mjs; do
+          for p in /blog/ /en/blog/ /blog/rubrika/pitaj-mesara/ /en/blog/category/ask-the-butcher/ /blog/rib-eye-ramstek-ili-biftek/ /en/blog/ribeye-striploin-or-fillet/ /blog/piletina-krumpir-limun-iz-pecnice/ /blog/ne-postoji/ /rostilj-planer/ /en/bbq-planner/ /vile-i-jahte/ /en/villa-yacht-meat-supply/ /radionice/ /en/workshops/ /komora/ /en/dry-age-room/ / /en/ /ponuda/ /en/meat-and-deli/ /odlezani-steakovi/ /en/dry-aged-steaks/ /meso-za-rostilj/ /en/bbq-meat/ /o-nama/ /en/about/ /kontakt/ /en/contact/ /ponuda /robots.txt /sitemap.xml /js/catalog.js /img/og/mecara-dubrovnik.jpg /img/foto/KKP4539.webp /nema-ovoga /wp-login.php /.git/config /wrangler.toml /src/worker.js /build/content.mjs; do
             curl -sS -o body -w "$p %{http_code} %{content_type} %{size_download} %{redirect_url}\n" "https://www.mecara.app$p"
           done
           echo "--- zaglavlja"

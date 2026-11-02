@@ -25,6 +25,7 @@ export const ROUTES = {
   planner: { hr: "/rostilj-planer/",     en: "/en/bbq-planner/" },
   villa:   { hr: "/vile-i-jahte/",       en: "/en/villa-yacht-meat-supply/" },
   workshops:{ hr: "/radionice/",         en: "/en/workshops/" },
+  blog:    { hr: "/blog/",               en: "/en/blog/" },
   about:   { hr: "/o-nama/",             en: "/en/about/" },
   contact: { hr: "/kontakt/",            en: "/en/contact/" },
 };
@@ -32,7 +33,7 @@ export const ROUTES = {
 export const UI = {
   hr: {
     langName: "Hrvatski", other: "English", otherShort: "EN",
-    nav: [["ponuda","Ponuda"],["komora","Komora"],["steak","Odležani steakovi"],["bbq","Za roštilj"],["planner","Roštilj planer"],["villa","Vile i jahte"],["workshops","Radionice"],["about","O nama"],["contact","Kontakt"]],
+    nav: [["ponuda","Ponuda"],["komora","Komora"],["steak","Odležani steakovi"],["bbq","Za roštilj"],["planner","Roštilj planer"],["villa","Vile i jahte"],["workshops","Radionice"],["blog","Blog"],["about","O nama"],["contact","Kontakt"]],
     enquiryBtn: "Vaš upit", navLabel: "Glavna navigacija", skip: "Preskoči na sadržaj",
     wip: "RADNA VERZIJA", wipText: "Stranica je u izradi. Cijene, komadi u komori i dostupnost su primjeri, a upiti se zasad ne šalju Mecari.",
     home: "Naslovnica", crumbs: "Putanja",
@@ -74,7 +75,7 @@ export const UI = {
   },
   en: {
     langName: "English", other: "Hrvatski", otherShort: "HR",
-    nav: [["ponuda","Meat & Deli"],["komora","Ageing Room"],["steak","Dry-Aged Steaks"],["bbq","BBQ Meat"],["planner","BBQ Planner"],["villa","Villas & Yachts"],["workshops","Workshops"],["about","About"],["contact","Contact"]],
+    nav: [["ponuda","Meat & Deli"],["komora","Ageing Room"],["steak","Dry-Aged Steaks"],["bbq","BBQ Meat"],["planner","BBQ Planner"],["villa","Villas & Yachts"],["workshops","Workshops"],["blog","Blog"],["about","About"],["contact","Contact"]],
     enquiryBtn: "Your enquiry", navLabel: "Main navigation", skip: "Skip to content",
     wip: "WORK IN PROGRESS", wipText: "This site is being built. Prices, aged cuts and availability are examples, and enquiries are not sent to Mecara yet.",
     home: "Home", crumbs: "Breadcrumb",

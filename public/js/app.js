@@ -288,3 +288,39 @@ if (vf) {
 renderOpen(); renderList(); renderCuts();
 setInterval(() => { renderOpen(); if (!document.body.classList.contains("cart-open")) renderSlots(); }, 60000);
 })();
+
+/* ===== blog: filteri recepata, porcije, ispis ===== */
+(function () {
+  const grid = document.getElementById("recipe-grid");
+  if (grid) {
+    const state = { protein: null, time: null };
+    const apply = () => {
+      let shown = 0;
+      grid.querySelectorAll(".post-card").forEach(c => {
+        const okP = !state.protein || c.dataset.protein === state.protein;
+        const t = c.dataset.time, okT = !state.time || (state.time === "slow" ? t === "slow" : (t !== "slow" && +t <= +state.time));
+        c.hidden = !(okP && okT); if (!c.hidden) shown++;
+      });
+      document.getElementById("f-empty").hidden = shown > 0;
+      document.querySelectorAll("[data-filter]").forEach(b => b.setAttribute("aria-pressed", String(state[b.dataset.filter] === b.dataset.value)));
+    };
+    document.querySelectorAll("[data-filter]").forEach(b => b.addEventListener("click", () => { const k = b.dataset.filter; state[k] = state[k] === b.dataset.value ? null : b.dataset.value; apply(); }));
+    document.getElementById("f-reset").addEventListener("click", () => { state.protein = state.time = null; apply(); });
+  }
+  const rc = document.querySelector(".recipe-card");
+  if (rc) {
+    const base = +rc.dataset.base || 4, out = document.getElementById("sv-out"); let sv = base;
+    const lang = document.documentElement.lang === "en" ? "en" : "hr";
+    const fmt = n => { const r = n >= 100 ? Math.round(n / 5) * 5 : n >= 10 ? Math.round(n) : Math.round(n * 10) / 10; return lang === "hr" ? String(r).replace(".", ",") : String(r); };
+    // skaliraj brojeve u sastojcima, ali ne cm, °C, %, minute
+    const scaleLine = (txt, f) => txt.replace(/(\d+(?:[.,]\d+)?)(?![\d.,]*\s*(?:cm|°|%|min))/g, m => fmt(parseFloat(m.replace(",", ".")) * f));
+    const items = document.querySelectorAll(".ingredients li[data-orig]");
+    const esc = s => s.replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+    const render = () => { out.textContent = sv; const f = sv / base;
+      items.forEach(li => { li.innerHTML = esc(f === 1 ? li.dataset.orig : scaleLine(li.dataset.orig, f)).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"); });
+      rc.querySelector('[data-sv="-1"]').disabled = sv <= 1; };
+    rc.querySelectorAll("[data-sv]").forEach(b => b.addEventListener("click", () => { sv = Math.min(24, Math.max(1, sv + +b.dataset.sv)); render(); }));
+    const pb = document.getElementById("print-recipe"); if (pb) pb.addEventListener("click", () => { try { window.print(); } catch (e) {} });
+    render();
+  }
+})();
