@@ -7,7 +7,7 @@
 <meta name="description" content="Mecara, mesnica u DOC-u, Dubrovnik. Meso domaćih uzgajivača, odležani steakovi, narudžba online i preuzimanje bez čekanja.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Mecara · Meso domaćih uzgajivača">
-<meta property="og:image" content="/img/logo-full.png">
+<meta property="og:image" content="https://mecara.app/img/foto/KKP4539.jpg">
 <meta name="theme-color" content="#13100e">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/img/icon-256.png">
@@ -65,7 +65,24 @@ nav.links a:hover{opacity:1;color:var(--copper-hi)}
 @media (max-width:480px){.brand span{display:none}.brand img{height:20px}.cartbtn{padding:8px 12px}.cartbtn > span:first-child{display:none}}
 
 /* hero */
-.hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--line);position:relative;background:#0e0b0a url("/img/foto/KKP4539.jpg") center 35%/cover no-repeat;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,10,.9) 0%,rgba(14,11,10,.62) 50%,rgba(14,11,10,.2) 100%),linear-gradient(0deg,rgba(19,16,14,1) 0%,rgba(19,16,14,0) 30%);z-index:-1}
+.hero .facts{background:rgba(28,24,21,.88);backdrop-filter:blur(6px)}
+.ph{display:block;width:100%;height:100%;object-fit:cover;border-radius:12px;background:var(--surface)}
+.k-head{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:end;margin-bottom:26px}
+.k-head .sec-head{margin:0}
+.k-head img{aspect-ratio:3/4;height:auto}
+@media (max-width:860px){.k-head{grid-template-columns:1fr}.k-head img{aspect-ratio:16/10;max-height:260px}}
+.strip{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px;gap:12px;margin-bottom:22px}
+.strip img{min-height:0}
+@media (max-width:760px){.strip{grid-template-columns:1fr 1fr;grid-template-rows:none}.strip img{aspect-ratio:4/3}.strip img:first-child{grid-column:1/-1}}
+.plan-photo{margin:-22px -22px 18px;width:calc(100% + 44px);height:170px;object-fit:cover;border-radius:14px 14px 0 0;display:block}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:220px 220px;gap:12px}
+.gallery img{min-height:0}
+.gallery img:nth-child(1){grid-row:1/3}
+.gallery img:nth-child(2){grid-column:2/4}
+.gallery img:nth-child(5){grid-column:3/5}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:none}.gallery img{aspect-ratio:1;grid-row:auto!important;grid-column:auto!important}.gallery img:nth-child(2){grid-column:1/-1!important;aspect-ratio:16/9}}
 .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end}
 .hero h1{font-size:clamp(38px,5.6vw,68px);line-height:1.02}
 .hero h1 em{font-style:italic}
@@ -84,7 +101,7 @@ nav.links a:hover{opacity:1;color:var(--copper-hi)}
 .dot.off{background:#c0645a}
 .hero-side{display:flex;flex-direction:column;gap:18px}
 .bull{width:100%;max-width:420px;height:auto;align-self:center;opacity:.95}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.bull{max-width:280px}}
+@media (max-width:860px){.hero{background-position:30% center}.hero::before{background:linear-gradient(180deg,rgba(14,11,10,.55) 0%,rgba(14,11,10,.88) 45%,rgba(19,16,14,1) 100%)}.hero .wrap{grid-template-columns:1fr}.bull{max-width:280px}}
 
 /* sections */
 section.block{padding:56px 0;border-bottom:1px solid var(--line)}
@@ -245,7 +262,7 @@ body.cart-open .drawer{transform:none}
         <a class="btn ghost" href="#rostilj" data-i18n="cta2">Koliko mesa za roštilj?</a>
       </div>
     </div>
-    <div class="hero-side"><img class="bull" src="/img/bull.png" alt="" width="1040" height="577">
+    <div class="hero-side">
     <div class="facts" aria-label="Info">
       <div><span class="k" data-i18n="fNow">Sada</span><span class="open-now"><i class="dot" id="open-dot"></i><span id="open-txt">Otvoreno</span></span></div>
       <div><span class="k" data-i18n="fAddr">Adresa</span><span>Kralja Tomislava 7, DOC, Dubrovnik</span></div>
@@ -258,13 +275,13 @@ body.cart-open .drawer{transform:none}
 
 <section class="block" id="komora">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="k-head"><div class="sec-head">
       <div>
         <span class="mono eyebrow" data-i18n="kEye">Dry-age komora · uživo</span>
         <h2 data-i18n="kH">Svaki steak ima svoje ime i svoj broj dana</h2>
         <p data-i18n="kP">Ovo nema nijedna mesnica u Dubrovniku: vidiš točno koji komad visi u komori, koliko je težak i koliko je dana odležao. Rezerviraš baš taj komad, a mi ga čuvamo za tebe.</p>
       </div>
-    </div>
+    </div><img class="ph" src="/img/foto/KKP4503-800.jpg" alt="Dry-age komora u Mecari" data-i18n-alt="altKomora" loading="lazy" width="532" height="800"></div>
     <div class="komora" id="komora-grid"></div>
   </div>
 </section>
@@ -277,6 +294,11 @@ body.cart-open .drawer{transform:none}
         <h2 data-i18n="pH">Sve što ima u vitrini, i ono iza nje</h2>
         <p data-i18n="pP">Dodaj u narudžbu, upiši kako želiš da narežemo, i izaberi termin preuzimanja.</p>
       </div>
+    </div>
+    <div class="strip">
+      <img class="ph" src="/img/foto/KKP4582.jpg" alt="Mesar reže steak" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4545-800.jpg" alt="Svježa junetina u vitrini" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4551-800.jpg" alt="Marinirano meso u vitrini" loading="lazy">
     </div>
     <div class="filters" id="filters"></div>
     <div class="grid" id="grid"></div>
@@ -294,6 +316,7 @@ body.cart-open .drawer{transform:none}
     </div>
     <div class="planner">
       <div class="panel">
+        <img class="plan-photo" src="/img/foto/KKP4561-800.jpg" alt="Marinirano meso za roštilj" loading="lazy">
         <div class="field">
           <label for="guests" data-i18n="rGuests">Broj osoba</label>
           <div style="display:flex;align-items:center;gap:16px"><span class="big num" id="guests-out">8</span><input type="range" id="guests" min="2" max="40" value="8"></div>
@@ -357,6 +380,26 @@ body.cart-open .drawer{transform:none}
   </div>
 </section>
 
+<section class="block" id="posjeti">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono eyebrow" data-i18n="gEye">Posjeti nas</span>
+        <h2 data-i18n="gH">Kralja Tomislava 7, u DOC-u</h2>
+        <p data-i18n="gP">Uđi, pogledaj komoru i pitaj mesara. Sat parkinga u garaži DOC-a je na nama.</p>
+      </div>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Mecara+Kralja+Tomislava+7+Dubrovnik" target="_blank" rel="noopener" data-i18n="gMap">Otvori kartu</a>
+    </div>
+    <div class="gallery">
+      <img class="ph" src="/img/foto/KKP4497-800.jpg" alt="Ulaz u mesnicu Mecara" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4512.jpg" alt="Interijer Mecare s vitrinama" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4498-800.jpg" alt="Domaća tjestenina i spenza" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4591-800.jpg" alt="Domaći džemovi i ajvari" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4506.jpg" alt="Vitrine i police u Mecari" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <section class="block">
   <div class="wrap">
     <div class="origin">
@@ -411,7 +454,7 @@ body.cart-open .drawer{transform:none}
 const WA_NUMBER = "385000000000"; // TODO: upisati pravi broj Mecare
 
 const T = {
- hr:{wip:"RADNA VERZIJA",proto:"Stranica je u izradi. Cijene, komadi u komori i datumi tečajeva su primjeri, a narudžbe još ne idu Mecari.",
+ hr:{gEye:"Posjeti nas",gH:"Kralja Tomislava 7, u DOC-u",gP:"Uđi, pogledaj komoru i pitaj mesara. Sat parkinga u garaži DOC-a je na nama.",gMap:"Otvori kartu",wip:"RADNA VERZIJA",proto:"Stranica je u izradi. Cijene, komadi u komori i datumi tečajeva su primjeri, a narudžbe još ne idu Mecari.",
   nav1:"Komora",nav2:"Ponuda",nav3:"Roštilj planer",nav4:"Villa & Yacht",nav5:"Tečajevi",cart:"Narudžba",
   heroEye:"Mesnica u DOC-u · od 7 do 19",
   heroH:'Naruči svoj komad večer prije. <em class="copper-text">Pokupi ga bez čekanja.</em>',
@@ -439,7 +482,7 @@ const T = {
   needItems:"Prvo dodaj nešto u narudžbu.",needName:"Upiši ime i broj mobitela.",copied:"Poruka kopirana",
   today:"Danas",tomorrow:"Sutra",addedT:"Dodano u narudžbu",
   msgHead:"Nova narudžba – Mecara",msgPick:"Preuzimanje",msgName:"Ime",msgTel:"Mob",msgNote:"Napomena",msgEst:"Okvirno"},
- en:{wip:"WORK IN PROGRESS",proto:"This site is being built. Prices, aged cuts and class dates are examples, and orders do not reach Mecara yet.",
+ en:{gEye:"Visit us",gH:"Kralja Tomislava 7, inside DOC",gP:"Come in, see the ageing room and ask the butcher. The first hour in the DOC garage is on us.",gMap:"Open map",wip:"WORK IN PROGRESS",proto:"This site is being built. Prices, aged cuts and class dates are examples, and orders do not reach Mecara yet.",
   nav1:"Ageing room",nav2:"Shop",nav3:"BBQ planner",nav4:"Villa & Yacht",nav5:"Classes",cart:"Order",
   heroEye:"Butcher shop in DOC · 7am to 7pm",
   heroH:'Order your cut the night before. <em class="copper-text">Pick it up with no queue.</em>',
