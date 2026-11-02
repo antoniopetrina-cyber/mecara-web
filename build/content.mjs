@@ -30,7 +30,7 @@ export const UI = {
     langName: "Hrvatski", other: "English", otherShort: "EN",
     nav: [["ponuda","Ponuda"],["steak","Odležani steakovi"],["bbq","Za roštilj"],["about","O nama"],["contact","Kontakt"]],
     enquiryBtn: "Vaš upit", navLabel: "Glavna navigacija", skip: "Preskoči na sadržaj",
-    wip: "RADNA VERZIJA", wipText: "Stranica je u izradi. Ponuda, radno vrijeme i dostupnost još se potvrđuju, a upiti se zasad ne šalju Mecari.",
+    wip: "RADNA VERZIJA", wipText: "Stranica je u izradi. Cijene, komadi u komori i dostupnost su primjeri, a upiti se zasad ne šalju Mecari.",
     home: "Naslovnica", crumbs: "Putanja",
     addr: "Kralja Tomislava 7 · Lapad, Dubrovnik",
     hoursText: "Pon–Sub 7:00–19:00 · Nedjeljom i blagdanima zatvoreno",
@@ -43,7 +43,7 @@ export const UI = {
     directions: "Upute za dolazak", call: "Nazovite nas",
     unit: { kg: "Prodaje se na kg", g100: "Prodaje se na 100 g", kom: "Prodaje se po komadu" },
     qty: "Željena količina", add: "Dodaj u upit", added: "Dodano u upit", less: "Manje", more: "Više",
-    askAvail: "Pitajte za dostupnost", cutAdd: "Zatražite ovaj komad",
+    askAvail: "Pitajte za dostupnost", cutAdd: "Rezerviraj ovaj komad", reserved: "Rezerviran", ready: "Spreman", inDays: "Spreman za {n} d.", days: "dana",
     faqTitle: "Pitanja i odgovori",
     // ladica upita
     d: {
@@ -61,10 +61,10 @@ export const UI = {
       wipNote: "Radna verzija: upiti se još ne šalju Mecari. Poruku možete kopirati, ali je zasad nemojte slati.",
       noItems: "Dodajte barem jedan proizvod.", noName: "Unesite svoje ime.", badTel: "Provjerite broj mobitela i pozivni broj države.",
       noSlots: "Trenutačno nema ponuđenih termina. Javite nam se za dogovor.",
-      today: "Danas", tomorrow: "Sutra", piece: "komad po dogovoru", pcs: "kom",
+      today: "Danas", tomorrow: "Sutra", piece: "komad po dogovoru", pcs: "kom", est: "Okvirni iznos", room: "Komora", reservedT: "Ovaj komad je već u vašem upitu.",
       openNow: "Otvoreno do 19:00", closedNow: "Zatvoreno · otvaramo u 7:00", closedSun: "Zatvoreno · otvaramo u ponedjeljak u 7:00", holiday: "Zatvoreno · blagdan",
       cartAria: "Otvori upit, broj stavki:", toastAdded: "Dodano u upit",
-      msg: { head: "Upit za Mecaru", name: "Ime", contact: "Kontakt", when: "Željeni datum i vrijeme", products: "Proizvodi", note: "Napomena za mesara", end: "Molim potvrdu dostupnosti, cijene odnosno načina obračuna i termina." },
+      msg: { head: "Upit za Mecaru", name: "Ime", contact: "Kontakt", when: "Željeni datum i vrijeme", products: "Proizvodi", est: "Okvirni iznos", note: "Napomena za mesara", end: "Molim potvrdu dostupnosti, cijene odnosno načina obračuna i termina." },
     },
     notFound: { title: "Ovu stranicu nismo pronašli.", btn: "Povratak na naslovnicu" },
   },
@@ -72,7 +72,7 @@ export const UI = {
     langName: "English", other: "Hrvatski", otherShort: "HR",
     nav: [["ponuda","Meat & Deli"],["steak","Dry-Aged Steaks"],["bbq","BBQ Meat"],["about","About"],["contact","Contact"]],
     enquiryBtn: "Your enquiry", navLabel: "Main navigation", skip: "Skip to content",
-    wip: "WORK IN PROGRESS", wipText: "This site is being built. Products, opening hours and availability are still being confirmed, and enquiries are not sent to Mecara yet.",
+    wip: "WORK IN PROGRESS", wipText: "This site is being built. Prices, aged cuts and availability are examples, and enquiries are not sent to Mecara yet.",
     home: "Home", crumbs: "Breadcrumb",
     addr: "Kralja Tomislava 7 · Lapad, Dubrovnik",
     hoursText: "Mon–Sat 7:00–19:00 · Closed on Sundays and public holidays",
@@ -85,7 +85,7 @@ export const UI = {
     directions: "Get directions", call: "Call us",
     unit: { kg: "Sold per kg", g100: "Sold per 100 g", kom: "Sold per piece" },
     qty: "Requested quantity", add: "Add to enquiry", added: "Added to enquiry", less: "Less", more: "More",
-    askAvail: "Ask about availability", cutAdd: "Enquire about this cut",
+    askAvail: "Ask about availability", cutAdd: "Reserve this piece", reserved: "Reserved", ready: "Ready", inDays: "Ready in {n} d", days: "days",
     faqTitle: "Questions and answers",
     d: {
       title: "Your enquiry", close: "Close enquiry", empty: "Your list is empty. Add an item from our selection.",
@@ -102,10 +102,10 @@ export const UI = {
       wipNote: "Work in progress: enquiries are not sent to Mecara yet. You can copy the message, but please don't send it for now.",
       noItems: "Add at least one item.", noName: "Enter your name.", badTel: "Check your mobile number and country code.",
       noSlots: "No collection times are currently listed. Contact us to arrange one.",
-      today: "Today", tomorrow: "Tomorrow", piece: "piece as agreed", pcs: "pcs",
+      today: "Today", tomorrow: "Tomorrow", piece: "piece as agreed", pcs: "pcs", est: "Estimated amount", room: "Ageing room", reservedT: "This piece is already in your enquiry.",
       openNow: "Open until 19:00", closedNow: "Closed · opens at 7:00", closedSun: "Closed · opens Monday at 7:00", holiday: "Closed · public holiday",
       cartAria: "Open enquiry, items:", toastAdded: "Added to enquiry",
-      msg: { head: "Enquiry for Mecara", name: "Name", contact: "Contact", when: "Preferred date and time", products: "Products", note: "Note for the butcher", end: "Please confirm availability, pricing or weight-based calculation, and timing." },
+      msg: { head: "Enquiry for Mecara", name: "Name", contact: "Contact", when: "Preferred date and time", products: "Products", est: "Estimated amount", note: "Note for the butcher", end: "Please confirm availability, pricing or weight-based calculation, and timing." },
     },
     notFound: { title: "We could not find this page.", btn: "Back to the homepage" },
   },
@@ -125,8 +125,10 @@ export const CATS = [
   { id: "spenza", hr: ["Spenza, vino i rakija","Dodaci za kuhinju i stol. Provjerite proizvođača i pakiranje uz svaki proizvod."], en: ["Pantry, Wine & Rakija","Extras for your kitchen and table. Check each item's producer and pack size."] },
 ];
 
+// DEMO cijene (radna verzija) – zamijeniti pravim cjenikom
+export const PRICES = {"p1": 59, "p2": 32, "p3": 16.9, "p4": 13.9, "p5": 14.5, "p6": 29, "p7": 15.5, "p8": 19.9, "p9": 34, "p10": 10.9, "p11": 9.9, "p12": 16.5, "p13": 8.9, "p14": 12.5, "p15": 14.9, "p16": 12.9, "p17": 13.9, "p18": 3.9, "p19": 5.5, "p20": 4.9, "p21": 4.9, "p22": 3.9, "p23": 3.5, "p24": 5.2, "p25": 2.9, "p26": 3.6, "p27": 3.8, "p28": 2.4, "p29": 1.9, "p30": 2.8, "p31": 2.9, "p32": 1.9, "p33": 6.5, "p34": 9.9, "p35": 5.5, "p36": 18, "p37": 16};
+
 // [id, kategorija, jedinica, HR naziv, HR opis, EN naziv, EN opis]
-// p18/p19 bez tvrdnje "bez glutena" dok se ne potvrdi; p32 (arancini) skriven dok se ne potvrdi o kojem je proizvodu riječ.
 export const PRODUCTS = [
   ["p1","junetina","kg","Juneći biftek","Za odreske ili pripremu u komadu. U upitu navedite željenu debljinu i broj porcija.","Beef fillet","For individual steaks or cooking as a whole piece. Specify your preferred thickness and number of portions."],
   ["p2","junetina","kg","Juneći ramstek","Odaberite količinu i rezanje prema pripremi na tavi ili roštilju.","Beef striploin","Choose your quantity and steak thickness for pan cooking or grilling."],
@@ -159,20 +161,21 @@ export const PRODUCTS = [
   ["p29","sir","g100","Mladi hercegovački sir","Za doručak, platu ili dodatak jelu. Podrijetlo i vrstu mlijeka provjerite uz proizvod.","Fresh Herzegovinian cheese","For breakfast, sharing boards or serving with a meal. Check origin and milk type."],
   ["p30","gotovo","kom","Sarma","Provjerite današnju ponudu, sastav punjenja i treba li proizvod kuhati ili podgrijati.","Sarma cabbage rolls","Check availability, filling ingredients and whether the product needs cooking or reheating."],
   ["p31","gotovo","kom","Punjene paprike","Sastav, veličinu porcije i upute za pripremu provjerite prije kupnje.","Stuffed peppers","Check filling ingredients, portion size and preparation instructions before buying."],
+  ["p32","gotovo","kom","Arancini","Provjerite dnevnu ponudu i način pripreme.","Arancini","Check today's selection and how to prepare them."],
   ["p33","spenza","kom","Pinđur","Povrtni dodatak roštilju ili drugim jelima. Provjerite recepturu i pakiranje.","Pinđur vegetable relish","An accompaniment to grilled meat and other dishes. Check the recipe and jar size."],
   ["p34","spenza","kom","Krema od bijelog tartufa","Dodatak jelima prema deklaraciji. Provjerite sastav i udio tartufa.","White truffle cream","A cooking accompaniment; check the ingredient list and truffle content."],
   ["p35","spenza","kom","Bruštulani mjenduli","Ušećereni bademi za posluženje ili mali poklon. Provjerite sastojke i težinu pakiranja.","Candied almonds","For serving or a small gift. Check ingredients and pack weight."],
   ["p36","spenza","kom","Rakija iz Konavala","Provjerite proizvođača, vrstu, alkoholnu jakost i volumen boce.","Konavle rakija","Check the producer, spirit type, alcohol content and bottle size."],
   ["p37","spenza","kom","Crno vino s dubrovačkog područja","Odaberite prema stvarnoj etiketi: vinarija, sorta, berba i volumen.","Red wine from the Dubrovnik area","Check the actual winery, grape variety, vintage and bottle size."],
-].map(r => ({ id: r[0], cat: r[1], unit: r[2], hr: { name: r[3], desc: r[4] }, en: { name: r[5], desc: r[6] } }));
+].map(r => ({ id: r[0], cat: r[1], unit: r[2], eur: PRICES[r[0]], hr: { name: r[3], desc: r[4] }, en: { name: r[5], desc: r[6] } }));
 
 export const CUTS = [
-  { id: "c1", hr: ["Côte de boeuf","Juneći odrezak s kosti. Za konkretan komad provjerite težinu, odležavanje i cijenu po kilogramu."], en: ["Côte de boeuf","Bone-in beef rib steak. Check the weight, ageing details and price per kilogram of the available piece."] },
-  { id: "c2", hr: ["T-bone","Odrezak s karakterističnom kosti. Navedite željenu debljinu i provjerite raspoložive komade."], en: ["T-bone","A steak with its distinctive T-shaped bone. Specify your preferred thickness and check available cuts."] },
-  { id: "c3", hr: ["Ramstek","Odrezak prema željenoj debljini. Količinu dogovorite prema broju osoba i prilozima."], en: ["Striploin","A striploin steak cut to an agreed thickness. Plan quantities around your guests and side dishes."] },
-  { id: "c4", hr: ["Tomahawk","Odrezak s dugom rebrenom kosti. Pitajte za veličinu komada i odgovara li vašoj opremi za pripremu."], en: ["Tomahawk","A steak with a long rib bone. Check its size and whether it suits your cooking equipment."] },
-  { id: "c5", hr: ["Porterhouse","Odrezak s kosti koji obuhvaća biftek i ramstek. Specifikaciju konkretnog reza potvrdite s mesarom."], en: ["Porterhouse","A bone-in cut combining fillet and striploin. Confirm the specification of the available steak with the butcher."] },
-  { id: "c6", hr: ["Rib-eye","Odrezak za tavu ili roštilj. Provjerite debljinu, težinu i je li dostupan s kosti ili bez nje."], en: ["Rib-eye","A steak for pan cooking or grilling. Check thickness, weight and whether the available cut is bone-in or boneless."] },
+  { id: "c1", kg: 1.12, day: 35, target: 35, eur: 62, sub: { hr: "rebro s kosti", en: "bone-in rib" }, hr: ["Côte de boeuf","Juneći odrezak s kosti. Za konkretan komad provjerite težinu, odležavanje i cijenu po kilogramu."], en: ["Côte de boeuf","Bone-in beef rib steak. Check the weight, ageing details and price per kilogram of the available piece."] },
+  { id: "c2", kg: 0.92, day: 28, target: 28, eur: 56, sub: { hr: "junetina", en: "young beef" }, hr: ["T-bone","Odrezak s karakterističnom kosti. Navedite željenu debljinu i provjerite raspoložive komade."], en: ["T-bone","A steak with its distinctive T-shaped bone. Specify your preferred thickness and check available cuts."] },
+  { id: "c3", kg: 0.48, day: 21, target: 21, eur: 49, sub: { hr: "komad za 2 osobe", en: "serves 2" }, hr: ["Ramstek","Odrezak prema željenoj debljini. Količinu dogovorite prema broju osoba i prilozima."], en: ["Striploin","A striploin steak cut to an agreed thickness. Plan quantities around your guests and side dishes."] },
+  { id: "c4", kg: 1.34, day: 39, target: 45, eur: 68, sub: { hr: "za posebnu večer", en: "for a big night" }, hr: ["Tomahawk","Odrezak s dugom rebrenom kosti. Pitajte za veličinu komada i odgovara li vašoj opremi za pripremu."], en: ["Tomahawk","A steak with a long rib bone. Check its size and whether it suits your cooking equipment."] },
+  { id: "c5", kg: 1.02, day: 24, target: 28, eur: 58, sub: { hr: "biftek + ramstek", en: "fillet + strip" }, hr: ["Porterhouse","Odrezak s kosti koji obuhvaća biftek i ramstek. Specifikaciju konkretnog reza potvrdite s mesarom."], en: ["Porterhouse","A bone-in cut combining fillet and striploin. Confirm the specification of the available steak with the butcher."] },
+  { id: "c6", kg: 0.36, day: 30, target: 30, eur: 59, sub: { hr: "bez kosti", en: "boneless" }, hr: ["Rib-eye","Odrezak za tavu ili roštilj. Provjerite debljinu, težinu i je li dostupan s kosti ili bez nje."], en: ["Rib-eye","A steak for pan cooking or grilling. Check thickness, weight and whether the available cut is bone-in or boneless."] },
 ];
 
 export const FAQ = {

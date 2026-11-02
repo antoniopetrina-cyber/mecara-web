@@ -335,3 +335,9 @@ dl.facts dd{margin:0}
 .note{font-size:13.5px;color:var(--muted)}
 .nf .ctas{justify-content:center}
 @media (max-width:480px){.cartbtn .lbl{display:none}.lang-link{margin-left:auto}}
+
+.cut .cut-desc{margin:0;font-size:14px;color:var(--muted)}
+.cut .btn[disabled]{opacity:.6}
+.komora{list-style:none;margin:0;padding:0}
+.line{grid-template-columns:1fr auto auto}
+.tag{white-space:nowrap}

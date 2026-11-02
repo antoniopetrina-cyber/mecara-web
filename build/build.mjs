@@ -7,6 +7,9 @@ import { SITE, ROUTES, UI, CATS, PRODUCTS, CUTS, FAQ, META, ALT } from "./conten
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "public");
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
 const abs = p => SITE.host + p;
+const money = (n, lang) => n.toLocaleString(lang === "hr" ? "hr-HR" : "en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const kgf = (n, lang) => n.toLocaleString(lang === "hr" ? "hr-HR" : "en-GB", { maximumFractionDigits: 2 }) + " kg";
+const unitPrice = (u, lang) => u === "kg" ? "€/kg" : u === "g100" ? "€/100 g" : (lang === "hr" ? "€/kom" : "€/pc");
 const V = Date.now().toString(36); // verzija za CSS/JS (osvježavanje predmemorije)
 
 const PHOTOS = {
@@ -36,7 +39,7 @@ function crumbs(lang, page, title) {
 function productList(lang, items) {
   const u = UI[lang];
   return `<ul class="prods">${items.map(p => `<li class="prod" data-id="${p.id}" data-unit="${p.unit}">
-    <div class="prod-txt"><h4>${esc(p[lang].name)}</h4><p>${esc(p[lang].desc)}</p><span class="pill">${esc(u.unit[p.unit])}</span></div>
+    <div class="prod-txt"><h4>${esc(p[lang].name)}</h4><p>${esc(p[lang].desc)}</p><div class="meta"><span class="pill">${esc(u.unit[p.unit])}</span><span class="pill num">${money(p.eur, lang)} ${unitPrice(p.unit, lang)}</span></div></div>
     <div class="prod-act">
       <div class="stepper" role="group" aria-label="${esc(u.qty)}: ${esc(p[lang].name)}"><button type="button" data-step="-1" aria-label="${esc(u.less)}">−</button><output aria-live="polite"></output><button type="button" data-step="1" aria-label="${esc(u.more)}">+</button></div>
       <button class="add" type="button" data-add="p" data-id="${p.id}">${esc(u.add)}</button>
@@ -45,8 +48,22 @@ function productList(lang, items) {
 
 function cutCards(lang) {
   const u = UI[lang];
-  return `<ul class="cuts">${CUTS.map(c => `<li class="cut-card"><div class="row"><h3>${esc(c[lang][0])}</h3><span class="tag">${esc(u.askAvail)}</span></div><p>${esc(c[lang][1])}</p><button class="btn small" type="button" data-add="cut" data-id="${c.id}">${esc(u.cutAdd)}</button></li>`).join("")}</ul>`;
+  return `<ul class="komora">${CUTS.map((c, i) => { const ready = c.day >= c.target;
+    const tag = ready ? `<span class="tag ready">${esc(u.ready)}</span>` : `<span class="tag aging">${esc(u.inDays.replace("{n}", c.target - c.day))}</span>`;
+    return `<li class="cut" data-cut="${c.id}"><canvas aria-hidden="true" data-seed="${i + 1}"></canvas><div class="body">
+      <div class="row"><h3>${esc(c[lang][0])}</h3>${tag}</div>
+      <div class="row muted meta-row"><span>${esc(c.sub[lang])}</span><span class="num">${kgf(c.kg, lang)}</span></div>
+      <p class="cut-desc">${esc(c[lang][1])}</p>
+      <div><div class="row mono muted days-row"><span>${c.day} / ${c.target} ${esc(u.days)}</span><span aria-hidden="true">#${String(i + 1).padStart(2, "0")}</span></div>
+      <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${c.target}" aria-valuenow="${c.day}" aria-label="${esc(c[lang][0])}: ${c.day} / ${c.target} ${esc(u.days)}"><i data-pct="${Math.min(100, Math.round(c.day / c.target * 100))}"></i></div></div>
+      <div class="row"><span class="price num">${c.eur} €/kg</span><b class="num">≈ ${money(c.eur * c.kg, lang)} €</b></div>
+      <button class="btn small" type="button" data-add="cut" data-id="${c.id}">${esc(u.cutAdd)}</button>
+    </div></li>`; }).join("")}</ul>`;
 }
+const KOMORA = {
+  hr: ["Dry-age komora · uživo", "Svaki steak ima svoje ime i svoj broj dana", "Ovo nema nijedna mesnica u Dubrovniku: vidite točno koji komad visi u komori, koliko je težak i koliko je dana odležao. Rezervirate baš taj komad, a mi ga čuvamo za vas."],
+  en: ["Dry-age room · live", "Every steak has a name and a day count", "No other butcher in Dubrovnik shows this: the exact piece hanging in the room, its weight and how many days it has aged. Reserve that piece and we keep it for you."],
+};
 
 function visitBlock(lang) {
   const u = UI[lang];
@@ -136,6 +153,10 @@ const PAGES = {
   <div><h2>${esc(T.steakH)}</h2><p>${esc(T.steakP)}</p><div class="ctas"><a class="btn" href="${ROUTES.steak[lang]}">${esc(T.steakB)}</a></div><p class="note">${esc(T.steakN)}</p></div>
   ${pic("ageing", ALT.ageing[lang], { cls: "ph tall", sizes: "(max-width: 860px) 100vw, 40vw" })}
 </div></section>
+<section class="block" id="komora"><div class="wrap">
+  <div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div></div>
+  ${cutCards(lang)}
+</div></section>
 <section class="block"><div class="wrap feature rev">
   ${pic("marinated2", ALT.marinated[lang], { sizes: "(max-width: 860px) 100vw, 50vw" })}
   <div><h2>${esc(T.bbqH)}</h2><p>${esc(T.bbqP)}</p><div class="ctas"><a class="btn" href="${ROUTES.bbq[lang]}">${esc(T.bbqB)}</a></div></div>
@@ -199,14 +220,14 @@ ${faqBlock(lang, ["avail", "thick", "gluten", "ready", "large"])}`;
       lead: "Za dobru steak večeru prvo odaberite rez koji odgovara vašem ukusu i načinu pripreme. U Mecari se raspitajte o aktualnom izboru odležanih komada, njihovoj težini i debljini rezanja.",
       s: [["Koji steak odabrati?","Volite li komad s kosti ili odrezak bez kosti? Pripremate li jednu porciju ili steak za dijeljenje? Recite nam što vam je važno. Nazivi poput rib-eye, T-bone i ramstek ne znače isti rez, pa ćemo izbor povezati s vašim planom za večeru."],
           ["Što provjeriti prije naručivanja","Za konkretan komad provjerite vrstu reza, podrijetlo, podatak o odležavanju, raspoloživu težinu i cijenu po kilogramu. Ako želite određenu debljinu, navedite je u upitu."],
-          ["Potvrda prije preuzimanja","Fotografija ili kartica na webu ne znači da je komad još dostupan. Pošaljite upit i pričekajte potvrdu Mecare. Tako prije dolaska znate koji vas komad čeka i u kojem terminu možete doći."]],
+          ["Rezervacija i potvrda","Rezervirajte komad iz komore i pošaljite upit. Mecara vam porukom potvrđuje da je komad spreman i u kojem terminu možete doći."]],
       cutsH: "Rezovi za koje možete pitati", cta: "Pitajte za današnji izbor steakova",
     } : {
       h1: "Dry-aged steaks in Dubrovnik",
       lead: "Start your steak dinner with a cut that suits your taste and cooking equipment. Ask Mecara about the dry-aged cuts currently available, their weights and the thicknesses we can prepare.",
       s: [["Which cut suits your dinner?","Would you prefer a bone-in steak or a boneless cut? Are you cooking individual portions or sharing a larger piece? Tell us your plans and ask about the differences between cuts such as rib-eye, T-bone and striploin."],
           ["Check the details of your cut","Before ordering, confirm the cut, origin, ageing information, available weight and price per kilogram. Include your preferred thickness if you have one."],
-          ["Confirm availability before collection","A product photo or listing does not guarantee that a particular piece is still available. Send an enquiry and wait for Mecara to confirm the cut and collection time."]],
+          ["Reserve and confirm","Reserve a piece from the ageing room and send your enquiry. Mecara confirms by message that it is ready and when you can collect it."]],
       cutsH: "Cuts you can ask about", cta: "Ask about today's steak selection",
     };
     return `
@@ -215,7 +236,7 @@ ${faqBlock(lang, ["avail", "thick", "gluten", "ready", "large"])}`;
   ${pic("ageing", ALT.ageing[lang], { cls: "ph tall", sizes: "(max-width: 860px) 100vw, 40vw", eager: true })}
 </div></section>
 <section class="block"><div class="wrap three-col">${T.s.map(s => `<div><h2>${esc(s[0])}</h2><p>${esc(s[1])}</p></div>`).join("")}</div></section>
-<section class="block"><div class="wrap"><h2>${esc(T.cutsH)}</h2>${cutCards(lang)}
+<section class="block" id="komora"><div class="wrap"><div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div></div>${cutCards(lang)}
   <div class="ctas center">${enquiryCta(lang, T.cta)}</div></div></section>
 ${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
   },
@@ -434,6 +455,7 @@ function drawer(lang) {
     </div>
   </div>
   <div class="foot">
+    <div class="sum"><span>${esc(d.est)}</span><b id="sum">0,00 €</b></div>
     <p class="note">${esc(d.weigh)}</p>
     <p class="err" id="c-err" role="alert"></p>
     <button class="btn" type="button" id="send">${esc(SITE.enquiryLive ? d.prepare : d.prepareWip)}</button>
@@ -473,9 +495,9 @@ write("404.html", notFound());
 
 const catalog = {
   site: { whatsapp: SITE.whatsapp, enquiryLive: !!(SITE.enquiryLive && /^\d{10,15}$/.test(SITE.whatsapp)), hours: SITE.hours },
-  products: Object.fromEntries(PRODUCTS.map(p => [p.id, { u: p.unit, hr: p.hr.name, en: p.en.name }])),
-  cuts: Object.fromEntries(CUTS.map(c => [c.id, { hr: c.hr[0], en: c.en[0] }])),
-  ui: { hr: UI.hr.d, en: UI.en.d },
+  products: Object.fromEntries(PRODUCTS.map(p => [p.id, { u: p.unit, eur: p.eur, hr: p.hr.name, en: p.en.name }])),
+  cuts: Object.fromEntries(CUTS.map(c => [c.id, { hr: c.hr[0], en: c.en[0], kg: c.kg, eur: c.eur, day: c.day }])),
+  ui: { hr: { ...UI.hr.d, reserved: UI.hr.reserved, days: UI.hr.days }, en: { ...UI.en.d, reserved: UI.en.reserved, days: UI.en.days } },
   added: { hr: UI.hr.added, en: UI.en.added }, add: { hr: UI.hr.add, en: UI.en.add },
 };
 write("js/catalog.js", `/* Generirano iz build/content.mjs – ne uređivati ručno */\nwindow.MECARA=${JSON.stringify(catalog)};\n`);

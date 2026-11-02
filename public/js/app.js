@@ -67,10 +67,11 @@ const fmtNum = n => n.toLocaleString(loc, { maximumFractionDigits: 2 });
 const step = u => u === "kg" ? 0.25 : 1;
 const defQty = u => u === "kg" ? 1 : u === "g100" ? 2 : 2;
 function qtyLabel(u, q) { return u === "kg" ? fmtNum(q) + " kg" : u === "g100" ? (q * 100) + " g" : q + " " + D.pcs; }
+const money = n => n.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " €";
 function lineInfo(k) {
   const c = list[k];
-  if (c.type === "p") { const p = M.products[c.id]; return { name: p[lang], q: qtyLabel(p.u, c.qty) }; }
-  return { name: M.cuts[c.id][lang], q: D.piece };
+  if (c.type === "p") { const p = M.products[c.id]; return { name: p[lang], q: qtyLabel(p.u, c.qty), eur: p.eur * c.qty }; }
+  const x = M.cuts[c.id]; return { name: D.room + ": " + x[lang] + " · " + x.day + " " + D.days, q: fmtNum(x.kg) + " kg", eur: x.eur * x.kg };
 }
 
 function toast(m) { const el = $("toast"); if (!el) return; el.textContent = m; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 2200); }
@@ -95,9 +96,10 @@ document.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click",
     const k = "p-" + id;
     if (list[k]) list[k].qty = Math.min(100, Math.round((list[k].qty + qtys[id]) * 100) / 100);
     else list[k] = { type: "p", id, qty: qtys[id] };
-  } else if (kind === "cut" && M.cuts[id]) list["cut-" + id] = { type: "cut", id };
+  } else if (kind === "cut" && M.cuts[id]) { if (list["cut-" + id]) { toast(D.reservedT); return; } list["cut-" + id] = { type: "cut", id }; }
   else return;
   save(); hideResult(); renderList();
+  if (kind === "cut") { renderCuts(); toast(D.toastAdded); return; }
   const old = b.textContent; b.textContent = M.added[lang]; b.classList.add("done");
   setTimeout(() => { b.textContent = old; b.classList.remove("done"); }, 1300);
   toast(D.toastAdded);
@@ -134,12 +136,14 @@ function renderList() {
   const keys = Object.keys(list), L = $("lines"); if (!L) return;
   L.textContent = "";
   if (!keys.length) { const p = document.createElement("p"); p.className = "empty"; p.textContent = D.empty; L.appendChild(p); }
+  let sum = 0;
   keys.forEach(k => {
-    const li = lineInfo(k), d = document.createElement("div"); d.className = "line";
-    d.innerHTML = `<div><div class="nm">${esc(li.name)}</div><div class="q">${esc(li.q)}</div></div><button class="rm" type="button">${esc(D.remove)}</button>`;
-    d.querySelector(".rm").addEventListener("click", () => { delete list[k]; save(); hideResult(); renderList(); });
+    const li = lineInfo(k), d = document.createElement("div"); d.className = "line"; sum += li.eur;
+    d.innerHTML = `<div><div class="nm">${esc(li.name)}</div><div class="q">${esc(li.q)}</div></div><b class="num">${esc(money(li.eur))}</b><button class="rm" type="button">${esc(D.remove)}</button>`;
+    d.querySelector(".rm").addEventListener("click", () => { delete list[k]; save(); hideResult(); renderList(); renderCuts(); });
     L.appendChild(d);
   });
+  if ($("sum")) $("sum").textContent = money(sum);
   $("cart-n").textContent = keys.length;
   $("open-cart").setAttribute("aria-label", D.cartAria + " " + keys.length);
 }
@@ -152,7 +156,7 @@ function buildMsg() {
   const note = clean($("c-note").value);
   return [m.head, m.name + ": " + clean($("c-name").value), m.contact + ": " + clean($("c-tel").value),
     m.when + ": " + (curDay ? dayLabel(curDay) + " (" + curDay.d.toLocaleDateString(loc, { timeZone: "UTC", day: "numeric", month: "numeric", year: "numeric" }) + ") " + hhmm(selTime) : "-"),
-    m.products + ":", ...lines, note ? m.note + ": " + note : "", m.end].filter(Boolean).join("\n");
+    m.products + ":", ...lines, m.est + ": " + money(Object.keys(list).reduce((a, k) => a + lineInfo(k).eur, 0)), note ? m.note + ": " + note : "", m.end].filter(Boolean).join("\n");
 }
 function hideResult() { const r = $("result"); if (r) r.classList.remove("show"); const a = $("after-open"); if (a) a.hidden = true; }
 function showResult(msg) {
@@ -200,6 +204,31 @@ $("copy").addEventListener("click", async () => {
 });
 ["c-name", "c-tel", "c-note"].forEach(id => $(id).addEventListener("input", hideResult));
 
-renderOpen(); renderList();
+/* ---------- komora: trake, mramor, rezervirano ---------- */
+function rng(seed) { let s = seed; return () => { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; }; }
+function marble(cv, seed) {
+  const dpr = Math.min(2, window.devicePixelRatio || 1), w = cv.clientWidth || 300, h = 140;
+  cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); const g = cv.getContext("2d"); if (!g) return; g.scale(dpr, dpr);
+  const r = rng(seed * 997 + 13), base = g.createLinearGradient(0, 0, w, h);
+  base.addColorStop(0, "#5a1c17"); base.addColorStop(.6, "#4a1612"); base.addColorStop(1, "#2e0e0c"); g.fillStyle = base; g.fillRect(0, 0, w, h);
+  for (let i = 0; i < 70; i++) { g.beginPath(); let x = r() * w, y = r() * h; g.moveTo(x, y);
+    for (let j = 0; j < 4; j++) { x += (r() - .3) * 60; y += (r() - .5) * 26; g.quadraticCurveTo(x - r() * 20, y + (r() - .5) * 14, x, y); }
+    g.strokeStyle = `rgba(244,226,205,${.08 + r() * .32})`; g.lineWidth = .6 + r() * 2.6; g.lineCap = "round"; g.stroke(); }
+  g.fillStyle = "rgba(240,220,196,.85)"; g.fillRect(0, h - 16, w, 16);
+  const v = g.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w * .7); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,.45)"); g.fillStyle = v; g.fillRect(0, 0, w, h);
+}
+function renderCuts() {
+  document.querySelectorAll(".cut[data-cut]").forEach(card => {
+    const id = card.dataset.cut, res = !!list["cut-" + id], b = card.querySelector("[data-add]");
+    card.classList.toggle("reserved", res);
+    if (!b.dataset.label) b.dataset.label = b.textContent;
+    b.textContent = res ? D.reserved : b.dataset.label; b.disabled = res;
+  });
+}
+document.querySelectorAll(".bar i[data-pct]").forEach(i => i.style.width = i.dataset.pct + "%");
+const paintMarble = () => document.querySelectorAll(".cut canvas[data-seed]").forEach(c => marble(c, +c.dataset.seed));
+paintMarble(); let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(paintMarble, 200); });
+
+renderOpen(); renderList(); renderCuts();
 setInterval(() => { renderOpen(); if (!document.body.classList.contains("cart-open")) renderSlots(); }, 60000);
 })();
