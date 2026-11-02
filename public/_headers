@@ -9,11 +9,14 @@
   Cross-Origin-Resource-Policy: same-origin
   X-Robots-Tag: noindex
 
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /
   Cache-Control: public, max-age=0, must-revalidate
 
-/index.html
-  Cache-Control: public, max-age=0, must-revalidate
+/sitemap.xml
+  Content-Type: application/xml; charset=utf-8
 
 /css/*
   Cache-Control: public, max-age=3600, must-revalidate
@@ -23,7 +26,7 @@
 
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
-  Access-Control-Allow-Origin: https://mecara.app
+  Access-Control-Allow-Origin: https://www.mecara.app
 
 /img/*
   Cache-Control: public, max-age=604800

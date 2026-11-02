@@ -8,11 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for u in https://mecara.app/ https://www.mecara.app/; do
-            echo "== $u"; curl -sS -D - -o page.html "$u?t=$(date +%s)" | grep -iE "^(HTTP|content-security|strict-transport|x-frame|permissions-policy|x-robots|cache-control)"
-            echo "foto refs: $(grep -o 'img/foto/[A-Z0-9-]*\.jpg' page.html | sort -u | wc -l) app.js: $(grep -c '/js/app.js' page.html) googlefonts: $(grep -c googleapis page.html)"
+          echo "--- preusmjeravanja"
+          for u in http://mecara.app/ https://mecara.app/ https://mecara.app/ponuda/?x=1 http://www.mecara.app/en/; do
+            curl -sS -o /dev/null -w "$u -> %{http_code} %{redirect_url}\n" "$u"
           done
-          for path in /js/app.js /css/styles.css /fonts/bodoni-moda-latin-500-normal.woff2 /robots.txt /site.webmanifest /img/foto/KKP4512.jpg /nema-ovoga /wp-login.php /.git/config /wrangler.toml /README.md; do
-            curl -sS -o /dev/null -w "$path %{http_code} %{size_download}\n" "https://mecara.app$path"
+          echo "--- stranice (www)"
+          for p in / /en/ /ponuda/ /en/meat-and-deli/ /odlezani-steakovi/ /en/dry-aged-steaks/ /meso-za-rostilj/ /en/bbq-meat/ /o-nama/ /en/about/ /kontakt/ /en/contact/ /ponuda /robots.txt /sitemap.xml /js/catalog.js /img/og/mecara-dubrovnik.jpg /img/foto/KKP4539.webp /nema-ovoga /wp-login.php /.git/config /wrangler.toml /src/worker.js /build/content.mjs; do
+            curl -sS -o body -w "$p %{http_code} %{content_type} %{size_download} %{redirect_url}\n" "https://www.mecara.app$p"
           done
-          curl -sS -o /dev/null -w "http->https: %{http_code} %{redirect_url}\n" http://mecara.app/
+          echo "--- zaglavlja"
+          curl -sS -D - -o page.html "https://www.mecara.app/en/?t=$(date +%s)" | grep -iE "^(content-security|strict-transport|x-frame|x-robots|content-type)"
+          grep -o '<title>[^<]*' page.html; grep -o 'hreflang="[a-z-]*"' page.html | tr '\n' ' '; echo
+          curl -sS https://www.mecara.app/robots.txt; curl -sS https://www.mecara.app/sitemap.xml | head -3

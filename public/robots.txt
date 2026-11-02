@@ -1,3 +1,4 @@
-# Radna verzija – stranica još nije za tražilice (vidi noindex).
 User-agent: *
 Allow: /
+
+Sitemap: https://www.mecara.app/sitemap.xml

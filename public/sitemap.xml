@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://www.mecara.app/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/"/></url>
+  <url><loc>https://www.mecara.app/en/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/"/></url>
+  <url><loc>https://www.mecara.app/ponuda/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/ponuda/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/meat-and-deli/"/></url>
+  <url><loc>https://www.mecara.app/en/meat-and-deli/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/ponuda/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/meat-and-deli/"/></url>
+  <url><loc>https://www.mecara.app/odlezani-steakovi/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/odlezani-steakovi/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/dry-aged-steaks/"/></url>
+  <url><loc>https://www.mecara.app/en/dry-aged-steaks/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/odlezani-steakovi/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/dry-aged-steaks/"/></url>
+  <url><loc>https://www.mecara.app/meso-za-rostilj/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/meso-za-rostilj/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/bbq-meat/"/></url>
+  <url><loc>https://www.mecara.app/en/bbq-meat/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/meso-za-rostilj/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/bbq-meat/"/></url>
+  <url><loc>https://www.mecara.app/o-nama/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/o-nama/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/about/"/></url>
+  <url><loc>https://www.mecara.app/en/about/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/o-nama/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/about/"/></url>
+  <url><loc>https://www.mecara.app/kontakt/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/kontakt/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/contact/"/></url>
+  <url><loc>https://www.mecara.app/en/contact/</loc><xhtml:link rel="alternate" hreflang="hr" href="https://www.mecara.app/kontakt/"/><xhtml:link rel="alternate" hreflang="en" href="https://www.mecara.app/en/contact/"/></url>
+</urlset>
