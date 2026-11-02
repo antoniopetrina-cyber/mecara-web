@@ -22,6 +22,9 @@ export const ROUTES = {
   komora:  { hr: "/komora/",            en: "/en/dry-age-room/" },
   steak:   { hr: "/odlezani-steakovi/",  en: "/en/dry-aged-steaks/" },
   bbq:     { hr: "/meso-za-rostilj/",    en: "/en/bbq-meat/" },
+  planner: { hr: "/rostilj-planer/",     en: "/en/bbq-planner/" },
+  villa:   { hr: "/vile-i-jahte/",       en: "/en/villa-yacht-meat-supply/" },
+  workshops:{ hr: "/radionice/",         en: "/en/workshops/" },
   about:   { hr: "/o-nama/",             en: "/en/about/" },
   contact: { hr: "/kontakt/",            en: "/en/contact/" },
 };
@@ -29,7 +32,7 @@ export const ROUTES = {
 export const UI = {
   hr: {
     langName: "Hrvatski", other: "English", otherShort: "EN",
-    nav: [["ponuda","Ponuda"],["komora","Komora"],["steak","Odležani steakovi"],["bbq","Za roštilj"],["about","O nama"],["contact","Kontakt"]],
+    nav: [["ponuda","Ponuda"],["komora","Komora"],["steak","Odležani steakovi"],["bbq","Za roštilj"],["planner","Roštilj planer"],["villa","Vile i jahte"],["workshops","Radionice"],["about","O nama"],["contact","Kontakt"]],
     enquiryBtn: "Vaš upit", navLabel: "Glavna navigacija", skip: "Preskoči na sadržaj",
     wip: "RADNA VERZIJA", wipText: "Stranica je u izradi. Cijene, komadi u komori i dostupnost su primjeri, a upiti se zasad ne šalju Mecari.",
     home: "Naslovnica", crumbs: "Putanja",
@@ -71,7 +74,7 @@ export const UI = {
   },
   en: {
     langName: "English", other: "Hrvatski", otherShort: "HR",
-    nav: [["ponuda","Meat & Deli"],["komora","Ageing Room"],["steak","Dry-Aged Steaks"],["bbq","BBQ Meat"],["about","About"],["contact","Contact"]],
+    nav: [["ponuda","Meat & Deli"],["komora","Ageing Room"],["steak","Dry-Aged Steaks"],["bbq","BBQ Meat"],["planner","BBQ Planner"],["villa","Villas & Yachts"],["workshops","Workshops"],["about","About"],["contact","Contact"]],
     enquiryBtn: "Your enquiry", navLabel: "Main navigation", skip: "Skip to content",
     wip: "WORK IN PROGRESS", wipText: "This site is being built. Prices, aged cuts and availability are examples, and enquiries are not sent to Mecara yet.",
     home: "Home", crumbs: "Breadcrumb",
@@ -199,6 +202,9 @@ export const META = {
   komora:  { hr: ["Dry-age komora uživo — odležani steakovi, Mecara Dubrovnik","Pogledajte koji komadi trenutačno odležavaju u Mecarinoj komori: težina, dani odležavanja i cijena. Rezervirajte svoj steak i saznajte kako ga pripremiti."], en: ["Live Dry-Age Room — Aged Steaks at Mecara, Dubrovnik","See which steaks are ageing in Mecara's dry-age room right now: weight, days aged and price. Reserve your piece and learn how to cook it."] },
   steak:   { hr: ["Odležani steakovi u Dubrovniku — Mecara","Tražite odležani steak u Dubrovniku? Pitajte Mecaru u Lapadu za aktualne rezove, težinu, podatke o odležavanju i cijenu odabranog komada."], en: ["Dry-Aged Steaks in Dubrovnik — Mecara","Choose a dry-aged steak at Mecara in Lapad. Check available cuts, ageing details, weights and prices before planning your steak dinner."] },
   bbq:     { hr: ["Meso za roštilj u Dubrovniku — Mecara","Složite izbor mesa za obiteljski roštilj ili veće društvo. Provjerite ponudu Mecare, zatražite savjet za količine i dogovorite preuzimanje."], en: ["BBQ Meat in Dubrovnik — Mecara Butcher Shop","Planning a BBQ in Dubrovnik? Ask Mecara about ćevapi, sausages, chicken and steaks. Check quantities and arrange confirmed collection."] },
+  planner: { hr: ["Koliko mesa za roštilj? Planer — Mecara","Izračunajte okvirnu količinu mesa za svoje društvo. Prilagodite izbor gostima i prilozima te pošaljite Mecari upit za dostupnost."], en: ["BBQ Meat Planner — How Much Meat?","Estimate how much meat you need for your BBQ. Adjust the selection for your guests and sides, then ask Mecara to confirm availability."] },
+  villa:   { hr: ["Meso za vile i jahte u Dubrovniku — Mecara","Pošaljite upit za meso i delikatese za vilu ili jahtu na dubrovačkom području. Sadržaj, cijenu i mogućnosti dostave potvrđujemo pojedinačno."], en: ["Villa & Yacht Meat Supply, Dubrovnik — Mecara","Request meat and deli items for a villa or yacht in the Dubrovnik area. Availability, pricing and delivery arrangements are confirmed individually."] },
+  workshops:{ hr: ["Radionice o mesu i steakovima — Mecara Dubrovnik","Pratite najave Mecarinih radionica u Dubrovniku. Provjerite objavljene teme, termine, jezik, cijenu i sadržaj programa prije prijave."], en: ["Meat & Steak Workshops in Dubrovnik — Mecara","Explore Mecara workshop announcements in Dubrovnik. Check each programme's topic, date, language and price before requesting a place."] },
   about:   { hr: ["O Mecari — Mesnica u DOC-u, Lapad","Upoznajte Mecaru, mesnicu u centru DOC u Dubrovniku. Birajte meso prema jelu koje pripremate i pitajte mesara za rezove i aktualnu ponudu."], en: ["About Mecara — Your Butcher in Lapad","Meet Mecara, a butcher shop at DOC in Lapad, Dubrovnik. Choose meat around your meal and ask about cuts, preparation and the current selection."] },
   contact: { hr: ["Mecara kontakt, adresa i radno vrijeme — Dubrovnik","Pronađite Mecaru na Kralja Tomislava 7 u centru DOC, Lapad. Provjerite kontakt i radno vrijeme ili pošaljite upit za željeni proizvod."], en: ["Contact & Opening Hours — Mecara Dubrovnik","Find Mecara at Kralja Tomislava 7, DOC shopping centre, Lapad. Check opening hours, get directions and contact us about the current selection."] },
 };
@@ -214,3 +220,20 @@ export const ALT = {
   pantry:   { hr: "Tjestenina i proizvodi iz spenze", en: "Pasta and pantry products" },
   shop:     { hr: "Vitrine i police u Mecari", en: "Display counters and shelves at Mecara" },
 };
+
+// DEMO radionice (radna verzija) – datumi i cijene su primjeri
+export const WORKSHOPS = [
+  { id: "w1", date: "21.11.", when: { hr: "Subota 18:00 · 2 sata · hrvatski", en: "Saturday 18:00 · 2 hours · Croatian" }, eur: 35, seats: 8,
+    hr: ["Odaberite i pripremite svoj steak","Kako odabrati komad iz komore, koliko ga dugo odmarati te kada tava, a kada roštilj."], en: ["Choosing and cooking your steak","How to choose a piece from the ageing room, how long to rest it, and when to use a pan or a grill."] },
+  { id: "w2", date: "04.12.", when: { hr: "Petak 18:30 · 2 sata · hrvatski i engleski", en: "Friday 18:30 · 2 hours · Croatian and English" }, eur: 29, seats: 12,
+    hr: ["Pršut i sir: kako složiti platu","Degustacija drniškog i sinjskog pršuta, sira iz mješine i domaćih dodataka, uz savjete za rezanje i slaganje."], en: ["Prosciutto and cheese: building a sharing board","A tasting of Drniš and Sinj prosciutto, sheepskin cheese and local accompaniments, with tips on slicing and arranging."] },
+  { id: "w3", date: "12.12.", when: { hr: "Subota 10:00 · 2,5 sata · hrvatski", en: "Saturday 10:00 · 2.5 hours · Croatian" }, eur: 35, seats: 8,
+    hr: ["Meso za blagdanski stol","Janjetina, teletina i odojak: koji komad za peku, ražanj ili pečenje i kako ga naručiti na vrijeme."], en: ["Choosing meat for a festive meal","Lamb, veal and suckling pig: which cut for peka, spit or roasting, and how to order in time."] },
+];
+// DEMO paketi za vile i jahte (radna verzija)
+export const BOXES = [
+  { id: "b1", price: "od 19 € / gostu", priceEn: "from €19 / guest", hr: ["Paket za roštilj na terasi","Izbor mesa za roštilj i dodataka prema broju gostiju. Konačan sadržaj i količine dogovaramo prije potvrde."], en: ["Terrace BBQ Selection","A selection of grilling meats and accompaniments for your group. Contents and quantities are agreed before confirmation."] },
+  { id: "b2", price: "od 45 € / gostu", priceEn: "from €45 / guest", hr: ["Paket za steak večeru","Odležani komadi iz komore prema raspoloživosti, uz mogućnost dodavanja suhomesnatih proizvoda i sireva."], en: ["Dry-Aged Steak Selection","Available dry-aged cuts from the ageing room, with the option to add cured meats and cheese."] },
+  { id: "b3", price: "od 28 € / gostu", priceEn: "from €28 / guest", hr: ["Meso za peku","Meso pripremljeno za vašeg kuhara. Navedite vrstu mesa, broj gostiju i potrebne količine."], en: ["Meat for Peka","Meat prepared for your chef to cook under a traditional peka bell. Specify your preferred meat and guest count."] },
+  { id: "b4", price: "od 15 € / gostu", priceEn: "from €15 / guest", hr: ["Izbor za platu","Suhomesnati proizvodi i sirevi za posluženje u vili ili na brodu. Sadržaj i pakiranje prema dogovoru."], en: ["Charcuterie & Cheese Selection","Cured meats and cheeses for your villa or boat. Contents and packaging are agreed individually."] },
+];

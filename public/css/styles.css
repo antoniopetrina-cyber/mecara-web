@@ -173,7 +173,7 @@ input[type=range]{accent-color:var(--copper);width:100%}
 .box p{margin:4px 0 0;font-size:14px;color:var(--muted)}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .form-grid .full{grid-column:1/-1}
-input[type=text],input[type=tel],input[type=date],input[type=number],select,textarea{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number],select,textarea{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 textarea{min-height:76px;resize:vertical}
 @media (max-width:860px){.villa{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}}
 
@@ -242,7 +242,7 @@ body.cart-open{overflow:hidden}
 fieldset{border:0;margin:0 0 16px;padding:0;min-width:0}
 legend{font-size:13px;color:var(--muted);padding:0;margin-bottom:6px}
 .err{color:#e48b80;font-size:13px;min-height:1em}
-input:invalid:not(:placeholder-shown){border-color:#c0645a}
+form.tried input:invalid{border-color:#c0645a}
 .btn[disabled],.add[disabled]{opacity:.5;cursor:not-allowed}
 .wip-note{background:rgba(217,168,91,.12);border:1px solid rgba(217,168,91,.4);color:#ecd1a2;border-radius:10px;padding:10px 12px;font-size:13px}
 .villa-result{margin-top:14px}
@@ -367,3 +367,24 @@ nav.links a{white-space:nowrap}
   nav.links::-webkit-scrollbar{display:none}
   html{scroll-padding-top:110px}
 }
+
+/* --- planer, vile, radionice --- */
+.num-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.chip.radio{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;cursor:pointer;position:relative}
+.chip.radio input{position:absolute;opacity:0;pointer-events:none}
+.chip.radio:has(input:checked){border-color:var(--copper);background:rgba(196,123,72,.14);color:var(--copper-hi)}
+.chip.radio:has(input:focus-visible){outline:2px solid var(--copper-hi);outline-offset:2px}
+.chip.radio small{font-size:12px;color:var(--muted)}
+#style .chip.radio,.planner fieldset:last-child .seg .chip{flex:1 1 180px;border-radius:12px;padding:10px 14px}
+.plan-list li.muted{display:block}
+.villa h2{font-size:clamp(24px,2.6vw,32px);margin-bottom:12px}
+.villa form h2{margin-bottom:16px}
+.villa .field small{margin-top:2px}
+.course .btn[disabled]{opacity:1}
+/* izbornik uvijek u svom redu (9 stavki) */
+.top .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:0;gap:12px}
+.lang-link{margin-left:auto}
+nav.links{display:flex;order:5;width:100%;margin:0 -20px;padding:8px 20px 10px;overflow-x:auto;gap:22px;scrollbar-width:none}
+nav.links::-webkit-scrollbar{display:none}
+html{scroll-padding-top:110px}
+.course .date small{max-width:150px}

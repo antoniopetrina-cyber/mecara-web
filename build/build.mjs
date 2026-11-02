@@ -2,7 +2,7 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { SITE, ROUTES, UI, CATS, PRODUCTS, CUTS, FAQ, META, ALT } from "./content.mjs";
+import { SITE, ROUTES, UI, CATS, PRODUCTS, CUTS, FAQ, META, ALT, WORKSHOPS, BOXES } from "./content.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "public");
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
@@ -101,7 +101,7 @@ const PAGES = {
       steakP: "Nije svaki steak isti. Rez, debljina i odležavanje utječu na izbor, a važno je i pripremate li ga na tavi ili roštilju. Recite nam kakvu večeru planirate i pomoći ćemo vam odabrati odgovarajući komad.",
       steakB: "Pogledajte odležane steakove", steakN: "Dostupnost, težinu i cijenu pojedinog komada provjerite prije dolaska.",
       bbqH: "Meso za roštilj bez nepotrebnog nagađanja",
-      bbqP: "Pripremate ručak za obitelj ili veće druženje? Krenite od broja ljudi, odaberite nekoliko vrsta mesa i dodajte priloge koje volite. Za pomoć pri količini i izboru obratite se mesaru.",
+      bbqP: "Pripremate ručak za obitelj ili veće druženje? Krenite od broja ljudi, odaberite nekoliko vrsta mesa i dodajte priloge koje volite. Naš planer može poslužiti kao početna procjena, a konačan izbor možete dogovoriti s mesarom.",
       bbqB: "Pogledajte ponudu za roštilj",
       stepsH: "Od upita do preuzimanja",
       steps: [["Odaberite što trebate.","Navedite proizvode, okvirnu količinu i kako želite da meso bude narezano."],["Pričekajte potvrdu.","Provjeravamo dostupnost i dogovaramo termin. Ako nešto nije dostupno, predložit ćemo zamjenu."],["Preuzmite u Mecari.","Dođite u potvrđenom terminu na Kralja Tomislava 7, u centru DOC u Lapadu."]],
@@ -120,7 +120,7 @@ const PAGES = {
       steakP: "The cut, thickness and ageing all help shape your choice. Let us know whether you are using a frying pan or a barbecue and we can help you choose a steak for the meal you have in mind.",
       steakB: "Explore dry-aged steaks", steakN: "Please check availability, weight and price before visiting for a specific cut.",
       bbqH: "Plan your barbecue with less guesswork",
-      bbqP: "Start with the number of guests, choose a few types of meat and allow for the side dishes you will serve. Ask the butcher for help choosing cuts and quantities.",
+      bbqP: "Start with the number of guests, choose a few types of meat and allow for the side dishes you will serve. Our BBQ planner gives you a starting estimate; speak to the butcher to adjust your selection.",
       bbqB: "Explore BBQ meat",
       stepsH: "How collection enquiries work",
       steps: [["Tell us what you need.","Choose your products and approximate quantities, and include any cutting requests."],["Wait for confirmation.","We check availability and agree a collection time. If an item is unavailable, we can discuss an alternative."],["Collect from Mecara.","Visit us at Kralja Tomislava 7, inside the DOC shopping centre in Lapad, at your confirmed time."]],
@@ -159,7 +159,7 @@ const PAGES = {
 </div></section>
 <section class="block"><div class="wrap feature rev">
   ${pic("marinated2", ALT.marinated[lang], { sizes: "(max-width: 860px) 100vw, 50vw" })}
-  <div><h2>${esc(T.bbqH)}</h2><p>${esc(T.bbqP)}</p><div class="ctas"><a class="btn" href="${ROUTES.bbq[lang]}">${esc(T.bbqB)}</a></div></div>
+  <div><h2>${esc(T.bbqH)}</h2><p>${esc(T.bbqP)}</p><div class="ctas"><a class="btn" href="${ROUTES.planner[lang]}">${lang === "hr" ? "Isplanirajte roštilj" : "Plan your BBQ"}</a><a class="btn ghost" href="${ROUTES.bbq[lang]}">${esc(T.bbqB)}</a></div></div>
 </div></section>
 ${SITE.enquiryLive ? `<section class="block"><div class="wrap"><div class="sec-head"><h2>${esc(T.stepsH)}</h2></div>
   <ol class="steps">${T.steps.map(s => `<li><b>${esc(s[0])}</b> ${esc(s[1])}</li>`).join("")}</ol><p class="note">${esc(T.stepsN)}</p></div></section>` : ""}
@@ -365,9 +365,154 @@ ${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
 </div></section>
 <section class="block"><div class="wrap two-col">
   <div><h2>${esc(T.s2[0])}</h2><p>${esc(T.s2[1])}</p></div>
-  <div><h2>${esc(T.s3[0])}</h2><p>${esc(T.s3[1])}</p><div class="ctas">${enquiryCta(lang, T.cta)}</div></div>
+  <div><h2>${esc(T.s3[0])}</h2><p>${esc(T.s3[1])}</p><div class="ctas"><a class="btn ghost" href="${ROUTES.planner[lang]}">${lang === "hr" ? "Otvorite roštilj planer" : "Open the BBQ planner"}</a>${enquiryCta(lang, T.cta)}</div></div>
 </div></section>
 ${faqBlock(lang, ["large", "ready", "estimate"])}`;
+  },
+
+  planner(lang) {
+    const hr = lang === "hr";
+    const T = hr ? {
+      h1: "Koliko mesa trebate za roštilj?",
+      lead: "Unesite broj gostiju i odaberite stil roštilja. Planer predlaže okvirnu količinu mesa koju možete promijeniti prije slanja upita.",
+      adults: "Odrasli", kids: "Djeca", hunger: "Koliko su gladni?", style: "Kakav roštilj?",
+      hungerOpts: ["Lagano","Normalno","Jako gladni"], styleOpts: ["Klasika","Premium","Dalmatinski"],
+      styleDesc: ["Ćevapi, svinjski vrat, kobasice i piletina.","Juneći ramstek, janjeći kotleti i pileći file.","Janjetina i teletina za peku, uz kobasice."],
+      plan: "Vaš prijedlog", total: "Ukupno okvirno", add: "Dodajte prijedlog u upit",
+      note: "Prikazane količine odnose se na sirovo meso. Procjena ne predstavlja potvrdu zalihe, cijene ni termina preuzimanja.",
+      empty: "Odaberite broj osoba kako biste dobili prijedlog.",
+      fitH: "Prilagodite plan svom društvu", fitP: "Broj odraslih i djece, meso s kosti, predjela i prilozi mijenjaju potrebnu količinu. Rezultat je polazište za kupnju, a ne pravilo koje vrijedi za svako druženje.",
+      howH: "Kako planer računa", how: ["Odrasla osoba: oko 250 g (lagano), 350 g (normalno) ili 500 g (jako gladni) sirovog mesa.","Dijete se računa kao pola odrasle porcije.","Količine se zaokružuju na četvrtinu kilograma, a najmanje je 0,25 kg po vrsti mesa."],
+      howN: "Gramaže su prijedlog za radnu verziju i potvrdit će ih mesar.",
+      more: "Pogledajte meso za roštilj",
+    } : {
+      h1: "How much meat do you need for a BBQ?",
+      lead: "Enter your guest count and choose a BBQ style. The planner suggests an approximate amount of meat that you can adjust before sending an enquiry.",
+      adults: "Adults", kids: "Children", hunger: "How hungry?", style: "What kind of BBQ?",
+      hungerOpts: ["Light","Normal","Very hungry"], styleOpts: ["Classic","Premium","Dalmatian"],
+      styleDesc: ["Ćevapi, pork neck, sausages and chicken.","Beef striploin, lamb chops and chicken breast.","Lamb and veal for peka, with sausages."],
+      plan: "Your suggestion", total: "Estimated total", add: "Add this plan to your enquiry",
+      note: "Quantities refer to raw meat. Estimates do not confirm stock, prices or collection times.",
+      empty: "Choose a guest count to see a suggestion.",
+      fitH: "Make the plan fit your group", fitP: "Adults and children, bone-in cuts, starters and side dishes all affect how much you may need. Treat the result as a starting point, not a fixed rule for every barbecue.",
+      howH: "How the planner works", how: ["Each adult: about 250 g (light), 350 g (normal) or 500 g (very hungry) of raw meat.","A child counts as half an adult portion.","Amounts are rounded to a quarter of a kilogram, with at least 0.25 kg per meat."],
+      howN: "These amounts are a working-version suggestion and will be confirmed by the butcher.",
+      more: "Explore BBQ meat",
+    };
+    const seg = (name, opts, sel, desc) => `<div class="seg" role="radiogroup">${opts.map((o, i) => `<label class="chip radio"><input type="radio" name="${name}" value="${i}"${i === sel ? " checked" : ""}><span>${esc(o)}</span>${desc ? `<small>${esc(desc[i])}</small>` : ""}</label>`).join("")}</div>`;
+    return `
+<section class="page-head"><div class="wrap feature">
+  <div><h1>${esc(T.h1)}</h1><p class="lead">${esc(T.lead)}</p></div>
+  ${pic("marinated", ALT.marinated[lang], { sizes: "(max-width: 860px) 100vw, 45vw", eager: true })}
+</div></section>
+<section class="block"><div class="wrap planner" id="planner" data-empty="${esc(T.empty)}">
+  <form class="panel" id="plan-form">
+    <div class="num-row">
+      <div class="field"><label for="pl-adults">${esc(T.adults)}</label><input type="number" id="pl-adults" min="0" max="80" value="8" inputmode="numeric"></div>
+      <div class="field"><label for="pl-kids">${esc(T.kids)}</label><input type="number" id="pl-kids" min="0" max="80" value="0" inputmode="numeric"></div>
+    </div>
+    <fieldset><legend>${esc(T.hunger)}</legend>${seg("hunger", T.hungerOpts, 1)}</fieldset>
+    <fieldset><legend>${esc(T.style)}</legend>${seg("style", T.styleOpts, 0, T.styleDesc)}</fieldset>
+  </form>
+  <div class="panel">
+    <span class="mono muted">${esc(T.plan)}</span>
+    <ul class="plan-list" id="plan" aria-live="polite"><li class="muted">${esc(T.empty)}</li></ul>
+    <div class="plan-total"><span>${esc(T.total)}</span><b class="num" id="plan-total">–</b></div>
+    <button class="btn" type="button" id="plan-add">${esc(T.add)}</button>
+    <p class="note">${esc(T.note)}</p>
+  </div>
+</div></section>
+<section class="block"><div class="wrap two-col">
+  <div><h2>${esc(T.fitH)}</h2><p>${esc(T.fitP)}</p><div class="ctas"><a class="btn ghost" href="${ROUTES.bbq[lang]}">${esc(T.more)}</a></div></div>
+  <div><h2>${esc(T.howH)}</h2><ul class="ticks">${T.how.map(x => `<li>${esc(x)}</li>`).join("")}</ul><p class="note">${esc(T.howN)}</p></div>
+</div></section>
+${faqBlock(lang, ["large", "estimate"])}`;
+  },
+
+  villa(lang) {
+    const hr = lang === "hr";
+    const T = hr ? {
+      eye: "Vile i jahte · na engleskom i hrvatskom",
+      h1: "Meso za vile i jahte na dubrovačkom području",
+      lead: "Planirate roštilj u vili, večeru na brodu ili nabavu za privatnog chefa? Pošaljite nam popis mesa i delikatesa, broj gostiju i željeni datum. Provjerit ćemo ponudu i predložiti izbor prema vašem planu.",
+      s: [["Narudžba prilagođena vašoj kuhinji","Navedite rezove, količine i način pakiranja koji trebate. Za peku, roštilj ili steak večeru važno je znati kojom opremom raspolažete i kada pripremate obrok."],
+          ["Lokacija i termin prema dogovoru","U upit uključite adresu vile ili naziv broda, marinu i vez. Mogućnost dostave, naknadu i termin potvrđujemo pojedinačno. Ako dostava nije moguća, možemo provjeriti preuzimanje u trgovini."],
+          ["Potvrda prije pripreme","Prije pripreme usuglašavamo proizvode, zamjene ako su potrebne, cijenu ili način obračuna te uvjete preuzimanja ili dostave. Slanje obrasca nije potvrđena narudžba."]],
+      boxH: "Paketi", formH: "Zatražite ponudu za svoju grupu",
+      f: { type: "Vrsta lokacije", types: ["Vila","Apartman","Jahta"], date: "Željeni datum", guests: "Broj gostiju", name: "Kontakt osoba", tel: "Mobitel s pozivnim brojem države", email: "E-mail", where: "Adresa / naziv broda, marina i vez", wherePh: "npr. Vila Sunce, Orašac ili M/Y Adria, ACI Komolac, vez 12", box: "Odabrani paket", note: "Napomene o rezanju i pakiranju", notePh: "Rezovi, količine, pakiranje, alergeni", submit: "Pripremi upit", need: "Ispunite datum, broj gostiju, kontakt osobu, mobitel i lokaciju.", where2: "Navedite lokaciju kako bismo mogli provjeriti mogućnosti." },
+      head: "Upit za vilu / jahtu – Mecara",
+    } : {
+      eye: "Villas & yachts · English and Croatian",
+      h1: "Meat for villas and yachts in the Dubrovnik area",
+      lead: "Planning a villa barbecue, a dinner on board or a shopping list for your private chef? Send us your preferred meats and deli items, guest count and date. We will check availability and discuss a selection that fits your plans.",
+      s: [["Prepared around your kitchen","Include the cuts, quantities and packaging you need. Let us know whether you are cooking on a barbecue, preparing peka or planning a steak dinner, and what equipment is available."],
+          ["Agree the location and timing","Provide the villa address or the yacht name, marina and berth. Delivery availability, charges and timing are confirmed individually. If delivery is unavailable, we can discuss collection from the shop."],
+          ["Confirm before preparation","We agree the products, any substitutions, pricing or weight-based calculation and collection or delivery arrangements before preparing your order. Submitting the form does not confirm a booking."]],
+      boxH: "Selections", formH: "Request a quote for your group",
+      f: { type: "Location type", types: ["Villa","Apartment","Yacht"], date: "Preferred date", guests: "Number of guests", name: "Contact name", tel: "Mobile number including country code", email: "Email", where: "Address / yacht name, marina and berth", wherePh: "e.g. Villa Sunset, Orašac or M/Y Adria, ACI Komolac, berth 12", box: "Preferred selection", note: "Cutting and packaging requests", notePh: "Cuts, quantities, packaging, allergens", submit: "Prepare enquiry", need: "Please fill in the date, guests, contact name, mobile and location.", where2: "Enter the location so we can check the available options." },
+      head: "Villa / yacht enquiry – Mecara",
+    };
+    const d = UI[lang].d;
+    return `
+<section class="page-head"><div class="wrap feature">
+  <div><span class="mono eyebrow">${esc(T.eye)}</span><h1>${esc(T.h1)}</h1><p class="lead">${esc(T.lead)}</p><div class="ctas"><a class="btn" href="#upit-vila">${esc(T.formH)}</a></div></div>
+  ${pic("interior2", ALT.interior[lang], { sizes: "(max-width: 860px) 100vw, 45vw", eager: true })}
+</div></section>
+<section class="block"><div class="wrap three-col">${T.s.map(x => `<div><h2>${esc(x[0])}</h2><p>${esc(x[1])}</p></div>`).join("")}</div></section>
+<section class="block" id="upit-vila"><div class="wrap villa">
+  <div><h2>${esc(T.boxH)}</h2><div class="boxes">${BOXES.map((b, i) => `<label class="box"><input type="radio" name="box" form="villa-form" value="${b.id}"${i === 0 ? " checked" : ""}><div><h3>${esc(b[lang][0])}</h3><p>${esc(b[lang][1])}</p></div><span class="mono muted">${esc(hr ? b.price : b.priceEn)}</span></label>`).join("")}</div></div>
+  <form class="panel" id="villa-form" novalidate data-head="${esc(T.head)}" data-need="${esc(T.f.need)}">
+    <h2>${esc(T.formH)}</h2>
+    <div class="form-grid">
+      <div class="field"><label for="v-type">${esc(T.f.type)}</label><select id="v-type">${T.f.types.map(x => `<option>${esc(x)}</option>`).join("")}</select></div>
+      <div class="field"><label for="v-date">${esc(T.f.date)}</label><input type="date" id="v-date" required></div>
+      <div class="field"><label for="v-guests">${esc(T.f.guests)}</label><input type="number" id="v-guests" min="2" max="80" value="8" inputmode="numeric" required></div>
+      <div class="field"><label for="v-name">${esc(T.f.name)}</label><input type="text" id="v-name" maxlength="80" autocomplete="name" required></div>
+      <div class="field"><label for="v-tel">${esc(T.f.tel)}</label><input type="tel" id="v-tel" maxlength="20" autocomplete="tel" inputmode="tel" placeholder="+44 7700 900123" required></div>
+      <div class="field"><label for="v-email">${esc(T.f.email)}</label><input type="email" id="v-email" maxlength="120" autocomplete="email"></div>
+      <div class="field full"><label for="v-where">${esc(T.f.where)}</label><input type="text" id="v-where" maxlength="160" placeholder="${esc(T.f.wherePh)}" required aria-describedby="v-where-h"><small class="note" id="v-where-h">${esc(T.f.where2)}</small></div>
+      <div class="field full"><label for="v-note">${esc(T.f.note)}</label><textarea id="v-note" maxlength="800" placeholder="${esc(T.f.notePh)}"></textarea></div>
+    </div>
+    <p class="err" id="v-err" role="alert"></p>
+    <button class="btn" type="submit">${esc(T.f.submit)}</button>
+    <div class="result" id="v-result">
+      <b>${esc(d.ready)}</b><pre></pre>
+      <p class="wip-note">${esc(d.wipNote)}</p>
+      <div class="ctas"><a class="btn small wa" href="#" target="_blank" rel="noopener noreferrer" hidden>${esc(d.openWa)}</a><button class="btn small ghost" type="button" id="v-copy">${esc(d.copy)}</button></div>
+    </div>
+  </form>
+</div></section>`;
+  },
+
+  workshops(lang) {
+    const hr = lang === "hr", u = UI[lang];
+    const T = hr ? {
+      h1: "Radionice o mesu i pripremi steakova u Dubrovniku",
+      lead: "Želite bolje razumjeti rezove mesa i sigurnije birati za svoje recepte? Pratite najave Mecarinih radionica. Uz svaku objavu navodimo temu, datum, trajanje, jezik, cijenu i sadržaj programa.",
+      sH: "Od odabira komada do pripreme", sP: "Radionice mogu obuhvatiti izbor steaka, pripremu za roštilj ili slaganje plate. Male grupe, za pultom u Mecari.",
+      listH: "Nadolazeće radionice", seats: "mjesta", signup: "Prijavi se", added: "Prijava u upitu",
+      howH: "Kako se prijaviti", how: "Kliknite „Prijavi se”, radionica ide u vaš upit. Pošaljite upit, a Mecara vam porukom potvrđuje mjesto.",
+      ask: "Pitajte za sljedeći termin",
+    } : {
+      h1: "Meat and steak workshops in Dubrovnik",
+      lead: "Would you like to understand meat cuts and choose more confidently for your recipes? Look out for Mecara workshop announcements. Each listing includes the topic, date, duration, language, price and programme.",
+      sH: "From choosing a cut to planning its preparation", sP: "Topics may include steak selection, barbecue preparation or putting together a charcuterie board. Small groups at the Mecara counter.",
+      listH: "Upcoming workshops", seats: "places", signup: "Sign up", added: "In your enquiry",
+      howH: "How to sign up", how: "Click “Sign up” and the workshop goes into your enquiry. Send the enquiry and Mecara confirms your place by message.",
+      ask: "Ask about the next workshop",
+    };
+    return `
+<section class="page-head"><div class="wrap feature">
+  <div><h1>${esc(T.h1)}</h1><p class="lead">${esc(T.lead)}</p></div>
+  ${pic("cutting", ALT.cutting[lang], { sizes: "(max-width: 860px) 100vw, 45vw", eager: true })}
+</div></section>
+<section class="block"><div class="wrap"><h2>${esc(T.listH)}</h2>
+  <div class="courses">${WORKSHOPS.map(w => `<div class="course" data-ws="${w.id}"><div class="date">${esc(w.date)}<small>${esc(w.when[lang])}</small></div><div><h3>${esc(w[lang][0])}</h3><p>${esc(w[lang][1])}</p></div><span class="mono muted">${w.eur} € · ${w.seats} ${esc(T.seats)}</span><button class="btn small ghost" type="button" data-add="ws" data-id="${w.id}" data-done="${esc(T.added)}">${esc(T.signup)}</button></div>`).join("")}</div>
+</div></section>
+<section class="block"><div class="wrap two-col">
+  <div><h2>${esc(T.sH)}</h2><p>${esc(T.sP)}</p></div>
+  <div><h2>${esc(T.howH)}</h2><p>${esc(T.how)}</p><div class="ctas">${enquiryCta(lang, T.ask)}</div></div>
+</div></section>`;
   },
 
   about(lang) {
@@ -592,6 +737,8 @@ const catalog = {
   site: { whatsapp: SITE.whatsapp, enquiryLive: !!(SITE.enquiryLive && /^\d{10,15}$/.test(SITE.whatsapp)), hours: SITE.hours },
   products: Object.fromEntries(PRODUCTS.map(p => [p.id, { u: p.unit, eur: p.eur, hr: p.hr.name, en: p.en.name }])),
   cuts: Object.fromEntries(CUTS.map(c => [c.id, { hr: c.hr[0], en: c.en[0], kg: c.kg, eur: c.eur, day: c.day }])),
+  workshops: Object.fromEntries(WORKSHOPS.map(w => [w.id, { hr: w.hr[0], en: w.en[0], date: w.date, eur: w.eur, seats: w.seats }])),
+  planner: { grams: [250, 350, 500], styles: [[["p15",.3],["p10",.3],["p16",.2],["p13",.2]],[["p2",.4],["p9",.3],["p14",.3]],[["p8",.45],["p7",.35],["p16",.2]]] },
   ui: { hr: { ...UI.hr.d, reserved: UI.hr.reserved, days: UI.hr.days }, en: { ...UI.en.d, reserved: UI.en.reserved, days: UI.en.days } },
   added: { hr: UI.hr.added, en: UI.en.added }, add: { hr: UI.hr.add, en: UI.en.add },
 };

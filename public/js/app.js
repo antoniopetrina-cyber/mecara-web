@@ -57,6 +57,7 @@ function load() {
     const q = Number(c.qty);
     if (c.type === "p" && M.products[c.id] && q > 0 && q <= 100) out["p-" + c.id] = { type: "p", id: c.id, qty: Math.round(q * 100) / 100 };
     else if (c.type === "cut" && M.cuts[c.id]) out["cut-" + c.id] = { type: "cut", id: c.id };
+    else if (c.type === "ws" && M.workshops[c.id]) out["ws-" + c.id] = { type: "ws", id: c.id };
   }
   return out;
 }
@@ -71,6 +72,7 @@ const money = n => n.toLocaleString(loc, { minimumFractionDigits: 2, maximumFrac
 function lineInfo(k) {
   const c = list[k];
   if (c.type === "p") { const p = M.products[c.id]; return { name: p[lang], q: qtyLabel(p.u, c.qty), eur: p.eur * c.qty }; }
+  if (c.type === "ws") { const w = M.workshops[c.id]; return { name: (lang === "hr" ? "Radionica: " : "Workshop: ") + w[lang] + " (" + w.date + ")", q: "1 " + (lang === "hr" ? "osoba" : "person"), eur: w.eur }; }
   const x = M.cuts[c.id]; return { name: D.room + ": " + x[lang] + " · " + x.day + " " + D.days, q: fmtNum(x.kg) + " kg", eur: x.eur * x.kg };
 }
 
@@ -97,9 +99,10 @@ document.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click",
     if (list[k]) list[k].qty = Math.min(100, Math.round((list[k].qty + qtys[id]) * 100) / 100);
     else list[k] = { type: "p", id, qty: qtys[id] };
   } else if (kind === "cut" && M.cuts[id]) { if (list["cut-" + id]) { toast(D.reservedT); return; } list["cut-" + id] = { type: "cut", id }; }
+  else if (kind === "ws" && M.workshops[id]) { if (list["ws-" + id]) return; list["ws-" + id] = { type: "ws", id }; }
   else return;
   save(); hideResult(); renderList();
-  if (kind === "cut") { renderCuts(); toast(D.toastAdded); return; }
+  if (kind === "cut" || kind === "ws") { renderCuts(); toast(D.toastAdded); return; }
   const old = b.textContent; b.textContent = M.added[lang]; b.classList.add("done");
   setTimeout(() => { b.textContent = old; b.classList.remove("done"); }, 1300);
   toast(D.toastAdded);
@@ -218,6 +221,11 @@ function marble(cv, seed) {
   const v = g.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w * .7); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,.45)"); g.fillStyle = v; g.fillRect(0, 0, w, h);
 }
 function renderCuts() {
+  document.querySelectorAll(".course[data-ws]").forEach(row => {
+    const id = row.dataset.ws, on = !!list["ws-" + id], b = row.querySelector("[data-add]");
+    if (!b.dataset.label) b.dataset.label = b.textContent;
+    b.textContent = on ? "✓ " + b.dataset.done : b.dataset.label; b.disabled = on; b.classList.toggle("ghost", !on);
+  });
   document.querySelectorAll(".cut[data-cut]").forEach(card => {
     const id = card.dataset.cut, res = !!list["cut-" + id], b = card.querySelector("[data-add]");
     card.classList.toggle("reserved", res);
@@ -228,6 +236,54 @@ function renderCuts() {
 document.querySelectorAll(".bar i[data-pct]").forEach(i => i.style.width = i.dataset.pct + "%");
 const paintMarble = () => document.querySelectorAll(".cut canvas[data-seed]").forEach(c => marble(c, +c.dataset.seed));
 paintMarble(); let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(paintMarble, 200); });
+
+/* ---------- roštilj planer ---------- */
+const pf = $("plan-form");
+function planItems() {
+  const a = Math.max(0, Math.min(80, Math.floor(+$("pl-adults").value || 0))), k = Math.max(0, Math.min(80, Math.floor(+$("pl-kids").value || 0)));
+  const hunger = +(pf.querySelector('input[name="hunger"]:checked') || { value: 1 }).value;
+  const style = +(pf.querySelector('input[name="style"]:checked') || { value: 0 }).value;
+  const people = a + k * 0.5; if (people <= 0) return [];
+  const total = people * M.planner.grams[hunger] / 1000;
+  return M.planner.styles[style].filter(([id]) => M.products[id]).map(([id, share]) => ({ id, kg: Math.max(0.25, Math.round(total * share * 4) / 4) }));
+}
+function renderPlan() {
+  const ul = $("plan"), items = planItems(); ul.textContent = ""; let sum = 0, kgs = 0;
+  if (!items.length) { const li = document.createElement("li"); li.className = "muted"; li.textContent = $("planner").dataset.empty; ul.appendChild(li); $("plan-total").textContent = "–"; $("plan-add").disabled = true; return; }
+  items.forEach(({ id, kg }) => { const p = M.products[id]; sum += p.eur * kg; kgs += kg;
+    const li = document.createElement("li"); li.innerHTML = `<span>${esc(p[lang])}</span><span class="num muted">${esc(fmtNum(kg))} kg</span><b class="num">${esc(money(p.eur * kg))}</b>`; ul.appendChild(li); });
+  $("plan-total").textContent = fmtNum(kgs) + " kg · " + money(sum); $("plan-add").disabled = false;
+}
+if (pf) {
+  pf.addEventListener("input", renderPlan); pf.addEventListener("change", renderPlan); pf.addEventListener("submit", e => e.preventDefault());
+  $("plan-add").addEventListener("click", () => {
+    planItems().forEach(({ id, kg }) => { const k = "p-" + id; if (list[k]) list[k].qty = Math.min(100, Math.round((list[k].qty + kg) * 100) / 100); else list[k] = { type: "p", id, qty: kg }; });
+    save(); hideResult(); renderList(); toast(D.toastAdded);
+  });
+  renderPlan();
+}
+
+/* ---------- vile i jahte ---------- */
+const vf = $("villa-form");
+if (vf) {
+  const n = zNow(), t0 = zDate(n.y, n.m, n.d); t0.setUTCDate(t0.getUTCDate() + 1);
+  const dEl = $("v-date"); dEl.min = key(t0); if (!dEl.value) dEl.value = key(t0); const mx = new Date(t0); mx.setUTCFullYear(mx.getUTCFullYear() + 1); dEl.max = key(mx);
+  vf.addEventListener("submit", e => {
+    e.preventDefault(); vf.classList.add("tried");
+    const v = id => clean($(id).value), err = $("v-err"); err.textContent = "";
+    const g = Math.floor(+$("v-guests").value);
+    if (!v("v-date") || v("v-date") < dEl.min || !(g >= 2 && g <= 80) || !v("v-name") || !validTel(v("v-tel")) || !v("v-where")) { err.textContent = vf.dataset.need; return; }
+    const boxEl = document.querySelector('input[name="box"]:checked'), boxName = boxEl ? clean(boxEl.closest(".box").querySelector("h3").textContent) : "-";
+    const L = lang === "hr" ? ["Paket", "Lokacija", "Gdje", "Datum", "Gosti", "Kontakt", "Mobitel", "E-mail", "Napomena"] : ["Selection", "Location type", "Where", "Date", "Guests", "Contact", "Mobile", "Email", "Notes"];
+    const msg = [vf.dataset.head, "", L[0] + ": " + boxName, L[1] + ": " + v("v-type"), L[2] + ": " + v("v-where"), L[3] + ": " + v("v-date"), L[4] + ": " + g, L[5] + ": " + v("v-name"), L[6] + ": " + v("v-tel"), v("v-email") ? L[7] + ": " + v("v-email") : "", v("v-note") ? L[8] + ": " + v("v-note") : "", "", D.msg.end].filter((x, i, a) => x !== "" || (i > 0 && a[i - 1] !== "")).join("\n");
+    const r = $("v-result"); r.querySelector("pre").textContent = msg;
+    const wa = r.querySelector(".wa");
+    if (M.site.enquiryLive) { wa.hidden = false; wa.href = "https://wa.me/" + M.site.whatsapp + "?text=" + encodeURIComponent(msg); } else wa.hidden = true;
+    r.querySelector(".wip-note").hidden = M.site.enquiryLive; r.classList.add("show");
+    r.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest" });
+  });
+  $("v-copy").addEventListener("click", async () => { const pre = $("v-result").querySelector("pre"); try { await navigator.clipboard.writeText(pre.textContent); toast(D.copied); } catch (e) { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast(D.copyFail); } });
+}
 
 renderOpen(); renderList(); renderCuts();
 setInterval(() => { renderOpen(); if (!document.body.classList.contains("cart-open")) renderSlots(); }, 60000);
