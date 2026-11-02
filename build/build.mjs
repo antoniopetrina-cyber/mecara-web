@@ -154,7 +154,7 @@ const PAGES = {
   ${pic("ageing", ALT.ageing[lang], { cls: "ph tall", sizes: "(max-width: 860px) 100vw, 40vw" })}
 </div></section>
 <section class="block" id="komora"><div class="wrap">
-  <div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div></div>
+  <div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div><a class="btn ghost" href="${ROUTES.komora[lang]}">${lang === "hr" ? "Sve o komori" : "All about the ageing room"}</a></div>
   ${cutCards(lang)}
 </div></section>
 <section class="block"><div class="wrap feature rev">
@@ -213,6 +213,101 @@ ${faqBlock(lang, ["where", "confirmed", "estimate", "time", "parking"])}`;
 ${faqBlock(lang, ["avail", "thick", "gluten", "ready", "large"])}`;
   },
 
+  komora(lang) {
+    const hr = lang === "hr";
+    const T = hr ? {
+      eye: "Dry-age komora · uživo", h1: "Komora: odležani steakovi uživo",
+      lead: "Ovo nema nijedna mesnica u Dubrovniku: vidite točno koji komad visi u komori, koliko je težak i koliko je dana odležao. Rezervirate baš taj komad, a mi ga čuvamo za vas.",
+      cta: "Pogledajte komade u komori", cta2: "Kako rezervirati",
+      liveH: "Što je trenutačno u komori",
+      readH: "Kako čitati karticu",
+      read: [["Dani odležavanja","Prvi broj pokazuje koliko je dana komad već u komori, a drugi koliko ga planiramo odležati. Traka prikazuje koliko je puta prošao."],
+             ["Spreman ili Spreman za X d.","„Spreman” znači da je komad odležao koliko smo planirali i može se rezati. „Spreman za 6 d.” znači da ga i dalje možete rezervirati, a preuzimate ga kad bude gotov."],
+             ["Težina i okvirni iznos","Težina je trenutačna težina komada. Okvirni iznos je cijena po kilogramu puta ta težina. Konačan iznos ovisi o težini nakon čišćenja i rezanja."],
+             ["Broj komada","Svaki komad ima svoj broj (#01, #02…), pa točno znate koji je vaš kad dođete u Mecaru."]],
+      whatH: "Što je suho odležavanje?",
+      what: ["Suho odležavanje (dry aging) znači da cijeli komad junetine, najčešće s kosti, visi tjednima u posebnoj komori s kontroliranom temperaturom malo iznad nule, vlagom i strujanjem zraka.",
+             "Za to vrijeme meso gubi dio vode pa okus postaje koncentriraniji, a prirodni enzimi polako omekšavaju vlakna. Steak je mekši i ima dublji, blago orašast okus koji svježe meso nema.",
+             "Vanjski sloj se pritom osuši i prije rezanja se odreže. Zato je odležano meso skuplje po kilogramu: dio težine se izgubi, a proces traje tjednima."],
+      daysH: "Koliko dana odležavanja?",
+      days: [["oko 21 dan","Blaži okus, vrlo sočan. Dobar prvi izbor ako tek upoznajete odležano meso."],
+             ["28 – 35 dana","Izraženiji, puniji okus i primjetno mekša tekstura. Najčešći izbor za steak večeru."],
+             ["45 dana i više","Intenzivan, karakterističan okus. Za one koji već vole odležane steakove."]],
+      daysN: "Opisi su okvirni. Okus ovisi i o rezu, masnoći i samom komadu, pa pitajte mesara što preporučuje za vaše jelo.",
+      howH: "Kako rezervirati komad",
+      how: [["Odaberite komad","Na kartici kliknite „Rezerviraj ovaj komad”. Komad ide u vaš upit."],
+            ["Pošaljite upit","Otvorite „Vaš upit”, odaberite željeni dan i vrijeme preuzimanja i upišite kako ga želite narezati."],
+            ["Pričekajte potvrdu","Mecara vam porukom potvrđuje komad, točnu težinu i termin."],
+            ["Preuzmite u DOC-u","Dođite u Mecaru na Kralja Tomislava 7. Sat parkinga na parkiralištu centra DOC i Tommyja je besplatan."]],
+      cookH: "Kako pripremiti odležani steak",
+      cook: ["Izvadite steak iz hladnjaka 30 do 60 minuta prije pripreme da dođe na sobnu temperaturu.",
+             "Posolite ga neposredno prije pečenja ili barem 40 minuta ranije. Papar dodajte na kraju.",
+             "Pecite na jako zagrijanoj tavi ili roštilju dok ne dobije koricu, zatim po želji dovršite na nižoj temperaturi.",
+             "Pustite ga da odstoji 5 do 10 minuta, pa režite poprijeko vlakana.",
+             "Za deblje komade s kosti pitajte mesara za vrijeme pečenja i stupanj pečenosti."],
+      endH: "Niste sigurni koji komad odabrati?", endP: "Recite nam za koliko osoba pripremate, imate li tavu ili roštilj i kakav okus volite. Mesar će vam predložiti komad iz komore.",
+      endB: "Pošaljite upit", endB2: "Svi odležani steakovi",
+    } : {
+      eye: "Dry-age room · live", h1: "Ageing room: dry-aged steaks, live",
+      lead: "No other butcher in Dubrovnik shows this: the exact piece hanging in the room, its weight and how many days it has aged. Reserve that piece and we keep it for you.",
+      cta: "See what's in the room", cta2: "How to reserve",
+      liveH: "In the ageing room right now",
+      readH: "How to read a card",
+      read: [["Days aged","The first number is how many days the piece has been in the room; the second is how long we plan to age it. The bar shows how far along it is."],
+             ["Ready or Ready in X d","“Ready” means it has aged as planned and can be cut. “Ready in 6 d” means you can still reserve it and collect it once it is done."],
+             ["Weight and estimated amount","The weight is the piece's current weight. The estimate is the price per kilogram times that weight. The final amount depends on the weight after trimming and cutting."],
+             ["Piece number","Every piece has its own number (#01, #02…), so you know exactly which one is yours when you visit."]],
+      whatH: "What is dry ageing?",
+      what: ["Dry ageing means a whole piece of beef, usually on the bone, hangs for weeks in a dedicated room with controlled temperature just above freezing, humidity and airflow.",
+             "During that time the meat loses some water, so the flavour becomes more concentrated, while natural enzymes slowly tenderise the fibres. The result is a more tender steak with a deeper, slightly nutty flavour that fresh beef does not have.",
+             "The outer layer dries out and is trimmed off before cutting. That is why aged beef costs more per kilogram: some weight is lost and the process takes weeks."],
+      daysH: "How many days of ageing?",
+      days: [["around 21 days","Milder flavour, very juicy. A good first choice if you are new to aged beef."],
+             ["28 – 35 days","Fuller, more pronounced flavour and noticeably more tender. The most popular choice for a steak dinner."],
+             ["45 days and more","Intense, distinctive flavour. For those who already love aged steak."]],
+      daysN: "These descriptions are a guide. Flavour also depends on the cut, the fat and the individual piece, so ask the butcher what suits your meal.",
+      howH: "How to reserve a piece",
+      how: [["Choose a piece","Click “Reserve this piece” on the card. It goes into your enquiry."],
+            ["Send your enquiry","Open “Your enquiry”, choose your preferred collection day and time, and tell us how to cut it."],
+            ["Wait for confirmation","Mecara confirms the piece, exact weight and collection time by message."],
+            ["Collect at DOC","Visit Mecara at Kralja Tomislava 7. The first hour at the DOC and Tommy car park is free."]],
+      cookH: "How to cook a dry-aged steak",
+      cook: ["Take the steak out of the fridge 30 to 60 minutes before cooking so it reaches room temperature.",
+             "Salt it just before cooking or at least 40 minutes ahead. Add pepper at the end.",
+             "Sear it in a very hot pan or on a hot grill until a crust forms, then finish at a lower heat if needed.",
+             "Let it rest for 5 to 10 minutes, then slice across the grain.",
+             "For thick bone-in cuts, ask the butcher about cooking times and doneness."],
+      endH: "Not sure which piece to choose?", endP: "Tell us how many people you are cooking for, whether you have a pan or a grill and what flavour you like. The butcher will suggest a piece from the room.",
+      endB: "Send an enquiry", endB2: "All dry-aged steaks",
+    };
+    return `
+<section class="page-head"><div class="wrap feature">
+  <div><span class="mono eyebrow">${esc(T.eye)}</span><h1>${esc(T.h1)}</h1><p class="lead">${esc(T.lead)}</p>
+  <div class="ctas"><a class="btn" href="#uzivo">${esc(T.cta)}</a><a class="btn ghost" href="#rezervacija">${esc(T.cta2)}</a></div></div>
+  ${pic("ageing", ALT.ageing[lang], { cls: "ph tall", sizes: "(max-width: 860px) 100vw, 40vw", eager: true })}
+</div></section>
+<section class="block" id="uzivo"><div class="wrap"><h2>${esc(T.liveH)}</h2>${cutCards(lang)}</div></section>
+<section class="block"><div class="wrap"><h2>${esc(T.readH)}</h2>
+  <div class="cards4 info">${T.read.map(r => `<div class="card"><h3>${esc(r[0])}</h3><p>${esc(r[1])}</p></div>`).join("")}</div>
+</div></section>
+<section class="block"><div class="wrap feature rev">
+  ${pic("cutting", ALT.cutting[lang], { sizes: "(max-width: 860px) 100vw, 45vw" })}
+  <div><h2>${esc(T.whatH)}</h2>${T.what.map(p => `<p>${esc(p)}</p>`).join("")}</div>
+</div></section>
+<section class="block"><div class="wrap"><h2>${esc(T.daysH)}</h2>
+  <div class="days-grid">${T.days.map(d => `<div class="card"><span class="mono eyebrow">${esc(d[0])}</span><p>${esc(d[1])}</p></div>`).join("")}</div>
+  <p class="note">${esc(T.daysN)}</p>
+</div></section>
+<section class="block" id="rezervacija"><div class="wrap"><h2>${esc(T.howH)}</h2>
+  <ol class="steps4">${T.how.map((h, i) => `<li><span class="n">${i + 1}</span><b>${esc(h[0])}</b><p>${esc(h[1])}</p></li>`).join("")}</ol>
+</div></section>
+<section class="block"><div class="wrap two-col">
+  <div><h2>${esc(T.cookH)}</h2><ul class="ticks">${T.cook.map(c => `<li>${esc(c)}</li>`).join("")}</ul></div>
+  <div><h2>${esc(T.endH)}</h2><p>${esc(T.endP)}</p><div class="ctas">${enquiryCta(lang, T.endB)}<a class="btn ghost" href="${ROUTES.steak[lang]}">${esc(T.endB2)}</a></div></div>
+</div></section>
+${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
+  },
+
   steak(lang) {
     const hr = lang === "hr";
     const T = hr ? {
@@ -236,7 +331,7 @@ ${faqBlock(lang, ["avail", "thick", "gluten", "ready", "large"])}`;
   ${pic("ageing", ALT.ageing[lang], { cls: "ph tall", sizes: "(max-width: 860px) 100vw, 40vw", eager: true })}
 </div></section>
 <section class="block"><div class="wrap three-col">${T.s.map(s => `<div><h2>${esc(s[0])}</h2><p>${esc(s[1])}</p></div>`).join("")}</div></section>
-<section class="block" id="komora"><div class="wrap"><div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div></div>${cutCards(lang)}
+<section class="block" id="komora"><div class="wrap"><div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div><a class="btn ghost" href="${ROUTES.komora[lang]}">${lang === "hr" ? "Kako funkcionira komora" : "How the ageing room works"}</a></div>${cutCards(lang)}
   <div class="ctas center">${enquiryCta(lang, T.cta)}</div></div></section>
 ${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
   },
@@ -421,7 +516,7 @@ ${PAGES[page](lang)}
       ${SITE.phone || SITE.email ? `<br>${[SITE.phone && (lang === "hr" ? "Telefon: " : "Phone: ") + esc(SITE.phone), SITE.email && "E-mail: " + esc(SITE.email)].filter(Boolean).join(" · ")}` : ""}
       ${SITE.legalName && SITE.oib ? `<br>${lang === "hr" ? "" : "Operated by "}${esc(SITE.legalName)} · OIB: ${esc(SITE.oib)}` : ""}
     </div>
-    <nav aria-label="Footer"><a href="${ROUTES.ponuda[lang]}">${esc(u.nav[0][1])}</a><a href="${ROUTES.contact[lang]}">${esc(u.nav[4][1])}</a><a href="${esc(SITE.instagram)}" rel="noopener noreferrer">Instagram</a><a href="${ROUTES[page][other]}" hreflang="${other}" lang="${other}">${esc(u.other)}</a></nav>
+    <nav aria-label="Footer"><a href="${ROUTES.home[lang]}">${esc(u.home)}</a>${u.nav.map(([k, l]) => `<a href="${ROUTES[k][lang]}">${esc(l)}</a>`).join("")}<a href="${esc(SITE.instagram)}" rel="noopener noreferrer">Instagram</a><a href="${ROUTES[page][other]}" hreflang="${other}" lang="${other}">${esc(u.other)}</a></nav>
   </div>
   <div class="wrap"><p class="privacy">${esc(u.privacy)}</p></div>
 </footer>
