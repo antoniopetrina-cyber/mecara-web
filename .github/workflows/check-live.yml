@@ -1,13 +1,18 @@
 name: Provjeri mecara.app
 on:
   workflow_dispatch:
+permissions:
+  contents: read
 jobs:
   check:
     runs-on: ubuntu-latest
     steps:
       - run: |
           for u in https://mecara.app/ https://www.mecara.app/; do
-            echo "== $u"; curl -sSL -D - -o page.html "$u?t=$(date +%s)" | grep -iE "^(HTTP|cf-cache|age|last-modified)"
-            echo "foto refs: $(grep -o 'img/foto/[A-Z0-9-]*\.jpg' page.html | sort -u | wc -l) garaza: $(grep -ci garaž page.html) tommy: $(grep -o Tommy page.html | wc -l)"
+            echo "== $u"; curl -sS -D - -o page.html "$u?t=$(date +%s)" | grep -iE "^(HTTP|content-security|strict-transport|x-frame|permissions-policy|x-robots|cache-control)"
+            echo "foto refs: $(grep -o 'img/foto/[A-Z0-9-]*\.jpg' page.html | sort -u | wc -l) app.js: $(grep -c '/js/app.js' page.html) googlefonts: $(grep -c googleapis page.html)"
           done
-          curl -sS -o /dev/null -w "KKP4512.jpg %{http_code} %{size_download}\n" https://mecara.app/img/foto/KKP4512.jpg
+          for path in /js/app.js /css/styles.css /fonts/bodoni-moda-latin-500-normal.woff2 /robots.txt /site.webmanifest /img/foto/KKP4512.jpg /nema-ovoga /wp-login.php /.git/config /wrangler.toml /README.md; do
+            curl -sS -o /dev/null -w "$path %{http_code} %{size_download}\n" "https://mecara.app$path"
+          done
+          curl -sS -o /dev/null -w "http->https: %{http_code} %{redirect_url}\n" http://mecara.app/

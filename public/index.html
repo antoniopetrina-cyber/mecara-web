@@ -7,250 +7,51 @@
 <meta name="description" content="Mecara, mesnica u DOC-u, Dubrovnik. Meso domaćih uzgajivača, odležani steakovi, narudžba online i preuzimanje bez čekanja.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Mecara · Meso domaćih uzgajivača">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mecara.app/">
+<meta property="og:locale" content="hr_HR">
+<meta property="og:description" content="Mesnica u DOC-u, Dubrovnik. Odležani steakovi, domaće meso, narudžba online.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mecara.app/">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/bodoni-moda-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/img/foto/KKP4539.jpg" as="image" fetchpriority="high">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Mecara","description":"Mesnica – meso domaćih uzgajivača","url":"https://mecara.app/","image":"https://mecara.app/img/foto/KKP4539.jpg","logo":"https://mecara.app/img/logo-full.png","address":{"@type":"PostalAddress","streetAddress":"Kralja Tomislava 7","addressLocality":"Dubrovnik","postalCode":"20000","addressCountry":"HR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}],"sameAs":["https://www.instagram.com/_mecaradubrovnik/"]}</script>
 <meta property="og:image" content="https://mecara.app/img/foto/KKP4539.jpg">
 <meta name="theme-color" content="#13100e">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/img/icon-256.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  /* Mecara: tamni ugljen + bakar iz logotipa. Preciznost "kao u apoteci": tanke linije, mono etikete za kilograme i dane odležavanja. */
-  --bg:#13100e;
-  --surface:#1c1815;
-  --surface-2:#251f1b;
-  --line:#3b312a;
-  --ink:#f1e8de;
-  --muted:#a99a8c;
-  --copper:#c47b48;
-  --copper-hi:#e8a875;
-  --ready:#86b892;
-  --aging:#d9a85b;
-  --display:"Bodoni Moda", "Didot", Georgia, serif;
-  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-html,body{margin:0}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-a{color:var(--copper-hi)}
-button,input,select,textarea{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--copper-hi);outline-offset:2px}
-h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;margin:0;letter-spacing:.005em}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.muted{color:var(--muted)}
-.copper-text{background:linear-gradient(100deg,#f3c39a 0%,#b9693a 32%,#eeb07c 55%,#8e4d27 80%,#e3a271 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-
-/* top bar */
-.proto{background:repeating-linear-gradient(135deg,#d9a85b 0 14px,#c9963f 14px 28px);color:#1a120c;font-size:13.5px;font-weight:600;text-align:center;padding:8px 16px}
-.proto b{letter-spacing:.12em;margin-right:6px}
-header.top{position:sticky;top:0;z-index:20;background:rgba(19,16,14,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
-.brand{display:flex;flex-direction:column;line-height:1;text-decoration:none}
-.brand img{height:26px;width:auto;display:block}
-.brand span{font-family:var(--mono);font-size:9.5px;letter-spacing:.32em;color:var(--muted);margin-top:4px}
-nav.links{display:flex;gap:18px;margin-left:auto}
-nav.links a{color:var(--ink);text-decoration:none;font-size:14px;opacity:.85}
-nav.links a:hover{opacity:1;color:var(--copper-hi)}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
-.lang button{background:none;border:0;padding:5px 10px;font-size:12px;cursor:pointer;color:var(--muted)}
-.lang button[aria-pressed="true"]{background:var(--copper);color:#1a120c;font-weight:600}
-.cartbtn{display:flex;align-items:center;gap:8px;background:var(--copper);color:#1a120c;border:0;border-radius:999px;padding:8px 16px;font-weight:600;cursor:pointer}
-.cartbtn .n{background:#1a120c;color:var(--copper-hi);border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px;font-family:var(--mono)}
-@media (max-width:860px){nav.links{display:none}.top .wrap{gap:12px}.lang{margin-left:auto}}
-.lang,.cartbtn{flex-shrink:0}
-@media (max-width:480px){.brand span{display:none}.brand img{height:20px}.cartbtn{padding:8px 12px}.cartbtn > span:first-child{display:none}}
-
-/* hero */
-.hero{padding:72px 0 56px;border-bottom:1px solid var(--line);position:relative;background:#0e0b0a url("/img/foto/KKP4539.jpg") center 35%/cover no-repeat;isolation:isolate}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,11,10,.9) 0%,rgba(14,11,10,.62) 50%,rgba(14,11,10,.2) 100%),linear-gradient(0deg,rgba(19,16,14,1) 0%,rgba(19,16,14,0) 30%);z-index:-1}
-.hero .facts{background:rgba(28,24,21,.88);backdrop-filter:blur(6px)}
-.ph{display:block;width:100%;height:100%;object-fit:cover;border-radius:12px;background:var(--surface)}
-.k-head{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:end;margin-bottom:26px}
-.k-head .sec-head{margin:0}
-.k-head img{aspect-ratio:3/4;height:auto}
-@media (max-width:860px){.k-head{grid-template-columns:1fr}.k-head img{aspect-ratio:16/10;max-height:260px}}
-.strip{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px;gap:12px;margin-bottom:22px}
-.strip img{min-height:0}
-@media (max-width:760px){.strip{grid-template-columns:1fr 1fr;grid-template-rows:none}.strip img{aspect-ratio:4/3}.strip img:first-child{grid-column:1/-1}}
-.plan-photo{margin:-22px -22px 18px;width:calc(100% + 44px);height:170px;object-fit:cover;border-radius:14px 14px 0 0;display:block}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:220px 220px;gap:12px}
-.gallery img{min-height:0}
-.gallery img:nth-child(1){grid-row:1/3}
-.gallery img:nth-child(2){grid-column:2/4}
-.gallery img:nth-child(5){grid-column:3/5}
-@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:none}.gallery img{aspect-ratio:1;grid-row:auto!important;grid-column:auto!important}.gallery img:nth-child(2){grid-column:1/-1!important;aspect-ratio:16/9}}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end}
-.hero h1{font-size:clamp(38px,5.6vw,68px);line-height:1.02}
-.hero h1 em{font-style:italic}
-.hero p.lead{font-size:18px;max-width:52ch;color:#d9cdc1;margin:18px 0 26px}
-.ctas{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:12px 20px;font-weight:600;cursor:pointer;text-decoration:none;border:1px solid var(--copper);background:var(--copper);color:#1a120c}
-.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
-.btn.ghost:hover{border-color:var(--copper)}
-.btn.small{padding:8px 14px;font-size:14px}
-.facts{display:grid;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
-.facts div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
-.facts div:last-child{border-bottom:0}
-.facts .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:3px}
-.open-now{display:inline-flex;align-items:center;gap:6px}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--ready);display:inline-block}
-.dot.off{background:#c0645a}
-.hero-side{display:flex;flex-direction:column;gap:18px}
-.bull{width:100%;max-width:420px;height:auto;align-self:center;opacity:.95}
-@media (max-width:860px){.hero{background-position:30% center}.hero::before{background:linear-gradient(180deg,rgba(14,11,10,.55) 0%,rgba(14,11,10,.88) 45%,rgba(19,16,14,1) 100%)}.hero .wrap{grid-template-columns:1fr}.bull{max-width:280px}}
-
-/* sections */
-section.block{padding:56px 0;border-bottom:1px solid var(--line)}
-.sec-head{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px}
-.sec-head h2{font-size:clamp(30px,3.6vw,44px);line-height:1.05}
-.sec-head p{max-width:56ch;margin:8px 0 0;color:var(--muted)}
-.eyebrow{color:var(--copper-hi);margin-bottom:10px;display:block}
-
-/* komora */
-.komora{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
-.cut{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.cut canvas{display:block;width:100%;height:140px}
-.cut .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
-.cut h3{font-size:22px}
-.cut .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.tag{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 10px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid}
-.tag.ready{color:var(--ready);border-color:rgba(134,184,146,.45)}
-.tag.aging{color:var(--aging);border-color:rgba(217,168,91,.45)}
-.tag.res{color:var(--muted);border-color:var(--line)}
-.bar{height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden}
-.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--copper),var(--copper-hi))}
-.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
-.cut .price{font-family:var(--mono);font-size:14px}
-.cut .btn{justify-content:center;margin-top:auto}
-.cut.reserved{opacity:.6}
-
-/* ponuda */
-.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:20px}
-.chip{background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer;color:var(--ink)}
-.chip[aria-pressed="true"]{border-color:var(--copper);background:rgba(196,123,72,.14);color:var(--copper-hi)}
-.gf-toggle{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer}
-.gf-toggle input{accent-color:var(--copper);width:18px;height:18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-.item{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
-.item h3{font-family:var(--body);font-size:16.5px;font-weight:600}
-.item .en{font-size:13px;color:var(--muted);margin-top:-6px}
-.item .meta{display:flex;gap:6px;flex-wrap:wrap}
-.pill{font-size:11.5px;border-radius:6px;padding:2px 8px;background:var(--surface-2);color:var(--muted)}
-.pill.gf{color:var(--ready);background:rgba(134,184,146,.12)}
-.item .foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:6px}
-.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px}
-.stepper button{background:none;border:0;width:32px;height:32px;cursor:pointer;font-size:18px;color:var(--copper-hi)}
-.stepper output{min-width:62px;text-align:center;font-family:var(--mono);font-size:13px}
-.add{background:var(--copper);border:0;border-radius:999px;color:#1a120c;font-weight:600;padding:7px 14px;cursor:pointer;font-size:14px}
-.add.done{background:var(--ready)}
-
-/* planner */
-.planner{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
-.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
-.field label{font-size:13px;color:var(--muted)}
-.seg{display:flex;flex-wrap:wrap;gap:8px}
-input[type=range]{accent-color:var(--copper);width:100%}
-.big{font-family:var(--display);font-size:56px;line-height:1}
-.plan-list{list-style:none;margin:0;padding:0;display:grid}
-.plan-list li{display:grid;grid-template-columns:1fr auto auto;gap:16px;padding:12px 0;border-bottom:1px dashed var(--line);align-items:baseline}
-.plan-list li:last-child{border-bottom:0}
-.plan-total{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 18px;padding-top:12px;border-top:1px solid var(--line)}
-@media (max-width:860px){.planner{grid-template-columns:1fr}}
-
-/* villa */
-.villa{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
-.boxes{display:grid;gap:12px}
-.box{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--surface);cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start}
-.box input{accent-color:var(--copper);margin-top:5px}
-.box:has(input:checked){border-color:var(--copper);background:rgba(196,123,72,.08)}
-.box h3{font-family:var(--body);font-size:16px;font-weight:600}
-.box p{margin:4px 0 0;font-size:14px;color:var(--muted)}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.form-grid .full{grid-column:1/-1}
-input[type=text],input[type=tel],input[type=date],input[type=number],select,textarea{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
-textarea{min-height:76px;resize:vertical}
-@media (max-width:860px){.villa{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}}
-
-/* tecajevi */
-.courses{display:grid;gap:0;border-top:1px solid var(--line)}
-.course{display:grid;grid-template-columns:120px 1fr auto auto;gap:20px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
-.course .date{font-family:var(--display);font-size:30px;line-height:1}
-.course .date small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--muted);margin-top:6px;text-transform:uppercase}
-.course h3{font-family:var(--body);font-size:17px;font-weight:600}
-.course p{margin:2px 0 0;font-size:14px;color:var(--muted)}
-@media (max-width:700px){.course{grid-template-columns:1fr;gap:8px}}
-
-/* origin */
-.origin{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.origin div{padding:24px;border-right:1px solid var(--line)}
-.origin div:last-child{border-right:0}
-.origin .n{font-family:var(--display);font-size:44px;line-height:1;color:var(--copper-hi)}
-.origin h3{font-family:var(--body);font-size:16px;font-weight:600;margin:12px 0 4px}
-.origin p{margin:0;color:var(--muted);font-size:14.5px}
-@media (max-width:760px){.origin{grid-template-columns:1fr}.origin div{border-right:0;border-bottom:1px solid var(--line)}}
-
-footer{padding:40px 0 120px;color:var(--muted);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-
-/* cart drawer */
-.scrim{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40;display:none}
-.drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--bg);border-left:1px solid var(--line);z-index:41;transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column}
-body.cart-open .scrim{display:block}
-body.cart-open .drawer{transform:none}
-.drawer header{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
-.drawer header h2{font-size:26px}
-.x{background:none;border:1px solid var(--line);border-radius:999px;width:36px;height:36px;cursor:pointer}
-.drawer .scroll{overflow:auto;padding:16px 20px;flex:1;display:flex;flex-direction:column;gap:16px}
-.line{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding-bottom:12px;border-bottom:1px dashed var(--line)}
-.line .nm{font-size:15px}
-.line .q{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-.rm{background:none;border:0;color:var(--muted);cursor:pointer;font-size:13px;text-decoration:underline}
-.empty{color:var(--muted);text-align:center;padding:30px 0}
-.slots{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px}
-.slots .chip{white-space:nowrap}
-.drawer .foot{padding:16px 20px;border-top:1px solid var(--line);display:grid;gap:10px}
-.sum{display:flex;justify-content:space-between;font-size:15px}
-.sum b{font-family:var(--mono)}
-.note{font-size:12.5px;color:var(--muted)}
-.result{background:var(--surface);border:1px solid var(--copper);border-radius:12px;padding:14px;display:none}
-.result.show{display:block}
-.result pre{white-space:pre-wrap;font-family:var(--mono);font-size:12px;margin:8px 0;max-height:180px;overflow:auto;color:#d9cdc1}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--copper);color:#1a120c;padding:10px 18px;border-radius:999px;font-weight:600;z-index:60;opacity:0;transition:opacity .2s;pointer-events:none}
-.toast.show{opacity:1}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+<a class="skip" href="#main" data-i18n="skip">Preskoči na sadržaj</a>
 
 <div class="proto" role="note"><b data-i18n="wip">RADNA VERZIJA</b> <span data-i18n="proto">Stranica je u izradi. Cijene, komadi u komori i datumi tečajeva su primjeri, a narudžbe još ne idu Mecari.</span></div>
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Mecara">
+    <a class="brand" href="#main" aria-label="Mecara – početak">
       <img src="/img/wordmark.png" alt="Mecara" width="119" height="26">
       <span>MESO DOMAĆIH UZGAJIVAČA</span>
     </a>
-    <nav class="links">
+    <nav class="links" aria-label="Sekcije">
       <a href="#komora" data-i18n="nav1">Komora</a>
       <a href="#ponuda" data-i18n="nav2">Ponuda</a>
       <a href="#rostilj" data-i18n="nav3">Roštilj planer</a>
       <a href="#villa" data-i18n="nav4">Villa &amp; Yacht</a>
       <a href="#tecajevi" data-i18n="nav5">Tečajevi</a>
+      <a href="#posjeti" data-i18n="gEye">Posjeti nas</a>
     </nav>
     <div class="lang" role="group" aria-label="Jezik / Language">
       <button type="button" id="lang-hr" aria-pressed="true">HR</button>
       <button type="button" id="lang-en" aria-pressed="false">EN</button>
     </div>
-    <button class="cartbtn" type="button" id="open-cart"><span data-i18n="cart">Narudžba</span> <span class="n" id="cart-n">0</span></button>
+    <button class="cartbtn" type="button" id="open-cart" aria-haspopup="dialog" aria-controls="drawer"><span data-i18n="cart">Narudžba</span> <span class="n" id="cart-n">0</span></button>
   </div>
 </header>
 
-<main id="top">
+<main id="main" tabindex="-1">
 <section class="hero">
   <div class="wrap">
     <div>
@@ -264,7 +65,7 @@ body.cart-open .drawer{transform:none}
     </div>
     <div class="hero-side">
     <div class="facts" aria-label="Info">
-      <div><span class="k" data-i18n="fNow">Sada</span><span class="open-now"><i class="dot" id="open-dot"></i><span id="open-txt">Otvoreno</span></span></div>
+      <div><span class="k" data-i18n="fNow">Sada</span><span class="open-now"><i class="dot" id="open-dot" aria-hidden="true"></i><span id="open-txt" aria-live="polite">–</span></span></div>
       <div><span class="k" data-i18n="fAddr">Adresa</span><span>Kralja Tomislava 7, DOC, Dubrovnik</span></div>
       <div><span class="k" data-i18n="fHours">Radno vrijeme</span><span data-i18n="fHoursV">Pon–Sub 7:00–19:00 · Ned zatvoreno</span></div>
       <div><span class="k" data-i18n="fPark">Parking</span><span data-i18n="fParkV">1 sat besplatno na parkingu centra DOC i Tommyja</span></div>
@@ -281,7 +82,7 @@ body.cart-open .drawer{transform:none}
         <h2 data-i18n="kH">Svaki steak ima svoje ime i svoj broj dana</h2>
         <p data-i18n="kP">Ovo nema nijedna mesnica u Dubrovniku: vidiš točno koji komad visi u komori, koliko je težak i koliko je dana odležao. Rezerviraš baš taj komad, a mi ga čuvamo za tebe.</p>
       </div>
-    </div><img class="ph" src="/img/foto/KKP4503-800.jpg" alt="Dry-age komora u Mecari" data-i18n-alt="altKomora" loading="lazy" width="532" height="800"></div>
+    </div><img class="ph" src="/img/foto/KKP4503-800.jpg" alt="Dry-age komora u Mecari" loading="lazy" decoding="async" width="532" height="800"></div>
     <div class="komora" id="komora-grid"></div>
   </div>
 </section>
@@ -296,9 +97,9 @@ body.cart-open .drawer{transform:none}
       </div>
     </div>
     <div class="strip">
-      <img class="ph" src="/img/foto/KKP4582.jpg" alt="Mesar reže steak" loading="lazy">
-      <img class="ph" src="/img/foto/KKP4545-800.jpg" alt="Svježa junetina u vitrini" loading="lazy">
-      <img class="ph" src="/img/foto/KKP4551-800.jpg" alt="Marinirano meso u vitrini" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4582.jpg" alt="Mesar reže steak" loading="lazy" decoding="async">
+      <img class="ph" src="/img/foto/KKP4545-800.jpg" alt="Svježa junetina u vitrini" loading="lazy" decoding="async">
+      <img class="ph" src="/img/foto/KKP4551-800.jpg" alt="Marinirano meso u vitrini" loading="lazy" decoding="async">
     </div>
     <div class="filters" id="filters"></div>
     <div class="grid" id="grid"></div>
@@ -316,23 +117,23 @@ body.cart-open .drawer{transform:none}
     </div>
     <div class="planner">
       <div class="panel">
-        <img class="plan-photo" src="/img/foto/KKP4561-800.jpg" alt="Marinirano meso za roštilj" loading="lazy">
+        <img class="plan-photo" src="/img/foto/KKP4561-800.jpg" alt="Marinirano meso za roštilj" loading="lazy" decoding="async">
         <div class="field">
           <label for="guests" data-i18n="rGuests">Broj osoba</label>
-          <div style="display:flex;align-items:center;gap:16px"><span class="big num" id="guests-out">8</span><input type="range" id="guests" min="2" max="40" value="8"></div>
+          <div class="guests-row"><span class="big num" id="guests-out" aria-hidden="true">8</span><input type="range" id="guests" min="2" max="40" value="8"></div>
         </div>
-        <div class="field">
-          <label data-i18n="rHunger">Koliko su gladni?</label>
+        <fieldset>
+          <legend data-i18n="rHunger">Koliko su gladni?</legend>
           <div class="seg" id="hunger"></div>
-        </div>
-        <div class="field">
-          <label data-i18n="rStyle">Kakav roštilj?</label>
+        </fieldset>
+        <fieldset>
+          <legend data-i18n="rStyle">Kakav roštilj?</legend>
           <div class="seg" id="style"></div>
-        </div>
+        </fieldset>
       </div>
       <div class="panel">
         <span class="mono muted" data-i18n="rPlan">Vaš plan</span>
-        <ul class="plan-list" id="plan"></ul>
+        <ul class="plan-list" id="plan" aria-live="polite"></ul>
         <div class="plan-total"><span data-i18n="rTotal">Ukupno okvirno</span><b class="num" id="plan-total">–</b></div>
         <button class="btn" type="button" id="plan-add" data-i18n="rAdd">Stavi sve u narudžbu</button>
       </div>
@@ -351,17 +152,24 @@ body.cart-open .drawer{transform:none}
     </div>
     <div class="villa">
       <div class="boxes" id="boxes"></div>
-      <form class="panel" id="villa-form">
+      <form class="panel" id="villa-form" novalidate>
         <div class="form-grid">
           <div class="field"><label for="v-type">Delivery to</label><select id="v-type"><option>Villa</option><option>Yacht (Gruž / ACI Komolac)</option><option>Apartment</option></select></div>
-          <div class="field"><label for="v-date">Date</label><input type="date" id="v-date"></div>
-          <div class="field"><label for="v-guests">Guests</label><input type="number" id="v-guests" min="2" max="60" value="8"></div>
-          <div class="field"><label for="v-name">Name</label><input type="text" id="v-name" placeholder="Name or villa manager"></div>
-          <div class="field full"><label for="v-where">Address / boat name</label><input type="text" id="v-where" placeholder="e.g. Villa Sunset, Orašac"></div>
-          <div class="field full"><label for="v-note">Notes for the butcher</label><textarea id="v-note" placeholder="Allergies, gluten free, cuts, chef's wishes"></textarea></div>
+          <div class="field"><label for="v-date">Date</label><input type="date" id="v-date" required></div>
+          <div class="field"><label for="v-guests">Guests</label><input type="number" id="v-guests" min="2" max="60" value="8" inputmode="numeric" required></div>
+          <div class="field"><label for="v-name">Name</label><input type="text" id="v-name" placeholder="Name or villa manager" maxlength="80" autocomplete="name" required></div>
+          <div class="field full"><label for="v-where">Address / boat name</label><input type="text" id="v-where" placeholder="e.g. Villa Sunset, Orašac" maxlength="140" required></div>
+          <div class="field full"><label for="v-note">Notes for the butcher</label><textarea id="v-note" placeholder="Allergies, gluten free, cuts, chef's wishes" maxlength="600"></textarea></div>
         </div>
-        <button class="btn" type="submit">Send request on WhatsApp</button>
+        <p class="err" id="v-err" role="alert"></p>
+        <button class="btn" type="submit">Prepare request</button>
         <p class="note">You get a confirmation and the final price from Mecara before anything is prepared.</p>
+        <div class="result villa-result" id="v-result">
+          <b>Your request</b>
+          <pre></pre>
+          <p class="wip-note">Work in progress: requests are not sent to Mecara yet.</p>
+          <div class="ctas"><a class="btn small wa" href="#" target="_blank" rel="noopener noreferrer" hidden>WhatsApp</a><button class="btn small ghost" type="button" id="v-copy">Copy message</button></div>
+        </div>
       </form>
     </div>
   </div>
@@ -388,14 +196,14 @@ body.cart-open .drawer{transform:none}
         <h2 data-i18n="gH">Kralja Tomislava 7, u DOC-u</h2>
         <p data-i18n="gP">Uđi, pogledaj komoru i pitaj mesara. Sat parkinga na parkingu centra DOC i Tommyja je na nama.</p>
       </div>
-      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Mecara+Kralja+Tomislava+7+Dubrovnik" target="_blank" rel="noopener" data-i18n="gMap">Otvori kartu</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Mecara+Kralja+Tomislava+7+Dubrovnik" target="_blank" rel="noopener noreferrer" data-i18n="gMap">Otvori kartu</a>
     </div>
     <div class="gallery">
-      <img class="ph" src="/img/foto/KKP4497-800.jpg" alt="Ulaz u mesnicu Mecara" loading="lazy">
-      <img class="ph" src="/img/foto/KKP4512.jpg" alt="Interijer Mecare s vitrinama" loading="lazy">
-      <img class="ph" src="/img/foto/KKP4498-800.jpg" alt="Domaća tjestenina i spenza" loading="lazy">
-      <img class="ph" src="/img/foto/KKP4591-800.jpg" alt="Domaći džemovi i ajvari" loading="lazy">
-      <img class="ph" src="/img/foto/KKP4506.jpg" alt="Vitrine i police u Mecari" loading="lazy">
+      <img class="ph" src="/img/foto/KKP4497-800.jpg" alt="Ulaz u mesnicu Mecara" loading="lazy" decoding="async">
+      <img class="ph" src="/img/foto/KKP4512.jpg" alt="Interijer Mecare s vitrinama" loading="lazy" decoding="async">
+      <img class="ph" src="/img/foto/KKP4498-800.jpg" alt="Domaća tjestenina i spenza" loading="lazy" decoding="async">
+      <img class="ph" src="/img/foto/KKP4591-800.jpg" alt="Domaći džemovi i ajvari" loading="lazy" decoding="async">
+      <img class="ph" src="/img/foto/KKP4506.jpg" alt="Vitrine i police u Mecari" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -413,413 +221,45 @@ body.cart-open .drawer{transform:none}
 
 <footer>
   <div class="wrap">
-    <div><img src="/img/wordmark.png" alt="Mecara" width="137" height="30" style="height:30px;width:auto;display:block;margin-bottom:8px">Kralja Tomislava 7, 20000 Dubrovnik</div>
-    <div>Instagram: <a href="https://www.instagram.com/_mecaradubrovnik/">@_mecaradubrovnik</a><br><span data-i18n="fHoursV">Pon–Sub 7:00–19:00 · Ned zatvoreno</span></div>
+    <div><img class="foot-logo" src="/img/wordmark.png" alt="Mecara" width="137" height="30" loading="lazy">Kralja Tomislava 7, 20000 Dubrovnik</div>
+    <div>Instagram: <a href="https://www.instagram.com/_mecaradubrovnik/" rel="noopener noreferrer">@_mecaradubrovnik</a><br><span data-i18n="fHoursV">Pon–Sub 7:00–19:00 · Ned zatvoreno</span></div>
   </div>
+  <div class="wrap"><p class="privacy" data-i18n="privacy">Privatnost: stranica ne koristi kolačiće ni praćenje.</p></div>
 </footer>
 
 <div class="scrim" id="scrim"></div>
-<aside class="drawer" id="drawer" aria-label="Narudžba">
-  <header><h2 data-i18n="cart">Narudžba</h2><button class="x" type="button" id="close-cart" aria-label="Zatvori">✕</button></header>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+  <header><h2 id="drawer-title" data-i18n="cart">Narudžba</h2><button class="x" type="button" id="close-cart" data-i18n-aria="close" aria-label="Zatvori">✕</button></header>
   <div class="scroll">
     <div id="lines"></div>
     <div class="field">
-      <label data-i18n="cDay">Dan preuzimanja</label>
-      <div class="slots" id="days"></div>
+      <span class="legend" id="l-day" data-i18n="cDay">Dan preuzimanja</span>
+      <div class="slots" id="days" role="group" aria-labelledby="l-day"></div>
     </div>
     <div class="field">
-      <label data-i18n="cTime">Vrijeme</label>
-      <div class="slots" id="times"></div>
+      <span class="legend" id="l-time" data-i18n="cTime">Vrijeme</span>
+      <div class="slots" id="times" role="group" aria-labelledby="l-time"></div>
     </div>
-    <div class="field"><label for="c-name" data-i18n="cName">Ime</label><input type="text" id="c-name"></div>
-    <div class="field"><label for="c-tel" data-i18n="cTel">Mobitel</label><input type="tel" id="c-tel" placeholder="09x xxx xxxx"></div>
-    <div class="field"><label for="c-note" data-i18n="cNote">Napomena mesaru</label><textarea id="c-note" data-i18n-ph="cNotePh" placeholder="npr. ramstek narezati na 3 cm, vakumirati, ćevape posebno"></textarea></div>
+    <div class="field"><label for="c-name" data-i18n="cName">Ime</label><input type="text" id="c-name" maxlength="80" autocomplete="name"></div>
+    <div class="field"><label for="c-tel" data-i18n="cTel">Mobitel</label><input type="tel" id="c-tel" placeholder="09x xxx xxxx" maxlength="20" autocomplete="tel" inputmode="tel"></div>
+    <div class="field"><label for="c-note" data-i18n="cNote">Napomena mesaru</label><textarea id="c-note" maxlength="600" data-i18n-ph="cNotePh" placeholder="npr. ramstek narezati na 3 cm, vakumirati, ćevape posebno"></textarea></div>
     <div class="result" id="result">
       <b data-i18n="rdy">Poruka je spremna</b>
       <pre id="msg"></pre>
-      <div class="ctas"><a class="btn small" id="wa" href="#" target="_blank" rel="noopener">WhatsApp</a><button class="btn small ghost" type="button" id="copy" data-i18n="copy">Kopiraj poruku</button></div>
+      <p class="wip-note" data-i18n="wipOrder">Radna verzija: narudžbe se još ne šalju Mecari.</p>
+      <div class="ctas"><a class="btn small wa" id="wa" href="#" target="_blank" rel="noopener noreferrer" hidden>WhatsApp</a><button class="btn small ghost" type="button" id="copy" data-i18n="copy">Kopiraj poruku</button></div>
       <p class="note" data-i18n="waNote">Ako se WhatsApp ne otvori, kopiraj poruku i pošalji je na broj Mecare.</p>
     </div>
   </div>
   <div class="foot">
     <div class="sum"><span data-i18n="cEst">Okvirno ukupno</span><b id="sum">0,00 €</b></div>
     <p class="note" data-i18n="cEstNote">Konačna cijena ovisi o točnoj težini nakon rezanja. Plaćaš pri preuzimanju.</p>
-    <button class="btn" type="button" id="send" style="justify-content:center" data-i18n="send">Pošalji narudžbu</button>
+    <p class="err" id="c-err" role="alert"></p>
+    <button class="btn" type="button" id="send">Pošalji narudžbu</button>
   </div>
 </aside>
 <div class="toast" id="toast" role="status"></div>
 
-<script>
-(function(){
-const WA_NUMBER = "385000000000"; // TODO: upisati pravi broj Mecare
-
-const T = {
- hr:{gEye:"Posjeti nas",gH:"Kralja Tomislava 7, u DOC-u",gP:"Uđi, pogledaj komoru i pitaj mesara. Sat parkinga na parkingu centra DOC i Tommyja je na nama.",gMap:"Otvori kartu",wip:"RADNA VERZIJA",proto:"Stranica je u izradi. Cijene, komadi u komori i datumi tečajeva su primjeri, a narudžbe još ne idu Mecari.",
-  nav1:"Komora",nav2:"Ponuda",nav3:"Roštilj planer",nav4:"Villa & Yacht",nav5:"Tečajevi",cart:"Narudžba",
-  heroEye:"Mesnica u DOC-u · od 7 do 19",
-  heroH:'Naruči svoj komad večer prije. <em class="copper-text">Pokupi ga bez čekanja.</em>',
-  heroP:"Domaće meso iz male klaonice u Dalmatinskoj zagori, odležani steakovi iz naše komore, pršut, sirevi i gotova jela. Izaberi online, mi narežemo i spakiramo, a ti dođeš u termin koji ti paše.",
-  cta1:"Pogledaj što je u komori",cta2:"Koliko mesa za roštilj?",
-  fNow:"Sada",fAddr:"Adresa",fHours:"Radno vrijeme",fHoursV:"Pon–Sub 7:00–19:00 · Ned zatvoreno",fPark:"Parking",fParkV:"1 sat besplatno na parkingu centra DOC i Tommyja",fPick:"Prvi termin",
-  open:"Otvoreno do 19:00",closed:"Zatvoreno · otvaramo u 7:00",
-  kEye:"Dry-age komora · uživo",kH:"Svaki steak ima svoje ime i svoj broj dana",
-  kP:"Ovo nema nijedna mesnica u Dubrovniku: vidiš točno koji komad visi u komori, koliko je težak i koliko je dana odležao. Rezerviraš baš taj komad, a mi ga čuvamo za tebe.",
-  days:"dana",ready:"Spreman",inDays:"Spreman za {n} d.",reserve:"Rezerviraj ovaj komad",reserved:"Rezerviran",
-  pEye:"Ponuda",pH:"Sve što ima u vitrini, i ono iza nje",pP:"Dodaj u narudžbu, upiši kako želiš da narežemo, i izaberi termin preuzimanja.",
-  all:"Sve",gf:"Samo bez glutena",gfPill:"bez glutena",add:"Dodaj",added:"Dodano",
-  rEye:"Roštilj planer",rH:"Koliko mesa treba za vaše društvo?",rP:"Upiši broj ljudi i koliko su gladni. Planer izračuna kilograme po vrsti mesa i jednim klikom sve stavi u narudžbu.",
-  rGuests:"Broj osoba",rHunger:"Koliko su gladni?",rStyle:"Kakav roštilj?",rPlan:"Vaš plan",rTotal:"Ukupno okvirno",rAdd:"Stavi sve u narudžbu",
-  h1:"Lagano",h2:"Normalno",h3:"Jako gladni",s1:"Klasika",s2:"Premium",s3:"Dalmatinski",
-  tEye:"Tečajevi o mesu",tH:"Dođi naučiti od mesara",tP:"Male grupe, za pultom u Mecari. Prijava ide preko narudžbe, mjesto je potvrđeno porukom.",
-  seats:"mjesta",signup:"Prijavi se",
-  o1h:"Jedan proizvođač, samo za Mecaru",o1p:"Junetina, teletina, janjci i odojci iz male klaonice u Dalmatinskoj zagori.",
-  o2h:"Domaći OPG-ovi",o2p:"Drniški i sinjski pršut, suho meso od mangulice, sir iz mješine, kajmak, rakije iz Konavala.",
-  o3h:"Bez glutena, ozbiljno",o3p:"Pohani pileći i juneći odresci bez glutena. Uključi filter i vidiš samo ono što je sigurno.",
-  cDay:"Dan preuzimanja",cTime:"Vrijeme",cName:"Ime",cTel:"Mobitel",cNote:"Napomena mesaru",cNotePh:"npr. ramstek narezati na 3 cm, vakumirati, ćevape posebno",
-  cEst:"Okvirno ukupno",cEstNote:"Konačna cijena ovisi o točnoj težini nakon rezanja. Plaćaš pri preuzimanju.",send:"Pošalji narudžbu",
-  rdy:"Poruka je spremna",copy:"Kopiraj poruku",waNote:"Ako se WhatsApp ne otvori, kopiraj poruku i pošalji je na broj Mecare.",
-  empty:"Narudžba je prazna. Dodaj nešto iz komore ili ponude.",remove:"makni",
-  needItems:"Prvo dodaj nešto u narudžbu.",needName:"Upiši ime i broj mobitela.",copied:"Poruka kopirana",
-  today:"Danas",tomorrow:"Sutra",addedT:"Dodano u narudžbu",
-  msgHead:"Nova narudžba – Mecara",msgPick:"Preuzimanje",msgName:"Ime",msgTel:"Mob",msgNote:"Napomena",msgEst:"Okvirno"},
- en:{gEye:"Visit us",gH:"Kralja Tomislava 7, inside DOC",gP:"Come in, see the ageing room and ask the butcher. The first hour at the DOC and Tommy car park is on us.",gMap:"Open map",wip:"WORK IN PROGRESS",proto:"This site is being built. Prices, aged cuts and class dates are examples, and orders do not reach Mecara yet.",
-  nav1:"Ageing room",nav2:"Shop",nav3:"BBQ planner",nav4:"Villa & Yacht",nav5:"Classes",cart:"Order",
-  heroEye:"Butcher shop in DOC · 7am to 7pm",
-  heroH:'Order your cut the night before. <em class="copper-text">Pick it up with no queue.</em>',
-  heroP:"Croatian meat from a small slaughterhouse in the Dalmatian hinterland, dry-aged steaks from our own ageing room, prosciutto, cheeses and ready meals. Choose online, we cut and pack, you come at the time that suits you.",
-  cta1:"See what's in the ageing room",cta2:"How much meat for a BBQ?",
-  fNow:"Now",fAddr:"Address",fHours:"Hours",fHoursV:"Mon–Sat 7:00–19:00 · Sun closed",fPark:"Parking",fParkV:"1 hour free at the DOC and Tommy car park",fPick:"First pickup",
-  open:"Open until 19:00",closed:"Closed · opens at 7:00",
-  kEye:"Dry-age room · live",kH:"Every steak has a name and a day count",
-  kP:"No other butcher in Dubrovnik shows this: the exact piece hanging in the room, its weight and how many days it has aged. Reserve that piece and we keep it for you.",
-  days:"days",ready:"Ready",inDays:"Ready in {n} d",reserve:"Reserve this piece",reserved:"Reserved",
-  pEye:"Shop",pH:"Everything in the counter, and what's behind it",pP:"Add to your order, tell us how to cut it, and pick a collection time.",
-  all:"All",gf:"Gluten free only",gfPill:"gluten free",add:"Add",added:"Added",
-  rEye:"BBQ planner",rH:"How much meat does your group need?",rP:"Enter the number of people and how hungry they are. The planner works out kilos per meat and adds it all to your order in one click.",
-  rGuests:"People",rHunger:"How hungry?",rStyle:"What kind of BBQ?",rPlan:"Your plan",rTotal:"Estimated total",rAdd:"Add all to order",
-  h1:"Light",h2:"Normal",h3:"Very hungry",s1:"Classic",s2:"Premium",s3:"Dalmatian",
-  tEye:"Meat classes",tH:"Learn from the butcher",tP:"Small groups at the Mecara counter. Sign up through the order, your seat is confirmed by message.",
-  seats:"seats",signup:"Sign up",
-  o1h:"One producer, only for Mecara",o1p:"Beef, veal, lamb and suckling pig from a small slaughterhouse in the Dalmatian hinterland.",
-  o2h:"Local family farms",o2p:"Drniš and Sinj prosciutto, Mangalica cured meat, cheese aged in sheepskin, kajmak, Konavle brandies.",
-  o3h:"Gluten free, properly",o3p:"Gluten-free breaded chicken and beef cutlets. Turn on the filter and see only what is safe.",
-  cDay:"Pickup day",cTime:"Time",cName:"Name",cTel:"Mobile",cNote:"Note for the butcher",cNotePh:"e.g. cut the striploin 3 cm thick, vacuum pack",
-  cEst:"Estimated total",cEstNote:"Final price depends on exact weight after cutting. Pay at pickup.",send:"Send order",
-  rdy:"Your message is ready",copy:"Copy message",waNote:"If WhatsApp doesn't open, copy the message and send it to Mecara's number.",
-  empty:"Your order is empty. Add something from the ageing room or the shop.",remove:"remove",
-  needItems:"Add something to your order first.",needName:"Enter your name and mobile number.",copied:"Message copied",
-  today:"Today",tomorrow:"Tomorrow",addedT:"Added to order",
-  msgHead:"New order – Mecara",msgPick:"Pickup",msgName:"Name",msgTel:"Mob",msgNote:"Note",msgEst:"Estimate"}
-};
-let lang = "hr";
-try{ lang = localStorage.getItem("mecara-lang") || "hr"; }catch(e){}
-const t = k => (T[lang][k] ?? T.hr[k] ?? k);
-
-/* ---------- data (primjeri) ---------- */
-const CUTS = [
- {id:"c1",hr:"Côte de boeuf",en:"Côte de boeuf",sub:{hr:"rebro s kosti",en:"bone-in rib"},kg:1.12,day:35,target:35,eur:62},
- {id:"c2",hr:"T-bone",en:"T-bone",sub:{hr:"junetina, Zagora",en:"young beef"},kg:0.92,day:28,target:28,eur:56},
- {id:"c3",hr:"Ramstek",en:"Striploin",sub:{hr:"komad za 2 osobe",en:"serves 2"},kg:0.48,day:21,target:21,eur:49},
- {id:"c4",hr:"Tomahawk",en:"Tomahawk",sub:{hr:"za posebnu večer",en:"for a big night"},kg:1.34,day:39,target:45,eur:68},
- {id:"c5",hr:"Porterhouse",en:"Porterhouse",sub:{hr:"biftek + ramstek",en:"fillet + strip"},kg:1.02,day:24,target:28,eur:58},
- {id:"c6",hr:"Rib-eye",en:"Rib-eye",sub:{hr:"bez kosti",en:"boneless"},kg:0.36,day:30,target:30,eur:59}
-];
-const CATS = [
- ["junetina",{hr:"Junetina",en:"Beef"}],["teletina",{hr:"Teletina",en:"Veal"}],["janjetina",{hr:"Janjetina",en:"Lamb"}],
- ["svinjetina",{hr:"Svinjetina i odojak",en:"Pork"}],["piletina",{hr:"Piletina",en:"Chicken"}],["rostilj",{hr:"Za roštilj",en:"For the grill"}],
- ["suho",{hr:"Suhomesnato",en:"Cured meats"}],["sir",{hr:"Sirevi",en:"Cheese"}],["gotovo",{hr:"Gotova jela",en:"Ready meals"}],["spenza",{hr:"Spenza, vino i rakija",en:"Pantry, wine & rakija"}]
-];
-// unit: kg (step .25), g100 (100 g), kom (piece)
-const P = [
- ["p1","junetina","Juneći biftek","Beef tenderloin","kg",59,"Dalmatinska zagora"],
- ["p2","junetina","Juneći ramstek","Beef striploin","kg",32,"Dalmatinska zagora"],
- ["p3","junetina","Juneći but za gulaš","Beef for goulash","kg",16.9,"Dalmatinska zagora"],
- ["p4","junetina","Mljevena junetina","Minced beef","kg",13.9,"Dalmatinska zagora"],
- ["p5","junetina","Juneća rebra","Beef short ribs","kg",14.5,"Dalmatinska zagora"],
- ["p6","teletina","Teleći odrezak","Veal escalope","kg",29,"Dalmatinska zagora"],
- ["p7","teletina","Teleća koljenica za peku","Veal shank for peka","kg",15.5,"Dalmatinska zagora"],
- ["p8","janjetina","Janjetina za peku","Lamb for peka","kg",19.9,"Dalmatinska zagora"],
- ["p9","janjetina","Janjeći kotleti","Lamb chops","kg",34,"Dalmatinska zagora"],
- ["p10","svinjetina","Svinjski vrat","Pork neck","kg",10.9,"Dalmatinska zagora"],
- ["p11","svinjetina","Svinjska rebarca","Pork ribs","kg",9.9,"Dalmatinska zagora"],
- ["p12","svinjetina","Odojak (po narudžbi)","Suckling pig (to order)","kg",16.5,"Dalmatinska zagora"],
- ["p13","piletina","Marinirani pileći batak","Marinated chicken legs","kg",8.9,"Hrvatska"],
- ["p14","piletina","Pileći file","Chicken breast","kg",12.5,"Hrvatska"],
- ["p15","rostilj","Domaći ćevapi","House ćevapi","kg",14.9,"Mecara"],
- ["p16","rostilj","Domaće kobasice za roštilj","Grill sausages","kg",12.9,"Mecara"],
- ["p17","rostilj","Pljeskavica","Pljeskavica patties","kg",13.9,"Mecara"],
- ["p18","piletina","Pohani pileći file bez glutena","Gluten-free breaded chicken","kom",3.9,"Mecara",1],
- ["p19","junetina","Pohani juneći odrezak bez glutena","Gluten-free breaded beef","kom",5.5,"Mecara",1],
- ["p20","suho","Drniški pršut, narezan","Drniš prosciutto, sliced","g100",4.9,"OPG"],
- ["p21","suho","Sinjski pršut, narezan","Sinj prosciutto, sliced","g100",4.9,"OPG"],
- ["p22","suho","Talijanski lardo","Italian lardo","g100",3.9,"Italija"],
- ["p23","suho","Rolana panceta u papru","Rolled pepper pancetta","g100",3.5,"Italija"],
- ["p24","suho","Suho meso od mangulice","Mangalica cured meat","g100",5.2,"OPG"],
- ["p25","suho","Domaća suha kobasica","Dry-cured sausage","g100",2.9,"OPG"],
- ["p26","sir","Sir iz mješine","Cheese aged in sheepskin","g100",3.6,"OPG"],
- ["p27","sir","Torotan","Torotan cheese","g100",3.8,"OPG"],
- ["p28","sir","Mladi kajmak","Young kajmak","g100",2.4,"OPG"],
- ["p29","sir","Mladi hercegovački sir","Young Herzegovina cheese","g100",1.9,"OPG"],
- ["p30","gotovo","Sarma","Sarma (cabbage rolls)","kom",2.8,"Mecara"],
- ["p31","gotovo","Punjene paprike","Stuffed peppers","kom",2.9,"Mecara"],
- ["p32","gotovo","Arancini","Arancini","kom",1.9,"Mecara"],
- ["p33","spenza","Pinđur","Pinđur relish","kom",6.5,"OPG"],
- ["p34","spenza","Krema od bijelog tartufa","White truffle cream","kom",9.9,"Italija"],
- ["p35","spenza","Bruštulani mjenduli","Candied almonds","kom",5.5,"Dubrovnik"],
- ["p36","spenza","Rakija iz Konavala, 0,5 l","Konavle rakija, 0.5 l","kom",18,"Konavle"],
- ["p37","spenza","Crno vino s dubrovačkog područja","Red wine, Dubrovnik area","kom",16,"Dubrovnik"]
-].map(r=>({id:r[0],cat:r[1],hr:r[2],en:r[3],unit:r[4],eur:r[5],origin:r[6],gf:!!r[7]}));
-const byId = Object.fromEntries(P.map(p=>[p.id,p]));
-
-const BOXES = [
- {id:"b1",name:"Terrace BBQ Box",desc:"Ćevapi, pork neck, chicken, grill sausages, ajvar & pinđur. About 400 g per guest.",from:"from €19 / guest"},
- {id:"b2",name:"Dry-Aged Steak Box",desc:"Côte de boeuf or T-bone from the ageing room, Drniš prosciutto and cheese board to start.",from:"from €45 / guest"},
- {id:"b3",name:"Peka for the Villa Chef",desc:"Lamb and veal shank cut for peka, with potatoes, herbs and a bottle of local red.",from:"from €28 / guest"},
- {id:"b4",name:"Yacht Charcuterie Board",desc:"Prosciutto, lardo, Mangalica, three cheeses, candied almonds and dried figs. Vacuum packed for the cool box.",from:"from €15 / guest"}
-];
-const COURSES = [
- {d:"21.11.",dw:{hr:"Subota 18:00",en:"Saturday 18:00"},hr:"Savršen steak kod kuće",en:"The perfect steak at home",phr:"Kako odabrati komad iz komore, odmor mesa, tava ili roštilj.",pen:"Choosing a dry-aged cut, resting, pan or grill.",eur:35,seats:8},
- {d:"04.12.",dw:{hr:"Petak 18:30",en:"Friday 18:30"},hr:"Pršut, sir i vino",en:"Prosciutto, cheese & wine",phr:"Degustacija drniškog i sinjskog pršuta, sira iz mješine i dubrovačkih vina.",pen:"Tasting Drniš and Sinj prosciutto, sheepskin cheese and Dubrovnik wines.",eur:29,seats:12},
- {d:"12.12.",dw:{hr:"Subota 10:00",en:"Saturday 10:00"},hr:"Božićna janjetina i odojak",en:"Christmas lamb & suckling pig",phr:"Rezanje, priprema za peku i ražanj, narudžbe za blagdane.",pen:"Butchery and prep for peka and spit roast, holiday orders.",eur:35,seats:8}
-];
-
-/* ---------- cart ---------- */
-let cart = {}; // key -> {type:'p'|'cut'|'course', id, qty}
-try{ cart = JSON.parse(localStorage.getItem("mecara-cart")||"{}"); }catch(e){ cart={}; }
-const save = ()=>{ try{ localStorage.setItem("mecara-cart",JSON.stringify(cart)); }catch(e){} };
-const fmt = n => n.toLocaleString(lang==="hr"?"hr-HR":"en-GB",{minimumFractionDigits:2,maximumFractionDigits:2})+" €";
-const fmtKg = n => (n.toLocaleString(lang==="hr"?"hr-HR":"en-GB",{maximumFractionDigits:2}))+" kg";
-function qtyLabel(p,q){ if(p.unit==="kg") return fmtKg(q); if(p.unit==="g100") return (q*100)+" g"; return q+" "+(lang==="hr"?"kom":"pcs"); }
-function unitPrice(p){ return p.unit==="kg"?"€/kg":p.unit==="g100"?"€/100 g":"€/"+(lang==="hr"?"kom":"pc"); }
-function lineInfo(k){
-  const c = cart[k];
-  if(c.type==="p"){ const p=byId[c.id]; return {name:p[lang],q:qtyLabel(p,c.qty),eur:p.eur*c.qty}; }
-  if(c.type==="cut"){ const x=CUTS.find(z=>z.id===c.id); return {name:(lang==="hr"?"Komora: ":"Ageing room: ")+x[lang]+" · "+x.day+" "+t("days"),q:fmtKg(x.kg),eur:x.eur*x.kg}; }
-  const co=COURSES[c.id]; return {name:(lang==="hr"?"Tečaj: ":"Class: ")+co[lang]+" ("+co.d+")",q:c.qty+"×",eur:co.eur*c.qty};
-}
-function addToCart(key,obj){ if(cart[key] && obj.type==="p"){ cart[key].qty = +(cart[key].qty+obj.qty).toFixed(2);} else cart[key]=obj; save(); renderCart(); }
-function toast(m){ const el=document.getElementById("toast"); el.textContent=m; el.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(()=>el.classList.remove("show"),1600); }
-
-/* ---------- marbling canvas (umjesto fotografija) ---------- */
-function rng(seed){ let s=seed; return ()=>{ s=(s*16807)%2147483647; return (s-1)/2147483646; }; }
-function marble(cv,seed,aged){
-  const dpr=Math.min(2,window.devicePixelRatio||1), w=cv.clientWidth||300, h=140;
-  cv.width=w*dpr; cv.height=h*dpr; const g=cv.getContext("2d"); g.scale(dpr,dpr);
-  const r=rng(seed*997+13);
-  const base=g.createLinearGradient(0,0,w,h);
-  base.addColorStop(0,aged?"#5a1c17":"#7a2420"); base.addColorStop(.6,aged?"#4a1612":"#6a1d1a"); base.addColorStop(1,"#2e0e0c");
-  g.fillStyle=base; g.fillRect(0,0,w,h);
-  for(let i=0;i<70;i++){
-    g.beginPath(); let x=r()*w, y=r()*h; g.moveTo(x,y);
-    for(let j=0;j<4;j++){ x+= (r()-.3)*60; y+=(r()-.5)*26; g.quadraticCurveTo(x-(r()*20),y+(r()-.5)*14,x,y); }
-    g.strokeStyle=`rgba(244,226,205,${.08+r()*.32})`; g.lineWidth=.6+r()*2.6; g.lineCap="round"; g.stroke();
-  }
-  g.fillStyle="rgba(240,220,196,.85)"; g.fillRect(0,h-16,w,16);
-  const cap=g.createLinearGradient(0,h-22,0,h); cap.addColorStop(0,"rgba(240,220,196,0)"); cap.addColorStop(1,"rgba(240,220,196,.4)");
-  g.fillStyle=cap; g.fillRect(0,h-22,w,6);
-  const v=g.createRadialGradient(w/2,h/2,10,w/2,h/2,w*.7); v.addColorStop(0,"rgba(0,0,0,0)"); v.addColorStop(1,"rgba(0,0,0,.45)");
-  g.fillStyle=v; g.fillRect(0,0,w,h);
-}
-
-/* ---------- render: komora ---------- */
-function renderKomora(){
-  const el=document.getElementById("komora-grid"); el.innerHTML="";
-  CUTS.forEach((c,i)=>{
-    const isRes = !!cart["cut-"+c.id];
-    const ready = c.day>=c.target;
-    const card=document.createElement("article"); card.className="cut"+(isRes?" reserved":"");
-    card.innerHTML=`<canvas aria-hidden="true"></canvas>
-     <div class="body">
-      <div class="row"><h3>${c[lang]}</h3>${isRes?`<span class="tag res">${t("reserved")}</span>`:ready?`<span class="tag ready">${t("ready")}</span>`:`<span class="tag aging">${t("inDays").replace("{n}",c.target-c.day)}</span>`}</div>
-      <div class="row muted" style="font-size:14px"><span>${c.sub[lang]}</span><span class="num">${fmtKg(c.kg)}</span></div>
-      <div><div class="row mono muted" style="margin-bottom:6px"><span>${c.day} / ${c.target} ${t("days")}</span><span>#${String(i+1).padStart(2,"0")}</span></div>
-      <div class="bar"><i style="width:${Math.min(100,c.day/c.target*100)}%"></i></div></div>
-      <div class="row"><span class="price num">${c.eur} €/kg</span><b class="num">≈ ${fmt(c.eur*c.kg)}</b></div>
-      <button class="btn small" type="button" ${isRes?"disabled":""}>${isRes?t("reserved"):t("reserve")}</button>
-     </div>`;
-    card.querySelector("button").onclick=()=>{ addToCart("cut-"+c.id,{type:"cut",id:c.id,qty:1}); renderKomora(); toast(t("addedT")); };
-    el.appendChild(card);
-    requestAnimationFrame(()=>marble(card.querySelector("canvas"),i+1,true));
-  });
-}
-
-/* ---------- render: ponuda ---------- */
-let activeCat="all", gfOnly=false;
-const qtys={};
-function stepOf(p){ return p.unit==="kg"?.25:1; }
-function defQty(p){ return p.unit==="kg"?(p.eur>40?.5:1):p.unit==="g100"?2:2; }
-function renderFilters(){
-  const f=document.getElementById("filters"); f.innerHTML="";
-  const mk=(id,label)=>{ const b=document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=label; b.setAttribute("aria-pressed",String(activeCat===id)); b.onclick=()=>{activeCat=id; renderFilters(); renderGrid();}; f.appendChild(b); };
-  mk("all",t("all")); CATS.forEach(([id,l])=>mk(id,l[lang]));
-  const lab=document.createElement("label"); lab.className="gf-toggle"; lab.innerHTML=`<input type="checkbox" id="gf" ${gfOnly?"checked":""}> ${t("gf")}`;
-  lab.querySelector("input").onchange=e=>{gfOnly=e.target.checked; renderGrid();}; f.appendChild(lab);
-}
-function renderGrid(){
-  const g=document.getElementById("grid"); g.innerHTML="";
-  P.filter(p=>(activeCat==="all"||p.cat===activeCat)&&(!gfOnly||p.gf)).forEach(p=>{
-    if(qtys[p.id]==null) qtys[p.id]=defQty(p);
-    const d=document.createElement("article"); d.className="item";
-    const other = lang==="hr"?p.en:p.hr;
-    d.innerHTML=`<h3>${p[lang]}</h3><div class="en">${other}</div>
-     <div class="meta"><span class="pill">${p.origin}</span>${p.gf?`<span class="pill gf">${t("gfPill")}</span>`:""}<span class="pill num">${String(p.eur.toFixed(2)).replace(".",lang==="hr"?",":".")} ${unitPrice(p)}</span></div>
-     <div class="foot"><div class="stepper"><button type="button" aria-label="−">−</button><output class="num"></output><button type="button" aria-label="+">+</button></div>
-     <button class="add" type="button">${t("add")}</button></div>`;
-    const out=d.querySelector("output"), [minus,plus]=d.querySelectorAll(".stepper button");
-    const upd=()=>{ out.textContent=qtyLabel(p,qtys[p.id]); };
-    minus.onclick=()=>{ qtys[p.id]=Math.max(stepOf(p),+(qtys[p.id]-stepOf(p)).toFixed(2)); upd(); };
-    plus.onclick=()=>{ qtys[p.id]=+(qtys[p.id]+stepOf(p)).toFixed(2); upd(); };
-    const addb=d.querySelector(".add");
-    addb.onclick=()=>{ addToCart("p-"+p.id,{type:"p",id:p.id,qty:qtys[p.id]}); addb.textContent=t("added"); addb.classList.add("done"); setTimeout(()=>{addb.textContent=t("add");addb.classList.remove("done");},1200); };
-    upd(); g.appendChild(d);
-  });
-}
-
-/* ---------- planner ---------- */
-let hunger=1, style=0;
-const HUNGER=[250,350,500]; // g sirovog mesa po osobi
-const STYLES=[
-  [["p15",.3],["p10",.3],["p16",.2],["p13",.2]],
-  [["p2",.4],["p9",.3],["p14",.3]],
-  [["p8",.45],["p7",.35],["p16",.2]]
-];
-function seg(id,keys,get,set){
-  const el=document.getElementById(id); el.innerHTML="";
-  keys.forEach((k,i)=>{ const b=document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=t(k); b.setAttribute("aria-pressed",String(get()===i)); b.onclick=()=>{set(i); seg(id,keys,get,set); renderPlan();}; el.appendChild(b); });
-}
-function planItems(){
-  const n=+document.getElementById("guests").value, total=n*HUNGER[hunger]/1000;
-  return STYLES[style].map(([id,share])=>{ const kg=Math.max(.25,Math.round(total*share*4)/4); return {p:byId[id],kg}; });
-}
-function renderPlan(){
-  document.getElementById("guests-out").textContent=document.getElementById("guests").value;
-  const ul=document.getElementById("plan"); ul.innerHTML=""; let sum=0, kgs=0;
-  planItems().forEach(({p,kg})=>{ sum+=p.eur*kg; kgs+=kg; const li=document.createElement("li"); li.innerHTML=`<span>${p[lang]}</span><span class="num muted">${fmtKg(kg)}</span><b class="num">${fmt(p.eur*kg)}</b>`; ul.appendChild(li); });
-  document.getElementById("plan-total").textContent=fmtKg(kgs)+" · "+fmt(sum);
-}
-
-/* ---------- villa ---------- */
-function renderBoxes(){
-  const el=document.getElementById("boxes"); el.innerHTML="";
-  BOXES.forEach((b,i)=>{ const l=document.createElement("label"); l.className="box"; l.innerHTML=`<input type="radio" name="box" value="${b.id}" ${i===0?"checked":""}><div><h3>${b.name}</h3><p>${b.desc}</p></div><span class="mono muted">${b.from}</span>`; el.appendChild(l); });
-}
-
-/* ---------- courses ---------- */
-function renderCourses(){
-  const el=document.getElementById("courses"); el.innerHTML="";
-  COURSES.forEach((c,i)=>{ const d=document.createElement("div"); d.className="course";
-    const taken=!!cart["course-"+i];
-    d.innerHTML=`<div class="date">${c.d}<small>${c.dw[lang]}</small></div><div><h3>${c[lang]}</h3><p>${lang==="hr"?c.phr:c.pen}</p></div><span class="mono muted">${c.eur} € · ${c.seats} ${t("seats")}</span><button class="btn small ${taken?"":"ghost"}" type="button">${taken?"✓ "+t("added"):t("signup")}</button>`;
-    d.querySelector("button").onclick=()=>{ addToCart("course-"+i,{type:"course",id:i,qty:1}); renderCourses(); toast(t("addedT")); };
-    el.appendChild(d); });
-}
-
-/* ---------- pickup slots ---------- */
-let selDay=null, selTime=null;
-function dayList(){
-  const out=[], now=new Date(); let d=new Date(now);
-  for(let i=0;out.length<6&&i<10;i++){ const x=new Date(now); x.setDate(now.getDate()+i); x.setHours(0,0,0,0); if(x.getDay()!==0) out.push(x); }
-  // ako je danas prekasno (zadnji termin 18:30 - 2h pripreme), preskoči danas
-  if(out[0].toDateString()===now.toDateString() && (now.getHours()+now.getMinutes()/60)>16.5) out.shift();
-  return out;
-}
-function timesFor(day){
-  const now=new Date(), res=[];
-  for(let h=8;h<=18.5;h+=.5){ const x=new Date(day); x.setHours(Math.floor(h),h%1?30:0,0,0); if(x-now>=2*3600*1000) res.push(x); }
-  return res;
-}
-function dayLabel(d){
-  const now=new Date(); now.setHours(0,0,0,0); const diff=Math.round((d-now)/864e5);
-  if(diff===0) return t("today"); if(diff===1) return t("tomorrow");
-  return d.toLocaleDateString(lang==="hr"?"hr-HR":"en-GB",{weekday:"short",day:"numeric",month:"numeric"});
-}
-const hm = d => d.toLocaleTimeString("hr-HR",{hour:"2-digit",minute:"2-digit"});
-function renderSlots(){
-  const days=dayList(); if(!selDay||!days.some(d=>d.getTime()===selDay)) selDay=days[0].getTime();
-  const de=document.getElementById("days"); de.innerHTML="";
-  days.forEach(d=>{ const b=document.createElement("button"); b.type="button"; b.className="chip"; b.textContent=dayLabel(d); b.setAttribute("aria-pressed",String(d.getTime()===selDay)); b.onclick=()=>{selDay=d.getTime(); selTime=null; renderSlots();}; de.appendChild(b); });
-  const ts=timesFor(new Date(selDay)); if(!selTime||!ts.some(x=>hm(x)===selTime)) selTime=ts[0]?hm(ts[0]):null;
-  const te=document.getElementById("times"); te.innerHTML="";
-  ts.forEach(x=>{ const b=document.createElement("button"); b.type="button"; b.className="chip num"; b.textContent=hm(x); b.setAttribute("aria-pressed",String(hm(x)===selTime)); b.onclick=()=>{selTime=hm(x); renderSlots();}; te.appendChild(b); });
-  const f=days[0], ft=timesFor(f)[0];
-  document.getElementById("first-slot").textContent = ft? dayLabel(f)+" · "+hm(ft) : "–";
-}
-
-/* ---------- cart render ---------- */
-function renderCart(){
-  const keys=Object.keys(cart); let n=0, sum=0;
-  const L=document.getElementById("lines"); L.innerHTML="";
-  if(!keys.length) L.innerHTML=`<p class="empty">${t("empty")}</p>`;
-  keys.forEach(k=>{ const li=lineInfo(k); n++; sum+=li.eur;
-    const d=document.createElement("div"); d.className="line";
-    d.innerHTML=`<div><div class="nm">${li.name}</div><div class="q">${li.q}</div></div><b class="num">${fmt(li.eur)}</b><button class="rm" type="button">${t("remove")}</button>`;
-    d.querySelector(".rm").onclick=()=>{ delete cart[k]; save(); renderCart(); renderKomora(); renderCourses(); };
-    L.appendChild(d); });
-  document.getElementById("cart-n").textContent=n;
-  document.getElementById("sum").textContent=fmt(sum);
-  return sum;
-}
-function buildMsg(){
-  const sum=renderCart(); const lines=Object.keys(cart).map(k=>{ const li=lineInfo(k); return "• "+li.name+" – "+li.q; });
-  const name=document.getElementById("c-name").value.trim(), tel=document.getElementById("c-tel").value.trim(), note=document.getElementById("c-note").value.trim();
-  return [t("msgHead"),"",...lines,"",t("msgPick")+": "+dayLabel(new Date(selDay))+" "+(selTime||""),t("msgName")+": "+name,t("msgTel")+": "+tel,note?t("msgNote")+": "+note:"",t("msgEst")+": "+fmt(sum)].filter(x=>x!=="").join("\n");
-}
-
-/* ---------- open/closed ---------- */
-function renderOpen(){
-  const now=new Date(), h=now.getHours()+now.getMinutes()/60, open=now.getDay()!==0 && h>=7 && h<19;
-  document.getElementById("open-dot").className="dot"+(open?"":" off");
-  document.getElementById("open-txt").textContent=open?t("open"):t("closed");
-}
-
-/* ---------- i18n apply ---------- */
-function applyLang(){
-  document.documentElement.lang=lang;
-  document.querySelectorAll("[data-i18n]").forEach(el=>el.textContent=t(el.dataset.i18n));
-  document.querySelectorAll("[data-i18n-html]").forEach(el=>el.innerHTML=t(el.dataset.i18nHtml));
-  document.querySelectorAll("[data-i18n-ph]").forEach(el=>el.placeholder=t(el.dataset.i18nPh));
-  document.getElementById("lang-hr").setAttribute("aria-pressed",String(lang==="hr"));
-  document.getElementById("lang-en").setAttribute("aria-pressed",String(lang==="en"));
-  renderOpen(); renderKomora(); renderFilters(); renderGrid();
-  seg("hunger",["h1","h2","h3"],()=>hunger,v=>hunger=v); seg("style",["s1","s2","s3"],()=>style,v=>style=v); renderPlan();
-  renderCourses(); renderSlots(); renderCart();
-}
-function setLang(l){ lang=l; try{localStorage.setItem("mecara-lang",l);}catch(e){} applyLang(); }
-
-/* ---------- events ---------- */
-document.getElementById("lang-hr").onclick=()=>setLang("hr");
-document.getElementById("lang-en").onclick=()=>setLang("en");
-document.getElementById("guests").oninput=renderPlan;
-document.getElementById("plan-add").onclick=()=>{ planItems().forEach(({p,kg})=>addToCart("p-"+p.id,{type:"p",id:p.id,qty:kg})); toast(t("addedT")); };
-const openCart=()=>{ renderSlots(); renderCart(); document.body.classList.add("cart-open"); };
-const closeCart=()=>document.body.classList.remove("cart-open");
-document.getElementById("open-cart").onclick=openCart;
-document.getElementById("close-cart").onclick=closeCart;
-document.getElementById("scrim").onclick=closeCart;
-document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeCart(); });
-document.getElementById("send").onclick=()=>{
-  if(!Object.keys(cart).length){ toast(t("needItems")); return; }
-  if(!document.getElementById("c-name").value.trim()||!document.getElementById("c-tel").value.trim()){ toast(t("needName")); return; }
-  const m=buildMsg(); document.getElementById("msg").textContent=m;
-  document.getElementById("wa").href="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(m);
-  document.getElementById("result").classList.add("show");
-  document.getElementById("result").scrollIntoView({behavior:"smooth",block:"nearest"});
-};
-document.getElementById("copy").onclick=async()=>{ try{ await navigator.clipboard.writeText(document.getElementById("msg").textContent); toast(t("copied")); }catch(e){ toast("Označi tekst i kopiraj ručno"); } };
-document.getElementById("villa-form").addEventListener("submit",e=>{
-  e.preventDefault();
-  const box=BOXES.find(b=>b.id===(document.querySelector('input[name="box"]:checked')||{}).value)||BOXES[0];
-  const v=id=>document.getElementById(id).value.trim();
-  const m=["Villa & Yacht request – Mecara","","Box: "+box.name,"Delivery to: "+v("v-type"),"Where: "+v("v-where"),"Date: "+v("v-date"),"Guests: "+v("v-guests"),"Name: "+v("v-name"),v("v-note")?"Notes: "+v("v-note"):""].filter(Boolean).join("\n");
-  document.getElementById("msg").textContent=m;
-  document.getElementById("wa").href="https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(m);
-  document.getElementById("result").classList.add("show"); openCart();
-});
-(function(){ const d=new Date(); d.setDate(d.getDate()+3); document.getElementById("v-date").value=d.toISOString().slice(0,10); })();
-window.addEventListener("resize",()=>{ clearTimeout(window._rz); window._rz=setTimeout(renderKomora,200); });
-
-applyLang();
-})();
-</script>
+<script src="/js/app.js" defer></script>
 </body>
 </html>
