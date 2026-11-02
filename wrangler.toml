@@ -1,6 +1,11 @@
 name = "mecara-web"
 compatibility_date = "2026-10-01"
 
+routes = [
+  { pattern = "mecara.app", custom_domain = true },
+  { pattern = "www.mecara.app", custom_domain = true }
+]
+
 [assets]
 directory = "./public"
 not_found_handling = "single-page-application"
