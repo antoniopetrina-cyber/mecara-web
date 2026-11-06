@@ -12,3 +12,8 @@ directory = "./public"
 binding = "ASSETS"
 not_found_handling = "404-page"
 run_worker_first = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mecara"
+database_id = "72ecf1e9-f606-4b23-a625-8c33b22460f9"

@@ -26,7 +26,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/fonts/bodoni-moda-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/styles.css?v=mvzq603z">
+<link rel="stylesheet" href="/css/styles.css?v=mw507anx">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Cook Steak in a Pan: A Practical Guide","description":"A suitable pan, a dry surface and controlled heat make steak cooking easier. Learn how to plan the sear without relying only on minutes.","inLanguage":"en","image":"https://www.mecara.app/img/blog/r02.jpg","datePublished":"2026-11-02","dateModified":"2026-11-02","mainEntityOfPage":"https://www.mecara.app/en/blog/how-to-cook-steak-in-a-pan/","publisher":{"@type":"Organization","name":"Mecara","logo":{"@type":"ImageObject","url":"https://www.mecara.app/img/logo-full.png"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.mecara.app/en/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.mecara.app/en/blog/"},{"@type":"ListItem","position":3,"name":"BBQ & Steaks","item":"https://www.mecara.app/en/blog/category/bbq-and-steaks/"},{"@type":"ListItem","position":4,"name":"How to cook steak in a pan without overcomplicating dinner","item":"https://www.mecara.app/en/blog/how-to-cook-steak-in-a-pan/"}]}</script>
 </head>
@@ -122,13 +122,15 @@
     <div class="field"><span class="legend" id="l-day">Preferred collection date</span><div class="slots" id="days" role="group" aria-labelledby="l-day"></div></div>
     <div class="field"><span class="legend" id="l-time">Preferred time</span><div class="slots" id="times" role="group" aria-labelledby="l-time"></div></div>
     <p class="note">Products and timing are confirmed by message.</p>
+    <input type="text" id="c-hp" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="field"><label for="c-name">Full name</label><input type="text" id="c-name" maxlength="80" autocomplete="name"></div>
     <div class="field"><label for="c-tel">Mobile number</label><input type="tel" id="c-tel" placeholder="+385 9x xxx xxxx" maxlength="20" autocomplete="tel" inputmode="tel"></div>
     <div class="field"><label for="c-note">Note for the butcher</label><textarea id="c-note" maxlength="600" placeholder="Example: steaks 3 cm thick, packed separately."></textarea></div>
     <div class="result" id="result">
+      <p class="status-line" role="status"></p>
       <b>Your message is ready. You still need to send it.</b>
       <pre id="msg"></pre>
-      <p class="wip-note">Work in progress: enquiries are not sent to Mecara yet. You can copy the message, but please don&#39;t send it for now.</p>
+      <p class="wip-note">Work in progress: your enquiry is saved in Mecara&#39;s system, but Mecara is not handling them regularly yet. For urgent orders, contact the shop.</p>
       <div class="ctas"><a class="btn small wa" id="wa" href="#" target="_blank" rel="noopener noreferrer" hidden>Open WhatsApp to send your enquiry</a><button class="btn small ghost" type="button" id="copy">Copy message</button></div>
       <p class="note" id="after-open" hidden>Check that your message was sent in WhatsApp. Wait for Mecara&#39;s confirmation.</p>
     </div>
@@ -137,12 +139,12 @@
     <div class="sum"><span>Estimated amount</span><b id="sum">0,00 €</b></div>
     <p class="note">The final amount for goods sold by weight depends on actual weight and the confirmed price.</p>
     <p class="err" id="c-err" role="alert"></p>
-    <button class="btn" type="button" id="send">Prepare message</button>
+    <button class="btn" type="button" id="send">Send enquiry</button>
   </div>
 </aside>
 <div class="scrim" id="scrim"></div>
 <div class="toast" id="toast" role="status"></div>
-<script src="/js/catalog.js?v=mvzq603z" defer></script>
-<script src="/js/app.js?v=mvzq603z" defer></script>
+<script src="/js/catalog.js?v=mw507anx" defer></script>
+<script src="/js/app.js?v=mw507anx" defer></script>
 </body>
 </html>

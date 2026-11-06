@@ -78,27 +78,25 @@ function lineInfo(k) {
 
 function toast(m) { const el = $("toast"); if (!el) return; el.textContent = m; el.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("show"), 2200); }
 
-/* ---------- proizvodi: koračnici i dodavanje ---------- */
+/* ---------- proizvodi: koračnici i dodavanje (delegirano, radi i za nove proizvode) ---------- */
 const qtys = {};
-document.querySelectorAll(".prod").forEach(li => {
-  const id = li.dataset.id, u = li.dataset.unit, out = li.querySelector("output");
-  if (!M.products[id]) return;
-  qtys[id] = defQty(u);
-  const minus = li.querySelector('[data-step="-1"]');
-  const upd = () => { out.textContent = qtyLabel(u, qtys[id]); minus.disabled = qtys[id] <= step(u); };
-  li.querySelectorAll("[data-step]").forEach(b => b.addEventListener("click", () => {
-    const s = step(u) * Number(b.dataset.step);
-    qtys[id] = Math.min(50, Math.max(step(u), Math.round((qtys[id] + s) * 100) / 100)); upd();
-  }));
-  upd();
-});
-document.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click", () => {
+function updStepper(li) {
+  const id = li.dataset.id, u = li.dataset.unit; if (qtys[id] == null) qtys[id] = defQty(u);
+  li.querySelector("output").textContent = qtyLabel(u, qtys[id]);
+  li.querySelector('[data-step="-1"]').disabled = qtys[id] <= step(u);
+}
+document.querySelectorAll(".prod").forEach(updStepper);
+document.addEventListener("click", e => {
+  const st = e.target.closest("[data-step]");
+  if (st) { const li = st.closest(".prod"); if (!li) return; const id = li.dataset.id, u = li.dataset.unit; if (qtys[id] == null) qtys[id] = defQty(u);
+    qtys[id] = Math.min(50, Math.max(step(u), Math.round((qtys[id] + step(u) * Number(st.dataset.step)) * 100) / 100)); updStepper(li); return; }
+  const b = e.target.closest("[data-add]"); if (!b || b.disabled) return;
   const id = b.dataset.id, kind = b.dataset.add;
   if (kind === "p" && M.products[id]) {
-    const k = "p-" + id;
+    const k = "p-" + id; const u = M.products[id].u; if (qtys[id] == null) qtys[id] = defQty(u);
     if (list[k]) list[k].qty = Math.min(100, Math.round((list[k].qty + qtys[id]) * 100) / 100);
     else list[k] = { type: "p", id, qty: qtys[id] };
-  } else if (kind === "cut" && M.cuts[id]) { if (list["cut-" + id]) { toast(D.reservedT); return; } list["cut-" + id] = { type: "cut", id }; }
+  } else if (kind === "cut" && M.cuts[id]) { if (list["cut-" + id] || M.cuts[id].reserved) { toast(D.reservedT); return; } list["cut-" + id] = { type: "cut", id }; }
   else if (kind === "ws" && M.workshops[id]) { if (list["ws-" + id]) return; list["ws-" + id] = { type: "ws", id }; }
   else return;
   save(); hideResult(); renderList();
@@ -106,7 +104,7 @@ document.querySelectorAll("[data-add]").forEach(b => b.addEventListener("click",
   const old = b.textContent; b.textContent = M.added[lang]; b.classList.add("done");
   setTimeout(() => { b.textContent = old; b.classList.remove("done"); }, 1300);
   toast(D.toastAdded);
-}));
+});
 
 /* ---------- termini ---------- */
 let selDay = null, selTime = null, curDay = null;
@@ -162,8 +160,9 @@ function buildMsg() {
     m.products + ":", ...lines, m.est + ": " + money(Object.keys(list).reduce((a, k) => a + lineInfo(k).eur, 0)), note ? m.note + ": " + note : "", m.end].filter(Boolean).join("\n");
 }
 function hideResult() { const r = $("result"); if (r) r.classList.remove("show"); const a = $("after-open"); if (a) a.hidden = true; }
-function showResult(msg) {
+function showResult(msg, status) {
   const r = $("result"); $("msg").textContent = msg;
+  const st = r.querySelector(".status-line"); if (st) st.textContent = status || "";
   const wa = $("wa");
   if (M.site.enquiryLive) { wa.hidden = false; wa.href = "https://wa.me/" + M.site.whatsapp + "?text=" + encodeURIComponent(msg); }
   else wa.hidden = true;
@@ -197,8 +196,24 @@ $("send").addEventListener("click", () => {
   if (!Object.keys(list).length) { err.textContent = D.noItems; return; }
   if (!clean($("c-name").value)) { err.textContent = D.noName; $("c-name").focus(); return; }
   if (!validTel($("c-tel").value.trim())) { err.textContent = D.badTel; $("c-tel").focus(); return; }
-  renderSlots(); showResult(buildMsg());
+  renderSlots(); const msg = buildMsg();
+  const btn = $("send"); btn.disabled = true; const label = btn.textContent; btn.textContent = D.sending;
+  postEnquiry({ source: "web", lang, name: clean($("c-name").value), phone: clean($("c-tel").value), note: clean($("c-note").value),
+    pickup: curDay ? key(curDay.d) + " " + hhmm(selTime) : "", items: Object.values(list).map(c => ({ type: c.type, id: c.id, qty: c.qty || 1 })), hp: ($("c-hp") || {}).value || "" })
+  .then(res => {
+    if (res.ok) { showResult(msg, D.received.replace("{id}", res.data.id)); list = {}; save(); renderList(); renderCuts(); refreshLive(); }
+    else if (res.status === 409 && res.data.conflict) { err.textContent = res.data.error; delete list["cut-" + res.data.conflict]; delete list["ws-" + res.data.conflict]; save(); renderList(); refreshLive(); }
+    else if (res.status === 0) showResult(msg, D.netFail);
+    else err.textContent = res.data.error || D.netFail;
+  }).finally(() => { btn.disabled = false; btn.textContent = label; });
 });
+async function postEnquiry(body) {
+  try {
+    const r = await fetch("/api/enquiry", { method: "POST", headers: { "content-type": "application/json", "x-mecara": "1" }, body: JSON.stringify(body) });
+    let data = {}; try { data = await r.json(); } catch (e) {}
+    return { ok: r.ok, status: r.status, data };
+  } catch (e) { return { ok: false, status: 0, data: {} }; }
+}
 $("wa").addEventListener("click", () => { $("after-open").hidden = false; });
 $("copy").addEventListener("click", async () => {
   const pre = $("msg");
@@ -220,6 +235,22 @@ function marble(cv, seed) {
   g.fillStyle = "rgba(240,220,196,.85)"; g.fillRect(0, h - 16, w, 16);
   const v = g.createRadialGradient(w / 2, h / 2, 10, w / 2, h / 2, w * .7); v.addColorStop(0, "rgba(0,0,0,0)"); v.addColorStop(1, "rgba(0,0,0,.45)"); g.fillStyle = v; g.fillRect(0, 0, w, h);
 }
+const RU = M.ui[lang];
+function cutCard(c, i) {
+  const ready = c.day >= c.target, kgS = fmtNum(c.kg) + " kg";
+  const tag = c.reserved ? `<span class="tag res">${esc(D.reserved)}</span>` : ready ? `<span class="tag ready">${esc(RU.ready)}</span>` : `<span class="tag aging">${esc(RU.inDays.replace("{n}", c.target - c.day))}</span>`;
+  const li = document.createElement("li"); li.className = "cut"; li.dataset.cut = c.id;
+  li.innerHTML = `<canvas aria-hidden="true" data-seed="${i + 1}"></canvas><div class="body">
+    <div class="row"><h3>${esc(c["name_" + lang])}</h3>${tag}</div>
+    <div class="row muted meta-row"><span>${esc(c["sub_" + lang] || "")}</span><span class="num">${esc(kgS)}</span></div>
+    <p class="cut-desc">${esc(c["desc_" + lang] || "")}</p>
+    <div><div class="row mono muted days-row"><span>${c.day} / ${c.target} ${esc(D.days)}</span><span aria-hidden="true">#${String(i + 1).padStart(2, "0")}</span></div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="${c.target}" aria-valuenow="${c.day}" aria-label="${esc(c["name_" + lang])}: ${c.day} / ${c.target} ${esc(D.days)}"><i></i></div></div>
+    <div class="row"><span class="price num">${esc(String(c.eur).replace(".", lang === "hr" ? "," : "."))} €/kg</span><b class="num">≈ ${esc(money(c.eur * c.kg))}</b></div>
+    <button class="btn small" type="button" data-add="cut" data-id="${esc(c.id)}">${esc(RU.cutAdd)}</button></div>`;
+  li.querySelector(".bar i").style.width = Math.min(100, Math.round(c.day / c.target * 100)) + "%";
+  return li;
+}
 function renderCuts() {
   document.querySelectorAll(".course[data-ws]").forEach(row => {
     const id = row.dataset.ws, on = !!list["ws-" + id], b = row.querySelector("[data-add]");
@@ -227,7 +258,7 @@ function renderCuts() {
     b.textContent = on ? "✓ " + b.dataset.done : b.dataset.label; b.disabled = on; b.classList.toggle("ghost", !on);
   });
   document.querySelectorAll(".cut[data-cut]").forEach(card => {
-    const id = card.dataset.cut, res = !!list["cut-" + id], b = card.querySelector("[data-add]");
+    const id = card.dataset.cut, res = !!list["cut-" + id] || !!(M.cuts[id] && M.cuts[id].reserved), b = card.querySelector("[data-add]");
     card.classList.toggle("reserved", res);
     if (!b.dataset.label) b.dataset.label = b.textContent;
     b.textContent = res ? D.reserved : b.dataset.label; b.disabled = res;
@@ -277,6 +308,10 @@ if (vf) {
     const L = lang === "hr" ? ["Paket", "Lokacija", "Gdje", "Datum", "Gosti", "Kontakt", "Mobitel", "E-mail", "Napomena"] : ["Selection", "Location type", "Where", "Date", "Guests", "Contact", "Mobile", "Email", "Notes"];
     const msg = [vf.dataset.head, "", L[0] + ": " + boxName, L[1] + ": " + v("v-type"), L[2] + ": " + v("v-where"), L[3] + ": " + v("v-date"), L[4] + ": " + g, L[5] + ": " + v("v-name"), L[6] + ": " + v("v-tel"), v("v-email") ? L[7] + ": " + v("v-email") : "", v("v-note") ? L[8] + ": " + v("v-note") : "", "", D.msg.end].filter((x, i, a) => x !== "" || (i > 0 && a[i - 1] !== "")).join("\n");
     const r = $("v-result"); r.querySelector("pre").textContent = msg;
+    const stl = r.querySelector(".status-line"); if (stl) stl.textContent = D.sending;
+    postEnquiry({ source: "villa", lang, name: v("v-name"), phone: v("v-tel"), email: v("v-email"), note: v("v-note"), items: [],
+      extra: { type: v("v-type"), where: v("v-where"), date: v("v-date"), guests: g, box: boxName }, hp: ($("v-hp") || {}).value || "" })
+      .then(res => { if (stl) stl.textContent = res.ok ? D.received.replace("{id}", res.data.id) : res.status === 0 ? D.netFail : (res.data.error || D.netFail); });
     const wa = r.querySelector(".wa");
     if (M.site.enquiryLive) { wa.hidden = false; wa.href = "https://wa.me/" + M.site.whatsapp + "?text=" + encodeURIComponent(msg); } else wa.hidden = true;
     r.querySelector(".wip-note").hidden = M.site.enquiryLive; r.classList.add("show");
@@ -285,7 +320,44 @@ if (vf) {
   $("v-copy").addEventListener("click", async () => { const pre = $("v-result").querySelector("pre"); try { await navigator.clipboard.writeText(pre.textContent); toast(D.copied); } catch (e) { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast(D.copyFail); } });
 }
 
-renderOpen(); renderList(); renderCuts();
+/* ---------- živi podaci iz Mecarina sustava ---------- */
+function applyLive(L) {
+  // proizvodi
+  const P = {}; L.products.forEach(p => { P[p.id] = p; M.products[p.id] = { u: p.unit, eur: p.eur, hr: p.name_hr, en: p.name_en }; });
+  Object.keys(M.products).forEach(id => { if (!P[id]) delete M.products[id]; });
+  const unitPrice = u => u === "kg" ? "€/kg" : u === "g100" ? "€/100 g" : (lang === "hr" ? "€/kom" : "€/pc");
+  document.querySelectorAll(".prod[data-id]").forEach(li => {
+    const p = P[li.dataset.id]; if (!p) { li.remove(); return; }
+    const pill = li.querySelector(".pill.num"); if (pill) pill.textContent = p.eur.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + unitPrice(p.unit);
+  });
+  L.products.forEach(p => { // novi proizvodi u ponudi
+    if (document.querySelector(`.prod[data-id="${CSS.escape(p.id)}"]`)) return;
+    const ul = document.querySelector(`.cat#${CSS.escape(p.cat)} ul.prods`); if (!ul) return;
+    const li = document.createElement("li"); li.className = "prod"; li.dataset.id = p.id; li.dataset.unit = p.unit;
+    li.innerHTML = `<div class="prod-txt"><h4>${esc(p["name_" + lang])}</h4><p>${esc(p["desc_" + lang] || "")}</p><div class="meta"><span class="pill">${esc(RU.unit[p.unit])}</span><span class="pill num">${esc(p.eur.toLocaleString(loc, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + unitPrice(p.unit))}</span></div></div>
+      <div class="prod-act"><div class="stepper" role="group" aria-label="${esc(RU.qty)}: ${esc(p["name_" + lang])}"><button type="button" data-step="-1" aria-label="${esc(RU.less)}">−</button><output aria-live="polite"></output><button type="button" data-step="1" aria-label="${esc(RU.more)}">+</button></div>
+      <button class="add" type="button" data-add="p" data-id="${esc(p.id)}">${esc(RU.add)}</button></div>`;
+    ul.appendChild(li); updStepper(li);
+  });
+  // komora
+  M.cuts = {}; L.cuts.forEach(c => M.cuts[c.id] = { hr: c.name_hr, en: c.name_en, kg: c.kg, eur: c.eur, day: c.day, reserved: c.reserved });
+  document.querySelectorAll("ul.komora").forEach(ul => { ul.textContent = ""; L.cuts.forEach((c, i) => ul.appendChild(cutCard(c, i))); });
+  // radionice
+  const W = {}; L.workshops.forEach(w => { W[w.id] = w; M.workshops[w.id] = { hr: w.title_hr, en: w.title_en, date: w.date.split("-").reverse().slice(0, 2).join(".") + ".", eur: w.eur, seats: w.seats }; });
+  document.querySelectorAll(".course[data-ws]").forEach(row => {
+    const w = W[row.dataset.ws]; if (!w) { row.remove(); return; }
+    const sp = row.querySelector(".mono"); if (sp) sp.textContent = `${w.eur} € · ${w.seatsLeft} ${D.seatsLeft}`;
+    const b = row.querySelector("[data-add]"); if (w.seatsLeft < 1 && !list["ws-" + w.id]) { b.disabled = true; b.textContent = D.full; }
+  });
+  Object.keys(list).forEach(k => { const c = list[k]; if ((c.type === "p" && !M.products[c.id]) || (c.type === "cut" && !M.cuts[c.id]) || (c.type === "ws" && !W[c.id])) delete list[k]; });
+  save(); renderList(); renderCuts(); paintMarble();
+  if (typeof renderPlan === "function" && pf) renderPlan();
+}
+async function refreshLive() {
+  try { const r = await fetch("/api/live", { headers: { accept: "application/json" } }); if (r.ok) applyLive(await r.json()); } catch (e) { /* ostaje statični sadržaj */ }
+}
+
+renderOpen(); renderList(); renderCuts(); refreshLive();
 setInterval(() => { renderOpen(); if (!document.body.classList.contains("cart-open")) renderSlots(); }, 60000);
 })();
 

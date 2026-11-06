@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mecara · Admin</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="adm">
+<header class="adm-top">
+  <div class="adm-wrap">
+    <a class="brand" href="/admin/" aria-label="Mecara admin"><img src="/img/wordmark.png" alt="Mecara" width="119" height="26"><span>ADMIN PANEL</span></a>
+    <div class="adm-user" id="user" hidden><span id="user-email"></span><button type="button" class="btn small ghost" id="logout">Odjava</button></div>
+  </div>
+  <nav class="adm-tabs adm-wrap" id="tabs" hidden aria-label="Odjeljci">
+    <button type="button" data-tab="upiti" aria-pressed="true">Upiti <span class="badge" id="b-novo">0</span></button>
+    <button type="button" data-tab="komora" aria-pressed="false">Komora</button>
+    <button type="button" data-tab="proizvodi" aria-pressed="false">Proizvodi i cijene</button>
+    <button type="button" data-tab="radionice" aria-pressed="false">Radionice</button>
+    <button type="button" data-tab="postavke" aria-pressed="false">Postavke</button>
+  </nav>
+</header>
+
+<main class="adm-wrap" id="main">
+  <!-- prijava -->
+  <section id="login-view" class="login" hidden>
+    <h1>Prijava</h1>
+    <form id="login-form" class="panel" novalidate>
+      <div class="field"><label for="l-email">E-mail</label><input type="email" id="l-email" autocomplete="username" required></div>
+      <div class="field"><label for="l-pass">Lozinka</label><input type="password" id="l-pass" autocomplete="current-password" required></div>
+      <p class="err" id="l-err" role="alert"></p>
+      <button class="btn" type="submit">Prijavi se</button>
+    </form>
+    <p class="note">Pristup imaju samo ovlašteni administratori Mecare.</p>
+  </section>
+
+  <section id="v-upiti" class="view" hidden>
+    <div class="view-head"><h1>Upiti</h1>
+      <div class="filters" id="enq-filter" role="group" aria-label="Filtar statusa"></div></div>
+    <div id="enq-list" class="list"></div>
+  </section>
+
+  <section id="v-komora" class="view" hidden>
+    <div class="view-head"><h1>Komora</h1><button type="button" class="btn" data-new="cuts">+ Novi komad</button></div>
+    <p class="note">Dani odležavanja računaju se sami od datuma početka. Komad koji je preuzet automatski se skriva s weba.</p>
+    <div id="cuts-list" class="list"></div>
+  </section>
+
+  <section id="v-proizvodi" class="view" hidden>
+    <div class="view-head"><h1>Proizvodi i cijene</h1><button type="button" class="btn" data-new="products">+ Novi proizvod</button></div>
+    <div class="field search"><label for="p-search">Traži</label><input type="search" id="p-search" placeholder="npr. ramstek"></div>
+    <div id="products-list" class="list"></div>
+  </section>
+
+  <section id="v-radionice" class="view" hidden>
+    <div class="view-head"><h1>Radionice</h1><button type="button" class="btn" data-new="workshops">+ Nova radionica</button></div>
+    <div id="workshops-list" class="list"></div>
+  </section>
+
+  <section id="v-postavke" class="view" hidden>
+    <h1>Postavke</h1>
+    <form id="pw-form" class="panel narrow-form" novalidate>
+      <h2>Promjena lozinke</h2>
+      <div class="field"><label for="pw-cur">Trenutačna lozinka</label><input type="password" id="pw-cur" autocomplete="current-password"></div>
+      <div class="field"><label for="pw-new">Nova lozinka (barem 12 znakova)</label><input type="password" id="pw-new" autocomplete="new-password" minlength="12"></div>
+      <p class="err" id="pw-err" role="alert"></p>
+      <button class="btn" type="submit">Spremi novu lozinku</button>
+    </form>
+    <p class="note">Promjenom lozinke odjavljuju se svi ostali uređaji.</p>
+  </section>
+</main>
+
+<dialog id="editor" aria-labelledby="ed-title">
+  <form id="ed-form" method="dialog" novalidate>
+    <header><h2 id="ed-title">Uredi</h2><button type="button" class="x" id="ed-close" aria-label="Zatvori">✕</button></header>
+    <div class="ed-body" id="ed-body"></div>
+    <p class="err" id="ed-err" role="alert"></p>
+    <footer><button type="button" class="btn ghost danger" id="ed-delete">Obriši</button><span></span><button type="button" class="btn ghost" id="ed-cancel">Odustani</button><button type="submit" class="btn">Spremi</button></footer>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+<script src="/admin/admin.js" defer></script>
+</body>
+</html>

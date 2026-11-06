@@ -477,3 +477,7 @@ html{scroll-padding-top:110px}
   .post-head .lead{color:#000}
   .wrap{max-width:none;padding:0}
 }
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.status-line{font-weight:600;color:var(--ready);margin:0 0 6px}
+.status-line:empty{display:none}
+.tag.res{color:#e3a54a;border-color:rgba(227,165,74,.45)}

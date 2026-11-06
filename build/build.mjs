@@ -473,9 +473,11 @@ ${faqBlock(lang, ["large", "estimate"])}`;
       <div class="field full"><label for="v-where">${esc(T.f.where)}</label><input type="text" id="v-where" maxlength="160" placeholder="${esc(T.f.wherePh)}" required aria-describedby="v-where-h"><small class="note" id="v-where-h">${esc(T.f.where2)}</small></div>
       <div class="field full"><label for="v-note">${esc(T.f.note)}</label><textarea id="v-note" maxlength="800" placeholder="${esc(T.f.notePh)}"></textarea></div>
     </div>
+    <input type="text" id="v-hp" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <p class="err" id="v-err" role="alert"></p>
     <button class="btn" type="submit">${esc(T.f.submit)}</button>
     <div class="result" id="v-result">
+      <p class="status-line" role="status"></p>
       <b>${esc(d.ready)}</b><pre></pre>
       <p class="wip-note">${esc(d.wipNote)}</p>
       <div class="ctas"><a class="btn small wa" href="#" target="_blank" rel="noopener noreferrer" hidden>${esc(d.openWa)}</a><button class="btn small ghost" type="button" id="v-copy">${esc(d.copy)}</button></div>
@@ -684,10 +686,12 @@ function drawer(lang) {
     <div class="field"><span class="legend" id="l-day">${esc(d.date)}</span><div class="slots" id="days" role="group" aria-labelledby="l-day"></div></div>
     <div class="field"><span class="legend" id="l-time">${esc(d.time)}</span><div class="slots" id="times" role="group" aria-labelledby="l-time"></div></div>
     <p class="note">${esc(d.notConfirmed)}</p>
+    <input type="text" id="c-hp" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="field"><label for="c-name">${esc(d.name)}</label><input type="text" id="c-name" maxlength="80" autocomplete="name"></div>
     <div class="field"><label for="c-tel">${esc(d.tel)}</label><input type="tel" id="c-tel" placeholder="+385 9x xxx xxxx" maxlength="20" autocomplete="tel" inputmode="tel"></div>
     <div class="field"><label for="c-note">${esc(d.note)}</label><textarea id="c-note" maxlength="600" placeholder="${esc(d.notePh)}"></textarea></div>
     <div class="result" id="result">
+      <p class="status-line" role="status"></p>
       <b>${esc(d.ready)}</b>
       <pre id="msg"></pre>
       <p class="wip-note">${esc(d.wipNote)}</p>
@@ -740,7 +744,7 @@ const catalog = {
   cuts: Object.fromEntries(CUTS.map(c => [c.id, { hr: c.hr[0], en: c.en[0], kg: c.kg, eur: c.eur, day: c.day }])),
   workshops: Object.fromEntries(WORKSHOPS.map(w => [w.id, { hr: w.hr[0], en: w.en[0], date: w.date, eur: w.eur, seats: w.seats }])),
   planner: { grams: [250, 350, 500], styles: [[["p15",.3],["p10",.3],["p16",.2],["p13",.2]],[["p2",.4],["p9",.3],["p14",.3]],[["p8",.45],["p7",.35],["p16",.2]]] },
-  ui: { hr: { ...UI.hr.d, reserved: UI.hr.reserved, days: UI.hr.days }, en: { ...UI.en.d, reserved: UI.en.reserved, days: UI.en.days } },
+  ui: Object.fromEntries(["hr", "en"].map(l => [l, { ...UI[l].d, reserved: UI[l].reserved, days: UI[l].days, ready: UI[l].ready, inDays: UI[l].inDays, cutAdd: UI[l].cutAdd, unit: UI[l].unit, qty: UI[l].qty, less: UI[l].less, more: UI[l].more, add: UI[l].add }])),
   added: { hr: UI.hr.added, en: UI.en.added }, add: { hr: UI.hr.add, en: UI.en.add },
 };
 write("js/catalog.js", `/* Generirano iz build/content.mjs – ne uređivati ručno */\nwindow.MECARA=${JSON.stringify(catalog)};\n`);
@@ -748,6 +752,12 @@ write("js/catalog.js", `/* Generirano iz build/content.mjs – ne uređivati ru�
 const { buildBlog } = await import("./blog-build.mjs");
 const blog = buildBlog({ layout, write, ROUTES, UI, SITE, abs });
 const smPairs = [...pages.map(p => ROUTES[p]), ...blog.sitemap];
+// početni podaci za bazu (Worker ih upiše ako su tablice prazne)
+writeFileSync(join(ROOT, "..", "src", "seed-data.js"), "// Generirano iz build/content.mjs\nexport default " + JSON.stringify({
+  products: PRODUCTS.map(p => ({ id: p.id, cat: p.cat, unit: p.unit, name_hr: p.hr.name, name_en: p.en.name, desc_hr: p.hr.desc, desc_en: p.en.desc, eur: p.eur })),
+  cuts: CUTS.map(c => ({ id: c.id, name_hr: c.hr[0], name_en: c.en[0], sub_hr: c.sub.hr, sub_en: c.sub.en, desc_hr: c.hr[1], desc_en: c.en[1], kg: c.kg, day: c.day, target: c.target, eur: c.eur })),
+  workshops: WORKSHOPS.map(w => ({ id: w.id, date: "2026-" + w.date.split(".").filter(Boolean).reverse().join("-"), when_hr: w.when.hr, when_en: w.when.en, title_hr: w.hr[0], title_en: w.en[0], desc_hr: w.hr[1], desc_en: w.en[1], eur: w.eur, seats: w.seats })),
+}) + ";\n");
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${smPairs.flatMap(r => ["hr", "en"].map(l => `  <url><loc>${abs(r[l])}</loc><xhtml:link rel="alternate" hreflang="hr" href="${abs(r.hr)}"/><xhtml:link rel="alternate" hreflang="en" href="${abs(r.en)}"/></url>`)).join("\n")}

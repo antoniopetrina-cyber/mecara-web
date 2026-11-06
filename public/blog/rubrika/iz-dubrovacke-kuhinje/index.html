@@ -28,7 +28,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="/fonts/bodoni-moda-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/styles.css?v=mvzq603z">
+<link rel="stylesheet" href="/css/styles.css?v=mw507anx">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Naslovnica","item":"https://www.mecara.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.mecara.app/blog/"},{"@type":"ListItem","position":3,"name":"Iz dubrovačke kuhinje","item":"https://www.mecara.app/blog/rubrika/iz-dubrovacke-kuhinje/"}]}</script>
 </head>
 <body data-page="blog">
@@ -101,13 +101,15 @@
     <div class="field"><span class="legend" id="l-day">Željeni datum preuzimanja</span><div class="slots" id="days" role="group" aria-labelledby="l-day"></div></div>
     <div class="field"><span class="legend" id="l-time">Željeno vrijeme</span><div class="slots" id="times" role="group" aria-labelledby="l-time"></div></div>
     <p class="note">Termin i proizvodi potvrđuju se porukom.</p>
+    <input type="text" id="c-hp" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="field"><label for="c-name">Ime i prezime</label><input type="text" id="c-name" maxlength="80" autocomplete="name"></div>
     <div class="field"><label for="c-tel">Broj mobitela</label><input type="tel" id="c-tel" placeholder="+385 9x xxx xxxx" maxlength="20" autocomplete="tel" inputmode="tel"></div>
     <div class="field"><label for="c-note">Napomena za mesara</label><textarea id="c-note" maxlength="600" placeholder="Primjer: odresci debljine 3 cm, pakirati odvojeno."></textarea></div>
     <div class="result" id="result">
+      <p class="status-line" role="status"></p>
       <b>Poruka je spremna. Još je trebate poslati.</b>
       <pre id="msg"></pre>
-      <p class="wip-note">Radna verzija: upiti se još ne šalju Mecari. Poruku možete kopirati, ali je zasad nemojte slati.</p>
+      <p class="wip-note">Radna verzija: upit je spremljen u Mecarin sustav, ali Mecara ga još ne obrađuje redovito. Za hitne narudžbe javite se u trgovinu.</p>
       <div class="ctas"><a class="btn small wa" id="wa" href="#" target="_blank" rel="noopener noreferrer" hidden>Otvori WhatsApp i pošalji upit</a><button class="btn small ghost" type="button" id="copy">Kopiraj poruku</button></div>
       <p class="note" id="after-open" hidden>Provjerite je li poruka poslana u WhatsAppu. Pričekajte potvrdu Mecare.</p>
     </div>
@@ -116,12 +118,12 @@
     <div class="sum"><span>Okvirni iznos</span><b id="sum">0,00 €</b></div>
     <p class="note">Konačan iznos za robu na vagu ovisi o stvarnoj težini i potvrđenoj cijeni.</p>
     <p class="err" id="c-err" role="alert"></p>
-    <button class="btn" type="button" id="send">Pripremi poruku</button>
+    <button class="btn" type="button" id="send">Pošalji upit</button>
   </div>
 </aside>
 <div class="scrim" id="scrim"></div>
 <div class="toast" id="toast" role="status"></div>
-<script src="/js/catalog.js?v=mvzq603z" defer></script>
-<script src="/js/app.js?v=mvzq603z" defer></script>
+<script src="/js/catalog.js?v=mw507anx" defer></script>
+<script src="/js/app.js?v=mw507anx" defer></script>
 </body>
 </html>
