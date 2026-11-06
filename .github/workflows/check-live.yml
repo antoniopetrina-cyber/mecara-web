@@ -8,15 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "--- preusmjeravanja"
-          for u in http://mecara.app/ https://mecara.app/ https://mecara.app/ponuda/?x=1 http://www.mecara.app/en/; do
-            curl -sS -o /dev/null -w "$u -> %{http_code} %{redirect_url}\n" "$u"
-          done
-          echo "--- stranice (www)"
-          for p in /blog/ /en/blog/ /blog/rubrika/pitaj-mesara/ /en/blog/category/ask-the-butcher/ /blog/rib-eye-ramstek-ili-biftek/ /en/blog/ribeye-striploin-or-fillet/ /blog/piletina-krumpir-limun-iz-pecnice/ /blog/ne-postoji/ /rostilj-planer/ /en/bbq-planner/ /vile-i-jahte/ /en/villa-yacht-meat-supply/ /radionice/ /en/workshops/ /komora/ /en/dry-age-room/ / /en/ /ponuda/ /en/meat-and-deli/ /odlezani-steakovi/ /en/dry-aged-steaks/ /meso-za-rostilj/ /en/bbq-meat/ /o-nama/ /en/about/ /kontakt/ /en/contact/ /ponuda /robots.txt /sitemap.xml /js/catalog.js /img/og/mecara-dubrovnik.jpg /img/foto/KKP4539.webp /nema-ovoga /wp-login.php /.git/config /wrangler.toml /src/worker.js /build/content.mjs; do
-            curl -sS -o body -w "$p %{http_code} %{content_type} %{size_download} %{redirect_url}\n" "https://www.mecara.app$p"
-          done
-          echo "--- zaglavlja"
-          curl -sS -D - -o page.html "https://www.mecara.app/en/?t=$(date +%s)" | grep -iE "^(content-security|strict-transport|x-frame|x-robots|content-type)"
-          grep -o '<title>[^<]*' page.html; grep -o 'hreflang="[a-z-]*"' page.html | tr '\n' ' '; echo
-          curl -sS https://www.mecara.app/robots.txt; curl -sS https://www.mecara.app/sitemap.xml | head -3
+          B=https://www.mecara.app
+          echo "--- stranice"
+          for p in / /komora/ /admin/ /blog/ /ponuda/; do curl -sS -o /dev/null -w "$p %{http_code} %{size_download}\n" "$B$p"; done
+          echo "--- api"
+          curl -sS "$B/api/live" | head -c 200; echo
+          curl -sS -o /dev/null -w "live %{http_code}\n" "$B/api/live"
+          curl -sS -w " admin/data %{http_code}\n" "$B/api/admin/data"
+          curl -sS -w " enquiry bez zaglavlja %{http_code}\n" -X POST -H "content-type: application/json" -H "origin: $B" -d '{}' "$B/api/enquiry"
+          curl -sS -w " login krivo %{http_code}\n" -X POST -H "content-type: application/json" -H "x-mecara: 1" -H "origin: $B" -d '{"email":"provjera@example.com","password":"krivo"}' "$B/api/admin/login"
+          curl -sS -D - -o /dev/null "$B/admin/" | grep -iE "^(cache-control|x-robots|content-security)" 
