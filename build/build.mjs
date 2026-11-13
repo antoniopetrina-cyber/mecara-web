@@ -61,15 +61,15 @@ function cutCards(lang) {
     </div></li>`; }).join("")}</ul>`;
 }
 const KOMORA = {
-  hr: ["Dry-age komora · uživo", "Svaki steak ima svoje ime i svoj broj dana", "Ovo nema nijedna mesnica u Dubrovniku: vidite točno koji komad visi u komori, koliko je težak i koliko je dana odležao. Rezervirate baš taj komad, a mi ga čuvamo za vas."],
-  en: ["Dry-age room · live", "Every steak has a name and a day count", "No other butcher in Dubrovnik shows this: the exact piece hanging in the room, its weight and how many days it has aged. Reserve that piece and we keep it for you."],
+  hr: ["Dry-age komora · uživo", "Svaki komad ima svoj broj i svoje dane", "To vam u Dubrovniku neće pokazati nijedna druga mesnica. Ovdje vidite koji komad visi u komori, koliko teži i koliko je dana već odležao. Rezervirate baš njega, a mi ga čuvamo za vas."],
+  en: ["Dry-age room · live", "Every piece numbered, every day counted", "You won't find this at any other butcher in Dubrovnik. You can see the actual piece hanging in the room, what it weighs and how many days it has aged. Reserve it and we'll set it aside for you."],
 };
 
 function visitBlock(lang) {
   const u = UI[lang];
   const t = lang === "hr"
-    ? ["Posjetite nas u Lapadu", "Mecara se nalazi u centru DOC, na adresi Kralja Tomislava 7 u Dubrovniku. Svratite po meso za današnji ručak, provjerite izbor steakova ili se raspitajte o ponudi za veće druženje."]
-    : ["Visit our butcher shop in Lapad", "Find Mecara inside the DOC shopping centre at Kralja Tomislava 7, Dubrovnik. Stop by for your next meal, browse the steak selection or ask about meat for a larger gathering."];
+    ? ["Svratite do nas u Lapad", "Mecara je u centru DOC, Kralja Tomislava 7. Dođite po meso za ručak, pogledajte koje steakove imamo ili nas pitajte za veće druženje."]
+    : ["Visit our butcher shop in Lapad", "We're inside the DOC shopping centre at Kralja Tomislava 7, Dubrovnik. Pop in for tonight's dinner, have a look at the steaks, or ask us about meat for a bigger group."];
   return `<section class="block" id="posjeti"><div class="wrap">
   <div class="sec-head"><div><h2>${esc(t[0])}</h2><p>${esc(t[1])}</p><p class="muted">${esc(u.parking)}</p></div>
   <div class="ctas"><a class="btn ghost" href="${esc(SITE.maps)}" target="_blank" rel="noopener noreferrer">${esc(u.directions)}</a>${SITE.phone ? `<a class="btn ghost" href="tel:${esc(SITE.phone.replace(/\s/g, ""))}">${esc(u.call)}: ${esc(SITE.phone)}</a>` : ""}</div></div>
@@ -89,43 +89,43 @@ const PAGES = {
   home(lang) {
     const u = UI[lang], hr = lang === "hr";
     const T = hr ? {
-      eye: "Mecara · DOC, Lapad", h1a: "Vaša mesnica u Dubrovniku.", h1b: "Dobar obrok počinje dobrim komadom.",
-      lead: "Birate meso za svakodnevni ručak, roštilj s društvom ili večeru uz steak? U Mecari u Lapadu pronađite svoj komad i pitajte nas kako ga pripremiti. Tu su i suhomesnati proizvodi, sirevi i dodaci za stol koji vrijedi okupiti.",
-      b1: "Pogledajte ponudu", b2: "Pronađite nas u DOC-u",
-      cookH: "Što danas pripremate?",
-      cards: [["Za ručak","Od gulaša do pečenja, dobar izbor počinje pravim komadom. Recite nam što kuhate i za koliko osoba pa ćemo vam pomoći pri odabiru.", ROUTES.ponuda.hr+"#junetina"],
-              ["Za roštilj","Ćevapi, burgeri, kobasice ili odresci: složite izbor prema društvu i načinu pripreme. Količinu prilagodite prilozima i apetitu gostiju.", ROUTES.bbq.hr],
-              ["Za steak večeru","Pogledajte izbor odležanih steakova. Za konkretan rez, debljinu i raspoloživu težinu obratite se mesaru.", ROUTES.steak.hr],
-              ["Za platu","Suhomesnati proizvodi, sirevi i nekoliko dobro odabranih dodataka dovoljni su za jednostavno posluženje. Pitajte što je trenutačno u ponudi.", ROUTES.ponuda.hr+"#suho"]],
-      steakH: "Odležani steakovi, odabrani za vaš način pripreme",
-      steakP: "Nije svaki steak isti. Rez, debljina i odležavanje utječu na izbor, a važno je i pripremate li ga na tavi ili roštilju. Recite nam kakvu večeru planirate i pomoći ćemo vam odabrati odgovarajući komad.",
-      steakB: "Pogledajte odležane steakove", steakN: "Dostupnost, težinu i cijenu pojedinog komada provjerite prije dolaska.",
-      bbqH: "Meso za roštilj bez nepotrebnog nagađanja",
-      bbqP: "Pripremate ručak za obitelj ili veće druženje? Krenite od broja ljudi, odaberite nekoliko vrsta mesa i dodajte priloge koje volite. Naš planer može poslužiti kao početna procjena, a konačan izbor možete dogovoriti s mesarom.",
-      bbqB: "Pogledajte ponudu za roštilj",
-      stepsH: "Od upita do preuzimanja",
-      steps: [["Odaberite što trebate.","Navedite proizvode, okvirnu količinu i kako želite da meso bude narezano."],["Pričekajte potvrdu.","Provjeravamo dostupnost i dogovaramo termin. Ako nešto nije dostupno, predložit ćemo zamjenu."],["Preuzmite u Mecari.","Dođite u potvrđenom terminu na Kralja Tomislava 7, u centru DOC u Lapadu."]],
-      stepsN: "Slanje upita nije potvrda narudžbe. Kod proizvoda koji se prodaju po težini konačan iznos ovisi o stvarno izvaganoj količini.",
-      askH: "Razgovarajte s mesarom", askP: "Ne morate znati naziv svakog reza. Dovoljno je reći što želite pripremiti, koliko ljudi dolazi i kakvu opremu imate. Zajedno ćemo lakše doći do dobrog izbora.", askB: "Pošaljite upit Mecari",
+      eye: "Mecara · DOC, Lapad", h1a: "Vaša mesnica u Dubrovniku.", h1b: "Ručak počinje za pultom.",
+      lead: "Treba vam meso za ručak, nešto za roštilj ili steak za večeru? Dođite u Mecaru u Lapadu, pokažite što vam se sviđa i pitajte kako to pripremiti. Imamo i suhomesnato, sir i ono sitno što ide uz stol.",
+      b1: "Pogledajte što imamo", b2: "Kako do nas u DOC-u",
+      cookH: "Što se danas kuha kod vas?",
+      cards: [["Za ručak","Gulaš traži jedan komad, pečenje drugi. Recite nam što kuhate i za koliko ljudi, pa ćemo izabrati zajedno.", ROUTES.ponuda.hr+"#junetina"],
+              ["Za roštilj","Ćevapi, burgeri, kobasice, odresci. Uzmite ono što vaše društvo stvarno jede, a količinu odredite prema prilozima i apetitu.", ROUTES.bbq.hr],
+              ["Za steak večeru","Odležani steakovi čekaju u komori. Koji rez je trenutačno tu, koliko je težak i kako ga narezati, pitajte mesara.", ROUTES.steak.hr],
+              ["Za platu","Malo suhomesnatog, malo sira i par dodataka. Za jednostavnu platu više ne treba. Pitajte što trenutačno imamo.", ROUTES.ponuda.hr+"#suho"]],
+      steakH: "Odležani steakovi, birani prema tome kako ih pečete",
+      steakP: "Rez, debljina i broj dana u komori mijenjaju steak. Mijenja ga i to pečete li ga na tavi ili na roštilju. Recite nam kakvu večeru spremate i naći ćemo komad koji joj odgovara.",
+      steakB: "Pogledajte odležane steakove", steakN: "Dolazite po točno određeni komad? Prije toga provjerite je li još tu, koliko teži i koliko košta.",
+      bbqH: "Meso za roštilj, bez nagađanja",
+      bbqP: "Krenite od broja ljudi. Onda odaberite nekoliko vrsta mesa i razmislite o prilozima. Planer vam daje prvu procjenu, a ostatak dogovorite s mesarom.",
+      bbqB: "Meso za roštilj",
+      stepsH: "Kako ide upit",
+      steps: [["Napišite što trebate.","Proizvode, okvirnu količinu i kako da vam narežemo meso."],["Pričekajte našu potvrdu.","Provjerimo što imamo i dogovorimo termin. Ako nečega nema, predložit ćemo zamjenu."],["Dođite po meso.","U dogovoreni termin, na Kralja Tomislava 7, u centru DOC u Lapadu."]],
+      stepsN: "Poslan upit još nije narudžba. Kod onoga što se prodaje na težinu plaćate koliko stvarno izvažemo.",
+      askH: "Pitajte mesara", askP: "Ne morate znati kako se koji rez zove. Recite što kuhate, koliko vas je i na čemu pečete. Dalje ćemo lako.", askB: "Pošaljite upit Mecari",
     } : {
-      eye: "Mecara · DOC shopping centre, Lapad", h1a: "Your butcher in Dubrovnik.", h1b: "A good meal starts with the right cut.",
-      lead: "Cooking at your apartment, planning a barbecue or choosing a steak for dinner? Visit Mecara in Lapad for meat, advice on cuts and a selection of cured meats, cheeses and deli favourites.",
-      b1: "Explore our selection", b2: "Find us in Lapad",
-      cookH: "What are you cooking?",
-      cards: [["Everyday meals","From a slow-cooked stew to a family roast, the right cut makes planning easier. Tell us what you are making and how many people you are cooking for.", ROUTES.ponuda.en+"#junetina"],
-              ["Barbecue favourites","Choose from the available ćevapi, burgers, sausages and steaks. Build your selection around your guests, side dishes and the grill you will be using.", ROUTES.bbq.en],
-              ["Steak night","Explore our dry-aged selection and ask about the cuts, thicknesses and weights currently available.", ROUTES.steak.en],
-              ["Something to share","Put together a simple spread with cured meats, cheese and deli accompaniments. Ask us what is available today.", ROUTES.ponuda.en+"#suho"]],
-      steakH: "Find the right dry-aged steak",
-      steakP: "The cut, thickness and ageing all help shape your choice. Let us know whether you are using a frying pan or a barbecue and we can help you choose a steak for the meal you have in mind.",
-      steakB: "Explore dry-aged steaks", steakN: "Please check availability, weight and price before visiting for a specific cut.",
-      bbqH: "Plan your barbecue with less guesswork",
-      bbqP: "Start with the number of guests, choose a few types of meat and allow for the side dishes you will serve. Our BBQ planner gives you a starting estimate; speak to the butcher to adjust your selection.",
-      bbqB: "Explore BBQ meat",
-      stepsH: "How collection enquiries work",
-      steps: [["Tell us what you need.","Choose your products and approximate quantities, and include any cutting requests."],["Wait for confirmation.","We check availability and agree a collection time. If an item is unavailable, we can discuss an alternative."],["Collect from Mecara.","Visit us at Kralja Tomislava 7, inside the DOC shopping centre in Lapad, at your confirmed time."]],
-      stepsN: "Sending an enquiry does not confirm an order. For products sold by weight, the final amount depends on the actual quantity weighed.",
-      askH: "Ask the butcher", askP: "You do not need to know every cut by name. Tell us what you want to cook, how many people are coming and what cooking equipment you have. We will help you choose.", askB: "Send Mecara an enquiry",
+      eye: "Mecara · DOC shopping centre, Lapad", h1a: "Your butcher in Dubrovnik.", h1b: "Dinner starts at the counter.",
+      lead: "Self-catering in an apartment, firing up a barbecue, or after a steak for tonight? Come to Mecara in Lapad. We'll help you pick the cut and tell you how to cook it. There's cured meat, cheese and a few deli bits on the shelves too.",
+      b1: "See what we have", b2: "Find us in Lapad",
+      cookH: "What's on the menu?",
+      cards: [["Everyday meals","A stew wants one cut, a roast another. Tell us what you're making and how many you're feeding, and we'll point you to the right piece.", ROUTES.ponuda.en+"#junetina"],
+              ["Barbecue","Ćevapi, burgers, sausages, steaks. Pick what your lot will actually eat, then size it to the side dishes and the grill you've got.", ROUTES.bbq.en],
+              ["Steak night","Have a look at the dry-aged steaks, then ask which cuts, thicknesses and weights we have in right now.", ROUTES.steak.en],
+              ["Something to share","Cured meats, a bit of cheese, something from the deli shelf. That's a spread sorted. Ask what we have today.", ROUTES.ponuda.en+"#suho"]],
+      steakH: "A dry-aged steak for the way you cook",
+      steakP: "Cut, thickness and days of ageing all change the steak. So does pan versus barbecue. Tell us which you're using and we'll find a piece that suits the dinner you're planning.",
+      steakB: "See the dry-aged steaks", steakN: "After one particular cut? Check it's still available, and its weight and price, before you come in.",
+      bbqH: "Plan your barbecue without the guesswork",
+      bbqP: "Count your guests first. Pick a few meats, then think about the sides. The BBQ planner gives you a rough figure to start from, and the butcher can adjust it with you.",
+      bbqB: "See BBQ meat",
+      stepsH: "How an enquiry works",
+      steps: [["Send your list.","Products, rough quantities and how you'd like them cut."],["We confirm.","We check what's in and agree a collection time. If something's missing, we'll talk about an alternative."],["Pick it up.","Kralja Tomislava 7, inside the DOC shopping centre in Lapad, at the time we agreed."]],
+      stepsN: "An enquiry isn't a confirmed order. Anything sold by weight is charged on what it actually weighs.",
+      askH: "Ask the butcher", askP: "No need to know the cuts by name. Tell us what you want to cook, how many are eating and what you're cooking on. We'll take it from there.", askB: "Send Mecara an enquiry",
     };
     return `
 <section class="hero">
@@ -154,12 +154,12 @@ const PAGES = {
   ${pic("ageing", ALT.ageing[lang], { cls: "ph tall", sizes: "(max-width: 860px) 100vw, 40vw" })}
 </div></section>
 <section class="block" id="komora"><div class="wrap">
-  <div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div><a class="btn ghost" href="${ROUTES.komora[lang]}">${lang === "hr" ? "Sve o komori" : "All about the ageing room"}</a></div>
+  <div class="sec-head"><div><span class="mono eyebrow">${esc(KOMORA[lang][0])}</span><h2>${esc(KOMORA[lang][1])}</h2><p>${esc(KOMORA[lang][2])}</p></div><a class="btn ghost" href="${ROUTES.komora[lang]}">${lang === "hr" ? "Kako radi komora" : "Inside the ageing room"}</a></div>
   ${cutCards(lang)}
 </div></section>
 <section class="block"><div class="wrap feature rev">
   ${pic("marinated2", ALT.marinated[lang], { sizes: "(max-width: 860px) 100vw, 50vw" })}
-  <div><h2>${esc(T.bbqH)}</h2><p>${esc(T.bbqP)}</p><div class="ctas"><a class="btn" href="${ROUTES.planner[lang]}">${lang === "hr" ? "Isplanirajte roštilj" : "Plan your BBQ"}</a><a class="btn ghost" href="${ROUTES.bbq[lang]}">${esc(T.bbqB)}</a></div></div>
+  <div><h2>${esc(T.bbqH)}</h2><p>${esc(T.bbqP)}</p><div class="ctas"><a class="btn" href="${ROUTES.planner[lang]}">${lang === "hr" ? "Izračunajte količine" : "Work out quantities"}</a><a class="btn ghost" href="${ROUTES.bbq[lang]}">${esc(T.bbqB)}</a></div></div>
 </div></section>
 ${SITE.enquiryLive ? `<section class="block"><div class="wrap"><div class="sec-head"><h2>${esc(T.stepsH)}</h2></div>
   <ol class="steps">${T.steps.map(s => `<li><b>${esc(s[0])}</b> ${esc(s[1])}</li>`).join("")}</ol><p class="note">${esc(T.stepsN)}</p></div></section>` : ""}
@@ -175,20 +175,20 @@ ${faqBlock(lang, ["where", "confirmed", "estimate", "time", "parking"])}`;
     const hr = lang === "hr";
     const T = hr ? {
       h1: "Svježe meso i delikatese u Dubrovniku",
-      lead: "U Mecari u Lapadu birajte meso prema jelu koje planirate. Za gulaš, pečenje, peku ili brzu pripremu na tavi ne trebate isti komad — zato uz izbor mesa vrijedi zatražiti i savjet mesara.",
-      s: [["Od svakodnevnog ručka do posebne večere","Pregledajte kategorije junetine, teletine, janjetine, svinjetine i piletine te provjerite aktualnu ponudu. Za određeni rez ili veću količinu javite nam se prije dolaska. Navedite želite li meso u komadu, narezano ili pripremljeno za određeno jelo."],
-          ["Suhomesnati proizvodi, sirevi i dodaci","Uz glavno jelo složite i jednostavno predjelo. Pršut, suhomesnati proizvodi i sirevi mogu biti početak plate za obitelj ili društvo. Proizvođač, podrijetlo i sastojci navode se uz konkretan proizvod; za ono što nije jasno pitajte prije kupnje."]],
-      catH: "Ponuda po kategorijama",
-      endH: "Provjerite današnju dostupnost", endP: "Ponuda se mijenja. Ako tražite određeni proizvod, pošaljite nam naziv i količinu. Dostupnost i mogućnost pripreme potvrđujemo zasebno.",
+      lead: "Za gulaš ne uzimate isti komad kao za peku. Pečenje traži svoje, a brzo na tavi opet nešto treće. U Mecari u Lapadu birajte meso prema jelu, a ako niste sigurni, pitajte mesara.",
+      s: [["Za svaki dan i za posebnu večeru","Ispod su junetina, teletina, janjetina, svinjetina i piletina, pa pogledajte što je trenutačno u ponudi. Trebate li točno određeni rez ili veću količinu, javite se prije nego što dođete. Recite i želite li meso u komadu, narezano ili spremno za određeno jelo."],
+          ["Suhomesnato, sir i ono uz to","Dok se glavno jelo peče, netko će htjeti nešto gricnuti. Pršut, suhomesnato i sir dobar su početak plate za obitelj ili društvo. Proizvođač, podrijetlo i sastojci pišu uz svaki proizvod. Ako vam nešto nije jasno, pitajte prije kupnje."]],
+      catH: "Što imamo, po kategorijama",
+      endH: "Provjerite što je danas tu", endP: "Ponuda se mijenja. Tražite li nešto određeno, pošaljite nam naziv i količinu. Imamo li to i možemo li ga pripremiti kako želite, potvrdit ćemo posebno.",
       c1: "Pitajte za proizvod", c2: "Pogledajte odležane steakove",
     } : {
       h1: "Fresh meat and deli favourites in Dubrovnik",
-      lead: "Choose your meat around the meal you want to make. At Mecara in Lapad, ask about cuts for stews, roasting, peka, pan cooking or the barbecue.",
-      s: [["Meat for everyday cooking and special dinners","Browse the beef, veal, lamb, pork and chicken categories, then check the current selection. If you need a particular cut or a larger quantity, contact us before visiting. Let us know whether you would like a whole piece, individual portions or a cut suited to a specific dish."],
-          ["Cured meats, cheese and deli accompaniments","Add a few things to share before the main meal. Explore the available prosciutto, cured meats and cheeses, and check the producer, origin and ingredients for each product."]],
+      lead: "Pick the meat for the dish, not the other way round. A stew, a roast, a peka, a quick pan fry and a barbecue all want different cuts. Come to Mecara in Lapad and ask which.",
+      s: [["Everyday cooking and special dinners","Beef, veal, lamb, pork and chicken are all below, so have a look at what's in. Need a particular cut, or a lot of something? Get in touch before you come. Tell us if you want it as a whole piece, in portions or cut for a specific dish."],
+          ["Cured meats, cheese and deli bits","Something to pick at before the main event. We have prosciutto, other cured meats and cheese. The producer, origin and ingredients are listed with each product."]],
       catH: "Browse by category",
-      endH: "Check what is available today", endP: "Our selection can change. Send us the product name and approximate quantity you need, and we will confirm availability and any preparation requests.",
-      c1: "Ask about a product", c2: "Explore dry-aged steaks",
+      endH: "What's in today", endP: "The selection changes. Send us the product name and roughly how much you need. We'll confirm whether we have it and whether we can prepare it the way you asked.",
+      c1: "Ask about a product", c2: "See the dry-aged steaks",
     };
     return `
 <section class="page-head"><div class="wrap">
@@ -217,67 +217,67 @@ ${faqBlock(lang, ["avail", "thick", "gluten", "ready", "large"])}`;
     const hr = lang === "hr";
     const T = hr ? {
       eye: "Dry-age komora · uživo", h1: "Komora: odležani steakovi uživo",
-      lead: "Ovo nema nijedna mesnica u Dubrovniku: vidite točno koji komad visi u komori, koliko je težak i koliko je dana odležao. Rezervirate baš taj komad, a mi ga čuvamo za vas.",
-      cta: "Pogledajte komade u komori", cta2: "Kako rezervirati",
-      liveH: "Što je trenutačno u komori",
+      lead: "U Dubrovniku ovo nećete vidjeti ni u jednoj drugoj mesnici. Ovdje je točno onaj komad koji visi u komori, njegova težina i broj dana koliko odležava. Rezervirate li ga, čuvamo ga za vas.",
+      cta: "Što je sada u komori", cta2: "Kako rezervirati",
+      liveH: "Trenutačno u komori",
       readH: "Kako čitati karticu",
-      read: [["Dani odležavanja","Prvi broj pokazuje koliko je dana komad već u komori, a drugi koliko ga planiramo odležati. Traka prikazuje koliko je puta prošao."],
-             ["Spreman ili Spreman za X d.","„Spreman” znači da je komad odležao koliko smo planirali i može se rezati. „Spreman za 6 d.” znači da ga i dalje možete rezervirati, a preuzimate ga kad bude gotov."],
-             ["Težina i okvirni iznos","Težina je trenutačna težina komada. Okvirni iznos je cijena po kilogramu puta ta težina. Konačan iznos ovisi o težini nakon čišćenja i rezanja."],
-             ["Broj komada","Svaki komad ima svoj broj (#01, #02…), pa točno znate koji je vaš kad dođete u Mecaru."]],
+      read: [["Dani odležavanja","Prvi broj kaže koliko je dana komad već u komori. Drugi kaže koliko ga namjeravamo držati. Traka pokazuje koliko je puta iza njega."],
+             ["Spreman ili Spreman za X d.","„Spreman” znači da je odležao koliko smo planirali i može se rezati. Kod „Spreman za 6 d.” komad svejedno možete rezervirati, samo ga preuzimate kad bude gotov."],
+             ["Težina i okvirni iznos","Težina je ono što komad teži danas. Okvirni iznos dobijete kad cijenu po kilogramu pomnožite s tom težinom. Konačan iznos ovisi o težini nakon čišćenja i rezanja."],
+             ["Broj komada","Svaki komad ima broj (#01, #02…). Kad dođete u Mecaru, znate točno koji je vaš."]],
       whatH: "Što je suho odležavanje?",
-      what: ["Suho odležavanje (dry aging) znači da cijeli komad junetine, najčešće s kosti, visi tjednima u posebnoj komori s kontroliranom temperaturom malo iznad nule, vlagom i strujanjem zraka.",
-             "Za to vrijeme meso gubi dio vode pa okus postaje koncentriraniji, a prirodni enzimi polako omekšavaju vlakna. Steak je mekši i ima dublji, blago orašast okus koji svježe meso nema.",
-             "Vanjski sloj se pritom osuši i prije rezanja se odreže. Zato je odležano meso skuplje po kilogramu: dio težine se izgubi, a proces traje tjednima."],
-      daysH: "Koliko dana odležavanja?",
-      days: [["oko 21 dan","Blaži okus, vrlo sočan. Dobar prvi izbor ako tek upoznajete odležano meso."],
-             ["28 – 35 dana","Izraženiji, puniji okus i primjetno mekša tekstura. Najčešći izbor za steak večeru."],
-             ["45 dana i više","Intenzivan, karakterističan okus. Za one koji već vole odležane steakove."]],
-      daysN: "Opisi su okvirni. Okus ovisi i o rezu, masnoći i samom komadu, pa pitajte mesara što preporučuje za vaše jelo.",
+      what: ["Kod suhog odležavanja (dry aging) cijeli komad junetine, najčešće s kosti, visi tjednima u posebnoj komori. Temperatura je malo iznad nule, a vlagu i strujanje zraka držimo pod kontrolom.",
+             "Meso za to vrijeme gubi dio vode i okus mu se zgusne. Prirodni enzimi polako omekšaju vlakna. Steak je na kraju mekši, a okus dublji i blago orašast. Toga u svježem mesu nema.",
+             "Vanjski se sloj osuši i prije rezanja ga odrežemo. Zato je odležano meso skuplje po kilogramu. Dio težine ode, a čeka se tjednima."],
+      daysH: "Koliko dana?",
+      days: [["oko 21 dan","Blaži okus, jako sočno. Dobro za početak ako odležano meso tek upoznajete."],
+             ["28 – 35 dana","Okus je jači i puniji, a meso primjetno mekše. Ovo se najčešće uzima za steak večeru."],
+             ["45 dana i više","Intenzivno i prepoznatljivo. Za one koji odležane steakove već vole."]],
+      daysN: "Ovo je okvirno. Na okus utječu i rez, masnoća i sam komad, pa pitajte mesara što bi on uzeo za vaše jelo.",
       howH: "Kako rezervirati komad",
       how: [["Odaberite komad","Na kartici kliknite „Rezerviraj ovaj komad”. Komad ide u vaš upit."],
-            ["Pošaljite upit","Otvorite „Vaš upit”, odaberite željeni dan i vrijeme preuzimanja i upišite kako ga želite narezati."],
-            ["Pričekajte potvrdu","Mecara vam porukom potvrđuje komad, točnu težinu i termin."],
-            ["Preuzmite u DOC-u","Dođite u Mecaru na Kralja Tomislava 7. Sat parkinga na parkiralištu centra DOC i Tommyja je besplatan."]],
-      cookH: "Kako pripremiti odležani steak",
-      cook: ["Izvadite steak iz hladnjaka 30 do 60 minuta prije pripreme da dođe na sobnu temperaturu.",
-             "Posolite ga neposredno prije pečenja ili barem 40 minuta ranije. Papar dodajte na kraju.",
-             "Pecite na jako zagrijanoj tavi ili roštilju dok ne dobije koricu, zatim po želji dovršite na nižoj temperaturi.",
-             "Pustite ga da odstoji 5 do 10 minuta, pa režite poprijeko vlakana.",
-             "Za deblje komade s kosti pitajte mesara za vrijeme pečenja i stupanj pečenosti."],
-      endH: "Niste sigurni koji komad odabrati?", endP: "Recite nam za koliko osoba pripremate, imate li tavu ili roštilj i kakav okus volite. Mesar će vam predložiti komad iz komore.",
+            ["Pošaljite upit","Otvorite „Vaš upit”, izaberite dan i sat preuzimanja i napišite kako da ga narežemo."],
+            ["Pričekajte potvrdu","Porukom vam potvrđujemo komad, točnu težinu i termin."],
+            ["Dođite u DOC","Mecara je na Kralja Tomislava 7. Sat parkinga na parkiralištu centra DOC i Tommyja je besplatan."]],
+      cookH: "Kako ispeći odležani steak",
+      cook: ["Izvadite steak iz hladnjaka 30 do 60 minuta prije pečenja, da dođe na sobnu temperaturu.",
+             "Solite ga neposredno prije pečenja ili barem 40 minuta ranije. Papar ide na kraju.",
+             "Tava ili roštilj moraju biti jako vrući. Pecite dok se ne uhvati korica, a onda ga po želji dovršite na nižoj temperaturi.",
+             "Neka odmori 5 do 10 minuta. Režite poprijeko vlakana.",
+             "Ako je komad debeo i s kosti, pitajte mesara koliko ga peći i do koje pečenosti."],
+      endH: "Ne znate koji komad uzeti?", endP: "Recite nam za koliko ljudi kuhate, pečete li na tavi ili na roštilju i kakav okus volite. Mesar će vam izabrati komad iz komore.",
       endB: "Pošaljite upit", endB2: "Svi odležani steakovi",
     } : {
       eye: "Dry-age room · live", h1: "Ageing room: dry-aged steaks, live",
-      lead: "No other butcher in Dubrovnik shows this: the exact piece hanging in the room, its weight and how many days it has aged. Reserve that piece and we keep it for you.",
-      cta: "See what's in the room", cta2: "How to reserve",
-      liveH: "In the ageing room right now",
-      readH: "How to read a card",
-      read: [["Days aged","The first number is how many days the piece has been in the room; the second is how long we plan to age it. The bar shows how far along it is."],
-             ["Ready or Ready in X d","“Ready” means it has aged as planned and can be cut. “Ready in 6 d” means you can still reserve it and collect it once it is done."],
-             ["Weight and estimated amount","The weight is the piece's current weight. The estimate is the price per kilogram times that weight. The final amount depends on the weight after trimming and cutting."],
-             ["Piece number","Every piece has its own number (#01, #02…), so you know exactly which one is yours when you visit."]],
+      lead: "You won't see this at any other butcher in Dubrovnik. Here's the exact piece hanging in the room, what it weighs and how many days it has aged. Reserve it and we'll keep it back for you.",
+      cta: "See what's ageing now", cta2: "How to reserve",
+      liveH: "In the room right now",
+      readH: "Reading a card",
+      read: [["Days aged","Two numbers. The first is how long the piece has been in the room, the second is how long we plan to leave it. The bar shows how far it's got."],
+             ["Ready or Ready in X d","“Ready” means it's done its time and can be cut. “Ready in 6 d” means you can reserve it now and collect it when it's finished."],
+             ["Weight and estimated amount","Weight is what the piece weighs today. The estimate is the price per kilo times that weight. What you actually pay depends on the weight after trimming and cutting."],
+             ["Piece number","Each piece is numbered (#01, #02…), so when you come in you know exactly which one is yours."]],
       whatH: "What is dry ageing?",
-      what: ["Dry ageing means a whole piece of beef, usually on the bone, hangs for weeks in a dedicated room with controlled temperature just above freezing, humidity and airflow.",
-             "During that time the meat loses some water, so the flavour becomes more concentrated, while natural enzymes slowly tenderise the fibres. The result is a more tender steak with a deeper, slightly nutty flavour that fresh beef does not have.",
-             "The outer layer dries out and is trimmed off before cutting. That is why aged beef costs more per kilogram: some weight is lost and the process takes weeks."],
-      daysH: "How many days of ageing?",
-      days: [["around 21 days","Milder flavour, very juicy. A good first choice if you are new to aged beef."],
-             ["28 – 35 days","Fuller, more pronounced flavour and noticeably more tender. The most popular choice for a steak dinner."],
-             ["45 days and more","Intense, distinctive flavour. For those who already love aged steak."]],
-      daysN: "These descriptions are a guide. Flavour also depends on the cut, the fat and the individual piece, so ask the butcher what suits your meal.",
+      what: ["A whole piece of beef, usually on the bone, hangs for weeks in its own room. The temperature sits just above freezing, and humidity and airflow are kept under control. That's dry ageing.",
+             "The meat slowly loses water, which concentrates the flavour. Natural enzymes work on the fibres at the same time and soften them. You end up with a more tender steak and a deeper, slightly nutty taste that fresh beef simply doesn't have.",
+             "The outside dries out and gets trimmed off before we cut. Hence the higher price per kilo. Some weight is lost, and it takes weeks."],
+      daysH: "How long should it age?",
+      days: [["around 21 days","Milder, very juicy. A good place to start if aged beef is new to you."],
+             ["28 – 35 days","Fuller and more pronounced, and noticeably more tender. This is what most people go for at a steak dinner."],
+             ["45 days and more","Intense and distinctive. For people who already know they love aged steak."]],
+      daysN: "Treat these as a rough guide. The cut, the fat and the piece itself all affect the flavour, so ask the butcher what they'd pick for your meal.",
       howH: "How to reserve a piece",
       how: [["Choose a piece","Click “Reserve this piece” on the card. It goes into your enquiry."],
-            ["Send your enquiry","Open “Your enquiry”, choose your preferred collection day and time, and tell us how to cut it."],
-            ["Wait for confirmation","Mecara confirms the piece, exact weight and collection time by message."],
-            ["Collect at DOC","Visit Mecara at Kralja Tomislava 7. The first hour at the DOC and Tommy car park is free."]],
-      cookH: "How to cook a dry-aged steak",
-      cook: ["Take the steak out of the fridge 30 to 60 minutes before cooking so it reaches room temperature.",
-             "Salt it just before cooking or at least 40 minutes ahead. Add pepper at the end.",
-             "Sear it in a very hot pan or on a hot grill until a crust forms, then finish at a lower heat if needed.",
-             "Let it rest for 5 to 10 minutes, then slice across the grain.",
-             "For thick bone-in cuts, ask the butcher about cooking times and doneness."],
-      endH: "Not sure which piece to choose?", endP: "Tell us how many people you are cooking for, whether you have a pan or a grill and what flavour you like. The butcher will suggest a piece from the room.",
+            ["Send your enquiry","Open “Your enquiry”, pick a collection day and time, and tell us how you want it cut."],
+            ["Wait for our message","We confirm the piece, its exact weight and your collection time by message."],
+            ["Collect at DOC","Mecara is at Kralja Tomislava 7. The first hour in the DOC and Tommy car park is free."]],
+      cookH: "Cooking a dry-aged steak",
+      cook: ["Take it out of the fridge 30 to 60 minutes before cooking so it comes up to room temperature.",
+             "Salt it right before it goes in, or at least 40 minutes ahead. Pepper goes on at the end.",
+             "Get the pan or grill very hot. Sear until there's a crust, then finish over lower heat if it needs it.",
+             "Rest it for 5 to 10 minutes. Slice across the grain.",
+             "Thick, bone-in cut? Ask the butcher about timing and doneness."],
+      endH: "Can't decide?", endP: "Tell us how many you're cooking for, pan or grill, and what sort of flavour you like. The butcher will pick a piece from the room for you.",
       endB: "Send an enquiry", endB2: "All dry-aged steaks",
     };
     return `
@@ -310,12 +310,12 @@ ${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
 
   steakMerged(lang) {
     const hr = lang === "hr";
-    const S = hr ? [["Koji steak odabrati?","Volite li komad s kosti ili odrezak bez kosti? Pripremate li jednu porciju ili steak za dijeljenje? Recite nam što vam je važno. Nazivi poput rib-eye, T-bone i ramstek ne znače isti rez, pa ćemo izbor povezati s vašim planom za večeru."],
-          ["Što provjeriti prije naručivanja","Za konkretan komad provjerite vrstu reza, podrijetlo, podatak o odležavanju, raspoloživu težinu i cijenu po kilogramu. Ako želite određenu debljinu, navedite je u upitu."],
-          ["Rezervacija i potvrda","Rezervirajte komad iz komore i pošaljite upit. Mecara vam porukom potvrđuje da je komad spreman i u kojem terminu možete doći."]]
-      : [["Which cut suits your dinner?","Would you prefer a bone-in steak or a boneless cut? Are you cooking individual portions or sharing a larger piece? Tell us your plans and ask about the differences between cuts such as rib-eye, T-bone and striploin."],
-          ["Check the details of your cut","Before ordering, confirm the cut, origin, ageing information, available weight and price per kilogram. Include your preferred thickness if you have one."],
-          ["Reserve and confirm","Reserve a piece from the ageing room and send your enquiry. Mecara confirms by message that it is ready and when you can collect it."]];
+    const S = hr ? [["Koji steak uzeti?","S kosti ili bez? Porcija po osobi ili jedan veliki komad za dijeljenje? Rib-eye, T-bone i ramstek nisu isto, pa nam recite kako zamišljate večeru i zajedno ćemo izabrati rez."],
+          ["Što provjeriti prije narudžbe","Pitajte koji je rez, odakle je meso, koliko je odležavalo, koliko ga ima i koliko košta po kilogramu. Ako želite određenu debljinu, napišite je u upitu."],
+          ["Rezervacija i potvrda","Rezervirajte komad iz komore i pošaljite upit. Porukom vam javljamo kad je spreman i kada možete doći po njega."]]
+      : [["Which cut for your dinner?","Bone-in or boneless? One each, or a big one to share? Rib-eye, T-bone and striploin aren't the same thing, so tell us what you've got planned and ask us about the difference."],
+          ["Check the details","Before you order, ask about the cut, origin, ageing, available weight and price per kilo. Want it a certain thickness? Say so in your enquiry."],
+          ["Reserve and confirm","Reserve a piece from the ageing room and send your enquiry. We'll message you when it's ready and when you can pick it up."]];
     let body = PAGES.komora(lang);
     body = body.replace(/<h1>[^<]*<\/h1>/, `<h1>${esc(hr ? "Odležani steakovi u Dubrovniku" : "Dry-aged steaks in Dubrovnik")}</h1>`);
     const three = `<section class="block"><div class="wrap three-col">${S.map(x => `<div><h2>${esc(x[0])}</h2><p>${esc(x[1])}</p></div>`).join("")}</div></section>`;
@@ -327,8 +327,8 @@ ${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
     let pl = PAGES.planner(lang);
     pl = pl.replace(/^\s*<section class="page-head">[\s\S]*?<\/section>/, "");          // bez drugog naslova
     pl = pl.replace(/\$\{?faq[\s\S]*$/, "");
-    const plH = lang === "hr" ? ["Roštilj planer","Koliko mesa trebate za roštilj?","Unesite broj gostiju i odaberite stil roštilja. Planer predlaže okvirnu količinu mesa koju možete promijeniti prije slanja upita."]
-                              : ["BBQ planner","How much meat do you need?","Enter your guest count and choose a BBQ style. The planner suggests an approximate amount of meat that you can adjust before sending an enquiry."];
+    const plH = lang === "hr" ? ["Roštilj planer","Koliko mesa trebate za roštilj?","Upišite koliko vas je i odaberite kakav roštilj radite. Planer će predložiti okvirnu količinu, a vi je možete mijenjati prije nego što pošaljete upit."]
+                              : ["BBQ planner","How much meat do you need?","Put in the number of guests and pick a style. The planner suggests a rough amount of meat, and you can change it before sending your enquiry."];
     const plHead = `<section class="block planner-intro" id="planner-top"><div class="wrap"><span class="mono eyebrow">${esc(plH[0])}</span><h2>${esc(plH[1])}</h2><p class="narrow-p">${esc(plH[2])}</p></div></section>`;
     // planer odmah nakon naslova stranice, prije popisa proizvoda; FAQ planera izbacujemo (bbq ima svoj)
     pl = pl.replace(/<section class="faq-block[\s\S]*$/, "");
@@ -366,17 +366,17 @@ ${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
     const hr = lang === "hr";
     const T = hr ? {
       h1: "Meso za roštilj u Dubrovniku",
-      lead: "Za dobar roštilj ne morate kupiti od svega pomalo. Odaberite nekoliko vrsta mesa koje vaše društvo voli i količinu prilagodite broju gostiju, prilozima i trajanju druženja.",
-      s1: ["Složite svoj izbor","Ćevapi i burgeri, kobasice, piletina ili svinjski vrat mogu biti osnova klasičnog roštilja. Za drugačiju večeru dodajte odreske prema aktualnoj ponudi. Ako želite izbjeći određeni sastojak, provjerite sastav svakog mariniranog ili pripremljenog proizvoda."],
-      s2: ["Recite nam koliko vas dolazi","U upitu navedite broj odraslih i djece, izbor mesa i imate li obilne priloge. Za veće druženje javite se ranije kako bismo provjerili raspoložive količine."],
-      s3: ["Željena količina, potvrđen dogovor","Završni izbor i termin preuzimanja potvrđujemo porukom."],
+      lead: "Ne treba vam od svega pomalo. Uzmite nekoliko vrsta mesa koje vaše društvo stvarno jede, a količinu odredite prema broju ljudi, prilozima i tome koliko će se sjediti.",
+      s1: ["Složite svoj izbor","Ćevapi, burgeri, kobasice, piletina, svinjski vrat. Od toga se radi klasičan roštilj. Želite li nešto drugačije, dodajte odreske iz trenutačne ponude. Ako netko izbjegava određeni sastojak, provjerite sastav svakog mariniranog ili pripremljenog proizvoda."],
+      s2: ["Koliko vas dolazi?","U upitu napišite broj odraslih i djece, koje meso želite i hoće li biti puno priloga. Za veće društvo javite se ranije, da stignemo provjeriti imamo li dovoljno."],
+      s3: ["Dogovor stiže porukom","Konačan izbor i termin preuzimanja potvrđujemo porukom."],
       cta: "Pošaljite popis mesaru",
     } : {
       h1: "BBQ meat in Dubrovnik",
-      lead: "Choose a few favourites and build your barbecue around your group. The amount you need depends on your guests, side dishes and whether meat is the main part of the meal.",
-      s1: ["Build your BBQ selection","Ask about ćevapi, burgers, grill sausages, chicken and pork neck, or add steaks from the current selection. Ćevapi are small seasoned minced-meat pieces for grilling; ask about the meat blend and ingredients of the batch you are buying."],
-      s2: ["Tell us about your group","Include the number of adults and children, your preferred meats and any substantial side dishes. For a larger barbecue, contact us in advance to check quantities."],
-      s3: ["Confirm your selection","We confirm the final selection and collection arrangements by message."],
+      lead: "Pick a few favourites and plan around who's coming. How much you need depends on the guests, the sides, and whether the meat is the main event.",
+      s1: ["Build your BBQ selection","Ćevapi, burgers, grill sausages, chicken and pork neck are the usual suspects. Steaks from the current selection work too. Ćevapi are small seasoned minced-meat pieces for the grill; ask about the meat blend and ingredients in the batch you're buying."],
+      s2: ["Tell us about your group","How many adults and children, which meats, and whether there'll be plenty of sides. For a bigger barbecue, get in touch early so we can check quantities."],
+      s3: ["Confirm your selection","We confirm the final selection and collection details by message."],
       cta: "Send your list to the butcher",
     };
     const items = ["p15","p16","p17","p10","p11","p13","p14","p2","p9"].map(id => PRODUCTS.find(p => p.id === id));
@@ -400,30 +400,30 @@ ${faqBlock(lang, ["large", "ready", "estimate"])}`;
     const hr = lang === "hr";
     const T = hr ? {
       h1: "Koliko mesa trebate za roštilj?",
-      lead: "Unesite broj gostiju i odaberite stil roštilja. Planer predlaže okvirnu količinu mesa koju možete promijeniti prije slanja upita.",
+      lead: "Upišite broj gostiju i izaberite kakav roštilj radite. Planer predlaže okvirnu količinu mesa, a vi je prije slanja upita možete promijeniti.",
       adults: "Odrasli", kids: "Djeca", hunger: "Koliko su gladni?", style: "Kakav roštilj?",
       hungerOpts: ["Lagano","Normalno","Jako gladni"], styleOpts: ["Klasika","Premium","Dalmatinski"],
       styleDesc: ["Ćevapi, svinjski vrat, kobasice i piletina.","Juneći ramstek, janjeći kotleti i pileći file.","Janjetina i teletina za peku, uz kobasice."],
-      plan: "Vaš prijedlog", total: "Ukupno okvirno", add: "Dodajte prijedlog u upit",
-      note: "Prikazane količine odnose se na sirovo meso. Procjena ne predstavlja potvrdu zalihe, cijene ni termina preuzimanja.",
-      empty: "Odaberite broj osoba kako biste dobili prijedlog.",
-      fitH: "Prilagodite plan svom društvu", fitP: "Broj odraslih i djece, meso s kosti, predjela i prilozi mijenjaju potrebnu količinu. Rezultat je polazište za kupnju, a ne pravilo koje vrijedi za svako druženje.",
-      howH: "Kako planer računa", how: ["Odrasla osoba: oko 250 g (lagano), 350 g (normalno) ili 500 g (jako gladni) sirovog mesa.","Dijete se računa kao pola odrasle porcije.","Količine se zaokružuju na četvrtinu kilograma, a najmanje je 0,25 kg po vrsti mesa."],
-      howN: "Gramaže su prijedlog za radnu verziju i potvrdit će ih mesar.",
+      plan: "Prijedlog", total: "Ukupno, okvirno", add: "Stavite prijedlog u upit",
+      note: "Količine su za sirovo meso. Ovo je procjena, a ne potvrda zalihe, cijene ni termina preuzimanja.",
+      empty: "Upišite koliko vas je pa ćemo predložiti količine.",
+      fitH: "Prilagodite plan svom društvu", fitP: "Djeca, meso s kosti, predjela i prilozi mijenjaju račun. Rezultat uzmite kao polazište za kupnju. Svako je druženje drugačije.",
+      howH: "Kako planer računa", how: ["Odrasla osoba: oko 250 g (lagano), 350 g (normalno) ili 500 g (jako gladni) sirovog mesa.","Dijete je pola porcije odrasle osobe.","Zaokružuje se na četvrtinu kilograma. Najmanje je 0,25 kg po vrsti mesa."],
+      howN: "Gramaže su prijedlog iz radne verzije. Konačno ih potvrđuje mesar.",
       more: "Pogledajte meso za roštilj",
     } : {
       h1: "How much meat do you need for a BBQ?",
-      lead: "Enter your guest count and choose a BBQ style. The planner suggests an approximate amount of meat that you can adjust before sending an enquiry.",
+      lead: "Enter how many are coming and pick a BBQ style. The planner suggests a rough amount of meat, which you can change before you send an enquiry.",
       adults: "Adults", kids: "Children", hunger: "How hungry?", style: "What kind of BBQ?",
       hungerOpts: ["Light","Normal","Very hungry"], styleOpts: ["Classic","Premium","Dalmatian"],
       styleDesc: ["Ćevapi, pork neck, sausages and chicken.","Beef striploin, lamb chops and chicken breast.","Lamb and veal for peka, with sausages."],
-      plan: "Your suggestion", total: "Estimated total", add: "Add this plan to your enquiry",
-      note: "Quantities refer to raw meat. Estimates do not confirm stock, prices or collection times.",
-      empty: "Choose a guest count to see a suggestion.",
-      fitH: "Make the plan fit your group", fitP: "Adults and children, bone-in cuts, starters and side dishes all affect how much you may need. Treat the result as a starting point, not a fixed rule for every barbecue.",
-      howH: "How the planner works", how: ["Each adult: about 250 g (light), 350 g (normal) or 500 g (very hungry) of raw meat.","A child counts as half an adult portion.","Amounts are rounded to a quarter of a kilogram, with at least 0.25 kg per meat."],
-      howN: "These amounts are a working-version suggestion and will be confirmed by the butcher.",
-      more: "Explore BBQ meat",
+      plan: "Suggested amounts", total: "Estimated total", add: "Add this to your enquiry",
+      note: "Quantities are for raw meat. This is an estimate, not a confirmation of stock, prices or collection time.",
+      empty: "Enter a guest count to see a suggestion.",
+      fitH: "Adjust it for your group", fitP: "Children, bone-in cuts, starters and sides all change the numbers. Use the result as somewhere to start. No two barbecues are the same.",
+      howH: "How the planner works", how: ["Each adult: about 250 g (light), 350 g (normal) or 500 g (very hungry) of raw meat.","A child counts as half an adult.","Amounts are rounded to a quarter of a kilo, with at least 0.25 kg of each meat."],
+      howN: "These amounts come from the working version. The butcher will confirm them.",
+      more: "See BBQ meat",
     };
     const seg = (name, opts, sel, desc) => `<div class="seg" role="radiogroup">${opts.map((o, i) => `<label class="chip radio"><input type="radio" name="${name}" value="${i}"${i === sel ? " checked" : ""}><span>${esc(o)}</span>${desc ? `<small>${esc(desc[i])}</small>` : ""}</label>`).join("")}</div>`;
     return `
@@ -460,22 +460,22 @@ ${faqBlock(lang, ["large", "estimate"])}`;
     const T = hr ? {
       eye: "Vile i jahte · na engleskom i hrvatskom",
       h1: "Meso za vile i jahte na dubrovačkom području",
-      lead: "Planirate roštilj u vili, večeru na brodu ili nabavu za privatnog chefa? Pošaljite nam popis mesa i delikatesa, broj gostiju i željeni datum. Provjerit ćemo ponudu i predložiti izbor prema vašem planu.",
-      s: [["Narudžba prilagođena vašoj kuhinji","Navedite rezove, količine i način pakiranja koji trebate. Za peku, roštilj ili steak večeru važno je znati kojom opremom raspolažete i kada pripremate obrok."],
-          ["Lokacija i termin prema dogovoru","U upit uključite adresu vile ili naziv broda, marinu i vez. Mogućnost dostave, naknadu i termin potvrđujemo pojedinačno. Ako dostava nije moguća, možemo provjeriti preuzimanje u trgovini."],
-          ["Potvrda prije pripreme","Prije pripreme usuglašavamo proizvode, zamjene ako su potrebne, cijenu ili način obračuna te uvjete preuzimanja ili dostave. Slanje obrasca nije potvrđena narudžba."]],
+      lead: "Roštilj u vili, večera na brodu, popis za privatnog chefa? Pošaljite nam što trebate od mesa i delikatesa, za koliko gostiju i za kada. Provjerit ćemo što imamo i predložiti izbor.",
+      s: [["Prema vašoj kuhinji","Napišite rezove, količine i kako da zapakiramo. Radite li peku, roštilj ili steak večeru, recite nam i čime raspolažete u kuhinji te kada kuhate."],
+          ["Lokacija i termin","U upitu navedite adresu vile ili ime broda, marinu i vez. Je li dostava moguća, koliko košta i kada stiže, potvrđujemo za svaki upit posebno. Ako dostava ne ide, provjerit ćemo možete li meso preuzeti u trgovini."],
+          ["Potvrda prije pripreme","Prije nego što išta pripremimo, dogovaramo proizvode, eventualne zamjene, cijenu ili način obračuna te uvjete preuzimanja ili dostave. Poslan obrazac još nije potvrđena narudžba."]],
       boxH: "Paketi", formH: "Zatražite ponudu za svoju grupu",
-      f: { type: "Vrsta lokacije", types: ["Vila","Apartman","Jahta"], date: "Željeni datum", guests: "Broj gostiju", name: "Kontakt osoba", tel: "Mobitel s pozivnim brojem države", email: "E-mail", where: "Adresa / naziv broda, marina i vez", wherePh: "npr. Vila Sunce, Orašac ili M/Y Adria, ACI Komolac, vez 12", box: "Odabrani paket", note: "Napomene o rezanju i pakiranju", notePh: "Rezovi, količine, pakiranje, alergeni", submit: "Pripremi upit", need: "Ispunite datum, broj gostiju, kontakt osobu, mobitel i lokaciju.", where2: "Navedite lokaciju kako bismo mogli provjeriti mogućnosti." },
+      f: { type: "Vrsta lokacije", types: ["Vila","Apartman","Jahta"], date: "Željeni datum", guests: "Broj gostiju", name: "Kontakt osoba", tel: "Mobitel s pozivnim brojem države", email: "E-mail", where: "Adresa / naziv broda, marina i vez", wherePh: "npr. Vila Sunce, Orašac ili M/Y Adria, ACI Komolac, vez 12", box: "Odabrani paket", note: "Napomene o rezanju i pakiranju", notePh: "Rezovi, količine, pakiranje, alergeni", submit: "Pripremi upit", need: "Nedostaje nešto od ovoga: datum, broj gostiju, kontakt osoba, mobitel ili lokacija.", where2: "Bez lokacije ne možemo provjeriti što je izvedivo." },
       head: "Upit za vilu / jahtu – Mecara",
     } : {
       eye: "Villas & yachts · English and Croatian",
       h1: "Meat for villas and yachts in the Dubrovnik area",
-      lead: "Planning a villa barbecue, a dinner on board or a shopping list for your private chef? Send us your preferred meats and deli items, guest count and date. We will check availability and discuss a selection that fits your plans.",
-      s: [["Prepared around your kitchen","Include the cuts, quantities and packaging you need. Let us know whether you are cooking on a barbecue, preparing peka or planning a steak dinner, and what equipment is available."],
-          ["Agree the location and timing","Provide the villa address or the yacht name, marina and berth. Delivery availability, charges and timing are confirmed individually. If delivery is unavailable, we can discuss collection from the shop."],
-          ["Confirm before preparation","We agree the products, any substitutions, pricing or weight-based calculation and collection or delivery arrangements before preparing your order. Submitting the form does not confirm a booking."]],
+      lead: "Barbecue at the villa, dinner on board, or a shopping list for your private chef? Send us the meat and deli items you want, the number of guests and the date. We'll check what we have and come back with a selection.",
+      s: [["Prepared for your kitchen","List the cuts, quantities and how you'd like them packed. Tell us if it's a barbecue, a peka or a steak dinner, what equipment you have, and when you're cooking."],
+          ["Location and timing","Give us the villa address, or the yacht name, marina and berth. Whether we can deliver, what it costs and when are confirmed case by case. If delivery isn't possible, we can talk about collection from the shop."],
+          ["Confirmed before we prepare","Before we prepare anything, we agree the products, any substitutions, the price or weight-based calculation, and collection or delivery. Sending the form doesn't confirm a booking."]],
       boxH: "Selections", formH: "Request a quote for your group",
-      f: { type: "Location type", types: ["Villa","Apartment","Yacht"], date: "Preferred date", guests: "Number of guests", name: "Contact name", tel: "Mobile number including country code", email: "Email", where: "Address / yacht name, marina and berth", wherePh: "e.g. Villa Sunset, Orašac or M/Y Adria, ACI Komolac, berth 12", box: "Preferred selection", note: "Cutting and packaging requests", notePh: "Cuts, quantities, packaging, allergens", submit: "Prepare enquiry", need: "Please fill in the date, guests, contact name, mobile and location.", where2: "Enter the location so we can check the available options." },
+      f: { type: "Location type", types: ["Villa","Apartment","Yacht"], date: "Preferred date", guests: "Number of guests", name: "Contact name", tel: "Mobile number including country code", email: "Email", where: "Address / yacht name, marina and berth", wherePh: "e.g. Villa Sunset, Orašac or M/Y Adria, ACI Komolac, berth 12", box: "Preferred selection", note: "Cutting and packaging requests", notePh: "Cuts, quantities, packaging, allergens", submit: "Prepare enquiry", need: "We still need the date, guests, contact name, mobile and location.", where2: "Tell us where you'll be so we can check what's possible." },
       head: "Villa / yacht enquiry – Mecara",
     };
     const d = UI[lang].d;
@@ -516,17 +516,17 @@ ${faqBlock(lang, ["large", "estimate"])}`;
     const hr = lang === "hr", u = UI[lang];
     const T = hr ? {
       h1: "Radionice o mesu i pripremi steakova u Dubrovniku",
-      lead: "Želite bolje razumjeti rezove mesa i sigurnije birati za svoje recepte? Pratite najave Mecarinih radionica. Uz svaku objavu navodimo temu, datum, trajanje, jezik, cijenu i sadržaj programa.",
-      sH: "Od odabira komada do pripreme", sP: "Radionice mogu obuhvatiti izbor steaka, pripremu za roštilj ili slaganje plate. Male grupe, za pultom u Mecari.",
+      lead: "Želite znati koji je rez za što i birati meso bez nagađanja? Pratite kad najavljujemo radionice. Uz svaku piše tema, datum, trajanje, jezik, cijena i program.",
+      sH: "Od izbora komada do pripreme", sP: "Na radionici može biti riječi o izboru steaka, pripremi za roštilj ili slaganju plate. Grupe su male, a radimo za pultom u Mecari.",
       listH: "Nadolazeće radionice", seats: "mjesta", signup: "Prijavi se", added: "Prijava u upitu",
-      howH: "Kako se prijaviti", how: "Kliknite „Prijavi se”, radionica ide u vaš upit. Pošaljite upit, a Mecara vam porukom potvrđuje mjesto.",
+      howH: "Kako se prijaviti", how: "Kliknite „Prijavi se” i radionica ide u vaš upit. Kad pošaljete upit, porukom vam potvrđujemo mjesto.",
       ask: "Pitajte za sljedeći termin",
     } : {
       h1: "Meat and steak workshops in Dubrovnik",
-      lead: "Would you like to understand meat cuts and choose more confidently for your recipes? Look out for Mecara workshop announcements. Each listing includes the topic, date, duration, language, price and programme.",
-      sH: "From choosing a cut to planning its preparation", sP: "Topics may include steak selection, barbecue preparation or putting together a charcuterie board. Small groups at the Mecara counter.",
+      lead: "Want to know your cuts and buy meat with a bit more confidence? Keep an eye out for Mecara workshops. Every listing shows the topic, date, length, language, price and what's covered.",
+      sH: "From choosing a cut to cooking it", sP: "We might cover picking a steak, getting ready for a barbecue or putting together a charcuterie board. Small groups, at the Mecara counter.",
       listH: "Upcoming workshops", seats: "places", signup: "Sign up", added: "In your enquiry",
-      howH: "How to sign up", how: "Click “Sign up” and the workshop goes into your enquiry. Send the enquiry and Mecara confirms your place by message.",
+      howH: "How to sign up", how: "Click “Sign up” and the workshop goes into your enquiry. Send it, and we'll confirm your place by message.",
       ask: "Ask about the next workshop",
     };
     return `
@@ -547,18 +547,18 @@ ${faqBlock(lang, ["large", "estimate"])}`;
     const hr = lang === "hr";
     const T = hr ? {
       h1: "Mecara, vaša mesnica u Lapadu",
-      lead: "Mecara je mjesto za ljude koji vole znati što kupuju i kako će to pripremiti. Naći ćete nas u centru DOC u Dubrovniku, gdje razgovor o dobrom obroku često počinje jednostavnim pitanjem: što danas kuhate?",
-      s: [["Izbor koji počinje vašim jelom","Nekad trebate komad za sporo kuhanje, nekad nekoliko odrezaka, a nekad dovoljno mesa za cijelo društvo. Naš je pristup pomoći vam odabrati prema jelu, količini i načinu pripreme."],
-          ["Jasne informacije o ponudi","Za podrijetlo, sastojke i dostupnost pitajte za konkretan proizvod. Želimo da prije kupnje imate informacije koje su vam potrebne, bez nagađanja prema fotografiji ili nazivu."],
-          ["Navratite u DOC","Pogledajte aktualnu ponudu ili nam se javite s popisom onoga što trebate. Za posebne rezove i veće količine najbolje je provjeriti mogućnosti unaprijed."]],
-      cta: "Upoznajte našu ponudu",
+      lead: "Mecara je za ljude koji žele znati što kupuju i što će s tim skuhati. Nalazimo se u centru DOC u Dubrovniku. Razgovor kod nas obično krene s istim pitanjem. Što danas kuhate?",
+      s: [["Krećemo od jela","Nekad vam treba komad za sporo kuhanje, nekad par odrezaka, a nekad meso za cijelo društvo. Pomažemo vam izabrati prema jelu, količini i načinu pripreme."],
+          ["Pitajte za proizvod","Za podrijetlo, sastojke i dostupnost pitajte za konkretan proizvod. Bolje je to znati prije kupnje nego nagađati po slici ili nazivu."],
+          ["Navratite u DOC","Pogledajte što trenutačno imamo ili nam pošaljite popis. Za posebne rezove i veće količine javite se unaprijed."]],
+      cta: "Pogledajte ponudu",
     } : {
       h1: "Mecara, your butcher shop in Lapad",
-      lead: "Mecara is for people who want to know what they are buying and how to cook it. Find us inside the DOC shopping centre in Dubrovnik, where choosing a good meal can start with a simple question: what are you making today?",
-      s: [["Choose around the meal","You may need a cut for slow cooking, a few steaks or enough meat for a whole group. Tell us about the dish, your guest count and your cooking equipment so we can help with your choice."],
-          ["Ask about the product","Check the origin, ingredients and availability of the item you want to buy. A clear answer about a particular product is more useful than guessing from its name or photo."],
-          ["Visit us at DOC","Browse the current selection or contact us with your list. For specific cuts and larger quantities, it is best to check in advance."]],
-      cta: "Explore our selection",
+      lead: "Mecara is for people who like to know what they're buying and how they'll cook it. We're inside the DOC shopping centre in Dubrovnik, and most conversations at our counter start the same way. What are you making today?",
+      s: [["We start with the meal","Sometimes it's a cut for slow cooking, sometimes a couple of steaks, sometimes enough meat for the whole group. Tell us the dish, how many you're feeding and what you're cooking on, and we'll help you choose."],
+          ["Ask about the product","Ask about the origin, ingredients and availability of the thing you want. A straight answer beats guessing from a name or a photo."],
+          ["Visit us at DOC","Have a look at what's in, or send us your list. For specific cuts or larger amounts, check with us first."]],
+      cta: "See our selection",
     };
     return `
 <section class="page-head"><div class="wrap feature">
@@ -574,17 +574,17 @@ ${faqBlock(lang, ["large", "estimate"])}`;
     const u = UI[lang], hr = lang === "hr";
     const T = hr ? {
       h1: "Kontakt i dolazak u Mecaru",
-      lead: "Posjetite nas u Lapadu ili nam pošaljite upit o ponudi. Ako trebate određeni rez, veću količinu ili pripremu za poseban datum, navedite pojedinosti kako bismo mogli provjeriti mogućnosti.",
+      lead: "Dođite do nas u Lapad ili nam pošaljite upit. Trebate li određeni rez, veću količinu ili nešto spremno za točno određeni datum, napišite pojedinosti pa ćemo provjeriti što se može.",
       addrK: "Adresa", addrV: "Mecara, Kralja Tomislava 7, centar DOC, 20000 Dubrovnik",
       telK: "Telefon / WhatsApp", mailK: "E-mail",
-      whatH: "Što napisati u upitu", whatP: "Navedite proizvod ili jelo koje planirate, okvirnu količinu, željeni datum i način rezanja ako vam je važan. Za preuzimanje pričekajte potvrdu termina.",
+      whatH: "Što napisati u upitu", whatP: "Proizvod ili jelo koje planirate, okvirnu količinu, datum i, ako vam je važno, kako da narežemo. Prije nego što krenete po meso, pričekajte da vam potvrdimo termin.",
       send: "Pošaljite upit",
     } : {
       h1: "Contact Mecara and find our shop",
-      lead: "Visit us in Lapad or ask about the current selection. If you need a specific cut, a larger quantity or preparation for a particular date, include the details so we can check what is possible.",
+      lead: "Come and see us in Lapad, or send an enquiry. If you need a specific cut, a larger quantity or something ready for a particular date, give us the details and we'll see what we can do.",
       addrK: "Address", addrV: "Mecara, Kralja Tomislava 7, DOC shopping centre, 20000 Dubrovnik, Croatia",
       telK: "Phone / WhatsApp", mailK: "Email",
-      whatH: "What to include in your enquiry", whatP: "Tell us the product or meal you have in mind, approximate quantity, preferred date and any cutting requirements. Wait for a confirmed collection time before making arrangements.",
+      whatH: "What to include in your enquiry", whatP: "The product or dish you have in mind, roughly how much, the date, and how you want it cut if that matters. Wait until we've confirmed a collection time before you plan around it.",
       send: "Send an enquiry",
     };
     return `

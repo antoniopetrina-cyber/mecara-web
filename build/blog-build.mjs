@@ -12,15 +12,15 @@ const PUBLISHED = "2026-11-02";
 export const BLOG_ROUTES = { hr: "/blog/", en: "/en/blog/" };
 export const CATS = [
   { id: "danas",   hr: ["Što danas kuhati?", "sto-danas-kuhati"],         en: ["What to Cook Today", "what-to-cook-today"],
-    intro: { hr: "Piletina iz pećnice, mesne okruglice ili ručak iz jedne tave: praktični recepti s popisom sastojaka i jasnim koracima.", en: "Chicken from the oven, meatballs or a one-pan dinner: practical recipes with ingredient lists and clear steps." } },
+    intro: { hr: "Piletina iz pećnice, mesne okruglice, ručak iz jedne tave. Recepti s popisom sastojaka i koracima koje je lako pratiti.", en: "Oven chicken, meatballs, a one-pan dinner. Recipes with a proper ingredient list and steps you can actually follow." } },
   { id: "mesar",   hr: ["Pitaj mesara", "pitaj-mesara"],                   en: ["Ask the Butcher", "ask-the-butcher"],
-    intro: { hr: "Koji rez uzeti, kako odabrati meso za gulaš i što pitati pri kupnji mljevenog mesa? Krenite od jela koje želite pripremiti.", en: "Which cut should you choose, what works in a stew and what should you ask about mince? Start with the meal you want to cook." } },
+    intro: { hr: "Koji rez uzeti, koje meso ide u gulaš i što pitati kad kupujete mljeveno. Krenite od jela koje želite skuhati.", en: "Which cut to buy, what goes in a stew, what to ask about mince. Start with what you want to cook." } },
   { id: "rostilj", hr: ["Roštilj i steakovi", "rostilj-i-steakovi"],       en: ["BBQ & Steaks", "bbq-and-steaks"],
-    intro: { hr: "Isplanirajte količine, pripremite steak na tavi i izbjegnite pogreške zbog kojih roštilj postaje nepotrebno kompliciran.", en: "Plan your quantities, cook a steak in a pan and avoid common mistakes that make a barbecue harder than it needs to be." } },
+    intro: { hr: "Koliko mesa kupiti, kako ispeći steak na tavi i koje pogreške roštilj čine težim nego što mora biti.", en: "How much to buy, how to cook a steak in a pan, and the usual mistakes that make a barbecue harder than it should be." } },
   { id: "kuhinja", hr: ["Iz dubrovačke kuhinje", "iz-dubrovacke-kuhinje"], en: ["From the Dubrovnik Table", "from-the-dubrovnik-table"],
-    intro: { hr: "Peka, pršut, sir i nedjeljni stol: ideje nadahnute načinom na koji se jede i okuplja na jugu.", en: "Peka, prosciutto, cheese and Sunday gatherings: ideas inspired by the way people cook and share food in southern Croatia." } },
+    intro: { hr: "Peka, pršut, sir i nedjeljni stol. Ideje iz načina na koji se na jugu kuha i sjedi za stolom.", en: "Peka, prosciutto, cheese and Sunday lunch. Ideas taken from how people cook and eat together in the south of Croatia." } },
   { id: "gosti",   hr: ["Za goste Dubrovnika", "za-goste-dubrovnika"],     en: ["For Visitors to Dubrovnik", "for-visitors-to-dubrovnik"],
-    intro: { hr: "Kuhate u apartmanu ili vili? Saznajte što pitati u mesnici, kako planirati kupnju i što znače nazivi lokalnih jela.", en: "Cooking in a Dubrovnik apartment or villa? Learn what to ask at the butcher, how to plan your shopping and what local food names mean." } },
+    intro: { hr: "Kuhate u apartmanu ili vili? Što pitati u mesnici, kako isplanirati kupnju i što znače imena domaćih jela.", en: "Cooking in an apartment or villa in Dubrovnik? What to ask at the butcher, how to plan the shopping and what the local dish names mean." } },
 ];
 const catPath = (c, lang) => lang === "hr" ? `/blog/rubrika/${c.hr[1]}/` : `/en/blog/category/${c.en[1]}/`;
 const artPath = (a, lang) => lang === "hr" ? `/blog/${a.slug.hr}/` : `/en/blog/${a.slug.en}/`;
@@ -34,22 +34,22 @@ const CTA = { M01: ["steak"], M02: ["ponuda","#junetina"], M03: ["ponuda","#june
 const RECIPE = { T01: { protein: "piletina", time: "slow", total: 65 }, T02: { protein: "mljeveno", time: "60", total: 50 }, T03: { protein: "junetina", time: "45", total: 40 } };
 
 const T = {
-  hr: { blog: "Blog", h1: "Za stolom s Mecarom", intro: "Ideje za današnji ručak, odgovori na pitanja o mesu i mali savjeti za bolji roštilj. Od izbora komada do posluživanja — pronađite nešto što vam se danas kuha.",
-        title: "Savjeti o mesu i ideje za ručak — Mecara blog", desc: "Što danas kuhati, koje meso odabrati i kako isplanirati roštilj? Pronađite recepte i praktične vodiče na Mecarinu blogu.",
+  hr: { blog: "Blog", h1: "Za stolom s Mecarom", intro: "Ideje za ručak, odgovori na pitanja o mesu i pokoji savjet za roštilj. Od izbora komada do tanjura. Nađite nešto što vam se danas kuha.",
+        title: "Savjeti o mesu i ideje za ručak — Mecara blog", desc: "Što danas kuhati, koje meso uzeti i kako isplanirati roštilj. Recepti i praktični savjeti s Mecarina bloga.",
         today: "Što danas kuhati?", all: "Svi članci", cats: "Rubrike", read: "Pročitajte članak", recipe: "Pogledajte recept", ingredients: "Sastojci", method: "Priprema", servings: "Broj porcija",
-        time: "Okvirno vrijeme", print: "Ispišite recept", related: "Povezani članci", explore: "Provjerite ponudu", serving: "Ilustracija posluživanja", cut: "Ilustracija reza", photo: "Fotografija",
-        published: "Objavljeno", minRead: "min čitanja", none: "Nema članaka za odabrani filter.", showAll: "Prikaži sve", sources: "Izvori i dodatne informacije", home: "Naslovnica",
+        time: "Okvirno vrijeme", print: "Ispišite recept", related: "Povezani članci", explore: "Pogledajte što imamo", serving: "Ilustracija posluživanja", cut: "Ilustracija reza", photo: "Fotografija",
+        published: "Objavljeno", minRead: "min čitanja", none: "Ništa ne odgovara ovom filteru.", showAll: "Prikaži sve", sources: "Izvori i dodatne informacije", home: "Naslovnica",
         fProtein: "Vrsta mesa", fTime: "Vrijeme", proteins: [["piletina","Piletina"],["junetina","Junetina"],["mljeveno","Mljeveno meso"]], times: [["45","Do 45 min"],["60","Do 60 min"],["slow","Bez žurbe"]],
-        less: "Manje porcija", more: "Više porcija", scaleNote: "Količine se preračunavaju prema broju porcija. Temperatura, vrijeme pečenja i veličina posude ne mijenjaju se automatski.",
-        catTitle: n => `${n} — Mecara blog`, placeholder: "Fotografija u pripremi", doneness: "Gotovost mesa provjerite termometrom; vremena su okvirna." },
-  en: { blog: "Blog", h1: "At the Table with Mecara", intro: "Ideas for tonight's dinner, answers to your meat questions and practical help with your next barbecue. Find a cut, a recipe or a little inspiration for the table.",
-        title: "Meat Guides & Everyday Recipes — Mecara Blog", desc: "Find dinner ideas, advice on choosing meat and practical BBQ guides. Explore Mecara's recipes and tips for cooking in Dubrovnik and at home.",
+        less: "Manje porcija", more: "Više porcija", scaleNote: "Količine se preračunaju prema broju porcija. Temperaturu, vrijeme pečenja i veličinu posude prilagodite sami, to se ne mijenja automatski.",
+        catTitle: n => `${n} — Mecara blog`, placeholder: "Fotografija u pripremi", doneness: "Je li meso gotovo, provjerite termometrom. Vremena su okvirna." },
+  en: { blog: "Blog", h1: "At the Table with Mecara", intro: "Dinner ideas, answers to your meat questions and some practical help with the barbecue. Come for a cut, leave with a recipe, or just find something to cook tonight.",
+        title: "Meat Guides & Everyday Recipes — Mecara Blog", desc: "Dinner ideas, advice on choosing meat and practical BBQ guides from Mecara, for cooking in Dubrovnik or back home.",
         today: "What to Cook Today", all: "All articles", cats: "Categories", read: "Read the article", recipe: "View recipe", ingredients: "Ingredients", method: "Method", servings: "Servings",
-        time: "Approximate time", print: "Print recipe", related: "Related articles", explore: "Explore the selection", serving: "Serving illustration", cut: "Cut illustration", photo: "Photo",
-        published: "Published", minRead: "min read", none: "No articles match this filter.", showAll: "Show all", sources: "Sources and further reading", home: "Home",
+        time: "Approximate time", print: "Print recipe", related: "Related articles", explore: "See what we have", serving: "Serving illustration", cut: "Cut illustration", photo: "Photo",
+        published: "Published", minRead: "min read", none: "Nothing matches that filter.", showAll: "Show all", sources: "Sources and further reading", home: "Home",
         fProtein: "Meat", fTime: "Time", proteins: [["piletina","Chicken"],["junetina","Beef"],["mljeveno","Mince"]], times: [["45","Up to 45 min"],["60","Up to 60 min"],["slow","No rush"]],
-        less: "Fewer servings", more: "More servings", scaleNote: "Quantities are recalculated for the number of servings. Oven temperature, cooking time and dish size do not change automatically.",
-        catTitle: n => `${n} — Mecara Blog`, placeholder: "Photo coming soon", doneness: "Check doneness with a thermometer; times are approximate." },
+        less: "Fewer servings", more: "More servings", scaleNote: "Quantities change with the number of servings. Oven temperature, cooking time and dish size don't, so adjust those yourself.",
+        catTitle: n => `${n} — Mecara Blog`, placeholder: "Photo coming soon", doneness: "Use a thermometer to check doneness. Times are a guide." },
 };
 
 function parseSources() {

@@ -93,8 +93,8 @@ Naslovi rubrika za title: `[naziv rubrike] — Mecara blog`, s lokaliziranim EN 
 **EN meta:** Compare ribeye, striploin and fillet by fat, texture and cooking style. Choose a steak that fits your taste, equipment and dinner plans.  
 **HR ključni pojam:** rib-eye ramstek biftek razlika; dodatno: koji steak odabrati, rezovi junetine.  
 **EN keyword:** ribeye vs striploin vs fillet; secondary: choosing steak, beef cuts.  
-**Izvadak HR:** Najskuplji komad nije automatski najbolji izbor za vašu večeru. Krenite od onoga što volite jesti.  
-**Excerpt EN:** The most expensive cut is not automatically the best choice for dinner. Start with what you enjoy eating.  
+**Izvadak HR:** Najskuplji komad u vitrini nije automatski i najbolji za vašu večeru. Krenite od onoga što zapravo volite jesti.  
+**Excerpt EN:** The priciest cut in the counter isn't automatically the right one for your dinner. Start with what you actually like to eat.  
 **Slika:** pretraga `raw ribeye striploin tenderloin steaks`; točno identificirani rezovi, bez izmišljene usporedbe na generičkoj slici.  
 **Alt HR/EN:** Rib-eye odrezak s vidljivim prošaranjem masnoćom / Ribeye steak with visible fat marbling. Prilagoditi odabranoj fotografiji.  
 **Poveznice:** R02 steak na tavi; /odlezani-steakovi/ i /en/dry-aged-steaks/.  
@@ -102,55 +102,63 @@ Naslovi rubrika za title: `[naziv rubrike] — Mecara blog`, s lokaliziranim EN 
 
 ### HR — Rib-eye, ramstek ili biftek: koji steak odabrati?
 
-Pred vitrinom je lako zapeti na imenima. Rib-eye, ramstek i biftek svi mogu biti dobar izbor, ali nude različit doživljaj. Prije pitanja o cijeni korisnije je odgovoriti na drugo: želite li mekši, nemasniji komad ili vam je važniji bogatiji okus i nešto više masnoće?
+Ljudi često stanu pred vitrinu i zapnu na imenima. Rib-eye, ramstek i biftek mogu svi biti dobra večera, samo je svaki dobar na svoj način. Zato vas prvo ne pitamo za cijenu, nego volite li mekši i nemasniji komad ili vam je draži jači okus i malo više masnoće.
 
-#### Rib-eye za ljubitelje prošaranog mesa
+#### Rib-eye
 
-Rib-eye dolazi iz rebrenog dijela i često ima vidljivu masnoću unutar mišića. Ako volite steak punijeg okusa, vrijedi ga razmotriti. Prošaranost nije ista na svakom odresku, pa pogledajte konkretan komad umjesto da se oslonite samo na naziv.
+Dolazi iz rebrenog dijela i obično ima masnoću vidljivu unutar samog mišića. Tko voli steak punijeg okusa, ovdje je na dobrom mjestu.
 
-Uz njega ne trebate složen prilog. Pečeni krumpir, zelena salata ili povrće s grila ostavljaju mesu dovoljno prostora na tanjuru.
+Prošaranost se razlikuje od odreska do odreska. Pogledajte komad koji kupujete, ime na etiketi vam to neće reći.
 
-#### Ramstek kao sredina između teksture i masnoće
+Prilog neka bude jednostavan: pečeni krumpir, zelena salata ili malo povrća s grila. Meso ionako vodi glavnu riječ.
 
-Pod nazivom ramstek u ponudi se često podrazumijeva striploin. Ima izraženiju strukturu od bifteka i obično prepoznatljiv rub masnoće. Dobar je kandidat kada želite steak koji se lijepo reže na kriške i poslužuje uz jednostavan umak.
+#### Ramstek
 
-Nazivi rezova mogu se razlikovati među tržištima. Ako pratite strani recept, pokažite naziv ili fotografiju mesaru kako biste provjerili kupujete li odgovarajući komad.
+Kad u ponudi piše ramstek, najčešće se misli na striploin. Čvršće je građe od bifteka i obično ima jasno vidljiv rub masnoće. Lijepo se reže na kriške pa je dobar izbor kad ga želite poslužiti uz neki jednostavan umak.
 
-#### Biftek kada prednost dajete mekoći
+Nazivi rezova nisu isti na svakom tržištu. Ako kuhate po stranom receptu, pokažite mesaru naziv ili fotografiju pa ćemo zajedno provjeriti je li to taj komad.
 
-Biftek, odnosno tenderloin ili fillet, poznat je po nježnijoj teksturi i manjoj masnoći. Prikladan je za manje, uredno oblikovane porcije. Ne treba ga birati samo zato što zvuči svečano: ako volite izraženije masne dijelove steaka, možda ćete više uživati u drugom rezu.
+#### Biftek
 
-#### Još dva pitanja prije kupnje
+Biftek je ono što ćete u stranim receptima naći kao tenderloin ili fillet. Mekan je i nemasniji od ostala dva, a dobro se slaže u manje, uredne porcije.
 
-Recite pripremate li meso na tavi ili roštilju i kolika vam je posuda. Debljina odreska utječe na način pripreme; dva komada jednake težine ne moraju se jednako peći. Za zajedničko posluživanje navedite i koliko će biti priloga.
+Samo ga nemojte uzeti zato što zvuči svečano. Ako vam je kod steaka najbolji onaj masniji dio, vjerojatno će vam se drugi rez više svidjeti.
 
-**Birate steak u Dubrovniku? Pogledajte Mecarinu ponudu odležanih steakova i provjerite koji su rezovi trenutačno dostupni.**
+#### Prije nego platite
+
+Recite nam pečete li na tavi ili na roštilju i kolika vam je tava. Debljina odreska mijenja način pečenja, pa se ni dva komada iste težine ne moraju peći jednako. Ako se steak dijeli za stolom, recite i koliko priloga planirate.
+
+**Birate steak u Dubrovniku? Bacite oko na Mecarine odležane steakove i provjerite koji su rezovi trenutačno na raspolaganju.**
 
 ### EN — Ribeye, striploin or fillet: which steak should you choose?
 
-Standing at a butcher's counter, the names can make the decision feel more complicated than it is. Ribeye, striploin and fillet can all make a good dinner. The useful question is what you enjoy: a leaner, softer piece, or a richer steak with more fat running through it?
+At the butcher's counter the names tend to make this feel harder than it is. Any of the three can give you a good dinner. What you really need to know is what you like on the plate: something leaner and softer, or a richer steak with more fat through it.
 
-#### Ribeye for a more marbled cut
+#### If you like marbling, go for ribeye
 
-Ribeye comes from the rib section and often shows visible fat within the muscle. It is worth considering if you enjoy a fuller-flavoured steak. Marbling varies from one piece to another, so look at the actual cut rather than buying by name alone.
+Ribeye is cut from the rib section, and you can usually see the fat running inside the muscle. That's where the fuller flavour comes from.
 
-Keep the rest of the plate straightforward. Roast potatoes, a green salad or grilled vegetables give the steak room to be the centre of the meal.
+No two pieces are marbled quite the same, though. Look at the actual steak in front of you rather than buying on the name.
 
-#### Striploin for texture and a fat edge
+Don't overdo the sides. Roast potatoes, a green salad or some grilled vegetables, and let the steak take centre stage.
 
-In a Croatian butcher's shop, the name ramstek often refers to striploin. It has a firmer texture than fillet and usually a recognisable edge of fat. It is a useful choice for a steak you plan to slice and serve with a simple sauce.
+#### Striploin, firmer and with a fat edge
 
-Cut names do not always line up perfectly between countries. If you are following a recipe from home, show the butcher the name or a picture and check that you mean the same cut.
+Here in Croatia you'll often see striploin sold as ramstek. It has a firmer texture than fillet and usually a clear strip of fat along one edge. Good for slicing and serving with a simple sauce.
 
-#### Fillet when tenderness matters most
+Cut names don't always match from one country to the next. If you're cooking from a recipe back home, show us the name or a photo and we'll check we're talking about the same cut.
 
-Fillet, also called tenderloin or biftek, is known for its delicate texture and lower fat content. It works well for smaller individual portions. That does not make it everyone's favourite: if you enjoy the fattier parts of a steak, another cut may suit you better.
+#### Fillet, for tenderness
 
-#### Ask about thickness and equipment
+Fillet goes by tenderloin too, and locally by biftek. It's delicate, lower in fat, and suits small, neat individual portions.
 
-Tell the butcher whether you will be using a frying pan or a barbecue, and how much space you have. Thickness affects cooking; two steaks of the same weight can need different handling. If the steak will be shared, allow for the side dishes too.
+It isn't everyone's favourite just because it sounds special. If the fatty bits are the best part of a steak for you, another cut will probably make you happier.
 
-**Choosing a steak in Dubrovnik? Explore Mecara's dry-aged selection and check which cuts are currently available.**
+#### Pan or barbecue?
+
+Tell the butcher which you'll be using and how much room you've got. Thickness changes how a steak cooks, and two pieces of the same weight can need quite different handling. Sharing one steak between a few people? Count the side dishes in as well.
+
+**Looking for a steak in Dubrovnik? Have a look at Mecara's dry-aged range and see which cuts we have in right now.**
 
 ## M02 — Koje meso za gulaš?
 
@@ -162,59 +170,61 @@ Tell the butcher whether you will be using a frying pan or a barbecue, and how m
 **EN meta:** Choose beef for stew with the cut, cube size and cooking time in mind. Learn what to ask your butcher before starting a slow-cooked dinner.  
 **HR pojmovi:** meso za gulaš; junetina za gulaš, juneća lopatica.  
 **EN keywords:** beef for stew; stewing beef, beef chuck.  
-**Izvadak HR:** Za gulaš birajte meso prema načinu kuhanja, a ne prema cijeni steaka.  
-**Excerpt EN:** Buy for the cooking method, not the price of a steak. A good stew begins with the right cut.  
+**Izvadak HR:** Meso za gulaš birajte prema tome kako će se kuhati, a cijenu steaka ostavite po strani.  
+**Excerpt EN:** Buy for how it will be cooked, not for what a steak costs. A decent stew starts with the right cut.  
 **Slika:** `raw diced beef chuck stew`; alt HR/EN: Junetina narezana na kocke za gulaš / Beef cut into cubes for a stew.  
 **Poveznice:** T03 juneće trakice za kontrast brze pripreme; ponuda mesa HR/EN.  
 **Izvori:** S5, S6.
 
 ### HR — Koje meso odabrati za gulaš?
 
-Gulaš je jelo za dan kada lonac može mirno raditi svoje. Zato komad koji se brzo peče na tavi nije nužno najbolji izbor. Za sporo kuhanje tražite junetinu prikladnu za dugo pirjanje, a pri kupnji recite koliko vremena imate.
+Gulaš se kuha onaj dan kad lonac smije mirno stajati na vatri. Komad koji je odličan na tavi tu vam ne mora biti od velike koristi. Tražite junetinu koja podnosi dugo pirjanje i recite mesaru koliko vremena imate.
 
-#### Krenite od lopatice ili drugog komada za pirjanje
+#### Lopatica je dobar početak
 
-Juneća lopatica često je dobar početak razgovora. Važna je građa konkretnog komada, a ne samo naziv na etiketi. Mesar može predložiti i drugi odgovarajući dio te objasniti koliko ga treba očistiti i kako narezati.
+Kad netko traži meso za gulaš, razgovor najčešće krene od juneće lopatice. Ipak, više od imena na etiketi govori sam komad, kako je građen. Mesar vam može predložiti i neki drugi dio koji odgovara, reći koliko ga treba očistiti i kako ga narezati.
 
-Vrlo nemasan komad i komad s više vezivnog tkiva neće se jednako ponašati u loncu. Cilj nije kupiti najskuplje meso, nego ono koje odgovara sporoj pripremi.
+Jako nemasan komad i onaj s više vezivnog tkiva u loncu se ponašaju različito. Najskuplje meso vam ovdje ne treba. Treba vam ono koje voli sporo kuhanje.
 
-#### Neka kocke budu približno jednake
+#### Kocke otprilike iste veličine
 
-Sitni komadi i velike kocke u istom loncu mogu završiti različito. Zatražite ravnomjerno rezanje, primjerice kocke od približno tri centimetra, i prilagodite ih svom receptu. To je praktična mjera, ne univerzalno pravilo.
+Ako u istom loncu imate sitne komadiće i velike kocke, neće biti gotovi u isto vrijeme. Zamolite da vam meso narežu ravnomjerno, recimo na kocke od oko tri centimetra, pa to prilagodite svom receptu. Tri centimetra su praktična mjera, nikakvo pravilo.
 
-Prije dodavanja tekućine zapecite meso u nekoliko manjih tura. Pretrpan lonac brzo se napuni tekućinom, pa je teže dobiti zapečenu površinu. Zatim dodajte ostale sastojke prema receptu i smanjite vatru.
+Meso zapecite prije nego dodate tekućinu, i to u nekoliko manjih tura. Kad je lonac pretrpan, meso brzo pusti sok i umjesto da se zapeče, kuha se. Onda dodajte ostalo po receptu i smanjite vatru.
 
-#### Mekoću provjeravajte, nemojte je pretpostaviti
+#### Vilica, ne sat
 
-Gulaš koji snažno ključa nije nužno brže gotov. Lagano kuhanje i dovoljno vremena korisniji su od stalnog pojačavanja vatre. Točno trajanje ovisi o rezu i veličini komada; meso treba biti mekano kada ga isprobate vilicom.
+Gulaš koji jako ključa nije zbog toga prije gotov. Bolje mu je dati laganu vatru i vremena nego stalno pojačavati plamen. Koliko će točno trajati, ovisi o rezu i veličini kocaka.
 
-Ako imate samo pola sata, bolje je odabrati drugačije jelo nego pokušati ubrzati veliki lonac gulaša. Juneće trakice iz prikladnog reza za brzu pripremu mogu biti bolji plan za taj dan.
+Gotov je kad vilica lako uđe u meso.
 
-**U Mecari pitajte za junetinu za gulaš i navedite koliko osoba kuhate te želite li meso već narezano. Dostupnost provjerite prije dolaska.**
+Ako imate samo pola sata, nemojte tjerati veliki lonac gulaša. Tada su bolje juneće trakice od reza za brzu pripremu.
+
+**U Mecari pitajte za junetinu za gulaš, recite za koliko osoba kuhate i želite li da vam je narežemo. Prije dolaska provjerite ima li je.**
 
 ### EN — Which beef should you choose for a stew?
 
-A beef stew suits a day when the pot can take its time. A cut designed for a quick sear is not automatically the right choice. Ask for beef suited to slow cooking and tell the butcher how much time you have.
+Stew is for a day when the pot can be left alone to get on with it. A cut that's brilliant seared in a pan isn't necessarily what you want here. Ask for beef that suits slow cooking, and let the butcher know how much time you've got.
 
-#### Start with chuck or another braising cut
+#### Chuck, or another braising cut
 
-Chuck, from the shoulder area, is a useful starting point. What matters is the structure of the particular piece, not just its label. Your butcher may recommend another suitable cut and explain how much trimming it needs.
+Chuck comes from the shoulder, and it's a sensible place to start. Still, the piece itself tells you more than the label does. Your butcher might point you to a different cut that works just as well, and tell you how much trimming it needs.
 
-A very lean piece and a piece with more connective tissue will behave differently in the pot. The aim is not to buy the most expensive meat. It is to match the cut to a slow, moist cooking method.
+Very lean beef and beef with more connective tissue behave differently in a pot. You don't need the most expensive meat for this. You need a cut that matches slow, moist cooking.
 
-#### Keep the cubes a similar size
+#### Similar-sized cubes
 
-Small pieces and very large chunks can cook unevenly. Ask for a fairly consistent dice, perhaps around three centimetres, and adapt it to your recipe. That size is a practical starting point rather than a fixed rule.
+Mix tiny bits with big chunks and they won't cook evenly. Ask for a fairly even dice, about three centimetres is a good place to begin, then adjust for your recipe. Treat that as a rough guide, not a rule.
 
-Brown the beef in smaller batches before adding liquid. Crowding the pan makes it harder to develop a browned surface. Add the remaining ingredients according to your recipe, then turn down the heat.
+Brown the beef in small batches before any liquid goes in. A crowded pan makes it hard to get a proper brown crust. After that, add everything else as your recipe says and turn the heat down.
 
-#### Check tenderness instead of relying on the clock
+#### Use a fork, not the clock
 
-A pot that boils fiercely is not necessarily producing a better stew. Gentle cooking and enough time are more useful than repeatedly turning up the heat. The exact duration depends on the cut and cube size; check that a piece yields easily to a fork.
+Hard boiling won't give you a better stew. A gentle simmer and enough time will do more than cranking up the heat every so often. How long it takes depends on the cut and the size of the pieces, so test it: a cube should give way easily to a fork.
 
-If dinner needs to be ready in half an hour, choose another dish. Thin beef strips from a cut intended for quick cooking may be a better answer than trying to rush a large stew.
+Only got half an hour for dinner? Cook something else. Thin strips of beef from a quick-cooking cut make far more sense than trying to hurry a big stew.
 
-**Ask Mecara about beef for slow cooking, your guest count and whether you would like it diced. Check availability before visiting.**
+**Ask us at Mecara for stewing beef, tell us how many you're feeding and whether you'd like it diced. Please check it's available before you come in.**
 
 ## M03 — Mljeveno meso prema jelu
 
@@ -226,63 +236,71 @@ If dinner needs to be ready in half an hour, choose another dish. Thin beef stri
 **EN meta:** Buying mince for a sauce, burgers or meatballs? Ask about the meat blend, fat content and ingredients, and choose for the dish you want to cook.  
 **HR pojmovi:** mljeveno meso; meso za burgere, mesne okruglice.  
 **EN keywords:** choosing minced meat; mince for burgers, meatball mince.  
-**Izvadak HR:** Jedna riječ na popisu za kupnju skriva nekoliko važnih pitanja.  
-**Excerpt EN:** One item on your shopping list can hide several useful questions.  
+**Izvadak HR:** Iza jedne stavke na popisu za kupnju krije se nekoliko pitanja koja vrijedi postaviti.  
+**Excerpt EN:** One line on your shopping list can hide a few questions worth asking.  
 **Slika:** `fresh minced beef bowl`; alt: Mljevena junetina u posudi prije pripreme / Minced beef in a bowl before cooking.  
 **Poveznice:** T02 okruglice; R03 pogreške na roštilju.  
 **Izvor sigurnosne napomene:** S1.
 
 ### HR — Kako odabrati mljeveno meso za umak, burgere i okruglice
 
-„Pola kile mljevenog“ brz je zahtjev, ali malo govori o večeri koju planirate. Za mesni umak, burger i okruglice možete imati različite želje. Zato je korisno prvo spomenuti jelo, a zatim pitati što se nalazi u odabranoj mješavini.
+„Pola kile mljevenog“ brzo se kaže, ali nam ne govori ništa o tome što kuhate. Za umak, burgere i okruglice možda ćete htjeti različito meso. Zato nam prvo recite jelo, a onda pitajte što je u mješavini.
 
-#### Za umak gledajte cijeli recept
+#### Umak
 
-Ako radite umak s rajčicom i povrćem, meso je jedan dio cjeline. Količinu prilagodite broju porcija, tjestenini i ostalim sastojcima. Nema potrebe dodavati novu veliku količinu ulja prije nego vidite koliko ga već ima u receptu i mesu.
+U umaku s rajčicom i povrćem meso je samo jedan od sastojaka. Količinu odredite prema broju porcija, tjestenini i svemu ostalom što ide u lonac. S uljem polako: prvo pogledajte koliko ga već ima u receptu i koliko masnoće pusti samo meso.
 
-Junetina i miješano mljeveno meso nisu isto. Odabir ovisi o ukusu i prehrambenim navikama ukućana, zato ne pretpostavljajte sastav samo prema boji.
+Mljevena junetina i miješano mljeveno meso nisu isto. Što ćete uzeti, ovisi o tome što ukućani vole i jedu. Po boji nemojte nagađati sastav.
 
-#### Za burgere provjerite sastav
+#### Burgeri
 
-Pitajte od kojih je vrsta mesa smjesa napravljena, kakav je udio masnoće i je li već začinjena. Tako ćete izbjeći da pripremljenu smjesu ponovno jako posolite. Ako kupujete oblikovane burgere, provjerite i veličinu kako bi odgovarali pecivima.
+Pitajte od kojeg je mesa smjesa, koliko je masna i je li već začinjena. Ako jest, nemojte je još jednom dobro posoliti.
 
-Ne morate tražiti jedan „savršeni“ omjer za sve recepte. Recite što želite postići i kakvu pripremu planirate.
+Uzimate li gotove, oblikovane burgere, pogledajte i koliki su, da vam ne budu manji ili veći od peciva.
 
-#### Za okruglice računajte i dodatke
+Jedan omjer koji vrijedi za svaki recept ne postoji. Recite nam kakav burger želite i kako ćete ga peći.
 
-Jaje, krušne mrvice, luk i ostali sastojci utječu na teksturu i konačnu količinu. Slijedite recept i ne dodajte mrvice samo zato što smjesa u početku djeluje mekano. Kratak odmor smjese u hladnjaku može olakšati oblikovanje.
+#### Okruglice
 
-Za alergene je važan cijeli recept, ne samo meso: mrvice mogu sadržavati gluten, a jaje i mliječni dodaci također traže pozornost.
+Jaje, krušne mrvice, luk i ostalo što stavite u smjesu mijenjaju i teksturu i količinu koju ćete na kraju dobiti. Držite se recepta. Smjesa je na početku obično mekana, pa to nije razlog da odmah dosipate mrvice. Ako je pustite kratko da odstoji u hladnjaku, lakše ćete oblikovati okruglice.
 
-Mljeveno meso čuvajte prema deklaraciji i potpuno termički obradite. Burger nije isto što i cijeli steak, pa pravila za ružičastu sredinu steaka ne prenosite na njega.
+Kad su u pitanju alergeni, gleda se cijelo jelo, a ne samo meso. U mrvicama može biti glutena, a pripazite i na jaje i mliječne dodatke.
 
-**Isprobajte recept za mesne okruglice u rajčici ili pitajte Mecaru za odgovarajuće mljeveno meso.**
+#### Čuvanje i pečenje
+
+Mljeveno meso čuvajte onako kako piše na deklaraciji i uvijek ga do kraja termički obradite. Burger nije cijeli steak. Ono što vrijedi za steak ružičast u sredini za burger ne vrijedi.
+
+**Isprobajte naše mesne okruglice u umaku od rajčice ili pitajte u Mecari koje mljeveno meso odgovara vašem jelu.**
 
 ### EN — Choosing mince for sauce, burgers and meatballs
 
-“Half a kilo of mince” is a quick request, but it says little about the dinner you are making. A meat sauce, burger and meatball recipe can call for different choices. Start by naming the dish, then ask what is in the blend.
+"Half a kilo of mince" is quick to ask for, but it tells the butcher very little about what's for dinner. A meat sauce, a burger and a batch of meatballs might each want something different. So tell us the dish first, then ask what goes into the blend.
 
-#### For a sauce, think about the whole recipe
+#### Sauce
 
-In a tomato and vegetable sauce, meat is one part of the dish. Plan the quantity around your portions, pasta and other ingredients. Before adding a generous amount of oil, consider what the recipe and the meat already contribute.
+In a tomato and vegetable sauce the meat is just one ingredient among several. Work out how much you need from your portions, the pasta and everything else going in. Hold back on the oil until you've seen what the recipe and the meat are already bringing.
 
-Beef mince and mixed mince are different products. Your preference may depend on taste or household dietary choices, so do not guess the blend from its colour.
+Beef mince and mixed mince are two different things. Which you pick may come down to taste or to how your household eats. You can't tell the blend by its colour, so ask.
 
-#### For burgers, check the mixture
+#### Burgers
 
-Ask which meats it contains, about the fat content and whether it has already been seasoned. This helps you avoid heavily salting a ready-seasoned mixture. If you buy shaped patties, check their size against the buns you plan to use.
+Find out which meats are in the mixture, how much fat it has and whether it's seasoned already. If it is, go easy on the salt.
 
-There is no need to insist on one supposedly perfect ratio for every recipe. Explain the result you want and how you will cook it.
+Buying ready-shaped patties? Check they're the right size for your buns.
 
-#### For meatballs, remember the other ingredients
+Nobody has one ideal ratio that works for every recipe. Tell us what kind of burger you're after and how you'll cook it, and we'll go from there.
 
-Egg, breadcrumbs, onion and other additions change the texture and finished quantity. Follow your recipe rather than adding extra breadcrumbs as soon as the mixture feels soft. A short rest in the fridge can make shaping easier.
+#### Meatballs
 
-Allergens belong to the whole dish, not just the meat. Breadcrumbs may contain gluten, while egg and dairy additions also need checking.
+Egg, breadcrumbs, onion and whatever else you add will change the texture and how much mixture you end up with. Stick to your recipe. A mix often feels soft at first, which is no reason to keep tipping in breadcrumbs. Give it a short rest in the fridge and the meatballs are easier to roll.
 
-Store mince according to the product instructions and cook it thoroughly. A burger is not a whole steak, so advice about serving a steak pink should not be applied to it.
+Allergens apply to the whole dish, not only the meat. Breadcrumbs may contain gluten, and egg and dairy need checking as well.
 
-**Try our meatballs in tomato sauce, or ask Mecara which mince suits the meal you are planning.**
+#### Storing and cooking mince
+
+Keep mince as the product label tells you, and cook it all the way through. A burger isn't a whole steak. What's fine for a steak served pink doesn't carry over to a burger.
+
+**Have a go at our meatballs in tomato sauce, or ask us at Mecara which mince will work for what you're cooking.**
 
 # D. ROŠTILJ I STEAKOVI / BBQ & STEAKS
 
@@ -296,73 +314,79 @@ Store mince according to the product instructions and cook it thoroughly. A burg
 **EN meta:** Plan a barbecue for ten with a practical meat shopping example. Adjust quantities for side dishes, appetites and bone-in cuts.  
 **HR pojmovi:** koliko mesa za roštilj za 10 osoba; meso po osobi, količina za roštilj.  
 **EN keywords:** how much BBQ meat for 10 people; barbecue quantities, meat per person.  
-**Izvadak HR:** Krenite od jelovnika i gostiju, a tek onda od kilograma.  
-**Excerpt EN:** Start with your guests and menu, then work out the kilograms.  
+**Izvadak HR:** Prvo pogledajte tko dolazi i što još ide na stol. Kilograme računamo poslije.  
+**Excerpt EN:** Work out who is coming and what else is on the table first. The kilograms come after that.  
 **Slika:** `mixed barbecue meat platter sausages chicken`; alt: Različite vrste pečenog mesa za zajednički roštilj / A selection of cooked meats for a shared barbecue.  
 **Poveznice:** R03 pogreške; M03 mljeveno; planer ako je aktivan.  
 **Napomena uredniku:** količine su naš ilustrativni plan kupnje, ne nutritivna ili službena porcija.
 
 ### HR — Koliko mesa kupiti za roštilj za 10 osoba?
 
-Za deset odraslih osoba koje uz meso imaju kruh, salatu i jedan konkretniji prilog, možete početi planirati s približno 3 do 3,5 kilograma sirovog mesa bez kosti. To je primjer umjereno obilnog roštilja, a ne pravilo za svako društvo. Ako imate veliko predjelo, treba vam manje; ako je meso gotovo cijeli obrok, plan će biti drugačiji.
+Ako dolazi deset odraslih i uz meso imate kruh, salatu i jedan ozbiljniji prilog, računajte otprilike 3 do 3,5 kilograma sirovog mesa bez kosti. Toliko ide na umjereno obilan roštilj. Za svako društvo to ipak ne vrijedi. Uz veliko predjelo trebat će vam manje, a ako je meso gotovo cijeli obrok, računica ide drukčije.
 
-#### Jednostavan primjer kupnje
+#### Primjer iz prakse
 
-Za ukupno 3,2 kilograma možete složiti:
+Evo kako bi izgledalo 3,2 kilograma:
 
 - 1,2 kg ćevapa;
 - 0,8 kg pilećeg mesa bez kosti;
 - 0,7 kg svinjskog vrata bez kosti;
 - 0,5 kg kobasica za roštilj.
 
-To je 320 grama sirovog mesa po odrasloj osobi prije pečenja. Kombinaciju slobodno promijenite: ako društvo ne jede svinjetinu, ne zamjenjujte je naslijepo kobasicama, nego prvo provjerite njihov sastav.
+Dođe 320 grama sirovog mesa po odrasloj osobi, prije pečenja.
 
-#### Prilozi mijenjaju računicu
+Kombinaciju mijenjajte kako vam odgovara. Samo jedno upozorenje: ako netko u društvu ne jede svinjetinu, nemojte vrat automatski zamijeniti kobasicama. Prvo provjerite od čega su.
 
-Krumpir, povrće, kruh i veća salata nisu samo ukras. Zapišite ih prije odlaska u kupnju. Ako uz roštilj poslužujete i platu za početak, nema potrebe svakom gostu računati punu porciju svake vrste mesa.
+#### Prilozi su dio obroka
 
-Za djecu i goste manjeg apetita prilagodite plan pojedinačno. Bolje je znati tko dolazi nego automatski brojati svaku osobu kao jednaku porciju.
+Krumpir, povrće, kruh i pošteno velika salata jedu se jednako kao meso, pa ih zapišite na popis prije nego krenete u kupnju. Ako za početak ide i plata, ne morate svakom gostu računati punu porciju od svake vrste mesa.
+
+Djeca i oni koji jedu kao ptičice ne broje se kao odrasli gladni muškarac nakon mora. Bolje je znati tko točno dolazi nego svakoga brojati kao istu porciju.
 
 #### Kilogram rebara nije kilogram filea
 
-Kada birate rebarca, batke ili druge komade s kosti, ukupna težina uključuje i ono što se neće pojesti. Zato navedeni primjer bez kosti ne prepisujte na takvu kupnju. Zatražite pomoć mesara za konkretne komade.
+Rebarca, batci i ostali komadi s kosti važu se zajedno s kosti, a nju nitko neće pojesti. Zato gornji primjer ne vrijedi za takvu kupnju. Recite mesaru što želite peći, pa ćemo zajedno procijeniti koliko vam treba.
 
-#### Kupite izbor koji možete ispeći
+#### Kupite onoliko koliko roštilj može podnijeti
 
-Četiri vrste mesa na malom roštilju mogu biti zahtjevnije od dvije dobro odabrane. Planirajte redoslijed i nekoliko tura, umjesto da sve pokušate staviti odjednom.
+Mali roštilj i četiri vrste mesa znaju biti gora kombinacija od dvije dobro odabrane. Unaprijed odredite što ide prvo i pecite u nekoliko tura.
 
-**Pošaljite Mecari broj gostiju i okvirni jelovnik pa provjerite raspoložive količine. Ako koristite roštilj planer, rezultat uzmite kao početni prijedlog, ne potvrđenu narudžbu.**
+Sve odjednom na rešetku neće stati.
+
+**Pošaljite Mecari broj gostiju i okvirni jelovnik, a mi ćemo vam javiti koje količine imamo. Ako ste koristili roštilj planer, njegov izračun shvatite kao prvi prijedlog, a ne kao potvrđenu narudžbu.**
 
 ### EN — How much meat should you buy for a BBQ for 10 people?
 
-For ten adults eating bread, salad and a substantial side dish with their meat, around 3 to 3.5 kilograms of raw boneless meat is a useful planning example. It makes a reasonably generous barbecue, not a universal serving rule. A large starter reduces what you need; a meal built almost entirely around meat changes the plan.
+Ten adults, with bread, salad and one proper side dish alongside the meat? Plan on roughly 3 to 3.5 kilograms of raw boneless meat. That gives you a fairly generous barbecue, but it is an example, not a rule that fits every group. Serve a big starter and you will need less. If the meat is more or less the whole meal, you will need to plan differently.
 
-#### A simple shopping example
+#### What 3.2 kilograms could look like
 
-For a total of 3.2 kilograms, you could choose:
+Here is one way to split it:
 
 - 1.2 kg ćevapi;
 - 0.8 kg boneless chicken;
 - 0.7 kg boneless pork neck;
 - 0.5 kg grill sausages.
 
-That works out at 320 grams of raw meat per adult before cooking. Change the mix to suit your guests. If someone avoids pork, do not assume sausages are a suitable replacement without checking their ingredients.
+That comes to 320 grams of raw meat per adult, weighed before cooking.
 
-#### Write down the sides first
+Swap things around to suit your guests. If someone does not eat pork, though, check what the sausages are made of before you count them as the pork-free option.
 
-Potatoes, vegetables, bread and a generous salad are part of the meal. Put them on the list before buying meat. If you are also serving a charcuterie board, you do not need to allocate every guest a full helping of every meat.
+#### Sides count
 
-Adjust for children and smaller appetites individually. Knowing who is coming is more useful than treating every guest as an identical portion.
+Potatoes, vegetables, bread and a big salad all fill people up. Write them down before you write down the meat. And if a charcuterie board is going out first, nobody needs a full helping of every single meat.
 
-#### Bone-in cuts need a different calculation
+Children and lighter eaters are best planned one by one. Knowing who is actually coming beats treating ten guests as ten identical portions.
 
-A kilogram of ribs or chicken drumsticks includes bone. The boneless shopping example above should not be copied directly for those cuts. Ask the butcher to help estimate quantities for the pieces you actually want.
+#### Bone-in cuts are a different sum
 
-#### Buy what your barbecue can handle
+When you buy ribs or chicken drumsticks, part of what you pay for by weight is bone. So the boneless example above will not work for them. Tell us which pieces you want and we will help you estimate the amount.
 
-Four meats on a small grill can be harder to manage than two well-chosen options. Plan a cooking order and a few batches rather than trying to fit everything on at once.
+#### Match the meat to your grill
 
-**Send Mecara your guest count and rough menu to check available quantities. If you use the BBQ planner, treat its result as a starting suggestion rather than a confirmed order.**
+A small grill with four kinds of meat on the menu can be more stress than a small grill with two. Decide what goes on first and cook in a few batches. It will not all fit at once, however hard you try.
+
+**Send Mecara your guest count and a rough menu and we will check what quantities we have. If you have used the BBQ planner, take its figure as a starting point, not a confirmed order.**
 
 ## R02 — Steak na tavi
 
@@ -374,67 +398,71 @@ Four meats on a small grill can be harder to manage than two well-chosen options
 **EN meta:** A suitable pan, a dry surface and controlled heat make steak cooking easier. Learn how to plan the sear without relying only on minutes.  
 **HR pojmovi:** steak na tavi; priprema steaka, kako ispeći steak.  
 **EN keywords:** cook steak in a pan; pan seared steak, steak cooking tips.  
-**Izvadak HR:** Za dobar steak ne treba roštilj, ali treba malo prostora u tavi.  
-**Excerpt EN:** You do not need a barbecue for steak, but you do need room in the pan.  
+**Izvadak HR:** Roštilj vam za steak ne treba. Treba vam tava u kojoj meso ima mjesta.  
+**Excerpt EN:** Steak does not need a barbecue. It needs a pan with enough room in it.  
 **Slika:** `steak cast iron skillet rosemary`; alt: Steak koji se peče u teškoj tavi / Steak cooking in a heavy frying pan.  
 **Poveznice:** M01 rezovi; ponuda steakova.  
 **Izvori:** S1, S7. Ovo je vodič metode, ne kompletan recept za Recipe oznaku.
 
 ### HR — Kako pripremiti steak na tavi bez nepotrebnog kompliciranja
 
-Večera sa steakom može početi i završiti u jednoj dobroj tavi. Najviše pomaže da unaprijed znate koji komad imate, koliko je debeo i želite li ga poslužiti cijelog ili narezanog za dijeljenje.
+Za steak vam treba jedna dobra tava i malo reda. Prije nego upalite ploču, znajte koji komad imate, koliko je debeo i hoćete li ga poslužiti cijelog ili narezanog na kriške za cijeli stol.
 
-#### Odaberite tavu u koju odrezak stvarno stane
+#### Tava u koju meso stane
 
-Teža tava koja ravnomjerno drži toplinu praktična je za ovu pripremu. Ako pečete dva velika komada, provjerite ostaje li između njih prostora. Ako ne ostaje, radite u turama. Meso ne bi smjelo biti složeno jedno preko drugoga.
+Najbolje radi teža tava koja ravnomjerno drži toplinu. Pečete li dva velika odreska, između njih mora ostati prostora. Ako ga nema, pecite jedan pa drugi. Meso se u tavi ne slaže jedno preko drugoga.
 
-Prilog pripremite ranije. Kada odrezak ide u tavu, nije dobar trenutak za početak guljenja krumpira.
+Prilog neka bude gotov prije. Kad je odrezak već u tavi, kasno je za guljenje krumpira.
 
-#### Osušite površinu i pripremite začine
+#### Suho meso, vruća tava
 
-Papirnatim ručnikom posušite površinu mesa, zatim začinite prema ukusu. Zagrijte tavu i dodajte malu količinu ulja prikladnog za pečenje. Izbjegavajte pregrijavanje do nekontroliranog dimljenja, osobito u maloj kuhinji.
+Površinu mesa posušite papirnatim ručnikom i začinite po svom ukusu. Zagrijte tavu pa dodajte malo ulja koje podnosi pečenje. Tava treba biti vruća, ali ne toliko da se kuhinja napuni dimom. U maloj kuhinji to ćete brzo osjetiti.
 
-Pustite da se površina zapeče, a zatim okrenite odrezak. Kod debljeg komada nakon početnog zapecanja smanjite toplinu kako biste mogli kontrolirati sredinu bez spaljivanja vanjskog sloja.
+Pustite da se donja strana lijepo zapeče, onda okrenite. Ako je komad deblji, nakon prvog zapecanja smanjite vatru. Tako sredina stigne, a vanjski sloj ne izgori.
 
-#### Minute nisu jedina mjera
+#### Sat nije termometar
 
-Debljina, početna temperatura mesa i snaga ploče mijenjaju trajanje. Termometar je korisniji od univerzalnog obećanja „tri minute sa svake strane“. Za jednostavan konzervativan cilj kod cijelog goveđeg odreska USDA navodi najmanje 63 °C u sredini i najmanje tri minute odmora. Ta se smjernica ne prenosi na mljeveno meso ili piletinu.
+Koliko će trajati ovisi o debljini, o tome koliko je meso bilo hladno kad je ušlo u tavu i o vašoj ploči. Recept koji obećava „tri minute sa svake strane“ to ne zna. Termometar zna.
 
-Maslac i začinsko bilje, ako ih koristite, dodajte pri kraju i smanjite vatru da maslac ne zagori.
+Ako želite jednostavan i oprezan cilj za cijeli goveđi odrezak, USDA navodi najmanje 63 °C u sredini i zatim najmanje tri minute odmora. Ta smjernica ne vrijedi za mljeveno meso ni za piletinu.
 
-#### Odmorite pa narežite
+Maslac i začinsko bilje, ako ih volite, idu pri kraju. Tada smanjite vatru da maslac ne zagori.
 
-Odrezak kratko odmorite na čistom tanjuru ili dasci prije rezanja. Za posluživanje na kriške režite poprečno na smjer vlakana. Malo soli, prilog i vlastiti sokovi iz mesa često su dovoljni.
+#### Odmor, pa nož
 
-**Ako tek birate komad, prvo pročitajte usporedbu rib-eyea, ramsteka i bifteka, a zatim provjerite aktualnu ponudu Mecare.**
+Prije rezanja ostavite odrezak kratko na čistom tanjuru ili dasci. Za posluživanje na kriške režite poprečno na vlakna. Malo soli, prilog i sok koji pusti meso obično su sasvim dovoljni.
+
+**Još niste odabrali komad? Pročitajte našu usporedbu rib-eyea, ramsteka i bifteka, a onda pogledajte što Mecara trenutno ima u ponudi.**
 
 ### EN — How to cook steak in a pan without overcomplicating dinner
 
-A steak dinner can begin and end in one good pan. It helps to know which cut you have, how thick it is and whether you plan to serve it whole or slice it for sharing.
+One decent pan is enough for a steak dinner. Before you start, know which cut you have, how thick it is, and whether it is going on the plate whole or sliced for everyone to share.
 
-#### Use a pan with enough room
+#### Give it space
 
-A heavier pan that holds heat evenly is useful here. If you are cooking two large steaks, check that there is space between them. Otherwise, cook in batches rather than squeezing the meat together.
+A heavy pan that holds its heat evenly does the job well. Cooking two big steaks? Make sure there is a gap between them. If there is not, do one at a time instead of squeezing them in together.
 
-Get the side dishes ready first. Once the steak is in the pan, it is not the moment to start peeling potatoes.
+Sort out the sides before anything else. Peeling potatoes while the steak is already sizzling is not a plan.
 
-#### Dry the surface and prepare your seasoning
+#### Dry, season, heat
 
-Pat the meat's surface dry with kitchen paper, then season to taste. Heat the pan and add a little oil suitable for frying. Avoid letting the pan smoke uncontrollably, especially in a small kitchen.
+Pat the steak dry with kitchen paper and season it however you like. Get the pan hot, then add a little oil that is fine for frying. Hot is good. Billowing smoke is not, particularly in a small kitchen.
 
-Allow the surface to brown, then turn the steak. For a thicker piece, reduce the heat after the initial sear so you can control the centre without burning the outside.
+Leave the first side to brown, then turn it over. With a thicker steak, turn the heat down once that first sear is done, so the middle has time to cook before the outside burns.
 
-#### Do not judge only by minutes
+#### Minutes are only a guess
 
-Thickness, the meat's starting temperature and your hob all affect cooking time. A thermometer is more useful than a universal promise of three minutes on each side. For a straightforward conservative target for a whole beef steak, USDA guidance gives at least 63°C in the centre followed by at least three minutes of rest. This is not the same guidance used for mince or chicken.
+How long it takes depends on the thickness, how cold the meat was when it went in and how strong your hob is. That is why a thermometer beats any promise of three minutes a side.
 
-If you want butter and herbs, add them towards the end and lower the heat so the butter does not burn.
+For a simple, cautious target on a whole beef steak, USDA guidance says at least 63°C in the centre, then at least three minutes of rest. Mince and chicken follow different guidance, so do not apply this to them.
 
-#### Rest before slicing
+Adding butter and herbs? Do it near the end, with the heat lowered so the butter does not burn.
 
-Give the steak a short rest on a clean plate or board before cutting it. For a sharing plate, slice across the direction of the muscle fibres. A little salt, a side dish and the meat's own juices may be all you need.
+#### Rest, then slice
 
-**Still choosing your cut? Read our ribeye, striploin and fillet comparison, then check Mecara's current selection.**
+Let the steak sit briefly on a clean plate or board before you cut it. If you are slicing it to share, cut across the muscle fibres. Salt, a side dish and the juices from the meat are usually all it needs.
+
+**Not sure which cut to buy yet? Have a look at our ribeye, striploin and fillet comparison, then see what Mecara has in today.**
 
 ## R03 — Pet pogrešaka na roštilju
 
@@ -446,67 +474,67 @@ Give the steak a short rest on a clean plate or board before cutting it. For a s
 **EN meta:** Crowded grills, excessive heat and poor timing can spoil a barbecue. Organise your cooking and check doneness instead of guessing.  
 **HR pojmovi:** pogreške na roštilju; kako peći meso na roštilju.  
 **EN keywords:** common BBQ mistakes; grilling meat tips.  
-**Izvadak HR:** Bolji roštilj često počinje boljim redoslijedom, a ne novom marinadom.  
-**Excerpt EN:** A better barbecue often starts with better timing, not a new marinade.  
+**Izvadak HR:** Roštilj češće spasi dobar redoslijed pečenja nego nova marinada.  
+**Excerpt EN:** Most barbecues are saved by sensible timing. A new marinade rarely does it.  
 **Slika:** `barbecue grill chicken sausages tongs`; alt: Meso na rešetki roštilja s prostorom između komada / Meat spaced out on a barbecue grill.  
 **Poveznice:** R01 količine; G03 villa BBQ.  
 **Izvor sigurnosnih navoda:** S1 i S14.
 
 ### HR — Pet pogrešaka na roštilju koje je lako izbjeći
 
-Kupili ste dobro meso, pripremili priloge i pozvali društvo. Ipak, na rešetki sve odjednom postane užurbano. Najčešće nije problem u kompliciranoj tehnici, nego u nekoliko sitnih odluka prije pečenja.
+Meso je kupljeno, prilozi su gotovi, društvo je stiglo. I onda kod roštilja odjednom nastane gužva. Rijetko je kriva tehnika. Obično je stvar u par sitnih odluka koje su se trebale donijeti prije nego što je ugljen uopće planuo.
 
-#### 1. Sve ide na rešetku u isto vrijeme
+#### 1. Sve na rešetku odjednom
 
-Deblji komadi piletine i tanki odresci ne trebaju jednak tretman. Napravite jednostavan redoslijed i ostavite prostor za nekoliko tura. Ako gosti jedu postupno, nema potrebe da svaka vrsta mesa završi u istoj minuti.
+Debeli komad piletine i tanki odrezak ne peku se jednako. Odredite što ide prvo, što poslije, i računajte na nekoliko tura. Gosti ionako jedu postupno, pa ne mora sve meso biti gotovo u istoj minuti.
 
-#### 2. Cijela površina je jednako vruća
+#### 2. Svugdje ista vatra
 
-Gdje oprema to dopušta, ostavite jače zagrijan i mirniji dio. Tako možete premjestiti komad koji izvana brzo tamni, a još nije gotov u sredini. Plamen koji stalno zahvaća meso nije cilj pripreme.
+Ako vam roštilj to dopušta, napravite jednu jaču i jednu blažu zonu. Kad neki komad izvana brzo potamni, a u sredini još nije gotov, maknete ga na blaži dio. Plamen koji stalno liže meso ne znači da dobro pečete.
 
-#### 3. Rešetka je pretrpana
+#### 3. Pretrpana rešetka
 
-Meso treba prostor za okretanje i kontrolu. Ako jednim potezom pomičete tri komada samo da biste došli do četvrtog, bolje je smanjiti turu. Hrana koja čeka neka ostane pravilno ohlađena, umjesto da cijela kupnja stoji uz vatru.
+Svaki komad treba mjesta da ga okrenete i pogledate. Ako morate pomaknuti tri da biste došli do četvrtog, tura je prevelika. Meso koje čeka svoj red neka bude pravilno ohlađeno. Cijela kupnja ne treba stajati pokraj vatre.
 
-#### 4. Boja izvana znači da je gotovo
+#### 4. „Lijepo je pocrnilo, znači gotovo je“
 
-Zapečena površina ne govori dovoljno o sredini. Piletinu i proizvode od mljevenog mesa treba potpuno termički obraditi. Za provjeru koristite čist termometar i odgovarajuću uputu za proizvod, osobito kod debljih komada.
+Zapečena kora malo govori o tome što je unutra. Piletina i sve od mljevenog mesa moraju biti potpuno pečeni. Provjerite čistim termometrom i držite se upute za taj proizvod, posebno kad su komadi deblji.
 
-#### 5. Gotovo meso vraća se na tanjur za sirovo
+#### 5. Pečeno meso na tanjuru od sirovog
 
-Pripremite čisti tanjur i pribor prije početka. Posuda u kojoj je stajalo sirovo meso ne ide ponovno na stol za gotove porcije bez pranja. Odvojite i pribor koji dolazi u dodir sa sirovom hranom.
+Čisti tanjur i pribor pripremite prije nego počnete. Posuda u kojoj je stajalo sirovo meso ne vraća se na stol s pečenim dok se ne opere. I pribor kojim dirate sirovo meso držite odvojeno.
 
-Na kraju ostavite sebi vremena sjesti za stol. Jednostavniji izbor i nekoliko dobro organiziranih tura često su ugodniji od pokušaja da pripremite sve što postoji u vitrini.
+Ostavite i sebi vremena da sjednete. Jednostavniji izbor i nekoliko dobro složenih tura bolje prolaze od pokušaja da ispečete sve što ste vidjeli u vitrini.
 
-**Za početak složite količine uz naš vodič za roštilj za deset osoba i provjerite Mecarinu aktualnu ponudu.**
+**Količine za početak izračunajte uz naš vodič za roštilj za deset osoba, a onda provjerite što Mecara trenutno ima.**
 
 ### EN — Five common BBQ mistakes you can avoid
 
-You have bought the meat, prepared the sides and invited your friends. Then everything suddenly feels rushed at the grill. Often the problem is not a difficult technique, but a few small decisions made before cooking.
+The meat is bought, the sides are done, your friends have turned up. Then, somehow, the grill turns into chaos. Technique is rarely the culprit. More often it comes down to a few small choices you could have made before lighting it.
 
 #### 1. Putting everything on together
 
-Thicker chicken pieces and thin steaks need different handling. Make a simple cooking order and allow for several batches. If your guests are happy to eat gradually, every meat does not have to finish in the same minute.
+A thick piece of chicken and a thin steak are not cooked the same way. Work out a simple order and plan on several batches. People are happy to eat as things come off the grill, so there is no need for every meat to be ready at the same moment.
 
 #### 2. Keeping the whole grill equally hot
 
-Where your equipment allows it, create a hotter area and a gentler one. You can then move a piece that is colouring quickly before its centre is cooked. Constant flames licking the meat are not the aim.
+If your barbecue allows it, set up one hotter zone and one gentler one. When something is colouring fast on the outside but the middle is not there yet, move it across. Flames constantly licking the meat are not a sign you are doing well.
 
 #### 3. Crowding the cooking surface
 
-Leave enough room to turn and check each piece. If you must move three things to reach a fourth, cook a smaller batch. Keep the uncooked food waiting under appropriate refrigeration rather than leaving the entire shopping bag beside the fire.
+You need room to turn each piece and check on it. Having to shift three things to reach a fourth means the batch is too big. Whatever is waiting its turn should stay properly chilled, not sit in the shopping bag next to the fire.
 
 #### 4. Judging only by the outside colour
 
-A browned surface tells you too little about the centre. Chicken and minced-meat products need thorough cooking. Use a clean food thermometer and the appropriate product instructions, especially with thicker pieces.
+A nicely browned outside says very little about the centre. Chicken and anything made from mince need to be cooked right through. Use a clean food thermometer and follow the instructions for that product, especially with thicker pieces.
 
 #### 5. Reusing the raw-meat plate
 
-Have a clean serving plate and utensils ready before starting. A dish that held raw meat should not be used for cooked portions without washing. Keep utensils that touch raw food separate too.
+Get a clean plate and clean utensils ready before you start. Anything that held raw meat gets washed before cooked food goes anywhere near it. The same goes for tongs and forks that have touched raw meat. Keep them separate.
 
-Leave yourself enough time to sit down with everyone else. A simpler menu and a few organised batches are often more enjoyable than trying to cook everything at the butcher's counter.
+And give yourself time to actually sit down and eat. A shorter menu cooked in a few tidy batches is far more pleasant than attempting the entire butcher's counter in one evening.
 
-**Start with our meat quantities guide for ten people, then check Mecara's current BBQ selection.**
+**Work out your quantities first with our guide to barbecue meat for ten people, then see what Mecara has for the grill right now.**
 
 # E. IZ DUBROVAČKE KUHINJE / FROM THE DUBROVNIK TABLE
 
@@ -522,63 +550,63 @@ Ova rubrika uključuje šire dalmatinske običaje koji su poznati i na dubrovač
 **EN meta:** Planning a Croatian peka? Choose veal or lamb around your guests, available cuts and cooking equipment, and agree the cutting before buying.  
 **HR pojmovi:** meso za peku; teletina ispod peke, janjetina ispod peke.  
 **EN keywords:** meat for peka; Croatian peka, veal or lamb peka.  
-**Izvadak HR:** Dobra peka počinje dogovorom o mesu, veličini posude i broju ljudi.  
-**Excerpt EN:** A good peka starts with the meat, the size of the dish and the number of guests.  
+**Izvadak HR:** Peka počinje dogovorom: koliko vas je, kolika je posuda i koje meso ide unutra.  
+**Excerpt EN:** Before you buy meat for a peka, work out how many are eating and how big the dish is.  
 **Slika:** `Croatian peka veal lamb potatoes bell`; treba prikazivati stvarnu peku. Alt: Meso i krumpir u posudi za pripremu ispod peke / Meat and potatoes in a dish for cooking under a peka bell.  
 **Poveznice:** G02 nazivi jela; ponuda.  
 **Izvor konteksta:** S8. Tekst nije detaljna uputa za rad sa žarom.
 
 ### HR — Koje meso odabrati za peku: teletinu ili janjetinu?
 
-Peka nije samo naziv jednog jela. To je način pripreme pod poklopcem, uz žar, pri kojem se meso i povrće zajedno peku u posudi. Za stolom obično znači još nešto: ručak kojem se ne žuri i dovoljno vremena da se svi okupe.
+Kad netko kaže "peka", misli više na način pečenja nego na jedno određeno jelo. Meso i povrće idu zajedno u posudu, pokrije se poklopcem i zatrpa žarom. A za stolom to obično znači ručak kojem se nitko ne žuri i dovoljno vremena da se svi skupe.
 
-Prije kupnje mesa dogovorite tko priprema peku i kolika je posuda. Velika narudžba ne pomaže ako u njoj nema prostora za meso i krumpir.
+Prije nego dođete po meso, dogovorite se tko peče i kolika je posuda. Možete kupiti pola mesnice, ali ako u peku ne stane i krumpir, ništa niste dobili.
 
-#### Teletina za blaži okus
+#### Teletina, kad društvo voli blaže
 
-Ako društvo voli blaži okus, teletina je dobar kandidat. Pitajte za komade prikladne za takvu pripremu i navedite želite li koljenicu ili drugi rez. Važno je da su veličina i rezanje usklađeni s načinom na koji će se jelo peći.
+Teletina je sigurniji izbor za stol koji ne voli jak okus. Pitajte nas za komade koji podnose ovakvo pečenje i recite želite li koljenicu ili neki drugi rez. Veličina komada i način rezanja moraju pratiti to kako će se peka peći.
 
-Nemojte automatski tražiti najmanje moguće komade. Razgovarajte s osobom koja priprema peku kako bi meso i povrće mogli završiti zajedno.
+I nemojte odmah tražiti što sitnije komade. Prvo pitajte onoga tko peče, da meso i povrće budu gotovi u isto vrijeme.
 
-#### Janjetina za izraženiji karakter
+#### Janjetina, za one koji je već vole
 
-Janjetina je izbor za stol za kojim se njezin okus već voli. Prije kupnje provjerite žele li je svi gosti i koji su komadi raspoloživi. Komadi s kosti utječu na računanje količine, pa broj kilograma nije jednak količini mesa koja završava na tanjuru.
+Janjetinu kupujte kad znate da je društvo voli. Provjerite jesu li svi za nju i pitajte koji su komadi trenutačno tu. Ima kosti, a kost se važe. Zato kilogrami na vagi nisu isto što i meso na tanjuru.
 
-Ako kombinirate teletinu i janjetinu, odabir i veličinu uskladite s kuharom. Nije dovoljno samo prepoloviti narudžbu.
+Mislite staviti i teletinu i janjetinu? Odabir i veličinu komada dogovorite s kuharom. Prepoloviti narudžbu nije plan.
 
-#### Tri podatka koja olakšavaju kupnju
+#### S čim doći na pult
 
-Mesaru recite broj odraslih i djece, veličinu peke te planirate li obilno predjelo. Navedite i želite li meso preuzeti narezano. Tako razgovor odmah postaje konkretniji.
+Koliko je odraslih, a koliko djece. Kolika je peka. Ide li prije toga obilno predjelo. I hoćete li meso preuzeti već narezano. S tim podacima odmah znamo o čemu razgovaramo.
 
-Nemate ognjište i opremu? Poklopljeno pečenje u pećnici može dati lijep obiteljski ručak, ali nije ista tehnika kao priprema pod žarom. Ne treba ga tako ni predstavljati.
+Nemate ognjište i opremu? Meso poklopljeno u pećnici može biti lijep obiteljski ručak, ali to nije ista tehnika kao pečenje pod žarom i ne treba ga gostima prodavati kao peku.
 
-**Za peku na dubrovačkom području provjerite Mecarinu ponudu teletine i janjetine te unaprijed pitajte za željene komade.**
+**Spremate peku negdje oko Dubrovnika? Pogledajte što Mecara ima od teletine i janjetine i javite nam na vrijeme koje komade želite.**
 
 ### EN — Choosing meat for peka: veal or lamb?
 
-Peka is not simply the name of one dish. It is a method of cooking under a lid with embers, allowing meat and vegetables to cook together in a pan. Around the table, it usually means something else as well: a meal that is not rushed and time for everyone to gather.
+Peka is less a dish than a way of cooking. Meat and vegetables go into a heavy pan, a bell-shaped lid goes on top, and hot embers are heaped over it. Locals will tell you it also means a long lunch where nobody is in a hurry and everyone has time to turn up.
 
-Before buying the meat, agree who is cooking and how large the peka pan is. A large order is not useful if there is no room for the meat and potatoes.
+So before you buy anything, find out two things: who is doing the cooking, and how big their peka pan is. There is no point ordering a mountain of meat if the potatoes won't fit alongside it.
 
-#### Veal for a milder flavour
+#### Veal, if your group likes it mild
 
-If your group prefers a gentler flavour, consider veal. Ask about cuts suited to this preparation and explain whether you want shank or another piece. Size and cutting should match the way the cook intends to handle the meal.
+Veal has the gentler flavour of the two. Ask us which cuts work for this kind of cooking, and say whether you'd like shank or something else. The size and cut of the pieces should suit the way your cook plans to handle the peka.
 
-Do not automatically request the smallest possible pieces. Talk to the person preparing the peka so the meat and vegetables can cook on a compatible schedule.
+Don't just ask for the smallest pieces we can manage. Have a word with whoever is cooking first, so the meat and vegetables finish together.
 
-#### Lamb for a more distinctive choice
+#### Lamb, if they already love it
 
-Lamb suits a group that already enjoys its flavour. Check your guests' preferences and the available cuts before buying. Bone-in pieces affect the quantity calculation: their total weight is not the same as the amount of edible meat served.
+Lamb is for people who know they like it. Check that everyone at the table is happy with lamb, and ask which cuts we have in. Cuts on the bone change the maths: the weight you pay for is not the weight of meat that ends up on plates.
 
-If you want to combine lamb and veal, agree the cuts and sizes with the cook. It is not simply a matter of splitting an order in half.
+Fancy a mix of veal and lamb? Sort out the cuts and sizes with your cook. Splitting the order down the middle won't do it.
 
-#### Bring three useful details to the butcher
+#### Bring these details to the counter
 
-Explain how many adults and children are eating, the size of the cooking dish and whether you are serving a substantial starter. Add whether you need the meat cut before collection.
+Tell us how many adults and children are eating, how big the pan is, and whether there's a proper starter beforehand. Also let us know if you want the meat cut before you collect it.
 
-Without a suitable hearth and equipment, a covered oven roast can still make a lovely shared meal. It is a different cooking method, though, and should not be described as the same experience as cooking beneath embers.
+If you don't have a hearth and the kit, a covered roast in the oven still makes a good shared meal. It's a different method, though, and honestly it shouldn't be passed off as cooking under embers.
 
-**For a peka in the Dubrovnik area, check Mecara's veal and lamb selection and ask about your preferred cuts in advance.**
+**Planning a peka around Dubrovnik? Have a look at what veal and lamb Mecara has, and tell us in good time which cuts you're after.**
 
 ## K02 — Plata pršuta i sira
 
@@ -590,63 +618,59 @@ Without a suitable hearth and equipment, a covered oven roast can still make a l
 **EN meta:** Build a simple prosciutto and cheese board with bread, vegetables and a few accompaniments. Plan it around the meal that follows.  
 **HR pojmovi:** plata pršuta i sira; kako složiti platu.  
 **EN keywords:** prosciutto and cheese board; Croatian charcuterie board.  
-**Izvadak HR:** Manje različitih proizvoda može dati bolju platu ako svaki ima svoje mjesto.  
-**Excerpt EN:** A smaller selection can make a better board when each item has a purpose.  
+**Izvadak HR:** Za dobru platu ne treba puno vrsta, treba znati zašto je koja na dasci.  
+**Excerpt EN:** A board with fewer things on it is often the better one, as long as each item earns its place.  
 **Slika:** `prosciutto cheese olives board`; alt: Plata pršuta i sira s maslinama i kruhom / Prosciutto and cheese board with olives and bread.  
 **Poveznice:** G02 lokalni nazivi; ponuda delikatesa.  
 **Napomena:** primjer slaganja i količina urednički je prijedlog, ne deklaracija Mecarina paketa.
 
 ### HR — Kako složiti platu pršuta i sira za društvo
 
-Dobra plata ne mora biti puna dvadeset različitih proizvoda. Pršut, dva sira, kruh i nekoliko dodataka mogu biti dovoljno lijep početak druženja. Najprije odlučite je li plata predjelo ili gotovo cijela večera.
+Na platu ne morate nagurati dvadeset stvari. Pršut, dva sira, kruh i par dodataka sasvim su dovoljni da večer lijepo počne. Prvo samo odlučite je li to predjelo ili ćete se njome i najesti.
 
-#### Odaberite nekoliko jasnih okusa
+#### Malo vrsta, ali jasnih
 
-Krenite s jednim pršutom ili drugim suhomesnatim proizvodom koji želite istaknuti. Dodajte jedan blaži sir i jedan izraženiji, prema onome što gosti vole. Nema potrebe da svaki proizvod bude snažan i slan; malo razlike čini posluživanje zanimljivijim.
+Uzmite jedan pršut ili neko drugo suho meso koje želite staviti u prvi plan. Uz njega jedan blaži sir i jedan jači, ovisno o tome što vaši gosti vole. Ne mora sve biti jako i slano. Kad se okusi malo razlikuju, platu je zanimljivije jesti.
 
-Ako je na stolu i glavno jelo, početna kupnja za četiri odrasle osobe može biti oko 200 g pršuta i 200 g sira ukupno, uz kruh i dodatke. To je ilustrativan plan predjela, ne fiksna porcija. Za platu kao večeru treba drukčije planirati.
+Koliko kupiti? Ako poslije dolazi glavno jelo, za četvero odraslih možete krenuti od otprilike 200 g pršuta i 200 g sira ukupno, plus kruh i dodaci. To je primjer za predjelo, a ne pravilo o porcijama. Ako je plata cijela večera, računa se drukčije.
 
-#### Dodajte nešto svježe i nešto hrskavo
+#### Nešto svježe, nešto hrskavo
 
-Narezano povrće, nekoliko maslina i komad kruha mogu biti dovoljni. Suhe smokve ili bademi imaju smisla ako ih društvo voli; nisu obvezna dekoracija koju na kraju nitko ne pojede.
+Narezano povrće, šaka maslina i kruh često su dovoljni. Suhe smokve i bademi imaju smisla ako ih društvo jede. Ako ih stavljate samo radi slike, vratit ćete ih u spenzu netaknute.
 
-Provjerite alergene kod sireva, kruha, orašastih plodova i namaza. Ako netko ima posebne prehrambene zahtjeve, odvojeno posluživanje može biti praktičnije od zajedničke velike daske.
+Provjerite alergene u sirevima, kruhu, orašastim plodovima i namazima. Ima li netko posebnu prehranu, njemu je lakše složiti zaseban tanjur nego svima jednu veliku dasku.
 
-#### Složite tako da se lako uzima
+#### Neka se lako uzima
 
-Pršut ne treba sabiti u visoku hrpu. Rasporedite ga u manje skupine, sireve narežite u oblike koji se lako uzimaju, a namaze stavite u zasebne posudice. Ostavite prostora za pribor.
+Pršut ne slažite u visoku hrpu. Raširite ga u manje snopove, sir narežite na komade koji se uzmu prstima, a namaze stavite u posebne posudice. Ostavite mjesta i za pribor.
 
-#### Iznesite koliko se upravo jede
+Na dugom druženju iznesite samo onoliko koliko se upravo jede. Ostatak neka čeka u hladnjaku, pa nadopunjavajte. Daska koja tri sata stoji na suncu na terasi loš je plan, koliko god lijepo izgledala.
 
-Za duže druženje dio ponude zadržite pravilno ohlađen i nadopunjavajte platu prema potrebi. Velika daska koja satima stoji na toploj terasi nije najbolji plan posluživanja.
-
-**U Mecari provjerite aktualni izbor pršuta, sireva i dodataka te pitajte za rezanje i pakiranje prema broju gostiju.**
+**Svratite u Mecaru vidjeti koji su pršuti, sirevi i dodaci trenutačno na pultu i pitajte nas za rezanje i pakiranje prema broju gostiju.**
 
 ### EN — How to build a prosciutto and cheese board
 
-A good sharing board does not need twenty different products. Prosciutto, two cheeses, bread and a few accompaniments can be a lovely beginning to an evening. First decide whether it is a starter or most of the meal.
+You don't need twenty things on a board. Some pršut (Dalmatian dry-cured ham, much like prosciutto), two cheeses, bread and a few extras are plenty to get an evening going. The one thing to decide first is whether this is a starter or most of dinner.
 
-#### Choose a few clear flavours
+#### Pick a few flavours that stand out
 
-Start with one prosciutto or cured meat you want to feature. Add a milder cheese and a stronger one, based on what your guests enjoy. Every item does not need to be intense and salty; a little contrast makes the board more interesting.
+Choose one prosciutto or cured meat to be the star. Then add a mild cheese and a stronger one, depending on your guests. Not everything has to be punchy and salty. A bit of contrast is what keeps people reaching back.
 
-If a main course follows, a starting shopping example for four adults is roughly 200 g of prosciutto and 200 g of cheese in total, plus bread and accompaniments. This is an illustrative starter plan, not a fixed serving standard. A board served as dinner needs a different calculation.
+As a rough shopping guide, if a main course follows, four adults could start with about 200 g of prosciutto and 200 g of cheese in total, plus bread and extras. That's an example for a starter, not a standard portion. If the board is the dinner, you'll need to work it out differently.
 
 #### Add something fresh and something crisp
 
-Cut vegetables, a few olives and some bread may be enough. Dried figs or almonds make sense if people enjoy them, rather than as decorations left behind at the end.
+Sliced vegetables, a few olives and some bread often do the job. Dried figs or almonds are worth adding if your lot actually eats them. Otherwise they're just decoration you'll be clearing away later.
 
-Check allergens in cheese, bread, nuts and spreads. For guests with specific dietary requirements, separate serving dishes may be more practical than one large mixed board.
+Check the allergens in the cheese, bread, nuts and any spreads. If someone has particular dietary needs, a separate plate for them is usually easier than one big shared board.
 
-#### Make it easy to serve
+#### Make it easy to pick from
 
-Avoid stacking all the prosciutto in one dense pile. Arrange smaller groups, cut cheese into manageable pieces and put spreads in their own little bowls. Leave room for serving utensils.
+Don't pile all the prosciutto in one dense heap. Lay it out in small loose bunches, cut the cheese into pieces people can actually pick up, and give spreads their own little bowls. Leave room for knives and forks.
 
-#### Bring out what people are eating
+For a long evening, put out what's being eaten and keep the rest properly chilled until you top up. A big board sitting on a warm terrace for hours is not a good idea, however nice the view.
 
-For a longer gathering, keep part of the selection appropriately chilled and replenish the board as needed. Leaving one large board on a warm terrace for hours is not a good serving plan.
-
-**Ask Mecara about the current cured meat and cheese selection, and discuss slicing and packing for your group.**
+**Pop into Mecara to see which cured meats and cheeses we have in at the moment, and ask us about slicing and packing for the size of your group.**
 
 ## K03 — Nedjeljno pečenje
 
@@ -658,67 +682,65 @@ For a longer gathering, keep part of the selection appropriately chilled and rep
 **EN meta:** Plan a Sunday roast around your guests, oven and available time. Choose a suitable cut and organise sides so the meal comes together.  
 **HR pojmovi:** meso za nedjeljno pečenje; obiteljski ručak, meso za pećnicu.  
 **EN keywords:** planning a Sunday roast; meat for roasting, family roast dinner.  
-**Izvadak HR:** Najkorisniji dodatak nedjeljnom ručku često je mali plan na papiru.  
-**Excerpt EN:** The most useful ingredient in a relaxed Sunday lunch may be a short plan on paper.  
+**Izvadak HR:** Mirnu nedjelju često spasi kratak plan napisan na papiru.  
+**Excerpt EN:** A short plan on paper may do more for a relaxed Sunday lunch than any ingredient.  
 **Slika:** `roast meat potatoes family table`; alt prilagoditi vrsti mesa, npr. Pečenje s krumpirom na pladnju za posluživanje / Roast meat and potatoes on a serving platter.  
 **Poveznice:** K01 peka; T01 piletina; kontakt.  
 **Tip:** vodič planiranja, bez Recipe markupa.
 
 ### HR — Meso za nedjeljno pečenje: kako isplanirati ručak
 
-Nedjeljni ručak ne mora značiti da cijelo jutro trčite između pećnice i trgovine. Kada unaprijed odaberete komad mesa, priloge i vrijeme posluživanja, priprema postaje mnogo mirnija.
+Nedjeljni ručak ne mora značiti jutro u trku od pećnice do dućana i natrag. Odlučite unaprijed koji komad mesa kupujete, što ide uz njega i kad sjedate za stol, pa će i kuhanje ići mirnije.
 
-#### Prvo pogledajte posudu, zatim birajte meso
+#### Najprije posuda, onda meso
 
-Veliki komad koji ne stane u posudu ili gotovo dodiruje gornji grijač nije praktična kupnja. Provjerite dimenzije, imate li poklopac i treba li meso biti s kosti ili bez nje. Fotografija blagdanskog pečenja nije zamjena za provjeru vlastite pećnice.
+Komad koji ne stane u posudu ili skoro dira gornji grijač nije dobra kupnja, ma koliko lijepo izgledao na pultu. Izmjerite posudu. Pogledajte imate li poklopac. Odlučite želite li meso s kosti ili bez. Slika blagdanskog pečenja s interneta ne govori ništa o vašoj pećnici.
 
-Mesaru recite kakvu pripremu želite: dulje poklopljeno pečenje, manje komade ili odreske koji se pripremaju brže. Za svaku od tih večera izbor može biti drukčiji.
+Kad dođete po meso, recite nam kako ga mislite peći. Dugo i poklopljeno, u manjim komadima ili kao odreske koji su brže gotovi? Za svaki od tih ručkova izbor mesa može biti drukčiji.
 
-#### Računajte cijeli jelovnik
+#### Računajte cijeli stol, ne samo meso
 
-Ako prije mesa dolaze juha i obilno predjelo, glavne porcije mogu biti manje. Kada je pečenje gotovo cijeli ručak, potreban je drugačiji plan. U broj gostiju uključite djecu i njihove navike, ne samo broj stolica.
+Ako prije pečenja ide juha i obilno predjelo, porcije mesa mogu biti manje. Ako je pečenje cijeli ručak, plan je drukčiji. I brojite djecu i ono što stvarno jedu, a ne samo stolice oko stola.
 
-Dogovorite i tko donosi priloge. Dvije velike zdjele krumpira uz isti ručak često znače da se nitko nije čuo na vrijeme.
+Dogovorite se i tko nosi priloge. Kad se na stolu nađu dvije velike zdjele krumpira, znači da se netko nekome nije javio.
 
-#### Složite raspored unatrag
+#### Krenite od sata kad sjedate
 
-Pođite od sata kada želite sjesti za stol. Ostavite vrijeme za pripremu, okvirno pečenje, provjeru gotovosti i potreban odmor mesa. Deblji komad ne treba planirati kao tanki odrezak samo zato što oboje ide u pećnicu.
+Uzmite vrijeme ručka i računajte unatrag. Treba vam vrijeme za pripremu, okvirno vrijeme pečenja, provjera je li meso gotovo i odmor mesa prije rezanja. Debeli komad ne peče se kao tanki odrezak samo zato što oboje ide u pećnicu.
 
-Ako krumpir dijeli posudu s mesom, pratite oboje. Jedna namirnica može biti gotova prije druge, pa imajte spremnu dodatnu posudu.
+Peče li se krumpir u istoj posudi s mesom, pazite na oboje. Jedno će možda biti gotovo prije drugoga, pa neka vam pri ruci bude još jedna posuda.
 
-#### Ne dodajte novo jelo u posljednjoj minuti
+Zadnji savjet je najlakši. Nemojte u zadnji čas smišljati još jedno jelo. Jedan dobar prilog i salata bolji su od tri napola gotova. Ako tražite konkretan recept za početak, probajte našu piletinu s krumpirom i limunom.
 
-Jedan dobro odabran prilog i salata obično su praktičniji od tri napola završena dodatka. Za konkretan recept možete početi našom piletinom s krumpirom i limunom.
-
-**Za veći komad mesa ili poseban datum javite se Mecari unaprijed i provjerite dostupnost te željeno rezanje.**
+**Trebate veći komad mesa ili meso za određeni dan? Javite se Mecari na vrijeme da provjerimo dostupnost i dogovorimo rezanje.**
 
 ### EN — Planning a Sunday roast: meat, sides and timing
 
-A Sunday lunch does not have to mean spending the whole morning rushing between the oven and the shops. Choose the meat, sides and serving time in advance, and the cooking becomes easier to organise.
+Sunday lunch doesn't have to mean a morning spent dashing between the oven and the shops. Decide on the meat, the sides and what time you're eating before the day, and the whole thing gets much easier to manage.
 
-#### Look at the roasting dish before buying the meat
+#### Check your roasting dish first
 
-A joint that does not fit the pan or sits almost against the oven's upper element is not a practical purchase. Check dimensions, whether you have a lid and whether you want bone-in or boneless meat. An attractive roast in a photograph is not a substitute for checking your own oven.
+Before you fall for a big joint, make sure it fits. If it won't go in your dish, or it's practically touching the top element of the oven, it isn't a sensible buy. Measure the dish, see whether it has a lid, and decide if you want the meat on the bone or off. A lovely roast in a photo tells you nothing about your own oven.
 
-Tell the butcher how you want to cook: a longer covered roast, smaller pieces or cuts that cook more quickly. Each plan may call for something different.
+When you come in, tell us how you plan to cook it: a long, slow covered roast, smaller pieces, or quicker-cooking cuts. Each of those may need different meat.
 
-#### Count the whole menu
+#### Think about the whole menu
 
-If soup and a substantial starter come first, the main portions may be smaller. A lunch built almost entirely around the roast needs a different plan. Count children and their preferences rather than simply counting chairs.
+If there's soup and a decent starter first, the portions of meat can be smaller. If the roast is basically the whole lunch, plan for that instead. Count the children and what they'll actually eat, not just the chairs.
 
-Agree who is bringing the sides as well. Two large bowls of potatoes often mean nobody checked with anyone else.
+Also agree who's bringing which side. Two huge bowls of potatoes on one table usually means somebody didn't ring somebody.
 
-#### Work backwards from serving time
+#### Work backwards from lunchtime
 
-Start with the time you want everyone at the table. Allow for preparation, approximate cooking, checking doneness and any necessary resting period. A thick joint cannot be scheduled like a thin steak simply because both go into an oven.
+Start with the time you want everyone seated. Then leave room for prep, a rough roasting time, checking the meat is done, and letting it rest. A thick joint can't be timed like a thin steak just because both go in the oven.
 
-If potatoes share the roasting dish, watch both components. One may finish before the other, so keep another dish available.
+If the potatoes are roasting in the same dish as the meat, keep an eye on both. One may be ready before the other, so have a spare dish to hand.
 
-#### Resist an extra last-minute dish
+#### Don't add a dish at the last minute
 
-One well-chosen side and a salad are often more practical than three unfinished extras. For a complete recipe to start with, try our chicken with potatoes and lemon.
+One good side and a salad beat three extras that are only half done. If you'd like a full recipe to start with, try our chicken with potatoes and lemon.
 
-**Contact Mecara in advance for a larger piece of meat or a special date, and check availability and cutting requirements.**
+**After a larger piece of meat, or meat for a particular day? Get in touch with Mecara early so we can check availability and agree the cutting.**
 
 # F. ZA GOSTE DUBROVNIKA / FOR VISITORS TO DUBROVNIK
 
@@ -732,62 +754,66 @@ One well-chosen side and a salad are often more practical than three unfinished 
 **EN meta:** Cooking in your Dubrovnik holiday apartment? Check your kitchen equipment, plan portions and learn what to ask when buying meat at a butcher.  
 **HR pojmovi:** kupnja mesa Dubrovnik; mesnica Lapad, kuhanje u apartmanu.  
 **EN keywords:** buying meat in Dubrovnik; butcher Lapad, self catering Dubrovnik.  
-**Izvadak HR:** Prije kupnje za večeru pogledajte što stvarno imate u kuhinji apartmana.  
-**Excerpt EN:** Before shopping for dinner, check what your holiday kitchen actually contains.  
+**Izvadak HR:** Prije nego krenete po meso za večeru, otvorite ladice u kuhinji apartmana i pogledajte što zapravo imate.  
+**Excerpt EN:** Before you go shopping for dinner, have a proper look at what your holiday kitchen actually has in it.  
 **Slika:** `cooking apartment kitchen fresh ingredients`; alt: Namirnice pripremljene za kuhanje u manjoj kuhinji / Ingredients ready for cooking in a small kitchen.  
 **Poveznice:** G02 nazivi; T03 brzi ručak; kontakt. Bez tvrdnje da je stock kuhinja u Dubrovniku.
 
 ### HR — Kupnja mesa u Dubrovniku kada kuhate u apartmanu
 
-Večera u apartmanu može biti ugodan predah od izlazaka. Za dobar obrok ne treba velika kuhinja, ali prije kupnje vrijedi provjeriti imate li tavu, pećnicu, oštar nož i dovoljno prostora u hladnjaku.
+Nakon nekoliko večeri po restoranima mnogima dobro dođe večera u apartmanu. Velika kuhinja za to ne treba. Ali prije nego dođete u mesnicu, pogledajte imate li tavu, pećnicu, oštar nož i mjesta u hladnjaku. Iznenadit ćete se koliko apartmana ima jedan tupi nož i tavu za dva jaja.
 
-#### Kupujte prema opremi koju imate
+#### Kupujte za kuhinju koju imate
 
-Ako na raspolaganju imate malu tavu i dvije ploče, jednostavno jelo od trakica mesa može biti praktičnije od velikog pečenja. Roštilj na fotografiji smještaja također prvo provjerite s domaćinom: smije li se koristiti, čime radi i imate li potreban pribor?
+Dvije ploče i mala tava? Onda su trakice mesa koje se brzo poprže pametniji izbor od velikog komada za pečenje.
 
-Kada znate opremu, lakše ćete objasniti mesaru što trebate. Navedite i broj ljudi, posebno ako želite odreske približno jednake veličine.
+Ako je na fotografijama smještaja bio roštilj, pitajte domaćina smijete li ga koristiti, na što radi i ima li pribora. Fotografija nije dozvola.
 
-#### Razjasnite rez i jedinicu prodaje
+Kad znate s čim radite, mesaru je lakše objasniti što vam treba. Recite i koliko vas je, osobito ako želite odreske otprilike iste veličine, da se nitko za stolom ne osjeti zakinutim.
 
-U mesnici cijena može biti navedena po kilogramu, a tražena količina manja od kilograma. Provjerite kupujete li cijeli komad, porciju ili proizvod na vagu. Kod mesa s kosti težina uključuje i kost.
+#### Rez i način prodaje
 
-Ako strani naziv reza nije jasan, pokažite recept ili fotografiju. Dvije slične riječi na različitim jezicima ne moraju označavati isti dio mesa.
+Cijena je u mesnici često istaknuta po kilogramu, iako vi uzimate manje od kile. Zato pitajte kupujete li cijeli komad, porciju ili nešto što se važe. Kod mesa s kosti u težinu ulazi i kost.
 
-#### Za gotov ručak pitajte izravno
+Strani nazivi rezova znaju zbuniti obje strane pulta. Pokažite recept ili fotografiju na mobitelu. Dvije riječi koje zvuče slično u dva jezika ne moraju biti isti dio mesa.
 
-Marinirano i pripremljeno za pečenje ne znači spremno za jelo. Provjerite treba li proizvod tek kuhati, peći ili samo podgrijati. Za začinjene proizvode raspitajte se i o sastojcima, osobito ako netko izbjegava određene namirnice.
+#### Je li to spremno za jelo?
 
-#### Ostavite kupnju mesa za kraj
+Marinirano meso ili meso pripremljeno za pečenje nije gotovo jelo. Pitajte treba li ga kuhati, peći ili samo podgrijati. Kod začinjenih proizvoda raspitajte se i što je unutra, pogotovo ako netko u društvu ne jede određene namirnice.
 
-Planirajte povratak u smještaj nakon kupnje, a ne još nekoliko sati razgledavanja. Rashladna torba može pomoći tijekom prijevoza, ali ne zamjenjuje hladnjak. Hranu spremite prema uputama na proizvodu.
+#### Meso kupite zadnje
 
-**Mecara se nalazi u centru DOC u Lapadu, na Kralja Tomislava 7. Prije odlaska provjerite aktualno radno vrijeme i dostupnost željenog mesa.**
+Iz mesnice idite ravno u smještaj, a ne u još tri sata razgledavanja po vrućini. Rashladna torba pomaže u prijevozu, ali hladnjak ne zamjenjuje. Doma meso spremite onako kako piše na proizvodu.
+
+**Mecaru ćete naći u centru DOC u Lapadu, na adresi Kralja Tomislava 7. Prije nego krenete, provjerite radno vrijeme i imamo li meso koje tražite.**
 
 ### EN — Buying meat in Dubrovnik for a self-catering stay
 
-Dinner at your holiday apartment can be a welcome break from eating out. You do not need a large kitchen, but check that you have a frying pan, oven, useful knife and enough fridge space before shopping.
+A night in at your apartment makes a nice change from restaurants. You don't need a big kitchen for a decent dinner, but do open a few cupboards before you come shopping. Is there a frying pan? An oven? A knife that actually cuts? Room in the fridge?
 
-#### Buy for the equipment you actually have
+#### Shop for the kitchen you've got
 
-With a small pan and two cooking rings, a straightforward beef-strip dish may be easier than a large roast. If your rental shows a barbecue in its photos, ask the host whether you may use it, how it is fuelled and which utensils are provided.
+Holiday kitchens are often a small pan and two hobs. If that's yours, quick-fried strips of beef will serve you far better than a big roast.
 
-Once you know the equipment, explain your plans to the butcher. Give the number of people too, especially if you want individual steaks of a similar size.
+Saw a barbecue in the rental photos? Ask your host before you plan around it: are guests allowed to use it, what does it run on, and are there any utensils?
 
-#### Check the cut and the pricing unit
+Once you know what you're working with, tell us at the counter. Say how many you're cooking for too, especially if you'd like steaks of roughly the same size.
 
-At the counter, a price may be shown per kilogram even when you buy a smaller amount. Check whether you are choosing a whole piece, a portion or a product sold by weight. Bone-in meat includes the weight of the bone.
+#### Cuts, weights and prices
 
-If a cut name is unfamiliar, show your recipe or a picture. Similar words in different countries do not always describe the same piece.
+Prices at the counter are usually per kilogram, even if you only want a few hundred grams. Check whether you're buying a whole piece, a portion or something weighed out for you. With bone-in meat, the bone counts towards the weight.
 
-#### Ask whether a product needs cooking
+If we don't recognise the name of a cut from home, just show us the recipe or a photo. Words that sound alike in two languages often aren't the same piece of meat.
 
-Marinated or prepared for cooking does not mean ready to eat. Check whether an item needs cooking, roasting or reheating. Ask about the ingredients of seasoned products, especially if someone in your group avoids particular foods.
+#### Ready to eat, or not yet?
 
-#### Make meat your last shopping stop
+Marinated or oven-ready doesn't mean ready to eat. Ask whether something needs cooking, roasting or just reheating. For seasoned products, ask what's in them, particularly if someone in your group avoids certain foods.
 
-Plan to return to your accommodation after buying chilled food rather than continuing sightseeing for several hours. An insulated bag can help during transport, but it does not replace refrigeration. Follow the product's storage instructions.
+#### Buy the meat last
 
-**Find Mecara inside the DOC shopping centre in Lapad, at Kralja Tomislava 7. Check current opening hours and the availability of your preferred cut before visiting.**
+Get the meat at the end of your outing and head back to the apartment, not off for another few hours of sightseeing in the heat. A cool bag helps on the way, but it isn't a fridge. Once you're back, store everything as the label says.
+
+**You'll find Mecara inside the DOC shopping centre in Lapad, at Kralja Tomislava 7. Check our current opening hours, and whether we have the cut you want, before you set off.**
 
 ## G02 — Mali rječnik mesnice
 
@@ -799,66 +825,66 @@ Plan to return to your accommodation after buying chilled food rather than conti
 **EN meta:** What are ćevapi, pljeskavica, peka and pršut? Understand these familiar Croatian food names and what to ask before buying or cooking.  
 **HR pojmovi:** ćevapi pljeskavica razlika; što je peka, pršut.  
 **EN keywords:** what are cevapi; pljeskavica, what is peka, Croatian prsut.  
-**Izvadak HR:** Četiri poznata naziva ne označavaju istu vrstu proizvoda ni isti način pripreme.  
-**Excerpt EN:** These four familiar names describe different foods and even different cooking methods.  
+**Izvadak HR:** Četiri naziva koja svi znamo, a svaki znači nešto drugo, i proizvod i način pripreme.  
+**Excerpt EN:** Four names you'll hear all over Croatia, and they mean different foods and even different ways of cooking.  
 **Slika:** `cevapi grilled plate`; alt: Pečeni ćevapi posluženi uz luk i kruh / Grilled ćevapi served with onion and bread.  
 **Poveznice:** K01 peka; K02 plata; M03 mljeveno. Izvor konteksta peke: S8.
 
 ### HR — Ćevapi, pljeskavica, peka i pršut: mali vodič za stol
 
-Kada kupujete za goste iz inozemstva, često se pokaže da je najkorisniji dodatak jelovniku kratko objašnjenje naziva. Ove četiri riječi redovito se pojavljuju u razgovoru o hrani, ali ne označavaju sve gotova jela.
+Nama su to obične riječi. Gostu iz inozemstva nisu, i kad kupujete ili kuhate za njega, kratko objašnjenje često vrijedi više od još jednog jela na stolu. Treba samo znati da sve četiri riječi ne označavaju gotovo jelo.
 
-#### Ćevapi: mali komadi mljevenog mesa za pečenje
+#### Ćevapi
 
-Ćevapi su oblikovani komadi začinjenog mljevenog mesa. Točan sastav nije isti kod svakog proizvođača, zato se vrsta mesa ne pretpostavlja prema imenu. U mesnici ih možete kupiti sirove za pripremu, a u restoranu kao gotovo jelo.
+Oblikovani komadići začinjenog mljevenog mesa. Sastav nije isti kod svakog proizvođača, pa iz samog imena ne zaključujte od kojeg su mesa. U mesnici ih kupujete sirove i pečete sami, u restoranu stižu gotovi na tanjur.
 
-Za goste je dovoljno objasniti što kupujete i kako će se pripremati. Za sastojke i alergene provjerite konkretan proizvod.
+Gostu je dovoljno reći što ste kupili i kako ćete ih pripremiti. Sastojke i alergene provjerite na konkretnom proizvodu.
 
-#### Pljeskavica: širi oblik, više mogućih izvedbi
+#### Pljeskavica
 
-Pljeskavica je oblikovana od mljevenog mesa u plosnatiji, širi komad. Može biti jednostavna, začinjena na različite načine ili punjena. Naziv sam po sebi ne govori sadrži li sir ili druge dodatke.
+Isto mljeveno meso, ali oblikovano u širi, plosnatiji komad. Može biti obična, začinjena na razne načine ili punjena. Ime ne otkriva ima li unutra sira ili čega drugog, pa pitajte.
 
-Ne treba je uvijek prevoditi samo kao hamburger: pecivo i način posluživanja nisu sastavni dio svakog proizvoda.
+Stranci će je odmah prozvati hamburgerom. Oblikom donekle i jest, ali lepinja i takvo posluživanje ne idu uz svaku pljeskavicu.
 
-#### Peka: način pripreme
+#### Peka
 
-Peka označava poklopac i način pečenja pod njim, uz žar. Ispod peke mogu se pripremati različite namirnice. „Meso za peku“ u mesnici zato ne znači da je ručak već pečen, nego da kupujete meso za takvu pripremu.
+Peka je poklopac i način pečenja ispod njega, pod žarom. Ispod peke peče se svašta. Kad u mesnici piše „meso za peku”, to je meso koje ćete tek tako pripremiti, a ne gotov ručak.
 
-#### Pršut: suhomesnati dio plate
+#### Pršut
 
-Pršut se obično poslužuje tanko narezan, često uz sir i kruh. Za podrijetlo i proizvođača pogledajte deklaraciju, a pri kupnji navedite želite li narezan proizvod ili komad.
+Obično se reže na tanko i stavlja na platu, najčešće uz sir i kruh. Podrijetlo i proizvođača pročitajte na deklaraciji. Na pultu recite želite li ga narezanog ili u komadu.
 
-Najjednostavnije pitanje koje rješava mnogo nesporazuma glasi: **Je li ovo spremno za jelo ili se tek priprema?** Sljedeće je pitanje o sastojcima, osobito ako za stolom postoje prehrambena ograničenja.
+Jedno pitanje rješava pola nesporazuma: **Je li ovo spremno za jelo ili se tek priprema?** Odmah iza njega pitajte za sastojke, osobito ako netko za stolom nešto ne smije ili ne jede.
 
-**U Mecari pitajte za aktualne proizvode i njihovu namjenu, a ideju za posluživanje potražite u našem vodiču za platu pršuta i sira.**
+**U Mecari pitajte što trenutno imamo i za što je koji proizvod namijenjen. Ako slažete platu, pogledajte i naš vodič za platu pršuta i sira.**
 
 ### EN — Ćevapi, pljeskavica, peka and pršut explained
 
-When you cook in Croatia, a short explanation of a food name can be more useful than a long shopping list. These four words often come up at the butcher or around the table, but they do not all mean ready-made dishes.
+Cooking in Croatia, you'll find that knowing what a word means is worth more than a long shopping list. These four turn up at the butcher's counter and around the table all the time. Not all of them are ready-made dishes, though.
 
-#### Ćevapi: small seasoned minced-meat pieces
+#### Ćevapi
 
-Ćevapi are shaped pieces of seasoned minced meat for cooking. The blend varies between producers, so the name does not guarantee which meats are included. At a butcher's shop, you may buy them raw; at a restaurant, they arrive as a cooked meal.
+Small shaped pieces of seasoned minced meat, meant for cooking. The blend varies from producer to producer, so the name alone doesn't tell you which meats went in. Buy them at a butcher's and they're raw, for you to cook. Order them in a restaurant and they arrive cooked, on a plate.
 
-Ask about the particular product's ingredients and allergens rather than assuming every version uses the same recipe.
+Don't assume every version follows the same recipe. Ask about the ingredients and allergens of the product in front of you.
 
-#### Pljeskavica: a larger, flatter patty
+#### Pljeskavica
 
-Pljeskavica is shaped from minced meat into a broader, flatter piece. It may be plain, seasoned in different ways or stuffed. The name alone does not tell you whether it contains cheese or other additions.
+Think of a bigger, flatter patty of minced meat. It can be plain, seasoned in all sorts of ways, or stuffed. You can't tell from the name whether there's cheese or anything else inside.
 
-Calling it a burger can help explain its shape, but a bun and burger-style serving are not part of every version.
+"Burger" is a fair way to describe the shape. But a bun and burger-style serving don't come with every pljeskavica.
 
-#### Peka: a cooking method
+#### Peka
 
-Peka refers to a lid and the method of cooking beneath it with embers. Different ingredients can be prepared this way. If a butcher sells meat for peka, that means meat intended for the method, not a finished roasted lunch.
+This one isn't a food at all. Peka is a lid, and the way of cooking under it, covered in embers. All kinds of ingredients go under a peka. So if a butcher sells "meat for peka", that's meat meant for the method, not a roast lunch you can take away.
 
-#### Pršut: cured ham for sharing
+#### Pršut
 
-Pršut is dry-cured ham, commonly served in thin slices with cheese and bread. Check the product information for its origin and producer, and specify whether you would like it sliced or as a piece.
+Dry-cured ham, usually sliced thin and shared with cheese and bread. The product information will tell you where it's from and who made it. At the counter, say whether you want it sliced or as a piece.
 
-One question prevents many misunderstandings: **Is this ready to eat, or does it still need cooking?** Follow it with a question about ingredients if anyone in your group has dietary requirements.
+If you ask only one thing, make it this: **Is this ready to eat, or does it still need cooking?** Then ask about ingredients if anyone you're feeding has dietary requirements.
 
-**Ask Mecara about the current products and how they are intended to be used. For a simple serving idea, read our prosciutto and cheese board guide.**
+**Ask us at Mecara what's in today and how each product is meant to be used. And if you fancy a simple spread, have a look at our prosciutto and cheese board guide.**
 
 ## G03 — Roštilj u vili
 
@@ -870,66 +896,70 @@ One question prevents many misunderstandings: **Is this ready to eat, or does it
 **EN meta:** Plan a villa BBQ in Dubrovnik with a simple checklist for equipment, guest preferences, meat quantities and shopping arrangements.  
 **HR pojmovi:** roštilj u vili Dubrovnik; meso za roštilj Dubrovnik.  
 **EN keywords:** villa BBQ Dubrovnik; barbecue meat Dubrovnik, villa cooking.  
-**Izvadak HR:** Od provjere roštilja do popisa za kupnju: mali plan za večeru na odmoru.  
-**Excerpt EN:** From checking the barbecue to writing the shopping list: a simple plan for dinner on holiday.  
+**Izvadak HR:** Mali plan za roštilj na odmoru, od provjere opreme do popisa za kupnju.  
+**Excerpt EN:** A simple plan for a holiday barbecue, from checking the grill to writing one shopping list.  
 **Slika:** `villa terrace barbecue dinner table`; alt: Stol pripremljen za večeru na terasi / Table set for dinner on a terrace. Ne tvrditi da je generička vila u Dubrovniku.  
 **Poveznice:** R01 količine; R03 pogreške; kontakt. Ne obećavati dostavu.
 
 ### HR — Kako organizirati roštilj u vili u Dubrovniku
 
-Roštilj na odmoru najugodniji je kada nitko ne mora pet puta u trgovinu. Prije dogovora o mesu provjerite opremu s domaćinom i napravite jedan zajednički popis za kupnju.
+Dobar roštilj na odmoru je onaj za koji nitko nije morao pet puta u dućan. Zato prvo s domaćinom provjerite opremu, a onda sjednite i napišite jedan popis za kupnju, zajednički za cijelo društvo.
 
-#### Provjerite što smijete koristiti
+#### Što se smije, a što ne
 
-Pitajte je li roštilj namijenjen gostima, kako se koristi i postoje li pravila objekta ili aktualna ograničenja za vatru. Drveni ugljen, plinski roštilj i električna ploča traže različitu pripremu. Upute domaćina i važeća lokalna pravila imaju prednost pred općenitim savjetom s bloga.
+Pitajte domaćina je li roštilj uopće za goste, kako se koristi te ima li kuća svoja pravila ili trenutačno vrijede ograničenja za loženje vatre. Ugljen, plin i električna ploča ne pripremaju se isto. Ako se domaćin ili lokalna pravila ne slažu s nečim što ste pročitali na blogu, uključujući ovaj, vrijedi ono što kažu domaćin i pravila.
 
-Provjerite imate li hvataljke, čiste pladnjeve, nož i odgovarajuće gorivo. Roštilj na ugljen koristi se isključivo na otvorenom, nikada u zatvorenom prostoru.
+Pogledajte imate li hvataljke, čiste pladnjeve, nož i pravo gorivo.
 
-#### Složite jelovnik za konkretno društvo
+Roštilj na ugljen ide samo vani. Nikad u zatvoren prostor.
 
-Prebrojite odrasle i djecu te pitajte što ne jedu. Odaberite dvije ili tri vrste mesa, jedan konkretniji prilog i salatu. Tako je lakše upravljati i kupnjom i pečenjem.
+#### Jelovnik prema ljudima, ne prema želji
 
-Za deset odraslih s prilozima pogledajte naš primjer količina. Ako kupujete meso s kosti, tražite prilagodbu umjesto da kopirate izračun za file ili ćevape.
+Prebrojite odrasle i djecu i pitajte tko što ne jede. Onda uzmite dvije ili tri vrste mesa, jedan pošteniji prilog i salatu. Manje izbora znači lakšu kupnju i mirniju večer uz roštilj.
 
-#### Dogovorite kupnju prije dana roštilja
+Koliko mesa treba za deset odraslih s prilozima, pokazali smo u posebnom primjeru količina. Ako uzimate meso s kosti, nemojte samo prepisati izračun za file ili ćevape. Pitajte mesara da ga prilagodi.
 
-Za posebne rezove i veću količinu provjerite dostupnost unaprijed. U upitu navedite datum, broj gostiju, proizvode i način rezanja. Ne planirajte večeru oko neprovjerene fotografije proizvoda.
+#### Kupnju dogovorite unaprijed
 
-Ako vam je potrebna dostava, pitajte postoji li mogućnost za vašu adresu. Mogućnost dostave, cijenu i termin dogovorite prije nego na tome temeljite plan večere.
+Posebne rezove i veće količine provjerite unaprijed. U poruci napišite datum, broj gostiju, što želite i kako da se meso nareže. Večeru ne gradite oko fotografije proizvoda koju nitko nije potvrdio.
 
-#### Podijelite posao
+Ako vam treba dostava, pitajte je li moguća na vašu adresu. Dok se ne dogovore mogućnost, cijena i termin, ne računajte na nju.
 
-Jedna osoba prati meso, druga priprema stol i priloge. Odvojite sirovu hranu od gotove i ostavite dovoljno prostora za rad. Više ljudi oko rešetke nije uvijek i brža priprema.
+#### Tko što radi
 
-**Za nabavu mesa u Lapadu provjerite Mecarinu ponudu i kontaktirajte trgovinu prije veće kupnje.**
+Jedan pazi na meso, drugi slaže stol i priloge. Sirovo meso držite odvojeno od pečenog i ostavite si dovoljno mjesta za rad. Pet ljudi oko jedne rešetke ne peče brže, samo više savjetuje.
+
+**Za meso u Lapadu pogledajte što Mecara trenutno nudi, a prije veće kupnje javite nam se da se dogovorimo.**
 
 ### EN — Planning a villa BBQ in Dubrovnik
 
-A holiday barbecue is more enjoyable when nobody has to make five separate shopping trips. Before choosing the meat, check the equipment with your host and make one shared shopping list.
+The best holiday barbecues are the ones where nobody has to run to the shop five times. So before you think about steaks, check the equipment with your host and write one shopping list for the whole group.
 
-#### Check what you are allowed to use
+#### Find out what you're allowed to use
 
-Ask whether the barbecue is available to guests, how it works and whether property rules or current fire restrictions apply. Charcoal, gas and electric cooking need different preparation. Your host's instructions and applicable local rules take priority over general blog advice.
+Ask your host whether guests can use the barbecue at all, how it works, and whether there are house rules or fire restrictions in place right now. Charcoal, gas and electric grills each need different preparation. If your host or the local rules say something different from a blog post (this one included), go with them.
 
-Check for tongs, clean serving plates, a knife and the appropriate fuel. Charcoal barbecues belong outdoors, never inside an enclosed space.
+Look for tongs, clean plates for serving, a knife and the right fuel.
 
-#### Build the menu around your group
+Charcoal barbecues are for outdoors only. Never use one in an enclosed space.
 
-Count adults and children, and ask what people do not eat. Choose two or three meats, one substantial side and a salad. This keeps both shopping and cooking easier to manage.
+#### Plan the menu around who's coming
 
-For ten adults with side dishes, see our sample quantity plan. If you are buying bone-in cuts, ask for an adjustment rather than copying the calculation for boneless meat.
+Count the adults and the children, and ask everyone what they don't eat. Then keep it to two or three meats, one filling side and a salad. Less to buy, less to juggle at the grill.
 
-#### Arrange the shopping in advance
+We've put together a sample quantity plan for ten adults with sides. If you're buying bone-in cuts, don't just copy the figures meant for boneless meat; ask us to adjust them.
 
-For specific steaks or a larger quantity, check availability ahead of time. Include your date, guest count, product list and cutting preferences. Do not build the dinner around an unconfirmed product photo.
+#### Sort the shopping out early
 
-If you need delivery, ask whether it is available for your address rather than assuming it is included. Agree availability, charges and timing before building your evening around it.
+For particular steaks or a bigger order, check with us in advance that we can do it. Send your date, the number of guests, what you'd like and how you want it cut. And please don't plan the whole evening around a product photo nobody has confirmed.
 
-#### Share the jobs
+Need delivery? Ask whether it's possible for your address, and don't assume it's part of the deal. Agree whether it can be done, what it costs and when it arrives before your evening depends on it.
 
-Let one person concentrate on the meat while another organises the table and sides. Keep raw food separate from cooked food and leave enough working space. More people gathered around the grill do not necessarily make cooking faster.
+#### Split the jobs
 
-**For meat shopping in Lapad, check Mecara's selection and contact the shop before placing a larger request.**
+One person looks after the meat. Someone else sorts the table and the sides. Keep raw meat away from cooked food and give yourselves room to work. A crowd around the grill rarely speeds things up.
+
+**Shopping for meat in Lapad? Have a look at what Mecara has on offer, and get in touch before a bigger order so we can sort it out together.**
 
 # G. ŠTO DANAS KUHATI? / WHAT TO COOK TODAY
 
@@ -945,15 +975,15 @@ Ova se rubrika vizualno prikazuje prva. Recepti su originalni urednički prijedl
 **EN meta:** Cook lemon chicken thighs with potatoes and rosemary in one roasting tray. A straightforward recipe for four with clear preparation steps.  
 **HR pojmovi:** piletina s krumpirom iz pećnice; što danas kuhati, pileći zabatci.  
 **EN keywords:** lemon chicken potato traybake; chicken thighs and potatoes, easy dinner.  
-**Izvadak HR:** Piletina, krumpir i nekoliko mirisnih dodataka za ručak iz jedne posude.  
-**Excerpt EN:** Chicken, potatoes and a few fragrant ingredients for dinner from one roasting tray.  
+**Izvadak HR:** Piletina, krumpir, limun i malo ružmarina u jednoj posudi. Ostalo odradi pećnica.  
+**Excerpt EN:** Chicken thighs, potatoes and lemon in one tray, and the oven does the rest.  
 **Slika:** `lemon chicken thighs potatoes rosemary tray bake`; mora prikazivati zabatke, ne samo pileći file. Alt: Pečeni pileći zabatci s krumpirom, limunom i ružmarinom / Roasted chicken thighs with potatoes, lemon and rosemary.  
 **Poveznice:** K03 nedjeljno pečenje; G01 kupnja; ponuda piletine ako postoji.  
 **Izvor sigurnosne provjere:** S7; rukovanje piletinom S13.
 
 ### HR — Piletina s krumpirom i limunom iz pećnice
 
-Kada vam treba ručak bez mnogo lonaca, piletina i krumpir dobar su početak. Limun daje svježinu, ružmarin miris, a posuda za pečenje odradi najveći dio posla. Ovdje koristimo zabatke s kosti i kožom; pileći file nije izravna zamjena jer traži drugačije vrijeme pripreme.
+Ovo je ručak za dane kad vam se ne da prati pet lonaca. Piletina i krumpir idu u istu posudu, uz limun i grančicu ružmarina, a pećnica odradi većinu posla. Uzimamo zabatke s kosti i kožom. Pileći file ovdje ne možete samo ubaciti umjesto njih jer mu treba drugačije vrijeme.
 
 **Porcije:** 4  
 **Priprema:** oko 15 minuta  
@@ -973,26 +1003,26 @@ Kada vam treba ručak bez mnogo lonaca, piletina i krumpir dobar su početak. Li
 - oko 1 žličica soli, prilagoditi ukusu;
 - svježe mljeveni papar.
 
-#### Priprema korak po korak
+#### Priprema
 
-1. Zagrijte pećnicu na 200 °C. Krumpir operite ili ogulite i narežite na komade od približno 2–3 cm. Posuda treba biti dovoljno velika da sastojci ne budu složeni u debeli višestruki sloj.
-2. Krumpir pomiješajte s jednom žlicom ulja, dijelom soli i paprom. Rasporedite ga po posudi, dodajte zgnječene režnjeve češnjaka i ružmarin te ulijte vodu uz rub.
-3. Piletinu posušite papirnatim ručnikom; sirovu piletinu nemojte prati. Premažite preostalim uljem, posolite i popaprite. Stavite je kožom prema gore između krumpira.
-4. Polovicu limuna narežite na kriške i rasporedite uz meso. Drugu polovicu ostavite za posluživanje, kako jelo na kraju ne bi bilo kiselije nego što želite.
-5. Pecite okvirno 40–50 minuta. Nakon otprilike pola sata promiješajte krumpir, bez okretanja piletine kožom prema dolje. Ako se posuda presuši, dodajte malo vode uz rub.
-6. Provjerite piletinu termometrom u najdebljem dijelu, bez dodirivanja kosti: treba dosegnuti najmanje 74 °C. Provjerite i krumpir. Ako je jedno gotovo prije drugoga, izvadite gotovi dio čistim priborom i nastavite peći ostatak.
+1. Upalite pećnicu na 200 °C. Krumpir operite ili ogulite pa ga narežite na komade od otprilike 2–3 cm. Uzmite posudu dovoljno veliku da se sve ne slaže u debeo sloj, jedno preko drugoga.
+2. Krumpir promiješajte sa žlicom ulja, malo soli i paprom pa ga rasporedite po posudi. Dodajte zgnječeni češnjak i ružmarin, a vodu ulijte uz rub.
+3. Piletinu posušite papirnatim ručnikom. Sirovu piletinu ne perite. Natrljajte je ostatkom ulja, posolite, popaprite i složite između krumpira, kožom prema gore.
+4. Pola limuna narežite na kriške i stavite uz meso. Drugu polovicu čuvajte za stol, pa ćete sami odlučiti koliko kiselo želite.
+5. Pecite okvirno 40–50 minuta. Negdje nakon pola sata promiješajte krumpir, ali piletinu ne okrećite. Koža ostaje gore. Ako se posuda osuši, dolijte malo vode uz rub.
+6. Termometar zabodite u najdeblji dio piletine, tako da ne dira kost. Mora pokazati najmanje 74 °C. Probajte i krumpir. Ako je jedno gotovo prije drugoga, izvadite ga čistim priborom, a ostatak neka se peče dalje.
 
-#### Posluživanje
+#### Na stol
 
-Dodajte limunov sok prema ukusu tek na tanjuru. Uz ovakav ručak dovoljna je zelena salata ili zdjela svježih rajčica. Ako ne volite ružmarin, zamijenite ga s malo timijana.
+Limunov sok dodajte tek na tanjuru, koliko tko voli. Uz ovo ne treba puno, zelena salata ili zdjela svježih rajčica sasvim je dovoljna. Ako ružmarin nije za vas, stavite malo timijana.
 
-Kod većeg broja porcija radije koristite dvije posude nego da sve složite jednu preko druge. Vrijeme pripreme može se promijeniti, pa termometar ostaje važniji od broja minuta.
+Kuhate li za više ljudi, uzmite dvije posude i nemojte slagati sve jedno na drugo. Vrijeme pečenja tada se može promijeniti. Termometru vjerujte više nego satu.
 
-**Za današnji ručak provjerite Mecarinu ponudu piletine i zatražite zabatke s kosti.**
+**Zabatke s kosti pitajte u Mecari i pogledajte što danas imamo od piletine.**
 
 ### EN — Lemon chicken and potato traybake
 
-When you want dinner without a pile of pans, chicken and potatoes are a useful starting point. Lemon adds freshness, rosemary brings fragrance and the roasting tray does most of the work. This version uses bone-in, skin-on thighs; chicken breast is not a direct substitution because it needs different timing.
+Some evenings you just don't want to wash up five pans. This one goes into a single roasting tray, chicken and potatoes with lemon and a bit of rosemary, and the oven does most of the work. We use bone-in, skin-on thighs. Breast won't behave the same way, it needs different timing, so don't simply swap it in.
 
 **Serves:** 4  
 **Preparation:** about 15 minutes  
@@ -1014,20 +1044,20 @@ When you want dinner without a pile of pans, chicken and potatoes are a useful s
 
 #### Method
 
-1. Heat a conventional oven to 200°C. Wash or peel the potatoes and cut them into pieces roughly 2–3 cm across. Choose a tray large enough to avoid a deep, crowded layer.
-2. Toss the potatoes with one tablespoon of oil, some of the salt and pepper. Spread them in the tray, add the crushed garlic cloves and rosemary, then pour the water around the edge.
-3. Pat the chicken dry with kitchen paper; do not wash raw chicken. Rub with the remaining oil and seasoning. Place skin-side up between the potatoes.
-4. Slice half the lemon and tuck the slices around the meat. Keep the other half for serving so you can control the final acidity.
-5. Roast for approximately 40–50 minutes. After about half an hour, turn the potatoes without turning the chicken skin-side down. Add a little water at the edge if the tray becomes dry.
-6. Check the thickest part of the chicken with a thermometer, away from the bone: it should reach at least 74°C. Check that the potatoes are tender too. If one component is ready first, remove it with clean utensils and continue cooking the other.
+1. Heat a conventional oven to 200°C. Wash or peel the potatoes and cut them into chunks of roughly 2–3 cm. Use a tray big enough that nothing ends up piled in a deep layer.
+2. Toss the potatoes with a tablespoon of the oil, some of the salt and a little pepper, then spread them out in the tray. Add the crushed garlic and the rosemary and pour the water in around the edge.
+3. Pat the chicken dry with kitchen paper. Don't wash raw chicken. Rub it with the rest of the oil, season it and sit it skin-side up among the potatoes.
+4. Slice half the lemon and tuck the slices round the meat. Save the other half for the table, so you decide how sharp it gets.
+5. Roast for approximately 40–50 minutes. Around the half-hour mark, give the potatoes a stir but leave the chicken skin-side up. If the tray looks dry, add a splash of water at the edge.
+6. Push the thermometer into the thickest part of the chicken, clear of the bone. You want at least 74°C. Check the potatoes are tender as well. If one is done before the other, lift it out with clean utensils and let the rest carry on.
 
 #### To serve
 
-Add a little lemon juice at the table if you like. A green salad or fresh tomatoes are enough alongside. If rosemary is not your favourite, use a little thyme instead.
+Squeeze over the lemon at the table, as much as you like. It doesn't need much alongside. A green salad or a bowl of fresh tomatoes will do. Not a rosemary fan? Use a little thyme.
 
-For a larger group, use two trays rather than stacking everything. Cooking time may change, so the thermometer matters more than the clock.
+For a bigger crowd, use two trays rather than stacking everything into one. The timing may shift, so trust the thermometer over the clock.
 
-**For tonight's dinner, check Mecara's chicken selection and ask about bone-in thighs.**
+**Ask at Mecara for bone-in chicken thighs and see what chicken we've got in today.**
 
 ## T02 — Mesne okruglice u rajčici
 
@@ -1039,15 +1069,15 @@ For a larger group, use two trays rather than stacking everything. Cooking time 
 **EN meta:** Make beef meatballs in tomato sauce for four. Follow the ingredient list and clear steps, then serve with pasta, polenta or mashed potatoes.  
 **HR pojmovi:** mesne okruglice u umaku od rajčice; okruglice od junetine, ideja za ručak.  
 **EN keywords:** beef meatballs in tomato sauce; meatball recipe, family dinner.  
-**Izvadak HR:** Okruglice i umak koji se dobro slažu s onim što već imate za prilog.  
-**Excerpt EN:** Tender meatballs and a tomato sauce to serve with the side dish you already have.  
+**Izvadak HR:** Juneće okruglice u rajčici, a prilog birate prema onome što već imate u spenzi.  
+**Excerpt EN:** Beef meatballs in tomato sauce, with whatever side you've already got in the kitchen.  
 **Slika:** `beef meatballs tomato sauce parsley`; alt: Mesne okruglice u umaku od rajčice s peršinom / Meatballs in tomato sauce topped with parsley.  
 **Poveznice:** M03 mljeveno; T01 drugi recept; ponuda.  
 **Izvor sigurnosne provjere:** S7.
 
 ### HR — Mesne okruglice u umaku od rajčice
 
-Ovaj je ručak zahvalan jer prilog možete birati prema onome što imate kod kuće. Tjestenina, palenta ili pire dobro pristaju uz umak, a okruglice se pripremaju od jednostavne smjese bez velikog popisa začina.
+Za ovaj ručak ne morate posebno kupovati prilog. Uz umak ide tjestenina, palenta ili pire, što god vam je pri ruci. Smjesa za okruglice je jednostavna i nema dugačak popis začina.
 
 **Porcije:** 4  
 **Priprema:** oko 20 minuta  
@@ -1055,7 +1085,7 @@ Ovaj je ručak zahvalan jer prilog možete birati prema onome što imate kod ku�
 **Ukupno:** oko 45–50 minuta, bez zasebne pripreme priloga  
 **Alergeni u ovoj verziji:** jaje, gluten iz krušnih mrvica; provjeriti i ostale deklaracije.
 
-#### Sastojci za okruglice
+#### Za okruglice
 
 - 600 g mljevene junetine;
 - 1 jaje;
@@ -1066,7 +1096,7 @@ Ovaj je ručak zahvalan jer prilog možete birati prema onome što imate kod ku�
 - pola žličice soli, prema ukusu;
 - papar.
 
-#### Sastojci za umak
+#### Za umak
 
 - 700 ml pasirane rajčice;
 - 150 ml vode;
@@ -1077,24 +1107,26 @@ Ovaj je ručak zahvalan jer prilog možete birati prema onome što imate kod ku�
 
 #### Priprema
 
-1. Mrvice prelijte s 50 ml vode i ostavite nekoliko minuta. Dodajte junetinu, jaje, luk, peršin i začine. Promiješajte samo koliko je potrebno da se sastojci povežu.
-2. Oblikujte 16 približno jednakih okruglica. Ako je smjesa mekana, kratko je stavite u hladnjak dok počinjete umak.
-3. U široj posudi zagrijte ulje. Dodajte češnjak i kratko ga promiješajte bez tamnjenja. Ulijte rajčicu i 150 ml vode te dodajte origano. Zagrijte do laganog vrenja.
-4. Okruglice pažljivo rasporedite u umak. Poklopite i lagano kuhajte oko 20–25 minuta, uz povremeno nježno pomicanje posude i okretanje okruglica čistim priborom. Ne miješajte naglo dok su mekane.
-5. Ako je umak pregust, dodajte malo vode. Ako je prerijedak, pred kraj kratko kuhajte otklopljeno. Najveće okruglice provjerite termometrom: sredina treba dosegnuti najmanje 71 °C. Po potrebi nastavite kuhati.
-6. Kušajte umak i tek tada dovršite začinjavanje. Poslužite uz odabrani, zasebno pripremljeni prilog.
+1. Mrvice prelijte s 50 ml vode i pustite ih nekoliko minuta da upiju. Onda dodajte junetinu, jaje, luk, peršin, sol i papar. Miješajte samo dok se smjesa ne poveže, ne duže.
+2. Napravite 16 okruglica, otprilike iste veličine. Ako je smjesa premekana, stavite je nakratko u hladnjak dok radite umak.
+3. U široj posudi zagrijte ulje i ubacite češnjak. Kratko promiješajte. Češnjak ne smije potamnjeti. Ulijte rajčicu i 150 ml vode, dodajte origano i pustite da lagano zavrije.
+4. Okruglice pažljivo složite u umak. Poklopite i kuhajte na laganoj vatri oko 20–25 minuta. S vremena na vrijeme nježno protresite posudu i okrenite okruglice čistim priborom. Dok su mekane, nemojte ih jako miješati.
+5. Ako se umak previše zgusne, dolijte malo vode. Ako je rijedak, pred kraj ga kratko kuhajte bez poklopca. Termometrom provjerite najveće okruglice. U sredini mora biti najmanje 71 °C, a ako nije, kuhajte dalje.
+6. Tek sad kušajte umak i dosolite ga ili popaprite. Poslužite uz prilog koji ste skuhali zasebno.
 
-#### Mali detalj koji olakšava pripremu
+#### Sitnica koja pomaže
 
-Jednaka veličina okruglica važnija je od savršenog oblika. Velike i male okruglice u istoj posudi neće biti gotove u isto vrijeme. Za djecu ih možete posluživati prepolovljene nakon kuhanja, umjesto da u istoj turi radite različite veličine.
+Bitnije je da su okruglice iste veličine nego da su lijepo okrugle. Velike i male u istoj posudi neće biti gotove u isto vrijeme.
 
-Ovo nije bezglutenski recept. Ako koristite zamjenske sastojke, provjerite njihove deklaracije i uvjete pripreme, a ne samo naziv na pakiranju.
+Ako ih djeca žele manje, prepolovite ih nakon kuhanja. Nemojte raditi dvije veličine u istoj turi.
 
-**Za kupnju prvo pogledajte vodič o odabiru mljevenog mesa, pa provjerite što je dostupno u Mecari.**
+Recept nije bezglutenski. Ako nešto zamijenite, pročitajte deklaraciju i uvjete pripreme, sam naziv na pakiranju nije dovoljan.
+
+**Prije kupnje bacite oko na naš vodič za mljeveno meso, pa provjerite što trenutno imamo u Mecari.**
 
 ### EN — Beef meatballs in tomato sauce
 
-This is a useful dinner when you want to choose the side dish from whatever is already in the kitchen. Pasta, polenta and mashed potatoes all work with the sauce, while the meatballs use a straightforward mixture without a long list of seasonings.
+A good one for nights when the side dish is whatever's already in the kitchen. Pasta, polenta or mash, they all go with the sauce. The meatballs are simple too, no long list of spices.
 
 **Serves:** 4  
 **Preparation:** about 20 minutes  
@@ -1124,20 +1156,20 @@ This is a useful dinner when you want to choose the side dish from whatever is a
 
 #### Method
 
-1. Pour 50 ml water over the breadcrumbs and leave for a few minutes. Add the beef, egg, onion, parsley and seasoning. Mix just enough to combine.
-2. Shape into 16 similar-sized meatballs. If the mixture feels soft, put it briefly in the fridge while you start the sauce.
-3. Heat the oil in a wide pan. Add the garlic and stir briefly without letting it brown. Add the passata, 150 ml water and oregano, then bring to a gentle simmer.
-4. Carefully place the meatballs in the sauce. Cover and simmer gently for about 20–25 minutes, occasionally moving the pan and turning the meatballs carefully with clean utensils. Avoid vigorous stirring while they are soft.
-5. Add a little water if the sauce becomes too thick. If it is thin, cook uncovered briefly towards the end. Check the largest meatballs with a thermometer: the centre should reach at least 71°C. Continue cooking if needed.
-6. Taste and adjust the sauce seasoning, then serve with your separately prepared side dish.
+1. Pour 50 ml water over the breadcrumbs and leave them a few minutes to soak. Add the beef, egg, onion, parsley, salt and pepper. Mix only until it holds together.
+2. Roll 16 meatballs, all roughly the same size. If the mix feels soft, put it in the fridge for a bit while you get the sauce going.
+3. Heat the oil in a wide pan and add the garlic. Stir it for a moment and don't let it brown. Pour in the passata and 150 ml water, add the oregano and bring it up to a gentle simmer.
+4. Lower the meatballs into the sauce carefully. Lid on, and simmer gently for about 20–25 minutes. Every so often give the pan a gentle shake and turn the meatballs with clean utensils. They're soft at this point, so no hard stirring.
+5. Sauce too thick? Add a splash of water. Too thin, leave the lid off for the last few minutes. Check the biggest meatballs with a thermometer. The centre needs at least 71°C, and if it isn't there yet, keep cooking.
+6. Now taste the sauce and season it properly. Serve with the side you've cooked separately.
 
-#### A detail that makes cooking easier
+#### One thing that helps
 
-Similar size matters more than a perfectly round shape. Large and small meatballs in the same pan will not cook on the same schedule. If you want smaller pieces for children, halve them after cooking rather than making mixed sizes in one batch.
+Getting them the same size matters more than getting them round. Big and small ones in one pan won't be ready together. If the kids want smaller pieces, cut them in half after cooking instead of rolling two sizes in the same batch.
 
-This recipe is not gluten-free. If you substitute ingredients, check their labels and preparation conditions rather than relying only on a product name.
+This recipe isn't gluten-free. If you swap anything, read the label and the preparation conditions. The name on the packet isn't enough.
 
-**Before shopping, read our guide to choosing mince, then ask about Mecara's current selection.**
+**Before you shop, have a look at our guide to choosing mince, then ask what we've got at Mecara right now.**
 
 ## T03 — Juneće trakice s gljivama
 
@@ -1149,15 +1181,15 @@ This recipe is not gluten-free. If you substitute ingredients, check their label
 **EN meta:** Cook beef strips with mushrooms and a simple pan sauce for four. Choose a quick-cooking cut and serve with rice or mashed potatoes.  
 **HR pojmovi:** juneće trakice s gljivama; brzi ručak s junetinom, što danas kuhati.  
 **EN keywords:** beef strips with mushrooms; quick beef dinner, one pan beef.  
-**Izvadak HR:** Brzi ručak počinje pravim komadom junetine i pečenjem u manjim turama.  
-**Excerpt EN:** A quick beef dinner starts with the right cut and cooking in small batches.  
+**Izvadak HR:** Za brzu junetinu trebaju vam pravi komad mesa i pečenje u manjim turama.  
+**Excerpt EN:** Quick beef comes down to the right cut and not crowding the pan. Cook it in small batches.  
 **Slika:** `beef strips mushrooms skillet sauce`; alt: Juneće trakice i gljive u tavi s umakom / Beef strips and mushrooms in a pan with sauce.  
 **Poveznice:** M02 razlika prema gulašu; M01 rezovi; ponuda.  
 **Izvori:** S1 za temeljitu termičku obradu, S3 za odabir reza. Izvorni recept, bez tvrdnje o testiranju.
 
 ### HR — Juneće trakice s gljivama za ručak iz jedne tave
 
-Kada želite junetinu, a nemate vremena za dugo kuhanje, izbor reza posebno je važan. Za ovaj recept tražite komad prikladan za kratku pripremu na tavi, primjerice odgovarajući ramstek. Meso za gulaš nije ravnopravna zamjena samo zato što je narezano sitnije.
+Kad vam se jede junetina, a nema vremena za dugo kuhanje, sve ovisi o komadu koji ste kupili. Tražite meso koje podnosi kratko pečenje na tavi, recimo odgovarajući ramstek. Meso za gulaš ovdje ne prolazi, i to što je narezano na sitno tu ništa ne mijenja.
 
 **Porcije:** 4  
 **Priprema:** oko 15 minuta  
@@ -1182,22 +1214,24 @@ Kada želite junetinu, a nemate vremena za dugo kuhanje, izbor reza posebno je v
 
 #### Priprema
 
-1. Šampinjone očistite i narežite, luk narežite na tanke ploške, a češnjak usitnite. Ako meso režete sami, režite poprečno na vlakna. Trakice posušite i lagano začinite.
-2. U tavi zagrijte jednu žlicu ulja. Meso kratko zapecite u dvije ili tri ture, tako da dobije boju. U ovoj fazi ne mora biti potpuno gotovo. Premjestite ga u zasebnu posudu namijenjenu nastavku pripreme, ne na završni pladanj za serviranje.
-3. Dodajte preostalo ulje i luk. Pirjajte oko 4–5 minuta, zatim dodajte gljive. Pecite još oko 6–8 minuta, dok omekšaju i dio tekućine ispari. Dodajte češnjak i kratko promiješajte.
-4. Ulijte temeljac, umiješajte senf i lagano ostružite zapečene tragove s dna. Škrob pomiješajte sa žlicom hladne vode i dodajte u umak. Kratko kuhajte da se blago zgusne.
-5. Vratite meso i sokove u tavu. Lagano dovršite kuhanje. Za ovu verziju potpuno kuhanih trakica provjerite najdeblji komad čistom tankom sondom: cilj je najmanje 75 °C tijekom 30 sekundi. Vrijeme ovisi o debljini i početnom zapecanju; nemojte se oslanjati samo na boju.
-6. Dodajte peršin, kušajte i po potrebi dosolite. Poslužite uz kuhanu rižu ili pire koje ste pripremili zasebno.
+1. Šampinjone očistite i narežite. Luk narežite na tanke ploške, a češnjak usitnite. Ako meso režete sami, režite poprečno na vlakna. Trakice posušite i lagano začinite.
+2. Zagrijte žlicu ulja u tavi. Meso kratko zapecite u dvije ili tri ture, samo da dobije boju. Ne mora još biti gotovo. Prebacite ga u zasebnu posudu u kojoj čeka nastavak, a ne na pladanj s kojim ćete servirati.
+3. U tavu stavite ostatak ulja i luk. Pirjajte oko 4–5 minuta pa dodajte gljive. Pecite još oko 6–8 minuta, dok ne omekšaju i dok dio tekućine ne ispari. Ubacite češnjak i kratko promiješajte.
+4. Ulijte temeljac, umiješajte senf i lagano ostružite zapečeno s dna. Škrob razmutite u žlici hladne vode i ulijte u umak. Kratko prokuhajte da se malo zgusne.
+5. Vratite meso u tavu, zajedno sa sokom koji je pustilo, i lagano ga dokuhajte. Ovdje su trakice potpuno kuhane, pa najdeblji komad provjerite čistom tankom sondom. Cilj je najmanje 75 °C tijekom 30 sekundi. Koliko će to trajati, ovisi o debljini i o tome koliko ste meso zapekli na početku. Samo po boji se ne ravnajte.
+6. Dodajte peršin, kušajte i dosolite ako treba. Poslužite uz rižu ili pire koje ste skuhali zasebno.
 
-#### Ako nemate odgovarajući rez
+#### Ako nemate pravi komad
 
-Nemojte pokušavati tvrđi komad omekšati s još nekoliko minuta jake vatre. Za takvo meso odaberite sporije pirjanje i recept koji je tome namijenjen. Upravo zato vrijedi reći mesaru koliko vremena imate za ručak.
+Tvrđi komad nećete omekšati s još par minuta na jakoj vatri. Takvo meso traži sporo pirjanje i recept koji je za to napravljen.
 
-**U Mecari pitajte za junetinu prikladnu za trakice i kratku pripremu na tavi te provjerite mogućnost rezanja.**
+Zato mesaru recite koliko vremena imate za ručak.
+
+**U Mecari pitajte za junetinu koja je dobra za trakice i kratko pečenje na tavi, i provjerite možemo li vam je narezati.**
 
 ### EN — Beef strips with mushrooms for a one-pan dinner
 
-When you want beef but do not have time for slow cooking, the cut matters. Ask for meat suited to quick pan cooking, such as an appropriate striploin piece. Stewing beef is not an equivalent substitute simply because it is cut into smaller pieces.
+If you fancy beef but haven't got time for anything slow, the cut decides how this turns out. Ask for something that handles quick pan cooking, a suitable piece of striploin for example. Stewing beef won't do the same job just because it's been cut small.
 
 **Serves:** 4  
 **Preparation:** about 15 minutes  
@@ -1222,18 +1256,18 @@ When you want beef but do not have time for slow cooking, the cut matters. Ask f
 
 #### Method
 
-1. Clean and slice the mushrooms, thinly slice the onion and chop the garlic. If cutting the beef yourself, slice across the grain. Pat the strips dry and season lightly.
-2. Heat one tablespoon of oil in the pan. Brown the beef briefly in two or three batches. It does not need to be fully cooked at this stage. Transfer it to a separate holding dish for continued preparation, not the final serving platter.
-3. Add the remaining oil and onion. Cook for about 4–5 minutes, then add the mushrooms. Cook for another 6–8 minutes until softened and some of the liquid has evaporated. Add the garlic and stir briefly.
-4. Pour in the stock, stir in the mustard and gently loosen the browned pieces from the bottom. Mix the cornflour with the tablespoon of cold water and add it to the sauce. Simmer briefly to thicken slightly.
-5. Return the beef and its juices to the pan and finish cooking gently. For this fully cooked version, check the thickest strip with a clean fine-tip thermometer: aim for at least 75°C for 30 seconds. Timing depends on thickness and the initial sear, so do not rely on colour alone.
-6. Add the parsley, taste and adjust the seasoning. Serve with rice or mashed potatoes prepared separately.
+1. Clean and slice the mushrooms. Slice the onion thinly and chop the garlic. If you're cutting the beef yourself, go across the grain. Pat the strips dry and season them lightly.
+2. Heat one tablespoon of oil in the pan and brown the beef quickly in two or three batches. It doesn't have to be cooked through yet. Move it to a separate dish to wait, not the plate you'll serve from.
+3. Add the rest of the oil and the onion and cook for about 4–5 minutes. Then the mushrooms go in for another 6–8 minutes, until they soften and some of the liquid has cooked off. Add the garlic and stir for a moment.
+4. Pour in the stock, stir in the mustard and gently scrape up the browned bits from the bottom. Mix the cornflour with the tablespoon of cold water, add it to the sauce and let it bubble briefly until it thickens a little.
+5. Put the beef back in with its juices and finish cooking gently. This version is fully cooked, so check the thickest strip with a clean, fine-tip thermometer. Aim for at least 75°C for 30 seconds. How long that takes depends on thickness and how well you seared it first. Colour alone won't tell you.
+6. Stir in the parsley, taste and add salt if it needs it. Serve with rice or mash cooked separately.
 
-#### If you have a different cut
+#### If your cut is a tougher one
 
-Do not try to soften a tougher piece by adding a few more minutes over fierce heat. Choose a slow-cooked dish designed for that meat instead. This is why telling the butcher how much time you have can be so useful.
+A few extra minutes on high heat won't make a tough piece tender. That kind of meat wants slow cooking and a recipe built for it. So tell the butcher how much time you've got.
 
-**Ask Mecara about beef suited to quick-cooking strips and whether it can be cut for you.**
+**Ask at Mecara for beef that suits quick-cooked strips, and check whether we can cut it for you.**
 
 # H. Povezivanje članaka i implementacijski podaci
 
