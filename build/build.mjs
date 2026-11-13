@@ -516,17 +516,17 @@ ${faqBlock(lang, ["large", "estimate"])}`;
     const hr = lang === "hr", u = UI[lang];
     const T = hr ? {
       h1: "Radionice o mesu i pripremi steakova u Dubrovniku",
-      lead: "Želite znati koji je rez za što i birati meso bez nagađanja? Pratite kad najavljujemo radionice. Uz svaku piše tema, datum, trajanje, jezik, cijena i program.",
-      sH: "Od izbora komada do pripreme", sP: "Na radionici može biti riječi o izboru steaka, pripremi za roštilj ili slaganju plate. Grupe su male, a radimo za pultom u Mecari.",
+      lead: "Na radionici stojite s nama za pultom. Gledamo meso, kušamo, a vi pitate što vas zanima. Svaku najavimo s datumom, trajanjem, jezikom, cijenom i onim što ćemo raditi.",
+      sH: "Što se radi", sP: "Ovisi o temi. Jednom biramo steak iz komore i pričamo o tavi i roštilju, drugi put slažemo platu od pršuta i sira. Grupe su male, da svi sve vide.",
       listH: "Nadolazeće radionice", seats: "mjesta", signup: "Prijavi se", added: "Prijava u upitu",
-      howH: "Kako se prijaviti", how: "Kliknite „Prijavi se” i radionica ide u vaš upit. Kad pošaljete upit, porukom vam potvrđujemo mjesto.",
-      ask: "Pitajte za sljedeći termin",
+      howH: "Prijava", how: "Kliknite „Prijavi se” pa pošaljite upit. Mjesto vam potvrdimo porukom. Kad se radionica popuni, na gumbu piše da je popunjena.",
+      ask: "Pitajte kad je sljedeća",
     } : {
       h1: "Meat and steak workshops in Dubrovnik",
-      lead: "Want to know your cuts and buy meat with a bit more confidence? Keep an eye out for Mecara workshops. Every listing shows the topic, date, length, language, price and what's covered.",
-      sH: "From choosing a cut to cooking it", sP: "We might cover picking a steak, getting ready for a barbecue or putting together a charcuterie board. Small groups, at the Mecara counter.",
+      lead: "Our workshops happen at the counter, not in front of a slideshow. You look, you taste, you ask. Each one is listed with its date, length, language, price and what we'll actually be doing.",
+      sH: "What happens on the night", sP: "Depends on the theme. One evening it's picking a steak from the ageing room and talking pans versus grills; another it's a proper board of prosciutto and cheese. Groups stay small so nobody's peering over shoulders.",
       listH: "Upcoming workshops", seats: "places", signup: "Sign up", added: "In your enquiry",
-      howH: "How to sign up", how: "Click “Sign up” and the workshop goes into your enquiry. Send it, and we'll confirm your place by message.",
+      howH: "Booking a place", how: "Hit “Sign up”, then send your enquiry. We'll message you to confirm. Once a workshop fills up, the button says so.",
       ask: "Ask about the next workshop",
     };
     return `
@@ -547,18 +547,18 @@ ${faqBlock(lang, ["large", "estimate"])}`;
     const hr = lang === "hr";
     const T = hr ? {
       h1: "Mecara, vaša mesnica u Lapadu",
-      lead: "Mecara je za ljude koji žele znati što kupuju i što će s tim skuhati. Nalazimo se u centru DOC u Dubrovniku. Razgovor kod nas obično krene s istim pitanjem. Što danas kuhate?",
-      s: [["Krećemo od jela","Nekad vam treba komad za sporo kuhanje, nekad par odrezaka, a nekad meso za cijelo društvo. Pomažemo vam izabrati prema jelu, količini i načinu pripreme."],
-          ["Pitajte za proizvod","Za podrijetlo, sastojke i dostupnost pitajte za konkretan proizvod. Bolje je to znati prije kupnje nego nagađati po slici ili nazivu."],
-          ["Navratite u DOC","Pogledajte što trenutačno imamo ili nam pošaljite popis. Za posebne rezove i veće količine javite se unaprijed."]],
+      lead: "Mecara je mesnica u centru DOC u Lapadu. Na zidu bik, u vitrini meso, a za pultom netko tko će vas pitati što kuhate prije nego što išta stavi na vagu.",
+      s: [["Prvo pitamo što kuhate","Gulaš i steak ne traže isti komad. Ni peka za osam ljudi i ručak za dvoje. Zato prvo pitamo za jelo, koliko vas je i pečete li na tavi, u pećnici ili na roštilju, a tek onda režemo. Ne znate kako se rez zove? Nema veze. Opišite jelo, to je dovoljno."],
+          ["Pitajte slobodno","Odakle je, što je unutra, ima li ga danas. Na konkretno pitanje dobit ćete konkretan odgovor."],
+          ["Svratite","Prvi sat na parkiralištu centra DOC i Tommyja je besplatan. Trebate li neki poseban rez ili veću količinu, javite se ranije."]],
       cta: "Pogledajte ponudu",
     } : {
       h1: "Mecara, your butcher shop in Lapad",
-      lead: "Mecara is for people who like to know what they're buying and how they'll cook it. We're inside the DOC shopping centre in Dubrovnik, and most conversations at our counter start the same way. What are you making today?",
-      s: [["We start with the meal","Sometimes it's a cut for slow cooking, sometimes a couple of steaks, sometimes enough meat for the whole group. Tell us the dish, how many you're feeding and what you're cooking on, and we'll help you choose."],
-          ["Ask about the product","Ask about the origin, ingredients and availability of the thing you want. A straight answer beats guessing from a name or a photo."],
-          ["Visit us at DOC","Have a look at what's in, or send us your list. For specific cuts or larger amounts, check with us first."]],
-      cta: "See our selection",
+      lead: "We're a butcher's counter inside the DOC shopping centre in Lapad. Bull on the wall, meat in the cabinet, and someone behind the counter who'll ask what you're cooking before anything goes on the scale.",
+      s: [["Tell us what's for dinner","A stew and a steak want different cuts. So do a peka for eight and lunch for two. We ask about the dish, the headcount and whether you've got a pan, an oven or a grill, and cut to suit. No idea what the cut is called? Describe the meal. That'll do."],
+          ["Ask away","Where it's from, what's in it, whether it's in today. Ask about the actual piece and you'll get a proper answer."],
+          ["Drop by","First hour at the DOC and Tommy car park is free. After something unusual, or a lot of it? Give us a shout first."]],
+      cta: "See what's in",
     };
     return `
 <section class="page-head"><div class="wrap feature">

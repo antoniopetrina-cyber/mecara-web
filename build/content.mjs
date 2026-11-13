@@ -225,11 +225,11 @@ export const ALT = {
 // DEMO radionice (radna verzija) – datumi i cijene su primjeri
 export const WORKSHOPS = [
   { id: "w1", date: "21.11.", when: { hr: "Subota u 18:00 · 2 sata · na hrvatskom", en: "Saturday, 18:00 · 2 hours · in Croatian" }, eur: 35, seats: 8,
-    hr: ["Odaberite i pripremite svoj steak","Kako izabrati komad iz komore, koliko ga pustiti da odmori i kad ide na tavu, a kad na roštilj."], en: ["Choosing and cooking your steak","Picking a piece from the ageing room, how long to rest it, and when it belongs in a pan rather than on the grill."] },
+    hr: ["Odaberite i pripremite svoj steak","Gledamo što visi u komori i biramo komad. Onda pričamo koliko ga pustiti da odmori i kad ga staviti na tavu, a kad na roštilj."], en: ["Choosing and cooking your steak","We pick a piece from the ageing room together, then talk resting time and when a steak belongs in a pan instead of on the grill."] },
   { id: "w2", date: "04.12.", when: { hr: "Petak u 18:30 · 2 sata · na hrvatskom i engleskom", en: "Friday, 18:30 · 2 hours · in Croatian and English" }, eur: 29, seats: 12,
-    hr: ["Pršut i sir: kako složiti platu","Kušamo drniški i sinjski pršut, sir iz mješine i domaće dodatke. Usput pokazujemo kako rezati i kako sve složiti na platu."], en: ["Prosciutto and cheese: building a sharing board","We taste Drniš and Sinj prosciutto, cheese matured in a sheepskin sack and local extras, and show you how to slice it all and lay out a board."] },
+    hr: ["Pršut i sir: kako složiti platu","Drniški i sinjski pršut, sir iz mješine i domaći dodaci. Kušamo, režemo i slažemo platu koju biste bez srama iznijeli gostima."], en: ["Prosciutto and cheese: building a sharing board","Drniš and Sinj prosciutto, cheese aged in a sheepskin sack, a few local extras. We taste, slice and lay out a board you'd happily put in front of guests."] },
   { id: "w3", date: "12.12.", when: { hr: "Subota u 10:00 · 2,5 sata · na hrvatskom", en: "Saturday, 10:00 · 2.5 hours · in Croatian" }, eur: 35, seats: 8,
-    hr: ["Meso za blagdanski stol","Janjetina, teletina i odojak. Koji komad za peku, koji za ražanj, a koji za pečenje, i kako ga naručiti na vrijeme."], en: ["Choosing meat for a festive meal","Lamb, veal and suckling pig: which cut for peka, the spit or the oven, and how to order early enough to get it."] },
+    hr: ["Meso za blagdanski stol","Janjetina, teletina i odojak za blagdane. Što ide pod peku, što na ražanj, a što u pećnicu, i do kad treba naručiti."], en: ["Choosing meat for a festive meal","Lamb, veal and suckling pig for the holidays: which cut goes under the peka, on the spit or in the oven, and how early you need to order."] },
 ];
 // DEMO paketi za vile i jahte (radna verzija)
 export const BOXES = [
