@@ -19,10 +19,10 @@ export const SITE = {
 export const ROUTES = {
   home:    { hr: "/",                    en: "/en/" },
   ponuda:  { hr: "/ponuda/",             en: "/en/meat-and-deli/" },
-  komora:  { hr: "/komora/",            en: "/en/dry-age-room/" },
+  komora:  { hr: "/odlezani-steakovi/#uzivo", en: "/en/dry-aged-steaks/#uzivo", alias: true },
   steak:   { hr: "/odlezani-steakovi/",  en: "/en/dry-aged-steaks/" },
   bbq:     { hr: "/meso-za-rostilj/",    en: "/en/bbq-meat/" },
-  planner: { hr: "/rostilj-planer/",     en: "/en/bbq-planner/" },
+  planner: { hr: "/meso-za-rostilj/#planner", en: "/en/bbq-meat/#planner", alias: true },
   villa:   { hr: "/vile-i-jahte/",       en: "/en/villa-yacht-meat-supply/" },
   workshops:{ hr: "/radionice/",         en: "/en/workshops/" },
   blog:    { hr: "/blog/",               en: "/en/blog/" },
@@ -33,7 +33,7 @@ export const ROUTES = {
 export const UI = {
   hr: {
     langName: "Hrvatski", other: "English", otherShort: "EN",
-    nav: [["ponuda","Ponuda"],["komora","Komora"],["steak","Odležani steakovi"],["bbq","Za roštilj"],["planner","Roštilj planer"],["villa","Vile i jahte"],["workshops","Radionice"],["blog","Blog"],["about","O nama"],["contact","Kontakt"]],
+    nav: [["ponuda","Ponuda"],["steak","Komora"],["bbq","Roštilj"],["villa","Vile i jahte"],["workshops","Radionice"],["blog","Blog"],["about","O nama"],["contact","Kontakt"]],
     enquiryBtn: "Vaš upit", navLabel: "Glavna navigacija", skip: "Preskoči na sadržaj",
     wip: "RADNA VERZIJA", wipText: "Stranica je u izradi. Cijene, komadi u komori i dostupnost su primjeri, a upiti se zasad ne šalju Mecari.",
     home: "Naslovnica", crumbs: "Putanja",
@@ -75,7 +75,7 @@ export const UI = {
   },
   en: {
     langName: "English", other: "Hrvatski", otherShort: "HR",
-    nav: [["ponuda","Meat & Deli"],["komora","Ageing Room"],["steak","Dry-Aged Steaks"],["bbq","BBQ Meat"],["planner","BBQ Planner"],["villa","Villas & Yachts"],["workshops","Workshops"],["blog","Blog"],["about","About"],["contact","Contact"]],
+    nav: [["ponuda","Meat & Deli"],["steak","Ageing Room"],["bbq","BBQ"],["villa","Villas & Yachts"],["workshops","Workshops"],["blog","Blog"],["about","About"],["contact","Contact"]],
     enquiryBtn: "Your enquiry", navLabel: "Main navigation", skip: "Skip to content",
     wip: "WORK IN PROGRESS", wipText: "This site is being built. Prices, aged cuts and availability are examples, and enquiries are not sent to Mecara yet.",
     home: "Home", crumbs: "Breadcrumb",
@@ -201,8 +201,8 @@ export const META = {
   home:    { hr: ["Mecara — Mesnica u Lapadu, Dubrovnik","Posjetite Mecaru u centru DOC u Lapadu. Meso za ručak, odležani steakovi i izbor za roštilj. Pogledajte ponudu i provjerite dostupnost."], en: ["Mecara — Butcher Shop in Lapad, Dubrovnik","Visit Mecara at DOC in Lapad, Dubrovnik. Explore fresh meat, dry-aged steaks and BBQ favourites, and ask about cuts and availability."] },
   ponuda:  { hr: ["Svježe meso i delikatese u Dubrovniku — Mecara","Pregledajte izbor mesa, suhomesnatih proizvoda i sireva u Mecari u Lapadu. Za konkretan rez, količinu i današnju dostupnost pošaljite upit."], en: ["Fresh Meat & Deli in Dubrovnik — Mecara","Explore meat, cured meats and cheese at Mecara in Lapad. Ask about available cuts, quantities and preparation for your next meal."] },
   komora:  { hr: ["Dry-age komora uživo — odležani steakovi, Mecara Dubrovnik","Pogledajte koji komadi trenutačno odležavaju u Mecarinoj komori: težina, dani odležavanja i cijena. Rezervirajte svoj steak i saznajte kako ga pripremiti."], en: ["Live Dry-Age Room — Aged Steaks at Mecara, Dubrovnik","See which steaks are ageing in Mecara's dry-age room right now: weight, days aged and price. Reserve your piece and learn how to cook it."] },
-  steak:   { hr: ["Odležani steakovi u Dubrovniku — Mecara","Tražite odležani steak u Dubrovniku? Pitajte Mecaru u Lapadu za aktualne rezove, težinu, podatke o odležavanju i cijenu odabranog komada."], en: ["Dry-Aged Steaks in Dubrovnik — Mecara","Choose a dry-aged steak at Mecara in Lapad. Check available cuts, ageing details, weights and prices before planning your steak dinner."] },
-  bbq:     { hr: ["Meso za roštilj u Dubrovniku — Mecara","Složite izbor mesa za obiteljski roštilj ili veće društvo. Provjerite ponudu Mecare, zatražite savjet za količine i dogovorite preuzimanje."], en: ["BBQ Meat in Dubrovnik — Mecara Butcher Shop","Planning a BBQ in Dubrovnik? Ask Mecara about ćevapi, sausages, chicken and steaks. Check quantities and arrange confirmed collection."] },
+  steak:   { hr: ["Odležani steakovi u Dubrovniku — Mecara","Dry-age komora uživo: pogledajte koji steakovi odležavaju u Mecari u Lapadu, s težinom, danima odležavanja i cijenom. Rezervirajte svoj komad."], en: ["Dry-Aged Steaks in Dubrovnik — Mecara","See Mecara's live dry-age room in Lapad: every steak with its weight, days aged and price. Reserve your piece and learn how to cook it."] },
+  bbq:     { hr: ["Meso za roštilj u Dubrovniku i planer količina — Mecara","Koliko mesa za roštilj? Izračunajte količinu za svoje društvo, složite izbor ćevapa, kobasica, piletine i odrezaka te pošaljite upit Mecari."], en: ["BBQ Meat in Dubrovnik & Quantity Planner — Mecara","How much meat for your BBQ? Estimate quantities for your group, choose ćevapi, sausages, chicken and steaks, and send Mecara an enquiry."] },
   planner: { hr: ["Koliko mesa za roštilj? Planer — Mecara","Izračunajte okvirnu količinu mesa za svoje društvo. Prilagodite izbor gostima i prilozima te pošaljite Mecari upit za dostupnost."], en: ["BBQ Meat Planner — How Much Meat?","Estimate how much meat you need for your BBQ. Adjust the selection for your guests and sides, then ask Mecara to confirm availability."] },
   villa:   { hr: ["Meso za vile i jahte u Dubrovniku — Mecara","Pošaljite upit za meso i delikatese za vilu ili jahtu na dubrovačkom području. Sadržaj, cijenu i mogućnosti dostave potvrđujemo pojedinačno."], en: ["Villa & Yacht Meat Supply, Dubrovnik — Mecara","Request meat and deli items for a villa or yacht in the Dubrovnik area. Availability, pricing and delivery arrangements are confirmed individually."] },
   workshops:{ hr: ["Radionice o mesu i steakovima — Mecara Dubrovnik","Pratite najave Mecarinih radionica u Dubrovniku. Provjerite objavljene teme, termine, jezik, cijenu i sadržaj programa prije prijave."], en: ["Meat & Steak Workshops in Dubrovnik — Mecara","Explore Mecara workshop announcements in Dubrovnik. Check each programme's topic, date, language and price before requesting a place."] },

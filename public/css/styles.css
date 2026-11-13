@@ -481,3 +481,25 @@ html{scroll-padding-top:110px}
 .status-line{font-weight:600;color:var(--ready);margin:0 0 6px}
 .status-line:empty{display:none}
 .tag.res{color:#e3a54a;border-color:rgba(227,165,74,.45)}
+
+/* ===== donja navigacija s pilulama (mobitel) ===== */
+.bottom-nav{display:none}
+@media (max-width:860px){
+  nav.links{display:none!important}
+  .top .wrap{padding-bottom:10px}
+  html{scroll-padding-top:80px}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .bottom-nav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;gap:6px;justify-content:space-between;align-items:center;
+    padding:10px 10px calc(10px + env(safe-area-inset-bottom));background:rgba(19,16,14,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+  .pill-nav{flex:1 1 0;text-align:center;padding:10px 4px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap;list-style:none;cursor:pointer;display:block}
+  .pill-nav::-webkit-details-marker{display:none}
+  .pill-nav[aria-current="page"]{background:var(--copper);border-color:var(--copper);color:#1a120c}
+  .more-nav{flex:1 1 0;position:relative}
+  .more-nav[open] > .pill-nav{border-color:var(--copper);color:var(--copper-hi)}
+  .more-panel{position:absolute;right:0;bottom:calc(100% + 10px);min-width:210px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:8px;display:grid;gap:2px;box-shadow:0 12px 40px rgba(0,0,0,.5)}
+  .more-panel a{color:var(--ink);text-decoration:none;padding:12px 14px;border-radius:10px;font-size:15px}
+  .more-panel a:hover,.more-panel a[aria-current="page"]{background:var(--surface-2);color:var(--copper-hi)}
+  .toast{bottom:96px}
+  .drawer{z-index:41}
+}
+@media print{.bottom-nav{display:none!important}}

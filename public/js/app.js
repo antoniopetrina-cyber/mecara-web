@@ -173,7 +173,7 @@ function showResult(msg, status) {
 
 /* ---------- ladica: fokus i tipkovnica ---------- */
 let lastFocus = null;
-const outside = () => [document.querySelector("main"), document.querySelector("header.top"), document.querySelector("footer"), document.querySelector(".proto"), document.querySelector(".crumbs"), document.querySelector(".skip")];
+const outside = () => [document.querySelector("main"), document.querySelector("header.top"), document.querySelector(".bottom-nav"), document.querySelector("footer"), document.querySelector(".proto"), document.querySelector(".crumbs"), document.querySelector(".skip")];
 function openList(e) {
   if (e) e.preventDefault();
   lastFocus = document.activeElement; renderSlots(); renderList();
@@ -395,4 +395,11 @@ setInterval(() => { renderOpen(); if (!document.body.classList.contains("cart-op
     const pb = document.getElementById("print-recipe"); if (pb) pb.addEventListener("click", () => { try { window.print(); } catch (e) {} });
     render();
   }
+})();
+
+/* ===== "Više" na donjoj traci: zatvori klikom izvan ili tipkom Esc ===== */
+(function () {
+  const more = document.querySelector(".more-nav"); if (!more) return;
+  document.addEventListener("click", e => { if (more.open && !more.contains(e.target)) more.open = false; });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && more.open) { more.open = false; more.querySelector("summary").focus(); } });
 })();

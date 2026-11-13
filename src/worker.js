@@ -14,6 +14,10 @@ export default {
       url.hostname = CANONICAL_HOST; url.protocol = "https:";
       return Response.redirect(url.toString(), 301);
     }
+    // stare adrese spojenih stranica → nove (trajno)
+    const MOVED = { "/komora/": "/odlezani-steakovi/", "/en/dry-age-room/": "/en/dry-aged-steaks/", "/rostilj-planer/": "/meso-za-rostilj/#planner", "/en/bbq-planner/": "/en/bbq-meat/#planner" };
+    const mv = MOVED[url.pathname.endsWith("/") ? url.pathname : url.pathname + "/"];
+    if (mv) return Response.redirect("https://" + CANONICAL_HOST + mv, 301);
     if (url.pathname.startsWith("/api/")) {
       try { return await api(request, env, url); }
       catch (e) { console.error(e); return json({ error: "Greška na poslužitelju." }, 500); }

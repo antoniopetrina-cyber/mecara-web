@@ -308,6 +308,32 @@ ${faqBlock(lang, ["avail", "thick", "gluten", "ready", "large"])}`;
 ${faqBlock(lang, ["dryaged", "thick", "estimate"])}`;
   },
 
+  steakMerged(lang) {
+    const hr = lang === "hr";
+    const S = hr ? [["Koji steak odabrati?","Volite li komad s kosti ili odrezak bez kosti? Pripremate li jednu porciju ili steak za dijeljenje? Recite nam što vam je važno. Nazivi poput rib-eye, T-bone i ramstek ne znače isti rez, pa ćemo izbor povezati s vašim planom za večeru."],
+          ["Što provjeriti prije naručivanja","Za konkretan komad provjerite vrstu reza, podrijetlo, podatak o odležavanju, raspoloživu težinu i cijenu po kilogramu. Ako želite određenu debljinu, navedite je u upitu."],
+          ["Rezervacija i potvrda","Rezervirajte komad iz komore i pošaljite upit. Mecara vam porukom potvrđuje da je komad spreman i u kojem terminu možete doći."]]
+      : [["Which cut suits your dinner?","Would you prefer a bone-in steak or a boneless cut? Are you cooking individual portions or sharing a larger piece? Tell us your plans and ask about the differences between cuts such as rib-eye, T-bone and striploin."],
+          ["Check the details of your cut","Before ordering, confirm the cut, origin, ageing information, available weight and price per kilogram. Include your preferred thickness if you have one."],
+          ["Reserve and confirm","Reserve a piece from the ageing room and send your enquiry. Mecara confirms by message that it is ready and when you can collect it."]];
+    let body = PAGES.komora(lang);
+    body = body.replace(/<h1>[^<]*<\/h1>/, `<h1>${esc(hr ? "Odležani steakovi u Dubrovniku" : "Dry-aged steaks in Dubrovnik")}</h1>`);
+    const three = `<section class="block"><div class="wrap three-col">${S.map(x => `<div><h2>${esc(x[0])}</h2><p>${esc(x[1])}</p></div>`).join("")}</div></section>`;
+    // umetni nakon žive komore
+    return body.replace(/(<section class="block" id="uzivo">[\s\S]*?<\/section>)/, `$1\n${three}`);
+  },
+  bbqMerged(lang) {
+    const bbq = PAGES.bbq(lang);
+    let pl = PAGES.planner(lang);
+    pl = pl.replace(/^\s*<section class="page-head">[\s\S]*?<\/section>/, "");          // bez drugog naslova
+    pl = pl.replace(/\$\{?faq[\s\S]*$/, "");
+    const plH = lang === "hr" ? ["Roštilj planer","Koliko mesa trebate za roštilj?","Unesite broj gostiju i odaberite stil roštilja. Planer predlaže okvirnu količinu mesa koju možete promijeniti prije slanja upita."]
+                              : ["BBQ planner","How much meat do you need?","Enter your guest count and choose a BBQ style. The planner suggests an approximate amount of meat that you can adjust before sending an enquiry."];
+    const plHead = `<section class="block planner-intro" id="planner-top"><div class="wrap"><span class="mono eyebrow">${esc(plH[0])}</span><h2>${esc(plH[1])}</h2><p class="narrow-p">${esc(plH[2])}</p></div></section>`;
+    // planer odmah nakon naslova stranice, prije popisa proizvoda; FAQ planera izbacujemo (bbq ima svoj)
+    pl = pl.replace(/<section class="faq-block[\s\S]*$/, "");
+    return bbq.replace(/(<section class="page-head">[\s\S]*?<\/section>)/, `$1\n${plHead}\n${pl}`);
+  },
   steak(lang) {
     const hr = lang === "hr";
     const T = hr ? {
@@ -653,6 +679,13 @@ ${SITE.wip ? `<div class="proto" role="note"><b>${esc(u.wip)}</b> <span>${esc(u.
     <a class="cartbtn" href="${ROUTES.contact[lang]}" id="open-cart" data-open-enquiry aria-haspopup="dialog" aria-controls="drawer"><span class="lbl">${esc(u.enquiryBtn)}</span> <span class="n" id="cart-n">0</span></a>
   </div>
 </header>
+<nav class="bottom-nav" aria-label="${lang === "hr" ? "Brza navigacija" : "Quick navigation"}">
+  ${[["ponuda", lang === "hr" ? "Ponuda" : "Shop"], ["steak", lang === "hr" ? "Komora" : "Steaks"], ["bbq", lang === "hr" ? "Roštilj" : "BBQ"], ["blog", "Blog"]].map(([k, l]) => `<a class="pill-nav" href="${ROUTES[k][lang]}"${k === navKey ? ' aria-current="page"' : ""}>${esc(l)}</a>`).join("")}
+  <details class="more-nav"><summary class="pill-nav">${lang === "hr" ? "Više" : "More"}</summary>
+    <div class="more-panel">${[["villa"], ["workshops"], ["about"], ["contact"]].map(([k]) => `<a href="${ROUTES[k][lang]}"${k === navKey ? ' aria-current="page"' : ""}>${esc(u.nav.find(n => n[0] === k)[1])}</a>`).join("")}
+      <a href="${alt[other]}" hreflang="${other}" lang="${other}">${other === "en" ? "English" : "Hrvatski"}</a></div>
+  </details>
+</nav>
 ${opt.crumbsHtml !== undefined ? opt.crumbsHtml : crumbs(lang, page, navTitle)}
 <main id="main" tabindex="-1">
 ${opt.body || PAGES[page](lang)}
@@ -734,8 +767,13 @@ function notFound() {
 
 /* ------------------------------ zapisivanje ------------------------------ */
 function write(rel, content) { const f = join(ROOT, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, content); }
-const pages = Object.keys(ROUTES).filter(p => p !== "blog");
-for (const page of pages) for (const lang of ["hr", "en"]) write(join(ROUTES[page][lang], "index.html"), layout(lang, page));
+const pages = Object.keys(ROUTES).filter(p => p !== "blog" && !ROUTES[p].alias);
+const MERGED = { steak: "steakMerged", bbq: "bbqMerged" };
+for (const page of pages) for (const lang of ["hr", "en"]) {
+  let body = MERGED[page] ? PAGES[MERGED[page]](lang) : undefined;
+  if (page === "steak" && body) body = body.replace(/<a class="btn ghost" href="[^"]*">(Svi odležani steakovi|All dry-aged steaks)<\/a>/, "");
+  write(join(ROUTES[page][lang], "index.html"), layout(lang, page, body ? { body } : {}));
+}
 write("404.html", notFound());
 
 const catalog = {
