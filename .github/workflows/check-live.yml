@@ -11,6 +11,7 @@ jobs:
           B=https://www.mecara.app
           echo "--- stranice"
           for p in / /komora/ /admin/ /blog/ /ponuda/; do curl -sS -o /dev/null -w "$p %{http_code} %{size_download}\n" "$B$p"; done
+          curl -sS "$B/en/about/" | grep -o "Bull on the wall[^<]*" | head -1; curl -sS "$B/radionice/" | grep -o "Na radionici stojite[^<]*" | head -1
           echo "--- preusmjeravanja"
           for p in /komora/ /rostilj-planer/ /en/dry-age-room/ /en/bbq-planner/; do curl -sS -o /dev/null -w "$p %{http_code} %{redirect_url}\n" "$B$p"; done
           for p in /odlezani-steakovi/ /meso-za-rostilj/ /en/dry-aged-steaks/ /en/bbq-meat/; do curl -sS -o page.html -w "$p %{http_code} " "$B$p"; echo "planner=$(grep -c 'id=\"planner\"' page.html) uzivo=$(grep -c 'id=\"uzivo\"' page.html) bottomnav=$(grep -c 'bottom-nav' page.html)"; done
