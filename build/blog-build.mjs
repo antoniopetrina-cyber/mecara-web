@@ -12,7 +12,7 @@ const PUBLISHED = "2026-11-02";
 export const BLOG_ROUTES = { hr: "/blog/", en: "/en/blog/" };
 export const CATS = [
   { id: "danas",   hr: ["Što danas kuhati?", "sto-danas-kuhati"],         en: ["What to Cook Today", "what-to-cook-today"],
-    intro: { hr: "Piletina iz pećnice, mesne okruglice, ručak iz jedne tave. Recepti s popisom sastojaka i koracima koje je lako pratiti.", en: "Oven chicken, meatballs, a one-pan dinner. Recipes with a proper ingredient list and steps you can actually follow." } },
+    intro: { hr: "Piletina iz pećnice, mesne okruglice, ručak iz jedne tave. Recepti s popisom sastojaka i koracima koje je lako pratiti.", en: "Oven chicken, meatballs, dinner from one pan. Recipes with a shopping list and steps you can follow with one hand on the spoon." } },
   { id: "mesar",   hr: ["Pitaj mesara", "pitaj-mesara"],                   en: ["Ask the Butcher", "ask-the-butcher"],
     intro: { hr: "Koji rez uzeti, koje meso ide u gulaš i što pitati kad kupujete mljeveno. Krenite od jela koje želite skuhati.", en: "Which cut to buy, what goes in a stew, what to ask about mince. Start with what you want to cook." } },
   { id: "rostilj", hr: ["Roštilj i steakovi", "rostilj-i-steakovi"],       en: ["BBQ & Steaks", "bbq-and-steaks"],
