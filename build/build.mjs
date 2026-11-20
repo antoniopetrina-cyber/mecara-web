@@ -699,7 +699,7 @@ ${opt.body || PAGES[page](lang)}
     </div>
     <nav aria-label="Footer"><a href="${ROUTES.home[lang]}">${esc(u.home)}</a>${u.nav.map(([k, l]) => `<a href="${ROUTES[k][lang]}">${esc(l)}</a>`).join("")}<a href="${esc(SITE.instagram)}" rel="noopener noreferrer">Instagram</a><a href="${alt[other]}" hreflang="${other}" lang="${other}">${esc(u.other)}</a></nav>
   </div>
-  <div class="wrap"><p class="privacy">${esc(u.privacy)}</p></div>
+  <div class="wrap"><p class="privacy">${esc(u.privacy)}</p><p class="credit"><a href="https://nadigra.com/" rel="noopener">${lang === "hr" ? "Izradio" : "Made by"} <img src="/img/nadigra-mark.png" width="16" height="16" alt="NADIGRA" loading="lazy"><span aria-hidden="true">NADIGRA</span></a></p></div>
 </footer>
 ${drawer(lang)}
 <div class="toast" id="toast" role="status"></div>
