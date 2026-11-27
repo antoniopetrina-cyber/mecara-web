@@ -35,7 +35,7 @@ export function spamScore(fields) {
   const text = entries.filter(([k]) => !/phone|telefon|mobitel|e-?mail|mail|website|url|source|lang|jezik|turnstile|token|csrf|ikey|request_id|^id$/i.test(k)).map(([, v]) => str(v)).join(" \n ");
   const phone = entries.filter(([k]) => /phone|telefon|mobitel/i.test(k)).map(([, v]) => str(v)).join("").replace(/\D/g, "");
   let score = 0;
-  if (/(\d)\1{6,}/.test(phone) || /^\d{1,4}10{6,}$/.test(phone)) score += 3; // +387 100000000, 0000000…
+  if (/(\d)\1{6,}/.test(phone) || /^\d{1,4}10{6,}$/.test(phone)) score += 2; // +387 100000000, 0000000…
   if (LINK.test(text)) score += 2;
   let hits = 0;
   for (const re of PROMO) if (re.test(text)) hits += 1;
