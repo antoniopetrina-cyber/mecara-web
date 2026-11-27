@@ -21,6 +21,11 @@ const PROMO = [
   /\bunsubscribe\b/i,
   /\b(sent you (an offer|a message)|contact form)\b/i,
   /\bpartnership (offer|proposal)\b/i,
+  /\b(came across|visited|found) your (web ?site|website|business)\b/i,
+  /\brank (higher|better|on google)\b|\bsearch results\b|\b(answer|generative) engine\b/i,
+  /\b(squarespace|shopify|wix|wordpress|godaddy)\b/i,
+  /\bbrand visibility\b|\bqualified (traffic|leads)\b/i,
+  /\b1 main street\b/i,
 ];
 
 const LINK = /(https?:\/\/|www\.)|\b[a-z0-9-]{2,}\.(com|net|org|io|app|info|biz|co|xyz|online|site|top|shop|store|link)\b/i;
