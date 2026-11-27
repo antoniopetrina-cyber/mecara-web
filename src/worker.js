@@ -1,5 +1,6 @@
 // Mecara Worker: glavni host, javni API (/api/live, /api/enquiry) i admin API (/api/admin/*).
 import SEED from "./seed-data.js";
+import { isSpam } from "./spam.js";
 
 const CANONICAL_HOST = "www.mecara.app";
 const COOKIE = "mecara_admin";
@@ -175,6 +176,8 @@ async function createEnquiry(request, env) {
   const digits = phone.replace(/\D/g, "");
   if (!name || digits.length < 8 || digits.length > 15 || !/^\+?[\d\s\/().-]+$/.test(phone)) return json({ error: lang === "hr" ? "Provjerite ime i broj mobitela." : "Check your name and mobile number." }, 400);
   if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ error: "E-mail nije ispravan." }, 400);
+  // Reklamne poruke (katalozi, SEO ponude…): tiho "u redu", ništa se ne sprema.
+  if (isSpam({ name, phone, email, note, pickup, extra: b.extra })) return json({ ok: true, id: 0 });
 
   const data = await liveData(env);
   const P = Object.fromEntries(data.products.map(x => [x.id, x])), C = Object.fromEntries(data.cuts.map(x => [x.id, x])), W = Object.fromEntries(data.workshops.map(x => [x.id, x]));
